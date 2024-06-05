@@ -1,0 +1,1629 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Program Files/mingw64/bin/c++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/libs/libpqxx/build/CMakeFiles/3.29.0-rc2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_48039/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_48039.dir\\build.make CMakeFiles/cmTC_48039.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs'
+        Building CXX object CMakeFiles/cmTC_48039.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE   -v -o CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        Using built-in specs.
+        COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-w64-mingw32
+        Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_48039.dir\\'
+         C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_48039.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccqMU9Wc.s
+        GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) version 13.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include"
+        ignoring nonexistent directory "R:/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"
+        ignoring nonexistent directory "/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: dfcad9499f61c0fe65de1f3a2e63177a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_48039.dir\\'
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccqMU9Wc.s
+        GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders) 2.41
+        COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../libexec/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../lib/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_48039.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_48039.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_48039.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_48039.dir/objects.a @CMakeFiles\\cmTC_48039.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_48039.dir/objects.a -Wl,--no-whole-archive -o cmTC_48039.exe -Wl,--out-implib,libcmTC_48039.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        Using built-in specs.
+        COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE
+        COLLECT_LTO_WRAPPER=C:/Program\\ Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-w64-mingw32
+        Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) 
+        COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../libexec/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../lib/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_48039.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_48039.'
+         C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccuoGXfw.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_48039.exe C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Program Files/mingw64/bin/../lib/gcc -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_48039.dir/objects.a --no-whole-archive --out-implib libcmTC_48039.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        collect2 version 13.2.0
+        C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccuoGXfw.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_48039.exe C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Program Files/mingw64/bin/../lib/gcc -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_48039.dir/objects.a --no-whole-archive --out-implib libcmTC_48039.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders) 2.41
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_48039.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_48039.'
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:134 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0] ==> [C:/Program Files/mingw64/include/c++/13.2.0]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32] ==> [C:/Program Files/mingw64/include/c++/13.2.0/x86_64-w64-mingw32]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward] ==> [C:/Program Files/mingw64/include/c++/13.2.0/backward]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include] ==> [C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include] ==> [C:/Program Files/mingw64/include]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed] ==> [C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Program Files/mingw64/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Program Files/mingw64/include/c++/13.2.0;C:/Program Files/mingw64/include/c++/13.2.0/x86_64-w64-mingw32;C:/Program Files/mingw64/include/c++/13.2.0/backward;C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include;C:/Program Files/mingw64/include;C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed;C:/Program Files/mingw64/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_48039/fast]
+        ignore line: [C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_48039.dir\\build.make CMakeFiles/cmTC_48039.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs']
+        ignore line: [Building CXX object CMakeFiles/cmTC_48039.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE   -v -o CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_48039.dir\\']
+        ignore line: [ C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_48039.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccqMU9Wc.s]
+        ignore line: [GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders) version 13.2.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include"]
+        ignore line: [ignoring nonexistent directory "R:/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"]
+        ignore line: [ignoring nonexistent directory "/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: dfcad9499f61c0fe65de1f3a2e63177a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_48039.dir\\']
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccqMU9Wc.s]
+        ignore line: [GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders) 2.41]
+        ignore line: [COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_48039.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_48039.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_48039.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_48039.dir/objects.a]
+        ignore line: [C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_48039.dir/objects.a @CMakeFiles\\cmTC_48039.dir\\objects1.rsp]
+        ignore line: [C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_48039.dir/objects.a -Wl --no-whole-archive -o cmTC_48039.exe -Wl --out-implib libcmTC_48039.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders) ]
+        ignore line: [COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_48039.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_48039.']
+        ignore line: [ C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccuoGXfw.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_48039.exe C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Program Files/mingw64/bin/../lib/gcc -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_48039.dir/objects.a --no-whole-archive --out-implib libcmTC_48039.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        ignore line: [collect2 version 13.2.0]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccuoGXfw.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_48039.exe C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Program Files/mingw64/bin/../lib/gcc -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_48039.dir/objects.a --no-whole-archive --out-implib libcmTC_48039.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        ignore line: [GNU ld (Binutils for MinGW-W64 x86_64  built by Brecht Sanders) 2.41]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_48039.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_48039.']
+        ignore line: [mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-kmjfvs']
+        ignore line: []
+        ignore line: []
+        linker tool for 'CXX': Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the CXX compiler's linker: "Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe" "-v"
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the CXX compiler's linker: "Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe" "-V"
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the CXX compiler's linker: "Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe" "--version"
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake/config.cmake:33 (check_function_exists)"
+      - "CMakeLists.txt:27 (include)"
+    checks:
+      - "Looking for poll"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-wfbxxq"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-wfbxxq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_POLL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-wfbxxq'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_148d6/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_148d6.dir\\build.make CMakeFiles/cmTC_148d6.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-wfbxxq'
+        Building CXX object CMakeFiles/cmTC_148d6.dir/CheckFunctionExists.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE   -DCHECK_FUNCTION_EXISTS=poll -o CMakeFiles\\cmTC_148d6.dir\\CheckFunctionExists.cxx.obj -c C:\\libs\\libpqxx\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wfbxxq\\CheckFunctionExists.cxx
+        Linking CXX executable cmTC_148d6.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_148d6.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_148d6.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_148d6.dir/objects.a @CMakeFiles\\cmTC_148d6.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  -DCHECK_FUNCTION_EXISTS=poll -Wl,--whole-archive CMakeFiles\\cmTC_148d6.dir/objects.a -Wl,--no-whole-archive -o cmTC_148d6.exe -Wl,--out-implib,libcmTC_148d6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_148d6.dir\\linkLibs.rsp
+        C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_148d6.dir/objects.a(CheckFunctionExists.cxx.obj):CheckFunctionExists.cxx:(.text+0x15): undefined reference to `poll'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_148d6.dir\\build.make:100: cmTC_148d6.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-wfbxxq'
+        mingw32-make: *** [Makefile:126: cmTC_148d6/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:70 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/config.cmake:36 (check_symbol_exists)"
+      - "CMakeLists.txt:27 (include)"
+    checks:
+      - "Looking for PQencryptPasswordConn"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-35q5hw"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-35q5hw"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_PQENCRYPTPASSWORDCONN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-35q5hw'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_1ceb1/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1ceb1.dir\\build.make CMakeFiles/cmTC_1ceb1.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-35q5hw'
+        Building CXX object CMakeFiles/cmTC_1ceb1.dir/CheckSymbolExists.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_1ceb1.dir\\CheckSymbolExists.cxx.obj -c C:\\libs\\libpqxx\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35q5hw\\CheckSymbolExists.cxx
+        Linking CXX executable cmTC_1ceb1.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_1ceb1.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_1ceb1.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_1ceb1.dir/objects.a @CMakeFiles\\cmTC_1ceb1.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_1ceb1.dir/objects.a -Wl,--no-whole-archive -o cmTC_1ceb1.exe -Wl,--out-implib,libcmTC_1ceb1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_1ceb1.dir\\linkLibs.rsp
+        C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lpq: No such file or directory
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_1ceb1.dir\\build.make:100: cmTC_1ceb1.exe] Error 1
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-35q5hw'
+        mingw32-make: *** [Makefile:126: cmTC_1ceb1/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:53 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_04733/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_04733.dir\\build.make CMakeFiles/cmTC_04733.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_04733.dir/gcc_pure.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_04733.dir\\gcc_pure.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\gcc_pure.cxx
+        Linking CXX executable cmTC_04733.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_04733.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_04733.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_04733.dir/objects.a @CMakeFiles\\cmTC_04733.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_04733.dir/objects.a -Wl,--no-whole-archive -o cmTC_04733.exe -Wl,--out-implib,libcmTC_04733.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_04733.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:57 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_938b3/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_938b3.dir\\build.make CMakeFiles/cmTC_938b3.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_938b3.dir/gcc_visibility.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_938b3.dir\\gcc_visibility.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\gcc_visibility.cxx
+        Linking CXX executable cmTC_938b3.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_938b3.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_938b3.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_938b3.dir/objects.a @CMakeFiles\\cmTC_938b3.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_938b3.dir/objects.a -Wl,--no-whole-archive -o cmTC_938b3.exe -Wl,--out-implib,libcmTC_938b3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_938b3.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:61 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9c3d5/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9c3d5.dir\\build.make CMakeFiles/cmTC_9c3d5.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_9c3d5.dir/cxa_demangle.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_9c3d5.dir\\cxa_demangle.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\cxa_demangle.cxx
+        Linking CXX executable cmTC_9c3d5.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_9c3d5.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_9c3d5.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_9c3d5.dir/objects.a @CMakeFiles\\cmTC_9c3d5.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_9c3d5.dir/objects.a -Wl,--no-whole-archive -o cmTC_9c3d5.exe -Wl,--out-implib,libcmTC_9c3d5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_9c3d5.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:65 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_da302/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_da302.dir\\build.make CMakeFiles/cmTC_da302.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_da302.dir/concepts.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_da302.dir\\concepts.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\concepts.cxx
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:7:22: error: 'concept' does not name a type; did you mean 'const'?
+            7 | template<typename T> concept Foo = std::ranges::input_range<T>;
+              |                      ^~~~~~~
+              |                      const
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:7:22: note: 'concept' only available with '-std=c++20' or '-fconcepts'
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:10: error: 'Foo' has not been declared
+           10 | template<Foo F> auto foo(F const &r)
+              |          ^~~
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:26: error: 'F' was not declared in this scope
+           10 | template<Foo F> auto foo(F const &r)
+              |                          ^
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:37: error: expected ';' before '{' token
+           10 | template<Foo F> auto foo(F const &r)
+              |                                     ^
+              |                                     ;
+           11 | {
+              | ~                                    
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx: In function 'int main()':
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:18:19: error: missing template arguments before '(' token
+           18 |   std::cout << foo(v) << '\\n';
+              |                   ^
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_da302.dir\\build.make:77: CMakeFiles/cmTC_da302.dir/concepts.cxx.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:126: cmTC_da302/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:69 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRNLEN_S"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_bece6/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_bece6.dir\\build.make CMakeFiles/cmTC_bece6.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_bece6.dir/strnlen_s.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_bece6.dir\\strnlen_s.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\strnlen_s.cxx
+        Linking CXX executable cmTC_bece6.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_bece6.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_bece6.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_bece6.dir/objects.a @CMakeFiles\\cmTC_bece6.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_bece6.dir/objects.a -Wl,--no-whole-archive -o cmTC_bece6.exe -Wl,--out-implib,libcmTC_bece6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_bece6.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:73 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRNLEN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e5beb/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e5beb.dir\\build.make CMakeFiles/cmTC_e5beb.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e5beb.dir/strnlen.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_e5beb.dir\\strnlen.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\strnlen.cxx
+        Linking CXX executable cmTC_e5beb.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_e5beb.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_e5beb.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e5beb.dir/objects.a @CMakeFiles\\cmTC_e5beb.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_e5beb.dir/objects.a -Wl,--no-whole-archive -o cmTC_e5beb.exe -Wl,--out-implib,libcmTC_e5beb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_e5beb.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:77 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_105e1/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_105e1.dir\\build.make CMakeFiles/cmTC_105e1.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_105e1.dir/charconv_float.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_105e1.dir\\charconv_float.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\charconv_float.cxx
+        Linking CXX executable cmTC_105e1.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_105e1.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_105e1.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_105e1.dir/objects.a @CMakeFiles\\cmTC_105e1.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_105e1.dir/objects.a -Wl,--no-whole-archive -o cmTC_105e1.exe -Wl,--out-implib,libcmTC_105e1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_105e1.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:81 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_cf820/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_cf820.dir\\build.make CMakeFiles/cmTC_cf820.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_cf820.dir/charconv_int.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_cf820.dir\\charconv_int.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\charconv_int.cxx
+        Linking CXX executable cmTC_cf820.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_cf820.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_cf820.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_cf820.dir/objects.a @CMakeFiles\\cmTC_cf820.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_cf820.dir/objects.a -Wl,--no-whole-archive -o cmTC_cf820.exe -Wl,--out-implib,libcmTC_cf820.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_cf820.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:85 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_VARIANT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_365cb/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_365cb.dir\\build.make CMakeFiles/cmTC_365cb.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_365cb.dir/variant.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_365cb.dir\\variant.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\variant.cxx
+        Linking CXX executable cmTC_365cb.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_365cb.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_365cb.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_365cb.dir/objects.a @CMakeFiles\\cmTC_365cb.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_365cb.dir/objects.a -Wl,--no-whole-archive -o cmTC_365cb.exe -Wl,--out-implib,libcmTC_365cb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_365cb.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:89 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_44e37/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_44e37.dir\\build.make CMakeFiles/cmTC_44e37.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_44e37.dir/thread_local.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_44e37.dir\\thread_local.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\thread_local.cxx
+        Linking CXX executable cmTC_44e37.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_44e37.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_44e37.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_44e37.dir/objects.a @CMakeFiles\\cmTC_44e37.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_44e37.dir/objects.a -Wl,--no-whole-archive -o cmTC_44e37.exe -Wl,--out-implib,libcmTC_44e37.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_44e37.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:53 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_3b965/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_3b965.dir\\build.make CMakeFiles/cmTC_3b965.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3b965.dir/gcc_pure.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_3b965.dir\\gcc_pure.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\gcc_pure.cxx
+        Linking CXX executable cmTC_3b965.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_3b965.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_3b965.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_3b965.dir/objects.a @CMakeFiles\\cmTC_3b965.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_3b965.dir/objects.a -Wl,--no-whole-archive -o cmTC_3b965.exe -Wl,--out-implib,libcmTC_3b965.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_3b965.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:57 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_c595c/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c595c.dir\\build.make CMakeFiles/cmTC_c595c.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c595c.dir/gcc_visibility.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_c595c.dir\\gcc_visibility.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\gcc_visibility.cxx
+        Linking CXX executable cmTC_c595c.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_c595c.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_c595c.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_c595c.dir/objects.a @CMakeFiles\\cmTC_c595c.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_c595c.dir/objects.a -Wl,--no-whole-archive -o cmTC_c595c.exe -Wl,--out-implib,libcmTC_c595c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_c595c.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:61 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_ada8a/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ada8a.dir\\build.make CMakeFiles/cmTC_ada8a.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ada8a.dir/cxa_demangle.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_ada8a.dir\\cxa_demangle.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\cxa_demangle.cxx
+        Linking CXX executable cmTC_ada8a.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_ada8a.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_ada8a.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_ada8a.dir/objects.a @CMakeFiles\\cmTC_ada8a.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_ada8a.dir/objects.a -Wl,--no-whole-archive -o cmTC_ada8a.exe -Wl,--out-implib,libcmTC_ada8a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_ada8a.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:65 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_87ba9/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_87ba9.dir\\build.make CMakeFiles/cmTC_87ba9.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_87ba9.dir/concepts.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_87ba9.dir\\concepts.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\concepts.cxx
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:7:22: error: 'concept' does not name a type; did you mean 'const'?
+            7 | template<typename T> concept Foo = std::ranges::input_range<T>;
+              |                      ^~~~~~~
+              |                      const
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:7:22: note: 'concept' only available with '-std=c++20' or '-fconcepts'
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:10: error: 'Foo' has not been declared
+           10 | template<Foo F> auto foo(F const &r)
+              |          ^~~
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:26: error: 'F' was not declared in this scope
+           10 | template<Foo F> auto foo(F const &r)
+              |                          ^
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:37: error: expected ';' before '{' token
+           10 | template<Foo F> auto foo(F const &r)
+              |                                     ^
+              |                                     ;
+           11 | {
+              | ~                                    
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx: In function 'int main()':
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:18:19: error: missing template arguments before '(' token
+           18 |   std::cout << foo(v) << '\\n';
+              |                   ^
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_87ba9.dir\\build.make:77: CMakeFiles/cmTC_87ba9.dir/concepts.cxx.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:126: cmTC_87ba9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:69 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRNLEN_S"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_3bfd4/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_3bfd4.dir\\build.make CMakeFiles/cmTC_3bfd4.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_3bfd4.dir/strnlen_s.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_3bfd4.dir\\strnlen_s.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\strnlen_s.cxx
+        Linking CXX executable cmTC_3bfd4.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_3bfd4.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_3bfd4.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_3bfd4.dir/objects.a @CMakeFiles\\cmTC_3bfd4.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_3bfd4.dir/objects.a -Wl,--no-whole-archive -o cmTC_3bfd4.exe -Wl,--out-implib,libcmTC_3bfd4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_3bfd4.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:73 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRNLEN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d0e12/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d0e12.dir\\build.make CMakeFiles/cmTC_d0e12.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d0e12.dir/strnlen.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_d0e12.dir\\strnlen.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\strnlen.cxx
+        Linking CXX executable cmTC_d0e12.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_d0e12.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_d0e12.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_d0e12.dir/objects.a @CMakeFiles\\cmTC_d0e12.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_d0e12.dir/objects.a -Wl,--no-whole-archive -o cmTC_d0e12.exe -Wl,--out-implib,libcmTC_d0e12.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d0e12.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:77 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b90c8/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b90c8.dir\\build.make CMakeFiles/cmTC_b90c8.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b90c8.dir/charconv_float.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_b90c8.dir\\charconv_float.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\charconv_float.cxx
+        Linking CXX executable cmTC_b90c8.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b90c8.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b90c8.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b90c8.dir/objects.a @CMakeFiles\\cmTC_b90c8.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_b90c8.dir/objects.a -Wl,--no-whole-archive -o cmTC_b90c8.exe -Wl,--out-implib,libcmTC_b90c8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b90c8.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:81 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_2178a/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2178a.dir\\build.make CMakeFiles/cmTC_2178a.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_2178a.dir/charconv_int.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_2178a.dir\\charconv_int.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\charconv_int.cxx
+        Linking CXX executable cmTC_2178a.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_2178a.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_2178a.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_2178a.dir/objects.a @CMakeFiles\\cmTC_2178a.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_2178a.dir/objects.a -Wl,--no-whole-archive -o cmTC_2178a.exe -Wl,--out-implib,libcmTC_2178a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_2178a.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:85 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_VARIANT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_586f7/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_586f7.dir\\build.make CMakeFiles/cmTC_586f7.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_586f7.dir/variant.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_586f7.dir\\variant.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\variant.cxx
+        Linking CXX executable cmTC_586f7.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_586f7.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_586f7.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_586f7.dir/objects.a @CMakeFiles\\cmTC_586f7.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_586f7.dir/objects.a -Wl,--no-whole-archive -o cmTC_586f7.exe -Wl,--out-implib,libcmTC_586f7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_586f7.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:89 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_0985e/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0985e.dir\\build.make CMakeFiles/cmTC_0985e.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0985e.dir/thread_local.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_0985e.dir\\thread_local.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\thread_local.cxx
+        Linking CXX executable cmTC_0985e.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_0985e.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_0985e.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_0985e.dir/objects.a @CMakeFiles\\cmTC_0985e.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_0985e.dir/objects.a -Wl,--no-whole-archive -o cmTC_0985e.exe -Wl,--out-implib,libcmTC_0985e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_0985e.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Windows - 6.2.9200 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Program Files/mingw64/bin/c++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/libs/libpqxx/build/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e7d98/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e7d98.dir\\build.make CMakeFiles/cmTC_e7d98.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du'
+        Building CXX object CMakeFiles/cmTC_e7d98.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE   -v -o CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\mingw64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        Using built-in specs.
+        COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-w64-mingw32
+        Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e7d98.dir\\'
+         C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -D_REENTRANT C:\\Program Files\\mingw64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_e7d98.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccjini6b.s
+        GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) version 13.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include"
+        ignoring nonexistent directory "R:/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"
+        ignoring nonexistent directory "/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed"
+        ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: dfcad9499f61c0fe65de1f3a2e63177a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e7d98.dir\\'
+         C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccjini6b.s
+        GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders) 2.41
+        COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../libexec/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../lib/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_e7d98.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_e7d98.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_e7d98.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e7d98.dir/objects.a @CMakeFiles\\cmTC_e7d98.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  -v -Wl,--whole-archive CMakeFiles\\cmTC_e7d98.dir/objects.a -Wl,--no-whole-archive -o cmTC_e7d98.exe -Wl,--out-implib,libcmTC_e7d98.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE
+        COLLECT_LTO_WRAPPER=C:/Program\\ Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        Target: x86_64-w64-mingw32
+        Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) 
+        COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../libexec/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/;C:/Program Files/mingw64/bin/../lib/gcc/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7d98.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7d98.'
+         C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccVfK8Lt.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_e7d98.exe C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Program Files/mingw64/bin/../lib/gcc -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. --whole-archive CMakeFiles\\cmTC_e7d98.dir/objects.a --no-whole-archive --out-implib libcmTC_e7d98.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7d98.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7d98.'
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+          add: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0] ==> [C:/Program Files/mingw64/include/c++/13.2.0]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32] ==> [C:/Program Files/mingw64/include/c++/13.2.0/x86_64-w64-mingw32]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward] ==> [C:/Program Files/mingw64/include/c++/13.2.0/backward]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include] ==> [C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include] ==> [C:/Program Files/mingw64/include]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed] ==> [C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+        collapse include dir [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Program Files/mingw64/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Program Files/mingw64/include/c++/13.2.0;C:/Program Files/mingw64/include/c++/13.2.0/x86_64-w64-mingw32;C:/Program Files/mingw64/include/c++/13.2.0/backward;C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include;C:/Program Files/mingw64/include;C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed;C:/Program Files/mingw64/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "C:/Program Files/mingw64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e7d98/fast]
+        ignore line: [C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e7d98.dir\\build.make CMakeFiles/cmTC_e7d98.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du']
+        ignore line: [Building CXX object CMakeFiles/cmTC_e7d98.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE   -v -o CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\mingw64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e7d98.dir\\']
+        ignore line: [ C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/ -D_REENTRANT C:\\Program Files\\mingw64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_e7d98.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccjini6b.s]
+        ignore line: [GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders) version 13.2.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include"]
+        ignore line: [ignoring nonexistent directory "R:/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"]
+        ignore line: [ignoring nonexistent directory "/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc/include"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/mingw64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed]
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: dfcad9499f61c0fe65de1f3a2e63177a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e7d98.dir\\']
+        ignore line: [ C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccjini6b.s]
+        ignore line: [GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders) 2.41]
+        ignore line: [COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e7d98.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_e7d98.exe]
+        ignore line: ["C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_e7d98.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_e7d98.dir/objects.a]
+        ignore line: [C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e7d98.dir/objects.a @CMakeFiles\\cmTC_e7d98.dir\\objects1.rsp]
+        ignore line: [C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE  -v -Wl --whole-archive CMakeFiles\\cmTC_e7d98.dir/objects.a -Wl --no-whole-archive -o cmTC_e7d98.exe -Wl --out-implib libcmTC_e7d98.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../configure --prefix=/R/winlibs64ucrt_stage/inst_gcc-13.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs64ucrt_stage/gcc-13.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/d/Prog/winlibs64ucrt_stage/custombuilt/share/binutils/bin/ld.exe]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders) ]
+        ignore line: [COMPILER_PATH=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../libexec/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7d98.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7d98.']
+        ignore line: [ C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/collect2.exe -plugin C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/liblto_plugin.dll -plugin-opt=C:/Program Files/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Nastya\\AppData\\Local\\Temp\\ccVfK8Lt.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_e7d98.exe C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtbegin.o -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0 -LC:/Program Files/mingw64/bin/../lib/gcc -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../.. --whole-archive CMakeFiles\\cmTC_e7d98.dir/objects.a --no-whole-archive --out-implib libcmTC_e7d98.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7d98.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7d98.']
+        ignore line: [mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeScratch/TryCompile-1up8du']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:53 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_PURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_c5253/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c5253.dir\\build.make CMakeFiles/cmTC_c5253.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c5253.dir/gcc_pure.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_c5253.dir\\gcc_pure.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\gcc_pure.cxx
+        Linking CXX executable cmTC_c5253.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_c5253.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_c5253.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_c5253.dir/objects.a @CMakeFiles\\cmTC_c5253.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_c5253.dir/objects.a -Wl,--no-whole-archive -o cmTC_c5253.exe -Wl,--out-implib,libcmTC_c5253.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_c5253.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:57 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_GCC_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_044c7/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_044c7.dir\\build.make CMakeFiles/cmTC_044c7.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_044c7.dir/gcc_visibility.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_044c7.dir\\gcc_visibility.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\gcc_visibility.cxx
+        Linking CXX executable cmTC_044c7.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_044c7.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_044c7.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_044c7.dir/objects.a @CMakeFiles\\cmTC_044c7.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_044c7.dir/objects.a -Wl,--no-whole-archive -o cmTC_044c7.exe -Wl,--out-implib,libcmTC_044c7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_044c7.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:61 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CXA_DEMANGLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e7de9/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e7de9.dir\\build.make CMakeFiles/cmTC_e7de9.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e7de9.dir/cxa_demangle.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_e7de9.dir\\cxa_demangle.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\cxa_demangle.cxx
+        Linking CXX executable cmTC_e7de9.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_e7de9.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_e7de9.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e7de9.dir/objects.a @CMakeFiles\\cmTC_e7de9.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_e7de9.dir/objects.a -Wl,--no-whole-archive -o cmTC_e7de9.exe -Wl,--out-implib,libcmTC_e7de9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_e7de9.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:65 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CONCEPTS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_c9316/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c9316.dir\\build.make CMakeFiles/cmTC_c9316.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c9316.dir/concepts.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_c9316.dir\\concepts.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\concepts.cxx
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:7:22: error: 'concept' does not name a type; did you mean 'const'?
+            7 | template<typename T> concept Foo = std::ranges::input_range<T>;
+              |                      ^~~~~~~
+              |                      const
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:7:22: note: 'concept' only available with '-std=c++20' or '-fconcepts'
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:10: error: 'Foo' has not been declared
+           10 | template<Foo F> auto foo(F const &r)
+              |          ^~~
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:26: error: 'F' was not declared in this scope
+           10 | template<Foo F> auto foo(F const &r)
+              |                          ^
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:10:37: error: expected ';' before '{' token
+           10 | template<Foo F> auto foo(F const &r)
+              |                                     ^
+              |                                     ;
+           11 | {
+              | ~                                    
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx: In function 'int main()':
+        C:\\libs\\libpqxx\\config-tests\\concepts.cxx:18:19: error: missing template arguments before '(' token
+           18 |   std::cout << foo(v) << '\\n';
+              |                   ^
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_c9316.dir\\build.make:77: CMakeFiles/cmTC_c9316.dir/concepts.cxx.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:126: cmTC_c9316/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:69 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRNLEN_S"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_bea03/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_bea03.dir\\build.make CMakeFiles/cmTC_bea03.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_bea03.dir/strnlen_s.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_bea03.dir\\strnlen_s.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\strnlen_s.cxx
+        Linking CXX executable cmTC_bea03.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_bea03.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_bea03.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_bea03.dir/objects.a @CMakeFiles\\cmTC_bea03.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_bea03.dir/objects.a -Wl,--no-whole-archive -o cmTC_bea03.exe -Wl,--out-implib,libcmTC_bea03.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_bea03.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:73 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_STRNLEN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_ccdf7/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ccdf7.dir\\build.make CMakeFiles/cmTC_ccdf7.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ccdf7.dir/strnlen.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_ccdf7.dir\\strnlen.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\strnlen.cxx
+        Linking CXX executable cmTC_ccdf7.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_ccdf7.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_ccdf7.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_ccdf7.dir/objects.a @CMakeFiles\\cmTC_ccdf7.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_ccdf7.dir/objects.a -Wl,--no-whole-archive -o cmTC_ccdf7.exe -Wl,--out-implib,libcmTC_ccdf7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_ccdf7.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:77 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_FLOAT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_2fc7b/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2fc7b.dir\\build.make CMakeFiles/cmTC_2fc7b.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_2fc7b.dir/charconv_float.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_2fc7b.dir\\charconv_float.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\charconv_float.cxx
+        Linking CXX executable cmTC_2fc7b.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_2fc7b.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_2fc7b.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_2fc7b.dir/objects.a @CMakeFiles\\cmTC_2fc7b.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_2fc7b.dir/objects.a -Wl,--no-whole-archive -o cmTC_2fc7b.exe -Wl,--out-implib,libcmTC_2fc7b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_2fc7b.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:81 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_CHARCONV_INT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fca7e/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fca7e.dir\\build.make CMakeFiles/cmTC_fca7e.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_fca7e.dir/charconv_int.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_fca7e.dir\\charconv_int.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\charconv_int.cxx
+        Linking CXX executable cmTC_fca7e.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fca7e.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_fca7e.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_fca7e.dir/objects.a @CMakeFiles\\cmTC_fca7e.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_fca7e.dir/objects.a -Wl,--no-whole-archive -o cmTC_fca7e.exe -Wl,--out-implib,libcmTC_fca7e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fca7e.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:85 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_VARIANT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_6d48d/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_6d48d.dir\\build.make CMakeFiles/cmTC_6d48d.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_6d48d.dir/variant.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_6d48d.dir\\variant.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\variant.cxx
+        Linking CXX executable cmTC_6d48d.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_6d48d.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_6d48d.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_6d48d.dir/objects.a @CMakeFiles\\cmTC_6d48d.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_6d48d.dir/objects.a -Wl,--no-whole-archive -o cmTC_6d48d.exe -Wl,--out-implib,libcmTC_6d48d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_6d48d.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/config.cmake:89 (try_compile)"
+      - "CMakeLists.txt:27 (include)"
+    directories:
+      source: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+      binary: "C:/libs/libpqxx/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/libs/libpqxx/cmake"
+    buildResult:
+      variable: "PQXX_HAVE_THREAD_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/mingw64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f Makefile cmTC_ce4b0/fast
+        C:/PROGRA~1/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ce4b0.dir\\build.make CMakeFiles/cmTC_ce4b0.dir/build
+        mingw32-make[1]: Entering directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ce4b0.dir/thread_local.cxx.obj
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE    -o CMakeFiles\\cmTC_ce4b0.dir\\thread_local.cxx.obj -c C:\\libs\\libpqxx\\config-tests\\thread_local.cxx
+        Linking CXX executable cmTC_ce4b0.exe
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_ce4b0.dir\\link.txt --verbose=1
+        "C:\\Program Files\\mingw64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_ce4b0.dir/objects.a
+        C:\\PROGRA~1\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_ce4b0.dir/objects.a @CMakeFiles\\cmTC_ce4b0.dir\\objects1.rsp
+        C:\\PROGRA~1\\mingw64\\bin\\C__~1.EXE -Wl,--whole-archive CMakeFiles\\cmTC_ce4b0.dir/objects.a -Wl,--no-whole-archive -o cmTC_ce4b0.exe -Wl,--out-implib,libcmTC_ce4b0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_ce4b0.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/libs/libpqxx/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...
