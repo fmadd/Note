@@ -1,132 +1,102 @@
-#include <doctest.h>
+#include <gmock/gmock.h>
+#include <gtest/gtest.h>
+
 #include "../src/crpt.h"
+#include "../src/base.h"
+#include "../src/server.hpp"
+
 using boost::asio::ip::tcp;
 using namespace boost::asio;
 using namespace std;
-//TEST_CASE("send_crypto_block") {
-//boost::asio::io_service io_service;
-//tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 1234));
-//tcp::socket socket(io_service);
+
+using ::testing::_;
+using ::testing::Return;
+
+// Мок класс для socket
+class MockSocket : public boost::asio::ip::tcp::socket {
+public:
+    MockSocket(boost::asio::io_service& io_service) : boost::asio::ip::tcp::socket(io_service) {};
+//    MOCK_METHOD(std::size_t, read_some, (MutableBufferSequence), (override));
+//    MOCK_METHOD(std::size_t, write_some, (boost::asio::const_buffer, std::size_t));
+
+    std::size_t read_some(mutable_buffer myBuffer) {
+        cout << "HE\n";
+      return 5;
+    };
+
+};
+
+TEST(AuthenticationTest, Success) {
+    // читаем из сокета логин пас и проверяем его и отсылаем в бд
+    boost::asio::io_service io_service;
+    MockSocket mockSocket(io_service);
+
+    CryptoPP::AutoSeededRandomPool rng;
+    CryptoPP::SecByteBlock aesKey(CryptoPP::AES::MAX_KEYLENGTH);
+    rng.GenerateBlock(aesKey, aesKey.size());
+
+//    ON_CALL(mockSocket, read_some).WillByDefault(Return(5));
+
+    registration(mockSocket, aesKey);
+    // проверяем что сокет принял бул
+
+    ASSERT_TRUE(true == false);
+}
+
+// Тест для проверки успешной аутентификации
+//TEST(AuthenticationTest, Success) {
+//    boost::asio::io_service io_service;
+//    MockSocket socket(io_service);
+//    std::string login = "user";
+//    std::string password = "password";
 //
-//// Создать тестовый блок данных
-//SecByteBlock block = "Hello, world!";
+//    CryptoPP::AutoSeededRandomPool rng;
+//    CryptoPP::SecByteBlock aesKey(CryptoPP::AES::MAX_KEYLENGTH);
+//    rng.GenerateBlock(aesKey, aesKey.size());
+//    std::string encryptedPassword = encryptAES(password, aesKey);
+//    std::size_t passwordLength = encryptedPassword.size();
 //
-//// Отправить блок данных через сокет
-//send_crypto_block(socket, block);
 //
-//// Убедиться, что блок данных успешно отправлен через сокет
-//CHECK(socket.send_buffer_size() == block.size() + sizeof(size_t));
+//
+//    EXPECT_CALL(socket, read_some(_, sizeof(std::size_t))).Times(1).WillOnce(Return(4));
+//    EXPECT_CALL(socket, read_some(_, passwordLength)).Times(1).WillOnce(Return(10));
+//    EXPECT_CALL(socket, write_some(_, sizeof(bool))).Times(1).WillOnce(Return(2));
+//
+//    authentication(socket, aesKey);
+//
+//
+//
+//    bool is_authenticated = true;
+//
+////    EXPECT_CALL(socket, write_some(_, sizeof(bool)))
+////
+////    .WillOnce(testing::DoAll(testing::SetArgPointee<1>(sizeof(bool)), Return(sizeof(bool))));
+//
+//    // Вызываем функцию authentication с использованием мок-объекта
+//    authentication(socket, aesKey);
+//    // Выполняем тестируемый код
+//    is_authenticated = check_password_correct(login, hashPass(password));
+//    ASSERT_TRUE(is_authenticated == false);
 //}
+
+//// Тест для проверки неуспешной аутентификации
+//TEST(AuthenticationTest, Failure) {
+//MockSocket socket;
+//std::string login = "hacker";
+//std::string password = "wrong_password";
+//std::string encryptedPassword = encryptAES(password, aesKey);
+//std::size_t passwordLength = encryptedPassword.size();
 //
-//TEST_CASE("receive_crypto_block") {
-//// Создать фиктивный сокет
-//boost::asio::io_service io_service;
-//        tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 1234));
-//        tcp::socket socket(io_service);
+//// Устанавливаем ожидания для вызовов мок-объекта
+//EXPECT_CALL(socket, read_some(_, sizeof(std::size_t))).Times(1).WillOnce(Return());
+//EXPECT_CALL(socket, read_some(_, passwordLength)).Times(1).WillOnce(Return());
+//EXPECT_CALL(socket, write(_, sizeof(bool))).Times(1).WillOnce(Return());
 //
-//// Создать тестовый блок данных
-//SecByteBlock block = "Hello, world!";
-//size_t size = block.size();
-//
-//// Отправить размер блока данных через сокет
-//write(socket, buffer(&size, sizeof(size)));
-//
-//// Отправить блок данных через сокет
-//write(socket, buffer(block.data(), size));
-//
-//// Получить блок данных через сокет
-//SecByteBlock received_block = receive_crypto_block(socket);
-//
-//// Убедиться, что полученный блок данных совпадает с тестовым блоком данных
-//CHECK(received_block == block);
+//// Выполняем тестируемый код
+//bool is_authenticated = check_password_correct(login, hashPass(password));
+//ASSERT_FALSE(is_authenticated);
 //}
-
-TEST_CASE("send_param") {
-// Создать фиктивный сокет
-boost::asio::io_service io_service;
-        tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 1234));
-        tcp::socket socket(io_service);
-
-// Создать тестовое значение
-Integer val(12345);
-
-// Отправить значение параметра через сокет
-send_param(socket, val);
-
-// Убедиться, что значение параметра успешно отправлено через сокет
-CHECK(socket.send_buffer_size() == val.MinEncodedSize() + sizeof(size_t));
-}
-
-TEST_CASE("GenerateDHKeys") {
-// Создать фиктивный сокет
-boost::asio::io_service io_service;
-        tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 1234));
-        tcp::socket socket(io_service);
-
-// Создать объект DH
-DH dh;
-
-// Создать объект AutoSeededRandomPool
-AutoSeededRandomPool rnd;
-
-// Создать тестовые приватный и публичный ключи
-SecByteBlock privKey;
-SecByteBlock pubKey;
-
-// Сгенерировать ключи DH
-GenerateDHKeys(socket, dh, rnd, privKey, pubKey);
-
-// Убедиться, что сгенерированы приватный и публичный ключи
-CHECK(privKey.size() == dh.PrivateKeyLength());
-CHECK(pubKey.size() == dh.PublicKeyLength());
-}
-
-TEST_CASE("deriveAESKeyFromDH") {
-// Создать тестовый общий ключ
-SecByteBlock sharedKey = "Shared key";
-
-// Вывести ключ AES
-SecByteBlock key = deriveAESKeyFromDH(sharedKey);
-
-// Убедиться, что ключ AES успешно выведен
-CHECK(key.size() == SHA256::DIGESTSIZE);
-}
-
-TEST_CASE("encryptAES") {
-// Создать тестовой текст
-string plaintext = "Hello, world!";
-
-// Создать ключ AES
-SecByteBlock key = deriveAESKeyFromDH(sharedKey);
-
-// Зашифровать текст с помощью AES
-string ciphertext = encryptAES(plaintext, key);
-
-// Убедиться, что текст успешно зашифрован
-CHECK(ciphertext.size() > 0);
-}
-
-TEST_CASE("decryptAES") {
-// Создать зашифрованный текст
-string ciphertext = "U29tZSB0ZXh0IHdlIHdhbnQgdG8gZGVjcnlwdA==";
-
-// Создать ключ AES
-SecByteBlock key = deriveAESKeyFromDH(sharedKey);
-
-// Расшифровать текст с помощью AES
-string plaintext = decryptAES(ciphertext, key);
-
-// Убедиться, что текст успешно расшифрован
-CHECK(plaintext == "Some text we want to decrypt");
-}
-
-TEST_CASE("hashPass") {
-// Создать тестовый пароль
-string password = "password";
-
-// Хешировать пароль
-string hashed_password = hashPass(password);
-
-// Убедиться, что пароль успешно хеширован
-CHECK(hashed_password.size() > 0);
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

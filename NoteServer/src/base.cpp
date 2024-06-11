@@ -1,8 +1,8 @@
 #include "base.h"
 
 // Функция для проверки наличия логина в базе
-bool check_login_exists(const std::string &login, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+bool DB_service::check_login_exists(const std::string &login ) {
+    pqxx::connection conn(_con_string);
 
     pqxx::work txn(conn);
     const std::string query = "SELECT COUNT(*) FROM users WHERE login = " + txn.quote(login);
@@ -13,8 +13,8 @@ bool check_login_exists(const std::string &login, const std::string &con_string 
 }
 
 // Функция для проверки правильности пароля пользователя
-bool check_password_correct(const std::string &login, const std::string &password, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+bool DB_service::check_password_correct(const std::string &login, const std::string &password ) {
+    pqxx::connection conn(_con_string);
 
     pqxx::work txn(conn);
     const std::string query = "SELECT COUNT(*) FROM users WHERE login = " + txn.quote(login) + " AND password = " + txn.quote(password);
@@ -25,10 +25,10 @@ bool check_password_correct(const std::string &login, const std::string &passwor
 }
 
 // Функция для проверки наличия пользователя в базе и удаления его
-void delete_user(const std::string &login, const std::string &con_string ) {
+void DB_service::delete_user(const std::string &login ) {
 
-    if (check_login_exists(login, con_string)) {
-        pqxx::connection conn(con_string);
+    if (DB_service::check_login_exists(login)) {
+        pqxx::connection conn(_con_string);
         pqxx::work txn(conn);
         const std::string deleteQuery = "DELETE FROM users WHERE  login = " + txn.quote(login);
         txn.exec(deleteQuery);
@@ -43,10 +43,10 @@ void delete_user(const std::string &login, const std::string &con_string ) {
 }
 
 // Функция для добавления нового пользователя
-void add_user(const std::string &login, const std::string &password, const std::string &con_string ) {
-
-    if (!check_login_exists(login, con_string)) {
-        pqxx::connection conn(con_string);
+void DB_service::add_user(const std::string &login, const std::string &password ) {
+    std::cout<<"add_user"<<std::endl;
+    if (!DB_service::check_login_exists(login)) {
+        pqxx::connection conn(_con_string);
         pqxx::work txn(conn);
         const std::string query =
                 "INSERT INTO users (login, password) VALUES (" + txn.quote(login) + ", " + txn.quote(password) + ")";
@@ -59,20 +59,19 @@ void add_user(const std::string &login, const std::string &password, const std::
 }
 
 // Функция для предоставления прав
-void add_user_access(const std::string &owner, const std::string &filename, const std::string &user, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+void DB_service::add_user_access(const std::string &owner, const std::string &filename, const std::string &user ) {
+    pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;
     pqxx::work txn(conn);
-
     const std::string query =
             "INSERT INTO public.files (login, path) VALUES (" + txn.quote(user) +  ", " + txn.quote(path) + ")";
     txn.exec(query);
     txn.commit();
     conn.close();
 }
-// Функция проверки можно ли дать файл
-bool check_user_access(const std::string &owner, const std::string &filename, const std::string& user, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+
+bool DB_service::check_user_access(const std::string &owner, const std::string &filename, const std::string& user ) {
+    pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;
     pqxx::work txn(conn);
 
@@ -84,8 +83,8 @@ bool check_user_access(const std::string &owner, const std::string &filename, co
 }
 
 
-void delete_file(const std::string &owner, const std::string &filename, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+void DB_service::delete_file(const std::string &owner, const std::string &filename ) {
+    pqxx::connection conn(_con_string);
     pqxx::work txn(conn);
     std::string path = owner+"/"+filename;
     txn.exec("DELETE FROM editing WHERE filename = " + txn.quote(path));
@@ -94,8 +93,8 @@ void delete_file(const std::string &owner, const std::string &filename, const st
     conn.close();
 }
 
-bool check_editing(const std::string &owner, const std::string &filename, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+bool DB_service::check_editing(const std::string &owner, const std::string &filename ) {
+    pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;
     pqxx::work txn(conn);
 
@@ -106,9 +105,9 @@ bool check_editing(const std::string &owner, const std::string &filename, const 
     return result[0][0].as<int>() > 0;
 }
 
-void start_editing(const std::string &owner, const std::string &filename, const std::string &con_string ) {
+void DB_service::start_editing(const std::string &owner, const std::string &filename ) {
 
-    pqxx::connection conn(con_string);
+    pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;
     pqxx::work txn(conn);
 
@@ -119,8 +118,8 @@ void start_editing(const std::string &owner, const std::string &filename, const 
     conn.close();
 
 }
-void end_editing(const std::string &owner, const std::string &filename, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+void DB_service::end_editing(const std::string &owner, const std::string &filename ) {
+    pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;
     pqxx::work txn(conn);
 
@@ -132,11 +131,10 @@ void end_editing(const std::string &owner, const std::string &filename, const st
 
 }
 
-void fetch_editing(const std::string &owner, const std::string &filename, const std::string &con_string ) {
-    pqxx::connection conn(con_string);
+void DB_service::fetch_editing(const std::string &owner, const std::string &filename ) {
+    pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;
     pqxx::work txn(conn);
-
     const std::string query = "SELECT COUNT(*) FROM editing WHERE filename = " + txn.quote(path);
     pqxx::result result = txn.exec(query);
     txn.commit();
@@ -144,7 +142,7 @@ void fetch_editing(const std::string &owner, const std::string &filename, const 
     if (result[0][0].as<int>() > 0){
         end_editing(owner, filename);
     }else{
-        pqxx::connection conn(con_string);
+        pqxx::connection conn(_con_string);
         pqxx::work txn(conn);
         const std::string query =
                 "INSERT INTO editing (filename, flag) VALUES (" + txn.quote(path) +  ", " + txn.quote(false) + ")";
@@ -154,46 +152,5 @@ void fetch_editing(const std::string &owner, const std::string &filename, const 
     }
 }
 
-
-//int main() {}
-//    try {
-//        pqxx::connection conn(con_string);
-//
-//        // Пример использования функций
-//        if (check_login_exists(conn, "testuser")) {
-//            std::cout << "Логин существует в базе." << std::endl;
-//        } else {
-//            std::cout << "Логин не существует в базе." << std::endl;
-//        }
-//
-//        if (check_password_correct(conn, "testuser", "testpassword")) {
-//            std::cout << "Пароль введен правильно." << std::endl;
-//        } else {
-//            std::cout << "Неправильный пароль." << std::endl;
-//        }
-//
-//        delete_user(conn, "newuser");
-//        add_user(conn, "newuser", "newpassword");
-//
-//        if (check_password_correct(conn, "newuser", "newpassword")) {
-//            std::cout << "Пароль введен правильно." << std::endl;
-//        } else {
-//            std::cout << "Неправильный пароль." << std::endl;
-//        }
-//
-//        if (findFileForUser(conn, "testuser", "example.txt")) {
-//            std::cout << "Файл найден для пользователя." << std::endl;
-//        } else {
-//            std::cout << "Файл не найден для пользователя." << std::endl;
-//        }
-//
-//       // pqxx::PQfinish(conn);
-//    } catch (const std::exception &e) {
-//        std::cerr << "Ошибка: " << e.what() << std::endl;
-//        return 1;
-//    }
-//
-//    return 0;
-//}
 
 
