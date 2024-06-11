@@ -2,14 +2,22 @@
 #include <iostream>
 #include <pqxx/pqxx>
 
-bool check_login_exists(const std::string &login, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-bool check_password_correct(const std::string &login, const std::string &password, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void add_user(const std::string &login, const std::string &password, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void delete_user(const std::string &login, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void delete_file(const std::string &owner, const std::string &filename, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void fetch_editing(const std::string &owner, const std::string &filename, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void end_editing(const std::string &owner, const std::string &filename, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void start_editing(const std::string &owner, const std::string &filename, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-bool check_editing(const std::string &owner, const std::string &filename, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-void add_user_access(const std::string &owner, const std::string &filename, const std::string &user, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
-bool check_user_access(const std::string &owner, const std::string &filename, const std::string& user, const std::string &con_string =  "dbname=NoteBase user=postgres password=x5wkfUTi=&8w!e5 hostaddr=172.20.208.1 port=5432");
+class DB_service{
+ public:
+    explicit DB_service(const std::string &con_string) : _con_string(con_string)  {};
+    bool check_login_exists(const std::string &login);
+    bool check_password_correct(const std::string &login, const std::string &password);
+    void add_user(const std::string &login, const std::string &password);
+    void delete_user(const std::string &login);
+    void delete_file(const std::string &owner, const std::string &filename);
+    void fetch_editing(const std::string &owner, const std::string &filename);
+    void end_editing(const std::string &owner, const std::string &filename);
+    void start_editing(const std::string &owner, const std::string &filename);
+    bool check_editing(const std::string &owner, const std::string &filename);
+    void add_user_access(const std::string &owner, const std::string &filename, const std::string &user);
+    bool check_user_access(const std::string &owner, const std::string &filename, const std::string& user);
+ private:
+    const std::string _con_string;
+
+};
+
