@@ -252,6 +252,32 @@ void download_file(const std::string& file) {
         std::cerr << "Failed to open file for writing." << std::endl;
         return;
     }
+}
+
+void SendFile() {
+    std::string owner;
+    std::string filename;
+
+    ImGui::InputText("Owner", &owner);
+    ImGui::InputText("File name", &filename);
+
+    send_file(owner, filename);
+}
+
+void AddAccess(){
+    std::string user;
+    std::string filename;
+
+    ImGui::OpenPopup("Add Access");
+
+    if (ImGui::BeginPopupModal("Add Access", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::InputText("Filename", &filename);
+        ImGui::InputText("User", &user);
+
+        add_access(filename, user);
+        ImGui::EndPopup();
+    }
+}
 
 int main() {
     try {
@@ -292,8 +318,8 @@ int main() {
             ImGui::InputText("Password", password);
 
             if (ImGui::Button("Sign Up")) {
-                //возможно тут понадобится if (registration())
-                if (registration()) { // если нажата кнопка - мы вызываем функцию аутенификации и по логину паролю ниже проверяем есть ли такой
+                
+                if (registration(login, password)) { // если нажата кнопка - мы вызываем функцию аутенификации и по логину паролю ниже проверяем есть ли такой
                     ImGui::Begin("Your menu");
                     ImGui::Text("You are now sucessfully registered");
                     ImGui::End();
@@ -301,79 +327,77 @@ int main() {
             }
 
             if (ImGui::Button("Sign In")) {           
-                if (authentication()) {
+                if (authentication(login, password)) {
                     if (userAlreadyOnPlatform) {
                         ImGui::Text("User is already on the platform");
                     } else {
                         ImGui::Begin("Your menu");
                         ImGui::Text("Welcome to your menu!");
                         ImGui::End();
+                        ImGui::Begin("Workspace");
+
+                        userAlreadyOnPlatform = true; // where is the already on a platgorm check??н
+                        if (ImGui::BeginTabBar("Files")) {
+                            //might be a problem with user_files as it's not declared it is 
+                            for (const auto& file : user_files) {
+                                if (ImGui::BeginTabItem(file.c_str())) {
+                                    std::string file_content = read_file(file);
+                                    if (is_text_file(file)) {
+                                        ImGui::Text(file_content.c_str());
+                                    }
+                                    else {
+                                        ImGui::Text("Can't open this format, please download the file");
+                                    }
+
+                                    if (ImGui::Button("Download file")) {
+                                        download_file();
+                                    }
+
+                                    ImGui::EndTabItem();
+                                }
+                            }
+                            ImGui::EndTabBar();
+                        }
+
+                        if (ImGui::Button("Add access")) {
+                            AddAccess();
+                        }
+
+                        if (ImGui::Button("Send File")) {
+                            SendFile();
+                        }
+
+                        if (ImGui::Button("Delete file")) {
+                            ImGui::OpenPopup("Delete File");
+                            if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                                ImGui::InputText("Owner", owner);
+                                ImGui::InputText("Filename", filename);
+                                delete_file(); //same question
+                                ImGui::EndPopup();
+                            }
+                        }
+
+                        if (ImGui::Button("Delete user")) {
+                            ImGui::OpenPopup("Delete user");
+                            if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                                ImGui::InputText("Name who to delete", login);
+                                delete_user();
+                                ImGui::EndPopup();
+                            }
+                        }
+
+                        if (ImGui::Button("Sign out")) {
+                            log_out(socket);
+                            userAlreadyOnPlatform = false;
+                            // end!! 
+                        }
+
+                        ImGui::End();
+
                     }
                 } else {
                     ImGui::Text("Invalid login or password");
                 }
-            }
-            ImGui::End();
-
-            ImGui::Begin("Workspace");
-
-            //sdelat eto only for each user
-            userAlreadyOnPlatform = true;
-            if (ImGui::BeginTabBar("Files")) {
-            //might be a problem with user_files as it's not declared it is 
-                for (const auto& file : user_files) {
-                    if (ImGui::BeginTabItem(file.c_str())) {
-                        std::string file_content = read_file(file);
-                        if (is_text_file(file)) {
-                            ImGui::Text(file_content.c_str());
-                        }
-                        else {
-                            ImGui::Text("Can't open this format, please download the file");
-                        }
-
-                        if (ImGui::Button("Download file")) {
-                            download_file();
-                        }
-
-                        ImGui::EndTabItem();
-                    }
-                }
-                ImGui::EndTabBar();
-            }
-
-            if (ImGui::Button("Add access")) {
-                ImGui::OpenPopup("Add Access");
-                if (ImGui::BeginPopupModal("Add Access", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-                    ImGui::InputText("Filename", filename);
-                    ImGui::InputText("User", user);
-                    add_access();// nado li peredavat filename and user?
-                    ImGui::EndPopup();
-                }
-            }
-
-            if (ImGui::Button("Delete file")) {
-                ImGui::OpenPopup("Delete File");
-                if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-                    ImGui::InputText("Owner", owner);
-                    ImGui::InputText("Filename", filename);
-                    delete_file(); //same question
-                    ImGui::EndPopup();
-                }
-            }
-
-            if (ImGui::Button("Delete user")) {
-                ImGui::OpenPopup("Delete user");
-                if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-                    ImGui::InputText("Name who to delete", login);
-                    delete_user();
-                    ImGui::EndPopup();
-                }
-            }
-
-            if (ImGui::Button("Sign out")) {
-                log_out(socket);
-                userAlreadyOnPlatform = false;
-                // end!! 
             }
 
             ImGui::End();

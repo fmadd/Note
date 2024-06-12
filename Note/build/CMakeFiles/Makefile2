@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE
+CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -222,14 +222,14 @@ CMakeFiles/imgui.dir/all: _deps/glad-build/CMakeFiles/glad.dir/all
 CMakeFiles/imgui.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=97,98,99,100 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=97,98,99,100 "Built target imgui"
 .PHONY : CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/imgui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/imgui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : CMakeFiles/imgui.dir/rule
 
 # Convenience name for target.
@@ -251,14 +251,14 @@ CMakeFiles/Project_ImGui.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 CMakeFiles/Project_ImGui.dir/all: libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=1 "Built target Project_ImGui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=1 "Built target Project_ImGui"
 .PHONY : CMakeFiles/Project_ImGui.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Project_ImGui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 90
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 90
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Project_ImGui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : CMakeFiles/Project_ImGui.dir/rule
 
 # Convenience name for target.
@@ -277,14 +277,14 @@ CMakeFiles/Project_ImGui.dir/clean:
 _deps/glad-build/CMakeFiles/glad-generate-files.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/glad-build/CMakeFiles/glad-generate-files.dir/build.make _deps/glad-build/CMakeFiles/glad-generate-files.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/glad-build/CMakeFiles/glad-generate-files.dir/build.make _deps/glad-build/CMakeFiles/glad-generate-files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num= "Built target glad-generate-files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num= "Built target glad-generate-files"
 .PHONY : _deps/glad-build/CMakeFiles/glad-generate-files.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/glad-build/CMakeFiles/glad-generate-files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glad-build/CMakeFiles/glad-generate-files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : _deps/glad-build/CMakeFiles/glad-generate-files.dir/rule
 
 # Convenience name for target.
@@ -303,14 +303,14 @@ _deps/glad-build/CMakeFiles/glad-generate-files.dir/clean:
 _deps/glad-build/CMakeFiles/glad.dir/all: _deps/glad-build/CMakeFiles/glad-generate-files.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/glad-build/CMakeFiles/glad.dir/build.make _deps/glad-build/CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/glad-build/CMakeFiles/glad.dir/build.make _deps/glad-build/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=88,89 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=88,89 "Built target glad"
 .PHONY : _deps/glad-build/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/glad-build/CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glad-build/CMakeFiles/glad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : _deps/glad-build/CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -329,14 +329,14 @@ _deps/glad-build/CMakeFiles/glad.dir/clean:
 _deps/glfw-build/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/glfw-build/src/CMakeFiles/glfw.dir/build.make _deps/glfw-build/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/glfw-build/src/CMakeFiles/glfw.dir/build.make _deps/glfw-build/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=90,91,92,93,94,95,96 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=90,91,92,93,94,95,96 "Built target glfw"
 .PHONY : _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/glfw-build/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : _deps/glfw-build/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -355,14 +355,14 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/clean:
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/all:
 	$(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num= "Built target test-verbose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num= "Built target test-verbose"
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/all
 
 # Build rule for subdir invocation for target.
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/rule
 
 # Convenience name for target.
@@ -381,14 +381,14 @@ libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/clean:
 libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/all:
 	$(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87 "Built target cryptopp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87 "Built target cryptopp"
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/all
 
 # Build rule for subdir invocation for target.
 libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 76
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 76
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/rule
 
 # Convenience name for target.
@@ -407,14 +407,14 @@ libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/clean:
 libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/all: libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptopp.dir/all
 	$(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11 "Built target cryptest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11 "Built target cryptest"
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/all
 
 # Build rule for subdir invocation for target.
 libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 86
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeFiles/cryptest.dir/rule
 
 # Convenience name for target.

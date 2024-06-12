@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE
+CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build
 
 # Utility rule file for test-verbose.
 
@@ -67,7 +67,7 @@ include libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/comp
 include libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/progress.make
 
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake && /usr/bin/ctest --verbose --output-on-failure
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake && /usr/bin/ctest --verbose --output-on-failure
 
 test-verbose: libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose
 test-verbose: libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make
@@ -78,10 +78,10 @@ libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build: test-
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build
 
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/clean:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/test && $(CMAKE_COMMAND) -P CMakeFiles/test-verbose.dir/cmake_clean.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/test && $(CMAKE_COMMAND) -P CMakeFiles/test-verbose.dir/cmake_clean.cmake
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/clean
 
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/depend:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/libs/cryptopp-cmake/cryptopp-cmake/test /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/test /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/Note /mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/test /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/test /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE
+# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/good/Note
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,9 +44,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/cmake_install.cmake")
-  include("/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-build/cmake_install.cmake")
-  include("/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cmake_install.cmake")
+  include("/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/cmake_install.cmake")
+  include("/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-build/cmake_install.cmake")
+  include("/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

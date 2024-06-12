@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(cryptopp-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/weidai11/cryptopp" "GIT_TAG" "CRYPTOPP_8_9_0"
-                    SOURCE_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp"
-                    BINARY_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build"
+                    SOURCE_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp"
+                    BINARY_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

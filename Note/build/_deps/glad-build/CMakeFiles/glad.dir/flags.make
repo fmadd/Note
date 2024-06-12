@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/include
+C_INCLUDES = -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include
 
 C_FLAGS = -O3 -DNDEBUG
 

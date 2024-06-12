@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-src/include -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-src/src -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-build/src
+C_INCLUDES = -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/include -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/src -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-build/src
 
 C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -std=gnu99
 

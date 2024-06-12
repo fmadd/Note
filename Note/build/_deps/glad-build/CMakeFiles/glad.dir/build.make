@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE
+CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build
 
 # Include any dependencies generated for this target.
 include _deps/glad-build/CMakeFiles/glad.dir/depend.make
@@ -70,8 +70,8 @@ include _deps/glad-build/CMakeFiles/glad.dir/progress.make
 include _deps/glad-build/CMakeFiles/glad.dir/flags.make
 
 _deps/glad-build/src/glad.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GLAD"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-src && /usr/bin/python3.10 -m glad --profile=compatibility --out-path=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build --api= --generator=c --extensions= --spec=gl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GLAD"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src && /usr/bin/python3.10 -m glad --profile=compatibility --out-path=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build --api= --generator=c --extensions= --spec=gl
 
 _deps/glad-build/include/glad/glad.h: _deps/glad-build/src/glad.c
 	@$(CMAKE_COMMAND) -E touch_nocreate _deps/glad-build/include/glad/glad.h
@@ -79,16 +79,16 @@ _deps/glad-build/include/glad/glad.h: _deps/glad-build/src/glad.c
 _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o: _deps/glad-build/CMakeFiles/glad.dir/flags.make
 _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o: _deps/glad-build/src/glad.c
 _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o: _deps/glad-build/CMakeFiles/glad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o -MF CMakeFiles/glad.dir/src/glad.c.o.d -o CMakeFiles/glad.dir/src/glad.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o -MF CMakeFiles/glad.dir/src/glad.c.o.d -o CMakeFiles/glad.dir/src/glad.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/src/glad.c
 
 _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glad.dir/src/glad.c.i"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/src/glad.c > CMakeFiles/glad.dir/src/glad.c.i
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/src/glad.c > CMakeFiles/glad.dir/src/glad.c.i
 
 _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glad.dir/src/glad.c.s"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/src/glad.c -o CMakeFiles/glad.dir/src/glad.c.s
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/src/glad.c -o CMakeFiles/glad.dir/src/glad.c.s
 
 # Object files for target glad
 glad_OBJECTS = \
@@ -100,20 +100,20 @@ glad_EXTERNAL_OBJECTS =
 _deps/glad-build/libglad.a: _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o
 _deps/glad-build/libglad.a: _deps/glad-build/CMakeFiles/glad.dir/build.make
 _deps/glad-build/libglad.a: _deps/glad-build/CMakeFiles/glad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libglad.a"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean_target.cmake
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libglad.a"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean_target.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/glad-build/CMakeFiles/glad.dir/build: _deps/glad-build/libglad.a
 .PHONY : _deps/glad-build/CMakeFiles/glad.dir/build
 
 _deps/glad-build/CMakeFiles/glad.dir/clean:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean.cmake
 .PHONY : _deps/glad-build/CMakeFiles/glad.dir/clean
 
 _deps/glad-build/CMakeFiles/glad.dir/depend: _deps/glad-build/include/glad/glad.h
 _deps/glad-build/CMakeFiles/glad.dir/depend: _deps/glad-build/src/glad.c
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-src /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/CMakeFiles/glad.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/Note /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/CMakeFiles/glad.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/glad-build/CMakeFiles/glad.dir/depend
 

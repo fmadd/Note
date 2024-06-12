@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE
+CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/test//CMakeFiles/progress.marks
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles 0
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/test//CMakeFiles/progress.marks
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/clean
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/preinstall
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/preinstall
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/rule:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/rule
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/rule
 .PHONY : libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ test-verbose: libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.di
 
 # fast build rule for target.
 test-verbose/fast:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(MAKE) $(MAKESILENT) -f libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build
 .PHONY : test-verbose/fast
 
 # Help Target
@@ -199,6 +199,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

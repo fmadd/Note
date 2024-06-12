@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(glad-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/Dav1dde/glad.git" "GIT_TAG" "df8e9e16110b305479a875399cee13daa0ccadd9"
-                    SOURCE_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-src"
-                    BINARY_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build"
+                    SOURCE_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src"
+                    BINARY_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

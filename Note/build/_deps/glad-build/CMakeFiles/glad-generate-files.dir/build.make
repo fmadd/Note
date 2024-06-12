@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE
+CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build
 
 # Utility rule file for glad-generate-files.
 
@@ -70,8 +70,8 @@ _deps/glad-build/CMakeFiles/glad-generate-files: _deps/glad-build/src/glad.c
 _deps/glad-build/CMakeFiles/glad-generate-files: _deps/glad-build/include/glad/glad.h
 
 _deps/glad-build/src/glad.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GLAD"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-src && /usr/bin/python3.10 -m glad --profile=compatibility --out-path=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build --api= --generator=c --extensions= --spec=gl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GLAD"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src && /usr/bin/python3.10 -m glad --profile=compatibility --out-path=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build --api= --generator=c --extensions= --spec=gl
 
 _deps/glad-build/include/glad/glad.h: _deps/glad-build/src/glad.c
 	@$(CMAKE_COMMAND) -E touch_nocreate _deps/glad-build/include/glad/glad.h
@@ -87,10 +87,10 @@ _deps/glad-build/CMakeFiles/glad-generate-files.dir/build: glad-generate-files
 .PHONY : _deps/glad-build/CMakeFiles/glad-generate-files.dir/build
 
 _deps/glad-build/CMakeFiles/glad-generate-files.dir/clean:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build && $(CMAKE_COMMAND) -P CMakeFiles/glad-generate-files.dir/cmake_clean.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && $(CMAKE_COMMAND) -P CMakeFiles/glad-generate-files.dir/cmake_clean.cmake
 .PHONY : _deps/glad-build/CMakeFiles/glad-generate-files.dir/clean
 
 _deps/glad-build/CMakeFiles/glad-generate-files.dir/depend:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-src /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/Note /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/glad-build/CMakeFiles/glad-generate-files.dir/depend
 

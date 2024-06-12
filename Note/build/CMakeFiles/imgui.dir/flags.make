@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DHAS_BOOST -DIMGUI_IMPL_OPENGL_LOADER_GLAD
 
-CXX_INCLUDES = -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/imgui-src -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-src/include -I/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glad-build/include
+CXX_INCLUDES = -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/include -I/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20
 

@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(glfw-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/glfw/glfw.git" "GIT_TAG" "3.3.2"
-                    SOURCE_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-src"
-                    BINARY_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-build"
+                    SOURCE_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src"
+                    BINARY_DIR          "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

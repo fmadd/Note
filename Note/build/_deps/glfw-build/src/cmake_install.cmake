@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/glfw-src/src
+# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

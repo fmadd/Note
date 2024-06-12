@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild
+CMAKE_SOURCE_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild
+CMAKE_BINARY_DIR = /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild
 
 # Utility rule file for cryptopp-populate.
 
@@ -77,63 +77,63 @@ CMakeFiles/cryptopp-populate-complete: cryptopp-populate-prefix/src/cryptopp-pop
 CMakeFiles/cryptopp-populate-complete: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-build
 CMakeFiles/cryptopp-populate-complete: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-install
 CMakeFiles/cryptopp-populate-complete: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'cryptopp-populate'"
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles
-	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate-complete
-	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'cryptopp-populate'"
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles
+	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate-complete
+	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-done
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-update:
 .PHONY : cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-update
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-build: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'cryptopp-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'cryptopp-populate'"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-build
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-configure: cryptopp-populate-prefix/tmp/cryptopp-populate-cfgcmd.txt
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-configure: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'cryptopp-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'cryptopp-populate'"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-configure
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-download: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitinfo.txt
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-download: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'cryptopp-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake && /usr/bin/cmake -P /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitclone.cmake
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'cryptopp-populate'"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake && /usr/bin/cmake -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitclone.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-download
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-install: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'cryptopp-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'cryptopp-populate'"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-install
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'cryptopp-populate'"
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src
-	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp
-	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'cryptopp-populate'"
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src
+	/usr/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp
+	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-mkdir
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-patch: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'cryptopp-populate'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'cryptopp-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-patch
+	/usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-patch
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-update:
 .PHONY : cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-update
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-test: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'cryptopp-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'cryptopp-populate'"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-build && /usr/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-test
 
 cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-update: cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'cryptopp-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp && /usr/bin/cmake -P /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'cryptopp-populate'"
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp && /usr/bin/cmake -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitupdate.cmake
 
 cryptopp-populate: CMakeFiles/cryptopp-populate
 cryptopp-populate: CMakeFiles/cryptopp-populate-complete
@@ -157,6 +157,6 @@ CMakeFiles/cryptopp-populate.dir/clean:
 .PHONY : CMakeFiles/cryptopp-populate.dir/clean
 
 CMakeFiles/cryptopp-populate.dir/depend:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/FINALE/build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cryptopp-populate.dir/depend
 
