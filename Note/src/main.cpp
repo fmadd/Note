@@ -261,7 +261,7 @@ void SendFile() {
     ImGui::InputText("Owner", &owner);
     ImGui::InputText("File name", &filename);
 
-    send_file(owner, filename);
+    send_file(owner, filename); // I struggle with peredacha peremennyh, I really don't know how to do it..
 }
 
 void AddAccess(){
@@ -275,6 +275,37 @@ void AddAccess(){
         ImGui::InputText("User", &user);
 
         add_access(filename, user);
+
+        ImGui::EndPopup();
+    }
+}
+
+void DeleteFile() {
+    std::string owner;
+    std::string filename;
+
+    ImGui::OpenPopup("Delete File");
+    if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+
+        ImGui::InputText("Owner", owner);
+        ImGui::InputText("Filename", filename);
+
+        delete_file(owner, filename); 
+
+        ImGui::EndPopup();
+    }
+
+}
+
+void DeleteUser() {
+    std::string login; 
+
+    ImGui::OpenPopup("Delete user");
+    if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::InputText("Name who to delete", login);
+
+        delete_user(login);
+
         ImGui::EndPopup();
     }
 }
@@ -368,26 +399,15 @@ int main() {
                         }
 
                         if (ImGui::Button("Delete file")) {
-                            ImGui::OpenPopup("Delete File");
-                            if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-                                ImGui::InputText("Owner", owner);
-                                ImGui::InputText("Filename", filename);
-                                delete_file(); //same question
-                                ImGui::EndPopup();
-                            }
+                            DeleteFile();
                         }
 
                         if (ImGui::Button("Delete user")) {
-                            ImGui::OpenPopup("Delete user");
-                            if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-                                ImGui::InputText("Name who to delete", login);
-                                delete_user();
-                                ImGui::EndPopup();
-                            }
+                            DeleteUser();
                         }
 
                         if (ImGui::Button("Sign out")) {
-                            log_out(socket);
+                            log_out();
                             userAlreadyOnPlatform = false;
                             // end!! 
                         }
@@ -424,7 +444,7 @@ int main() {
         socket.close();
     }
     catch (exception& e) {
-        cerr << "Îøèáêà: " << e.what() << endl;
+        cerr << "Mistake: " << e.what() << endl;
     }
 
     return 0;
