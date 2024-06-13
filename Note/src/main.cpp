@@ -41,6 +41,7 @@ void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string user
 
     ofstream file(user_path / filename, ios::out);
     size_t received_bytes = 0;
+    ImGui::Text("Create file");
     //cout << "create file" << endl;
     size_t file_size;
 
@@ -52,6 +53,7 @@ void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string user
         vector<char> buffer(1024);
         size_t bytes_received = socket.read_some(boost::asio::buffer(buffer));
 
+        ImGui::Text("Start writing");
         //cout << "start writing" << endl;
         std::string ciphertext(buffer.begin(), buffer.end());
         std::string plaintext = decryptAES(ciphertext, aesKey);
@@ -61,6 +63,7 @@ void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string user
 
     } while (received_bytes < file_size);
 
+    ImGui::Text("File has been sucessfully received");
     // cout << "Файл был успешно получен: " << filename << endl;
 }
 
@@ -68,7 +71,15 @@ void delete_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey) { //Hurray!
     int number = 8;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
-    //std::string owner, filename;
+    std::string owner, filename;
+
+    ImGui::OpenPopup("Delete File");
+    if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::InputText("Owner", &owner);
+        ImGui::InputText("Filename", &filename);
+        ImGui::EndPopup();
+    }
+
     //std::cout << "Введите имя владельца: ";
     //std::cin >> owner;
     //std::cout << "Имя файла: ";
@@ -89,6 +100,8 @@ void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
     string owner, owner_length;
+
+    ImGui::InputText("Input owner's name", &owner);
    // cout << "Введите имя владельца: ";
     //cin >> owner;
     owner_length = owner.size();
@@ -96,6 +109,8 @@ void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
     write(socket, buffer(owner));
 
     string filename;
+
+    ImGui::InputText("File name", &filename);
     //cout << "Введите имя файла: ";
     //cin >> filename;
     filename = encryptAES(filename, aesKey);
@@ -135,12 +150,15 @@ void authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hu
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
 
-    //std::string login, password;
-    // JUST A TEST IN CASE
+    std::string login, password;
+    ImGui::InputText("Login", &login);
+    ImGui::InputText("Password", &password);
+
     //std::cout << "Логин: ";
     //std::cin >> login;
     //std::cout << "Пароль: ";
     //std::cin >> password;
+
     password = encryptAES(password, aesKey);
 
     // Отправляем логин и пароль на сервер.
@@ -156,7 +174,10 @@ void authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hu
     bool response;
     socket.read_some(boost::asio::buffer(&response, sizeof(bool)));
 
-    if (!response) throw std::runtime_error("Wrong password or login");
+    if (!response) {
+        throw std::runtime_error("Wrong password or login");
+        ImGui::Text("Wrong password or login");
+    }
     //std::cout << response << std::endl;
 }
 
@@ -164,7 +185,10 @@ void registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hurr
     int number = 1;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
-    //std::string login, password;
+    std::string login, password;
+    ImGui::InputText("Login", &login);
+    ImGui::InputText("Password", &password);
+
     //std::cout << "Логин: ";
     //std::cin >> login;
     //std::cout << "Пароль: ";
@@ -184,15 +208,34 @@ void registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hurr
     bool response;
     socket.read_some(boost::asio::buffer(&response, sizeof(bool)));
 
-    if (!response) throw std::runtime_error("Неудалось зарегестрировать пользователя");
+    if (ImGui::Button("Sign Up") && response) {
+        ImGui::Begin("Your menu");
+        // cheto napisat'
+        ImGui::Text("You are now sucessfully registered");
+        ImGui::End();
+    }
+
+    if (!response)
+    {
+        throw std::runtime_error("Неудалось зарегестрировать пользователя");
+        ImGui::Text("We can't register this user");
+
+    }
     //std::cout << response << std::endl;
+
 }
 
 void delete_user(tcp::socket& socket) { //Hurray!
     int number = 7;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
+    std::string login;
 
-    //std::string login;
+    ImGui::OpenPopup("Delete user");
+    if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::InputText("Username", &login);
+        ImGui::EndPopup();
+    }
+
     //std::cout << "Кого удаляем : ";
     //std::cin >> login;
 
@@ -208,6 +251,13 @@ void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
     std::string filename, user;
+
+    ImGui::OpenPopup("Add Access");
+    if (ImGui::BeginPopupModal("Add Access", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+        ImGui::InputText("Filename", &filename);
+        ImGui::InputText("User", &user);
+        ImGui::EndPopup();
+    }
     //std::cout << " Имя файла: ";
     //std::cin >> filename;
     //std::cout << "Кому даем права: ";
@@ -225,7 +275,8 @@ void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
 
 void log_out(tcp::socket& socket) { //Hurray!
     int number = 6;
-    cout << "Logout" << endl;
+    ImGui::Text("You are now logged out");
+    //cout << "Logout" << endl;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
 }
@@ -251,62 +302,6 @@ void download_file(const std::string& file) {
     if (!save_file.is_open()) {
         std::cerr << "Failed to open file for writing." << std::endl;
         return;
-    }
-}
-
-void SendFile() {
-    std::string owner;
-    std::string filename;
-
-    ImGui::InputText("Owner", &owner);
-    ImGui::InputText("File name", &filename);
-
-    send_file(owner, filename); // I struggle with peredacha peremennyh, I really don't know how to do it..
-}
-
-void AddAccess(){
-    std::string user;
-    std::string filename;
-
-    ImGui::OpenPopup("Add Access");
-
-    if (ImGui::BeginPopupModal("Add Access", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::InputText("Filename", &filename);
-        ImGui::InputText("User", &user);
-
-        add_access(filename, user);
-
-        ImGui::EndPopup();
-    }
-}
-
-void DeleteFile() {
-    std::string owner;
-    std::string filename;
-
-    ImGui::OpenPopup("Delete File");
-    if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-
-        ImGui::InputText("Owner", owner);
-        ImGui::InputText("Filename", filename);
-
-        delete_file(owner, filename); 
-
-        ImGui::EndPopup();
-    }
-
-}
-
-void DeleteUser() {
-    std::string login; 
-
-    ImGui::OpenPopup("Delete user");
-    if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::InputText("Name who to delete", login);
-
-        delete_user(login);
-
-        ImGui::EndPopup();
     }
 }
 
@@ -345,20 +340,8 @@ int main() {
 
             ImGui::Begin("Sign Up");
 
-            ImGui::InputText("Login", login);
-            ImGui::InputText("Password", password);
-
-            if (ImGui::Button("Sign Up")) {
-                
-                if (registration(login, password)) { // если нажата кнопка - мы вызываем функцию аутенификации и по логину паролю ниже проверяем есть ли такой
-                    ImGui::Begin("Your menu");
-                    ImGui::Text("You are now sucessfully registered");
-                    ImGui::End();
-                }
-            }
-
             if (ImGui::Button("Sign In")) {           
-                if (authentication(login, password)) {
+                if (authentication()) {
                     if (userAlreadyOnPlatform) {
                         ImGui::Text("User is already on the platform");
                     } else {
@@ -367,7 +350,7 @@ int main() {
                         ImGui::End();
                         ImGui::Begin("Workspace");
 
-                        userAlreadyOnPlatform = true; // where is the already on a platgorm check??н
+                        userAlreadyOnPlatform = true; // where is the already on a platgorm check??
                         if (ImGui::BeginTabBar("Files")) {
                             //might be a problem with user_files as it's not declared it is 
                             for (const auto& file : user_files) {
@@ -391,19 +374,19 @@ int main() {
                         }
 
                         if (ImGui::Button("Add access")) {
-                            AddAccess();
+                            add_access();
                         }
 
                         if (ImGui::Button("Send File")) {
-                            SendFile();
+                            send_file();
                         }
 
                         if (ImGui::Button("Delete file")) {
-                            DeleteFile();
+                            delete_file();
                         }
 
                         if (ImGui::Button("Delete user")) {
-                            DeleteUser();
+                            delete_user();
                         }
 
                         if (ImGui::Button("Sign out")) {
