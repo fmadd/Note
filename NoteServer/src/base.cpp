@@ -36,8 +36,7 @@ void DB_service::delete_user(const std::string &login ) {
         txn.commit();
         conn.close();
     } else {
-       // throw "l";
-        std::cout << "Пользователь " << login << " не найден в базе." << std::endl;
+        throw std::runtime_error("Login not in base");
     }
 
 }

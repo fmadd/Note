@@ -2,7 +2,16 @@
 #include <filesystem>
 #include <string>
 
+/**
+ * \file path_util.hpp
+ * \brief Получает путь к каталогу пользователя.
+ */
 
+/**
+ * \brief Получает путь к каталогу пользователя
+ * \param user_name Имя пользователя. По умолчанию "test_user", если не указано.
+ * \return Путь к каталогу пользователя.
+ */
 std::filesystem::path get_path_to_dir(const std::string& user_name = "test_user") {
     std::filesystem::path current_path = std::filesystem::current_path();
 

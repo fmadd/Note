@@ -1,0 +1,178 @@
+\hypertarget{classserver__service}{}\doxysection{server\+\_\+service Class Reference}
+\label{classserver__service}\index{server\_service@{server\_service}}
+
+
+Класс, предоставляющий сервисы сервера для обработки запросов клиента  
+
+
+
+
+{\ttfamily \#include $<$server.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver__service_ad118b45a6c2c47eb934341e55acd70df}{server\+\_\+service}} (\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&socket, const \mbox{\hyperlink{classDB__service}{DB\+\_\+service}} \&db, Crypto\+PP\+::\+Sec\+Byte\+Block aes\+Key)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classserver__service}{server\+\_\+service}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_acf3aaa7d833927f8d191405f6bc18514}{except\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает запрос на получение файла. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_afbc351715abffe36e4bae1976853ebf9}{send\+\_\+file}} (const string \&owner, const string \&user, const string \&filename)
+\begin{DoxyCompactList}\small\item\em Отправляет файл. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_ad9672323aa9e31b7b071b218b0d7e044}{send}} ()
+\begin{DoxyCompactList}\small\item\em Отправляет файл пользователю. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_a15f77e9eb835df84d123c1e48ba5c6ce}{authentication}} ()
+\begin{DoxyCompactList}\small\item\em Аутентификация пользователя. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_afc39d414b1f66a7316fc26cdd39cc9d7}{registration}} ()
+\begin{DoxyCompactList}\small\item\em Регистрация пользователя. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_a053a1b0452820559cd62554419a78d64}{add\+\_\+access}} ()
+\begin{DoxyCompactList}\small\item\em Добавляет доступ пользователю к файлу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_a42aa84561deb1064bf59e004c39fede4}{log\+\_\+out}} ()
+\begin{DoxyCompactList}\small\item\em Выход пользователя из системы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_aaada77582effc0e72ca0899bcee6ffe1}{del\+\_\+user}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет пользователя. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_aaec036ab1563f58e4cb314aa135ed7fc}{del\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет файл. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserver__service_a77e7757bad2320ee0a82891caa3eabe0}{session}} ()
+\begin{DoxyCompactList}\small\item\em Обрабатывает сеанс обмена данными с клиентом. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, предоставляющий сервисы сервера для обработки запросов клиента 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver__service_ad118b45a6c2c47eb934341e55acd70df}\label{classserver__service_ad118b45a6c2c47eb934341e55acd70df}} 
+\index{server\_service@{server\_service}!server\_service@{server\_service}}
+\index{server\_service@{server\_service}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{server\_service()}{server\_service()}}
+{\footnotesize\ttfamily server\+\_\+service\+::server\+\_\+service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&}]{socket,  }\item[{const \mbox{\hyperlink{classDB__service}{DB\+\_\+service}} \&}]{db,  }\item[{Crypto\+PP\+::\+Sec\+Byte\+Block}]{aes\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Конструктор класса \mbox{\hyperlink{classserver__service}{server\+\_\+service}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Ссылка на объект класса \mbox{\hyperlink{classsocket__service}{socket\+\_\+service}}. \\
+\hline
+{\em db} & Объект класса \mbox{\hyperlink{classDB__service}{DB\+\_\+service}}. \\
+\hline
+{\em aes\+Key} & Ключ шифрования AES. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver__service_a053a1b0452820559cd62554419a78d64}\label{classserver__service_a053a1b0452820559cd62554419a78d64}} 
+\index{server\_service@{server\_service}!add\_access@{add\_access}}
+\index{add\_access@{add\_access}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{add\_access()}{add\_access()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::add\+\_\+access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Добавляет доступ пользователю к файлу. 
+
+\mbox{\Hypertarget{classserver__service_a15f77e9eb835df84d123c1e48ba5c6ce}\label{classserver__service_a15f77e9eb835df84d123c1e48ba5c6ce}} 
+\index{server\_service@{server\_service}!authentication@{authentication}}
+\index{authentication@{authentication}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{authentication()}{authentication()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::authentication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Аутентификация пользователя. 
+
+\mbox{\Hypertarget{classserver__service_aaec036ab1563f58e4cb314aa135ed7fc}\label{classserver__service_aaec036ab1563f58e4cb314aa135ed7fc}} 
+\index{server\_service@{server\_service}!del\_file@{del\_file}}
+\index{del\_file@{del\_file}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{del\_file()}{del\_file()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::del\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Удаляет файл. 
+
+\mbox{\Hypertarget{classserver__service_aaada77582effc0e72ca0899bcee6ffe1}\label{classserver__service_aaada77582effc0e72ca0899bcee6ffe1}} 
+\index{server\_service@{server\_service}!del\_user@{del\_user}}
+\index{del\_user@{del\_user}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{del\_user()}{del\_user()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::del\+\_\+user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Удаляет пользователя. 
+
+\mbox{\Hypertarget{classserver__service_acf3aaa7d833927f8d191405f6bc18514}\label{classserver__service_acf3aaa7d833927f8d191405f6bc18514}} 
+\index{server\_service@{server\_service}!except\_file@{except\_file}}
+\index{except\_file@{except\_file}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{except\_file()}{except\_file()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::except\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает запрос на получение файла. 
+
+\mbox{\Hypertarget{classserver__service_a42aa84561deb1064bf59e004c39fede4}\label{classserver__service_a42aa84561deb1064bf59e004c39fede4}} 
+\index{server\_service@{server\_service}!log\_out@{log\_out}}
+\index{log\_out@{log\_out}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{log\_out()}{log\_out()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::log\+\_\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Выход пользователя из системы. 
+
+\mbox{\Hypertarget{classserver__service_afc39d414b1f66a7316fc26cdd39cc9d7}\label{classserver__service_afc39d414b1f66a7316fc26cdd39cc9d7}} 
+\index{server\_service@{server\_service}!registration@{registration}}
+\index{registration@{registration}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{registration()}{registration()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::registration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Регистрация пользователя. 
+
+\mbox{\Hypertarget{classserver__service_ad9672323aa9e31b7b071b218b0d7e044}\label{classserver__service_ad9672323aa9e31b7b071b218b0d7e044}} 
+\index{server\_service@{server\_service}!send@{send}}
+\index{send@{send}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Отправляет файл пользователю. 
+
+\mbox{\Hypertarget{classserver__service_afbc351715abffe36e4bae1976853ebf9}\label{classserver__service_afbc351715abffe36e4bae1976853ebf9}} 
+\index{server\_service@{server\_service}!send\_file@{send\_file}}
+\index{send\_file@{send\_file}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{send\_file()}{send\_file()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::send\+\_\+file (\begin{DoxyParamCaption}\item[{const string \&}]{owner,  }\item[{const string \&}]{user,  }\item[{const string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Отправляет файл. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em user} & Пользователь. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver__service_a77e7757bad2320ee0a82891caa3eabe0}\label{classserver__service_a77e7757bad2320ee0a82891caa3eabe0}} 
+\index{server\_service@{server\_service}!session@{session}}
+\index{session@{session}!server\_service@{server\_service}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily void server\+\_\+service\+::session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает сеанс обмена данными с клиентом. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{server_8hpp}{server.\+hpp}}\end{DoxyCompactItemize}

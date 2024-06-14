@@ -16,18 +16,34 @@ using namespace CryptoPP;
 
 std::string current_user;
 
+/**
+ * \file server.hpp
+ * \brief Класс server_service
+ */
 
+/**
+ * \class server_service
+ * \brief Класс, предоставляющий сервисы сервера для обработки запросов клиента
+ */
 class server_service {
 private:
-    socket_service &_socket;
-    DB_service _db;
-    CryptoPP::SecByteBlock _aesKey;
+    socket_service &_socket; /**< Ссылка на объект класса socket_service для работы с сокетом */
+    DB_service _db; /**< Объект класса DB_service для работы с базой данных */
+    CryptoPP::SecByteBlock _aesKey; /**< Ключ шифрования AES */
 
 public:
+    /**
+    * \brief Конструктор класса server_service.
+    * \param socket Ссылка на объект класса socket_service.
+    * \param db Объект класса DB_service.
+    * \param aesKey Ключ шифрования AES.
+    */
     explicit server_service(socket_service &socket, const DB_service &db, CryptoPP::SecByteBlock aesKey) : _socket(socket),
                                                                                                         _db(db),
                                                                                                         _aesKey(aesKey) {};
-
+    /**
+     * \brief Обрабатывает запрос на получение файла.
+     */
     void except_file() {
         string filename, owner;
 
@@ -51,7 +67,12 @@ public:
         } while (received_bytes < file_size);
         _db.fetch_editing(owner, filename);
     }
-
+    /**
+     * \brief Отправляет файл.
+     * \param owner Владелец файла.
+     * \param user Пользователь.
+     * \param filename Имя файла.
+     */
     void send_file(const string &owner, const string &user, const string &filename) {
         _db.start_editing(owner, filename);
         ifstream file;
@@ -71,7 +92,9 @@ public:
         }
         file.close();
     }
-
+    /**
+     * \brief Отправляет файл пользователю.
+     */
     void send() {
         string owner = _socket.get_string();
         string filename = _socket.get_string();
@@ -91,17 +114,25 @@ public:
             throw std::runtime_error("file editing right now");
         }
     }
-
+    /**
+     * \brief Аутентификация пользователя.
+     */
     void authentication() {
         std::string login, password;
-
         login = _socket.get_string();
         password = decryptAES(_socket.get_string(), _aesKey);
+        std::cout << "111 Registration" << std::endl;
+
         bool is_authenticated = _db.check_password_correct(login, hashPass(password));
         if (is_authenticated) current_user = login;
-        _socket.writeInSocket(boost::asio::buffer(&is_authenticated, sizeof(bool)));
-    }
+        std::cout << "2 Registration" << std::endl;
 
+        _socket.writeInSocket(boost::asio::buffer(&is_authenticated, sizeof(bool)));
+        std::cout << "3 Registration" << std::endl;
+    }
+    /**
+    * \brief Регистрация пользователя.
+    */
     void registration() {
 
         std::string login, password;
@@ -109,8 +140,6 @@ public:
         password = _socket.get_string();
         bool response;
         try {
-            // Отправляем ответ клиенту.
-            std::cout << "reg2"<<endl;
             _db.add_user(login, hashPass(password));
             current_user = login;
             response = true;
@@ -120,36 +149,45 @@ public:
         }
         _socket.writeInSocket(boost::asio::buffer(&response, sizeof(bool)));
     }
-
+    /**
+     * \brief Добавляет доступ пользователю к файлу.
+     */
     void add_access() {
         string owner = current_user, filename, user;
         filename = _socket.get_string();
         user = _socket.get_string();
         _db.add_user_access(owner, filename, user);
     }
-
+    /**
+     * \brief Выход пользователя из системы.
+     */
     void log_out() {
         cout << "Logout" << endl;
         current_user.clear();
     }
-
+    /**
+     * \brief Удаляет пользователя.
+     */
     void del_user() {
         string login = _socket.get_string();
         _db.delete_user(login);
     }
-
+    /**
+   * \brief Удаляет файл.
+   */
     void del_file() {
         string owner = _socket.get_string();
         string filename = _socket.get_string();
         _db.delete_file(owner, filename);
     }
-
+    /**
+     * \brief Обрабатывает сеанс обмена данными с клиентом.
+     */
     void session() {
 
         int type = _socket.read_request();
 
         if (type == 1) {
-            std::cout << "Type"<<std::endl;
             registration();
         } else if (type == 2) {
             authentication();
@@ -158,7 +196,6 @@ public:
         } else if (type == 4) {
             except_file();
         } else if (type == 5) {
-            std::cout<<"add"<<std::endl;
             add_access();
         } else if (type == 6) {
             log_out();

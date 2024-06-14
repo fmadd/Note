@@ -44,75 +44,77 @@ TEST_CASE( "TestLogin") {
     //CHECK(!check_login_exists("Bob", con_string));
     drop_Database();
 }
-//
-//TEST_CASE( "TestPassword") {
-//// Проверить, что возвращаемый пользователь имеет правильное имя и возраст
-//    create_Database();
-//    DB_service db(con_string);
-//    CHECK(db.check_password_correct("John", "30"));
-//
-//    drop_Database();
-//}
-//
-//TEST_CASE( "TestAdd") {
-//    create_Database();
-//    DB_service db(con_string);
-//    // Проверить, что возвращаемый пользователь имеет правильное имя и возраст
-//    db.add_user("Nastya1", "40");
-//    CHECK(db.check_login_exists("Nastya1"));
-//    drop_Database();
-//}
-//
-//TEST_CASE( "TestDel") {
-//    create_Database();
-//    DB_service db(con_string);
-//    // Проверить, что возвращаемый пользователь имеет правильное имя и возраст
-//    CHECK(db.check_login_exists("John"));
-//    db.delete_user("John");
-//
-//    CHECK(!db.check_login_exists("John"));
-//    drop_Database();
-//}
-//
-//
-//
-//TEST_CASE("add_user_access") {
-//
-//    create_Database();
-//    DB_service db(con_string);
-//    db.add_user_access("john.doe", "test_file.txt", "test_user");
-//    CHECK(db.check_user_access("john.doe", "test_file.txt", "test_user") == true);
-//    drop_Database();
-//
-//}
-//
-//TEST_CASE("delete_file") {
-//    create_Database();
-//    DB_service db(con_string);
-//    db.delete_file("john.doe", "test_file.txt");
-//    CHECK(db.check_user_access("john.doe", "test_file.txt", "test_user") == false);
-//    drop_Database();
-//}
-//
-//TEST_CASE("check_editing") {
-//    create_Database();
-//    DB_service db(con_string);
-//    CHECK(db.check_editing("john.doe", "test_file.txt") == true);
-//
-//    db.start_editing("john.doe", "test_file.txt");
-//
-//    CHECK(db.check_editing("john.doe", "test_file.txt") == false);
-//
-//    db.end_editing("john.doe", "test_file.txt");
-//
-//    CHECK(db.check_editing("john.doe", "test_file.txt") == true);
-//    drop_Database();
-//}
-//
-//TEST_CASE("fetch_editing") {
-//    create_Database();
-//    DB_service db(con_string);
-//    db.fetch_editing("john.doe", "test_file.txt");
-//    CHECK(db.check_editing("john.doe", "test_file.txt") == true);
-//    drop_Database();
-//}
+
+TEST_CASE( "TestPassword") {
+// Проверить, что возвращаемый пользователь имеет правильное имя и возраст
+    create_Database();
+    DB_service db(con_string);
+    CHECK(db.check_password_correct("John", "30"));
+
+    drop_Database();
+}
+
+TEST_CASE( "TestAdd") {
+    create_Database();
+    DB_service db(con_string);
+    db.add_user("Nastya1", "40");
+    
+    CHECK(db.check_login_exists("Nastya1"));
+    drop_Database();
+}
+
+TEST_CASE( "TestDel") {
+    create_Database();
+    DB_service db(con_string);
+    CHECK(db.check_login_exists("John"));
+    CHECK(!db.check_login_exists("Bob"));
+    db.delete_user("John");
+    CHECK_THROWS((db.delete_user("John1")));
+    CHECK(!db.check_login_exists("John"));
+    drop_Database();
+}
+
+
+
+TEST_CASE("add_user_access") {
+
+    create_Database();
+    DB_service db(con_string);
+    db.add_user_access("john.doe", "test_file.txt", "test_user");
+    CHECK(db.check_user_access("john.doe", "test_file.txt", "test_user") == true);
+    CHECK(db.check_user_access("john.doe", "another_file.txt", "test_user") == false);
+    drop_Database();
+
+}
+
+TEST_CASE("delete_file") {
+    create_Database();
+    DB_service db(con_string);
+    db.delete_file("john.doe", "test_file.txt");
+    CHECK(db.check_user_access("john.doe", "test_file.txt", "test_user") == false);
+    drop_Database();
+}
+
+TEST_CASE("check_editing") {
+    create_Database();
+    DB_service db(con_string);
+    CHECK(db.check_editing("john.doe", "test_file.txt") == true);
+    CHECK(db.check_editing("Jane", "20") == false);
+
+    db.start_editing("john.doe", "test_file.txt");
+
+    CHECK(db.check_editing("john.doe", "test_file.txt") == false);
+
+    db.end_editing("john.doe", "test_file.txt");
+
+    CHECK(db.check_editing("john.doe", "test_file.txt") == true);
+    drop_Database();
+}
+
+TEST_CASE("fetch_editing") {
+    create_Database();
+    DB_service db(con_string);
+    db.fetch_editing("john.doe", "test_file.txt");
+    CHECK(db.check_editing("john.doe", "test_file.txt") == true);
+    drop_Database();
+}

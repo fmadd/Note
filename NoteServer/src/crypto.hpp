@@ -18,13 +18,26 @@ using namespace boost::asio;
 using namespace std;
 using namespace CryptoPP;
 
+/**
+ * \file crypto.hpp
+ * \brief Функции для шифрования и хэширования данных
+ */
 
+/**
+ * \brief Отправляет зашифрованный блок данных через сокет.
+ * \param socket Сокет для отправки данных.
+ * \param block Блок данных для отправки.
+ */
 void send_crypto_block(socket_service &socket, const SecByteBlock &block) {
     size_t size = block.size();
     socket.writeInSocket(buffer(&size, sizeof(size)));
     socket.writeInSocket(buffer(block.data(), size));
 }
-
+/**
+ * \brief Получает зашифрованный блок данных через сокет.
+ * \param socket Сокет для получения данных.
+ * \return Зашифрованный блок данных.
+ */
 SecByteBlock receive_crypto_block(socket_service &socket) {
     size_t size = socket.read_filesize();
     SecByteBlock block(size);
@@ -35,7 +48,11 @@ SecByteBlock receive_crypto_block(socket_service &socket) {
 
     return block;
 }
-
+/**
+ * \brief Отправляет параметр через сокет.
+ * \param socket Сокет для отправки данных.
+ * \param val Параметр для отправки.
+ */
 void send_param(socket_service &socket, Integer &val) {
     size_t size = val.MinEncodedSize();
     SecByteBlock block(size);
@@ -43,7 +60,14 @@ void send_param(socket_service &socket, Integer &val) {
     send_crypto_block(socket, block);
 
 }
-
+/**
+ * \brief Генерирует ключи для протокола Диффи-Хеллман и отправляет необходимые параметры через сокет.
+ * \param socket Сокет для отправки данных.
+ * \param dh Объект класса DH для генерации ключей.
+ * \param rnd Генератор случайных чисел.
+ * \param privKey Приватный ключ.
+ * \param pubKey Публичный ключ.
+ */
 void
 GenerateDHKeys(socket_service &socket, DH &dh, AutoSeededRandomPool &rnd, SecByteBlock &privKey, SecByteBlock &pubKey) {
     dh.AccessGroupParameters().GenerateRandomWithKeySize(rnd, 512);
@@ -60,7 +84,11 @@ GenerateDHKeys(socket_service &socket, DH &dh, AutoSeededRandomPool &rnd, SecByt
     dh.GenerateKeyPair(rnd, privKey, pubKey);
 }
 
-
+/**
+ * \brief Вычисляет симметричный ключ шифрования из общего ключа Диффи-Хеллмана.
+ * \param sharedKey Общий ключ Диффи-Хеллмана.
+ * \return Симметричный ключ шифрования.
+ */
 CryptoPP::SecByteBlock deriveAESKeyFromDH(SecByteBlock &sharedKey) {
     SecByteBlock key(SHA256::DIGESTSIZE);
     SHA256().CalculateDigest(key, sharedKey, sharedKey.size());
@@ -68,7 +96,12 @@ CryptoPP::SecByteBlock deriveAESKeyFromDH(SecByteBlock &sharedKey) {
     return key;
 }
 
-
+/**
+ * \brief Шифрует текст с использованием AES.
+ * \param plaintext Исходный текст.
+ * \param key Ключ шифрования.
+ * \return Зашифрованный текст.
+ */
 std::string encryptAES(const std::string &plaintext, CryptoPP::SecByteBlock key) {
 //
     ECB_Mode<AES>::Encryption cfbEncryption(key, key.size());
@@ -88,7 +121,12 @@ std::string encryptAES(const std::string &plaintext, CryptoPP::SecByteBlock key)
     return cipher;
 
 }
-
+/**
+ * \brief Расшифровывает текст, зашифрованный с использованием AES.
+ * \param ciphertext Зашифрованный текст.
+ * \param Key Ключ расшифрования.
+ * \return Расшифрованный текст.
+ */
 std::string decryptAES(const std::string &ciphertext, CryptoPP::SecByteBlock Key) {
     ECB_Mode<AES>::Decryption aesDecryption(Key, Key.size());
     string recovered;
@@ -102,7 +140,11 @@ std::string decryptAES(const std::string &ciphertext, CryptoPP::SecByteBlock Key
     cout << "recovered text: " << recovered << endl;
     return recovered;
 }
-
+/**
+ * \brief Хэширует пароль пользователя.
+ * \param password Пароль пользователя.
+ * \return Хэш пароля.
+ */
 std::string hashPass(std::string password) {
 
 
@@ -122,7 +164,11 @@ std::string hashPass(std::string password) {
 
     return encoded;
 }
-
+/**
+ * \brief Обменивается ключами Диффи-Хеллмана с другим участником через сокет и вычисляет общий секретный ключ.
+ * \param socket Сокет для обмена данными.
+ * \return Общий секретный ключ.
+ */
 CryptoPP::SecByteBlock sharing_key(socket_service &socket) {
     DH dh;
     AutoSeededRandomPool rnd;

@@ -1,0 +1,44 @@
+\hypertarget{path__util_8hpp}{}\doxysection{src/path\+\_\+util.hpp File Reference}
+\label{path__util_8hpp}\index{src/path\_util.hpp@{src/path\_util.hpp}}
+
+
+Получает путь к каталогу пользователя.  
+
+
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for path\+\_\+util.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::filesystem\+::path \mbox{\hyperlink{path__util_8hpp_ad43c076585da10587243c90322637e38}{get\+\_\+path\+\_\+to\+\_\+dir}} (const std\+::string \&user\+\_\+name=\char`\"{}test\+\_\+user\char`\"{})
+\begin{DoxyCompactList}\small\item\em Получает путь к каталогу пользователя \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Получает путь к каталогу пользователя. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{path__util_8hpp_ad43c076585da10587243c90322637e38}\label{path__util_8hpp_ad43c076585da10587243c90322637e38}} 
+\index{path\_util.hpp@{path\_util.hpp}!get\_path\_to\_dir@{get\_path\_to\_dir}}
+\index{get\_path\_to\_dir@{get\_path\_to\_dir}!path\_util.hpp@{path\_util.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_path\_to\_dir()}{get\_path\_to\_dir()}}
+{\footnotesize\ttfamily std\+::filesystem\+::path get\+\_\+path\+\_\+to\+\_\+dir (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{user\+\_\+name = {\ttfamily \char`\"{}test\+\_\+user\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Получает путь к каталогу пользователя 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+name} & Имя пользователя. По умолчанию \char`\"{}test\+\_\+user\char`\"{}, если не указано. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Путь к каталогу пользователя. 
+\end{DoxyReturn}

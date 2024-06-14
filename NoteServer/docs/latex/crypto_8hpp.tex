@@ -1,0 +1,221 @@
+\hypertarget{crypto_8hpp}{}\doxysection{src/crypto.hpp File Reference}
+\label{crypto_8hpp}\index{src/crypto.hpp@{src/crypto.hpp}}
+
+
+Функции для шифрования и хэширования данных  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cryptopp/modes.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/filters.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/aes.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/osrng.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/dh2.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/dh.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/secblock.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/base64.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/hex.\+h$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}socket\+\_\+service.\+hpp\char`\"{}}\newline
+Include dependency graph for crypto.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{crypto_8hpp_a4319a243cf9b60dac4ba702bdd0ee392}{send\+\_\+crypto\+\_\+block}} (\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&socket, const Sec\+Byte\+Block \&block)
+\begin{DoxyCompactList}\small\item\em Отправляет зашифрованный блок данных через сокет. \end{DoxyCompactList}\item 
+Sec\+Byte\+Block \mbox{\hyperlink{crypto_8hpp_ab8fa42aac44acab1d34064a6d50b1888}{receive\+\_\+crypto\+\_\+block}} (\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&socket)
+\begin{DoxyCompactList}\small\item\em Получает зашифрованный блок данных через сокет. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{crypto_8hpp_a8b61cea236a7333df5b448c6e7cb2c7c}{send\+\_\+param}} (\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&socket, Integer \&val)
+\begin{DoxyCompactList}\small\item\em Отправляет параметр через сокет. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{crypto_8hpp_ae5df3160fef7fb4c8a84e33ea384e3a8}{Generate\+DHKeys}} (\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&socket, DH \&dh, Auto\+Seeded\+Random\+Pool \&rnd, Sec\+Byte\+Block \&priv\+Key, Sec\+Byte\+Block \&pub\+Key)
+\begin{DoxyCompactList}\small\item\em Генерирует ключи для протокола Диффи-\/Хеллман и отправляет необходимые параметры через сокет. \end{DoxyCompactList}\item 
+Crypto\+PP\+::\+Sec\+Byte\+Block \mbox{\hyperlink{crypto_8hpp_ab2d28e4a314161268efe1d7f3eb3039c}{derive\+AESKey\+From\+DH}} (Sec\+Byte\+Block \&shared\+Key)
+\begin{DoxyCompactList}\small\item\em Вычисляет симметричный ключ шифрования из общего ключа Диффи-\/Хеллмана. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{crypto_8hpp_af3bcb54de4355e9da9030e080ba7c69f}{encrypt\+AES}} (const std\+::string \&plaintext, Crypto\+PP\+::\+Sec\+Byte\+Block key)
+\begin{DoxyCompactList}\small\item\em Шифрует текст с использованием AES. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{crypto_8hpp_a8490e9e60deba146bf0a520b55a7a22e}{decrypt\+AES}} (const std\+::string \&ciphertext, Crypto\+PP\+::\+Sec\+Byte\+Block Key)
+\begin{DoxyCompactList}\small\item\em Расшифровывает текст, зашифрованный с использованием AES. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{crypto_8hpp_aacda4090667881256561f070e30c800f}{hash\+Pass}} (std\+::string password)
+\begin{DoxyCompactList}\small\item\em Хэширует пароль пользователя. \end{DoxyCompactList}\item 
+Crypto\+PP\+::\+Sec\+Byte\+Block \mbox{\hyperlink{crypto_8hpp_a5c7b6f1c0ea5575f105654e01cd30932}{sharing\+\_\+key}} (\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&socket)
+\begin{DoxyCompactList}\small\item\em Обменивается ключами Диффи-\/Хеллмана с другим участником через сокет и вычисляет общий секретный ключ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Функции для шифрования и хэширования данных 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{crypto_8hpp_a8490e9e60deba146bf0a520b55a7a22e}\label{crypto_8hpp_a8490e9e60deba146bf0a520b55a7a22e}} 
+\index{crypto.hpp@{crypto.hpp}!decryptAES@{decryptAES}}
+\index{decryptAES@{decryptAES}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{decryptAES()}{decryptAES()}}
+{\footnotesize\ttfamily std\+::string decrypt\+AES (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ciphertext,  }\item[{Crypto\+PP\+::\+Sec\+Byte\+Block}]{Key }\end{DoxyParamCaption})}
+
+
+
+Расшифровывает текст, зашифрованный с использованием AES. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Зашифрованный текст. \\
+\hline
+{\em Key} & Ключ расшифрования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Расшифрованный текст. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crypto_8hpp_ab2d28e4a314161268efe1d7f3eb3039c}\label{crypto_8hpp_ab2d28e4a314161268efe1d7f3eb3039c}} 
+\index{crypto.hpp@{crypto.hpp}!deriveAESKeyFromDH@{deriveAESKeyFromDH}}
+\index{deriveAESKeyFromDH@{deriveAESKeyFromDH}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{deriveAESKeyFromDH()}{deriveAESKeyFromDH()}}
+{\footnotesize\ttfamily Crypto\+PP\+::\+Sec\+Byte\+Block derive\+AESKey\+From\+DH (\begin{DoxyParamCaption}\item[{Sec\+Byte\+Block \&}]{shared\+Key }\end{DoxyParamCaption})}
+
+
+
+Вычисляет симметричный ключ шифрования из общего ключа Диффи-\/Хеллмана. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shared\+Key} & Общий ключ Диффи-\/Хеллмана. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Симметричный ключ шифрования. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crypto_8hpp_af3bcb54de4355e9da9030e080ba7c69f}\label{crypto_8hpp_af3bcb54de4355e9da9030e080ba7c69f}} 
+\index{crypto.hpp@{crypto.hpp}!encryptAES@{encryptAES}}
+\index{encryptAES@{encryptAES}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{encryptAES()}{encryptAES()}}
+{\footnotesize\ttfamily std\+::string encrypt\+AES (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plaintext,  }\item[{Crypto\+PP\+::\+Sec\+Byte\+Block}]{key }\end{DoxyParamCaption})}
+
+
+
+Шифрует текст с использованием AES. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Исходный текст. \\
+\hline
+{\em key} & Ключ шифрования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный текст. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crypto_8hpp_ae5df3160fef7fb4c8a84e33ea384e3a8}\label{crypto_8hpp_ae5df3160fef7fb4c8a84e33ea384e3a8}} 
+\index{crypto.hpp@{crypto.hpp}!GenerateDHKeys@{GenerateDHKeys}}
+\index{GenerateDHKeys@{GenerateDHKeys}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{GenerateDHKeys()}{GenerateDHKeys()}}
+{\footnotesize\ttfamily void Generate\+DHKeys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&}]{socket,  }\item[{DH \&}]{dh,  }\item[{Auto\+Seeded\+Random\+Pool \&}]{rnd,  }\item[{Sec\+Byte\+Block \&}]{priv\+Key,  }\item[{Sec\+Byte\+Block \&}]{pub\+Key }\end{DoxyParamCaption})}
+
+
+
+Генерирует ключи для протокола Диффи-\/Хеллман и отправляет необходимые параметры через сокет. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет для отправки данных. \\
+\hline
+{\em dh} & Объект класса DH для генерации ключей. \\
+\hline
+{\em rnd} & Генератор случайных чисел. \\
+\hline
+{\em priv\+Key} & Приватный ключ. \\
+\hline
+{\em pub\+Key} & Публичный ключ. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{crypto_8hpp_aacda4090667881256561f070e30c800f}\label{crypto_8hpp_aacda4090667881256561f070e30c800f}} 
+\index{crypto.hpp@{crypto.hpp}!hashPass@{hashPass}}
+\index{hashPass@{hashPass}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{hashPass()}{hashPass()}}
+{\footnotesize\ttfamily std\+::string hash\+Pass (\begin{DoxyParamCaption}\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Хэширует пароль пользователя. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Пароль пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хэш пароля. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crypto_8hpp_ab8fa42aac44acab1d34064a6d50b1888}\label{crypto_8hpp_ab8fa42aac44acab1d34064a6d50b1888}} 
+\index{crypto.hpp@{crypto.hpp}!receive\_crypto\_block@{receive\_crypto\_block}}
+\index{receive\_crypto\_block@{receive\_crypto\_block}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{receive\_crypto\_block()}{receive\_crypto\_block()}}
+{\footnotesize\ttfamily Sec\+Byte\+Block receive\+\_\+crypto\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+Получает зашифрованный блок данных через сокет. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет для получения данных. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный блок данных. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crypto_8hpp_a4319a243cf9b60dac4ba702bdd0ee392}\label{crypto_8hpp_a4319a243cf9b60dac4ba702bdd0ee392}} 
+\index{crypto.hpp@{crypto.hpp}!send\_crypto\_block@{send\_crypto\_block}}
+\index{send\_crypto\_block@{send\_crypto\_block}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{send\_crypto\_block()}{send\_crypto\_block()}}
+{\footnotesize\ttfamily void send\+\_\+crypto\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&}]{socket,  }\item[{const Sec\+Byte\+Block \&}]{block }\end{DoxyParamCaption})}
+
+
+
+Отправляет зашифрованный блок данных через сокет. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет для отправки данных. \\
+\hline
+{\em block} & Блок данных для отправки. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{crypto_8hpp_a8b61cea236a7333df5b448c6e7cb2c7c}\label{crypto_8hpp_a8b61cea236a7333df5b448c6e7cb2c7c}} 
+\index{crypto.hpp@{crypto.hpp}!send\_param@{send\_param}}
+\index{send\_param@{send\_param}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{send\_param()}{send\_param()}}
+{\footnotesize\ttfamily void send\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&}]{socket,  }\item[{Integer \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Отправляет параметр через сокет. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет для отправки данных. \\
+\hline
+{\em val} & Параметр для отправки. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{crypto_8hpp_a5c7b6f1c0ea5575f105654e01cd30932}\label{crypto_8hpp_a5c7b6f1c0ea5575f105654e01cd30932}} 
+\index{crypto.hpp@{crypto.hpp}!sharing\_key@{sharing\_key}}
+\index{sharing\_key@{sharing\_key}!crypto.hpp@{crypto.hpp}}
+\doxysubsubsection{\texorpdfstring{sharing\_key()}{sharing\_key()}}
+{\footnotesize\ttfamily Crypto\+PP\+::\+Sec\+Byte\+Block sharing\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsocket__service}{socket\+\_\+service}} \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+Обменивается ключами Диффи-\/Хеллмана с другим участником через сокет и вычисляет общий секретный ключ. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет для обмена данными. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Общий секретный ключ. 
+\end{DoxyReturn}

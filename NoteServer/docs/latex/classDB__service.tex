@@ -1,0 +1,263 @@
+\hypertarget{classDB__service}{}\doxysection{DB\+\_\+service Class Reference}
+\label{classDB__service}\index{DB\_service@{DB\_service}}
+
+
+Класс, предоставляющий сервисы для работы с базой данных  
+
+
+
+
+{\ttfamily \#include $<$base.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDB__service_a02c1faa47cc33f2994913386324d67d0}{DB\+\_\+service}} (const std\+::string \&con\+\_\+string)
+\item 
+bool \mbox{\hyperlink{classDB__service_aceb9d792209397d9d3e494e0013f30f0}{check\+\_\+login\+\_\+exists}} (const std\+::string \&login)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие логина в базе данных. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDB__service_a6a167b3a4e9932669f346d21c87d4d4b}{check\+\_\+password\+\_\+correct}} (const std\+::string \&login, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Проверяет правильность пароля пользователя. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDB__service_a86111d2c6e57e206e6f375195cd5d1eb}{add\+\_\+user}} (const std\+::string \&login, const std\+::string \&password)
+\begin{DoxyCompactList}\small\item\em Добавляет нового пользователя в базу данных. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDB__service_a13954711fdfae124b067f2b6bfce4cdf}{delete\+\_\+user}} (const std\+::string \&login)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие пользователя в базе данных и удаляет его. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDB__service_ab7da01e9df1774b15596b12013bf5891}{delete\+\_\+file}} (const std\+::string \&owner, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Удаляет файл из базы данных. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDB__service_a8759353d0b800509aa33bc4f313e4bf7}{fetch\+\_\+editing}} (const std\+::string \&owner, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Получает информацию о редактировании файла и выполняет соответствующие действия. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDB__service_a025f3ca7d335a64e7c719318aa07b360}{end\+\_\+editing}} (const std\+::string \&owner, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Завершает редактирование файла. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDB__service_abf11e79231ee09c30387f03a499bd3b5}{start\+\_\+editing}} (const std\+::string \&owner, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Начинает редактирование файла. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDB__service_aa4d0d07bd21e124751209ffb84238161}{check\+\_\+editing}} (const std\+::string \&owner, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Проверяет, выполняется ли редактирование файла. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDB__service_ace2791cc36515996dcbc74821c15a13f}{add\+\_\+user\+\_\+access}} (const std\+::string \&owner, const std\+::string \&filename, const std\+::string \&user)
+\begin{DoxyCompactList}\small\item\em Предоставляет права пользователю на доступ к файлу. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDB__service_a582838baa40af3a4004eb17c9cc5b2c1}{check\+\_\+user\+\_\+access}} (const std\+::string \&owner, const std\+::string \&filename, const std\+::string \&user)
+\begin{DoxyCompactList}\small\item\em Проверяет доступ пользователя к определенному файлу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, предоставляющий сервисы для работы с базой данных 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDB__service_a02c1faa47cc33f2994913386324d67d0}\label{classDB__service_a02c1faa47cc33f2994913386324d67d0}} 
+\index{DB\_service@{DB\_service}!DB\_service@{DB\_service}}
+\index{DB\_service@{DB\_service}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{DB\_service()}{DB\_service()}}
+{\footnotesize\ttfamily DB\+\_\+service\+::\+DB\+\_\+service (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{con\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDB__service_a86111d2c6e57e206e6f375195cd5d1eb}\label{classDB__service_a86111d2c6e57e206e6f375195cd5d1eb}} 
+\index{DB\_service@{DB\_service}!add\_user@{add\_user}}
+\index{add\_user@{add\_user}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{add\_user()}{add\_user()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::add\+\_\+user (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Добавляет нового пользователя в базу данных. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин пользователя. \\
+\hline
+{\em password} & Пароль пользователя. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error,если} & логин уже существует. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classDB__service_ace2791cc36515996dcbc74821c15a13f}\label{classDB__service_ace2791cc36515996dcbc74821c15a13f}} 
+\index{DB\_service@{DB\_service}!add\_user\_access@{add\_user\_access}}
+\index{add\_user\_access@{add\_user\_access}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{add\_user\_access()}{add\_user\_access()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::add\+\_\+user\+\_\+access (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Предоставляет права пользователю на доступ к файлу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+{\em user} & Пользователь, которому предоставляются права. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDB__service_aa4d0d07bd21e124751209ffb84238161}\label{classDB__service_aa4d0d07bd21e124751209ffb84238161}} 
+\index{DB\_service@{DB\_service}!check\_editing@{check\_editing}}
+\index{check\_editing@{check\_editing}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{check\_editing()}{check\_editing()}}
+{\footnotesize\ttfamily bool DB\+\_\+service\+::check\+\_\+editing (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Проверяет, выполняется ли редактирование файла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если редактирование файла выполняется, иначе false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDB__service_aceb9d792209397d9d3e494e0013f30f0}\label{classDB__service_aceb9d792209397d9d3e494e0013f30f0}} 
+\index{DB\_service@{DB\_service}!check\_login\_exists@{check\_login\_exists}}
+\index{check\_login\_exists@{check\_login\_exists}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{check\_login\_exists()}{check\_login\_exists()}}
+{\footnotesize\ttfamily bool DB\+\_\+service\+::check\+\_\+login\+\_\+exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption})}
+
+
+
+Проверяет наличие логина в базе данных. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если логин существует в базе данных, иначе false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDB__service_a6a167b3a4e9932669f346d21c87d4d4b}\label{classDB__service_a6a167b3a4e9932669f346d21c87d4d4b}} 
+\index{DB\_service@{DB\_service}!check\_password\_correct@{check\_password\_correct}}
+\index{check\_password\_correct@{check\_password\_correct}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{check\_password\_correct()}{check\_password\_correct()}}
+{\footnotesize\ttfamily bool DB\+\_\+service\+::check\+\_\+password\+\_\+correct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Проверяет правильность пароля пользователя. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин пользователя. \\
+\hline
+{\em password} & Пароль пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если пароль правильный, иначе false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDB__service_a582838baa40af3a4004eb17c9cc5b2c1}\label{classDB__service_a582838baa40af3a4004eb17c9cc5b2c1}} 
+\index{DB\_service@{DB\_service}!check\_user\_access@{check\_user\_access}}
+\index{check\_user\_access@{check\_user\_access}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{check\_user\_access()}{check\_user\_access()}}
+{\footnotesize\ttfamily bool DB\+\_\+service\+::check\+\_\+user\+\_\+access (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Проверяет доступ пользователя к определенному файлу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+{\em user} & Пользователь. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если пользователь имеет доступ к файлу, иначе false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDB__service_ab7da01e9df1774b15596b12013bf5891}\label{classDB__service_ab7da01e9df1774b15596b12013bf5891}} 
+\index{DB\_service@{DB\_service}!delete\_file@{delete\_file}}
+\index{delete\_file@{delete\_file}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{delete\_file()}{delete\_file()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::delete\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Удаляет файл из базы данных. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDB__service_a13954711fdfae124b067f2b6bfce4cdf}\label{classDB__service_a13954711fdfae124b067f2b6bfce4cdf}} 
+\index{DB\_service@{DB\_service}!delete\_user@{delete\_user}}
+\index{delete\_user@{delete\_user}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{delete\_user()}{delete\_user()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::delete\+\_\+user (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{login }\end{DoxyParamCaption})}
+
+
+
+Проверяет наличие пользователя в базе данных и удаляет его. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин пользователя. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDB__service_a025f3ca7d335a64e7c719318aa07b360}\label{classDB__service_a025f3ca7d335a64e7c719318aa07b360}} 
+\index{DB\_service@{DB\_service}!end\_editing@{end\_editing}}
+\index{end\_editing@{end\_editing}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{end\_editing()}{end\_editing()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::end\+\_\+editing (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Завершает редактирование файла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDB__service_a8759353d0b800509aa33bc4f313e4bf7}\label{classDB__service_a8759353d0b800509aa33bc4f313e4bf7}} 
+\index{DB\_service@{DB\_service}!fetch\_editing@{fetch\_editing}}
+\index{fetch\_editing@{fetch\_editing}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{fetch\_editing()}{fetch\_editing()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::fetch\+\_\+editing (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Получает информацию о редактировании файла и выполняет соответствующие действия. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDB__service_abf11e79231ee09c30387f03a499bd3b5}\label{classDB__service_abf11e79231ee09c30387f03a499bd3b5}} 
+\index{DB\_service@{DB\_service}!start\_editing@{start\_editing}}
+\index{start\_editing@{start\_editing}!DB\_service@{DB\_service}}
+\doxysubsubsection{\texorpdfstring{start\_editing()}{start\_editing()}}
+{\footnotesize\ttfamily void DB\+\_\+service\+::start\+\_\+editing (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Начинает редактирование файла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Владелец файла. \\
+\hline
+{\em filename} & Имя файла. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{base_8h}{base.\+h}}\item 
+src/\mbox{\hyperlink{base_8cpp}{base.\+cpp}}\end{DoxyCompactItemize}
