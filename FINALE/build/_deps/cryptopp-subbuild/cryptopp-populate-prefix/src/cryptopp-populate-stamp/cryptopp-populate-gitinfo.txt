@@ -1,3 +1,0 @@
-repository='https://github.com/weidai11/cryptopp'
-module=''
-tag='origin'
