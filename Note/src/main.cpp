@@ -67,97 +67,56 @@ void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string user
     // cout << "Файл был успешно получен: " << filename << endl;
 }
 
-void delete_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey) { //Hurray!
+void delete_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, const std::string& owner, const std::string& filename) {
     int number = 8;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
-    std::string owner, filename;
-
-    ImGui::OpenPopup("Delete File");
-    if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::InputText("Owner", &owner);
-        ImGui::InputText("Filename", &filename);
-        ImGui::EndPopup();
-    }
-
-    //std::cout << "Введите имя владельца: ";
-    //std::cin >> owner;
-    //std::cout << "Имя файла: ";
-    //std::cin >> filename;
-
-    // Отправляем логин и пароль на сервер.
     std::size_t owner_length = owner.size();
     std::size_t filename_length = filename.size();
 
     boost::asio::write(socket, boost::asio::buffer(&owner_length, sizeof(std::size_t)));
     boost::asio::write(socket, boost::asio::buffer(owner, owner_length));
     boost::asio::write(socket, boost::asio::buffer(&filename_length, sizeof(std::size_t)));
-
+    boost::asio::write(socket, boost::asio::buffer(filename, filename_length));
 }
 
-void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
+void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& owner, const std::string& filename) {
     int number = 4;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
-    string owner, owner_length;
+    std::size_t owner_length = owner.size();
+    boost::asio::write(socket, boost::asio::buffer(&owner_length, sizeof(std::size_t)));
+    boost::asio::write(socket, boost::asio::buffer(owner, owner_length));
 
-    ImGui::InputText("Input owner's name", &owner);
-   // cout << "Введите имя владельца: ";
-    //cin >> owner;
-    owner_length = owner.size();
-    write(socket, buffer(&owner_length, sizeof(size_t)));
-    write(socket, buffer(owner));
-
-    string filename;
-
-    ImGui::InputText("File name", &filename);
-    //cout << "Введите имя файла: ";
-    //cin >> filename;
     filename = encryptAES(filename, aesKey);
 
-    size_t filename_length = filename.length();
-    write(socket, buffer(&filename_length, sizeof(size_t)));
-    write(socket, buffer(filename));
+    std::size_t filename_length = filename.size();
+    boost::asio::write(socket, boost::asio::buffer(&filename_length, sizeof(std::size_t)));
+    boost::asio::write(socket, boost::asio::buffer(filename));
 
     ifstream file;
     file.open("userfiles/" + filename, std::ifstream::in);
-    //cout<<file.good()<<" "<<file.is_open()<<" "<<file.eof() <<endl;
     if (!file.is_open()) throw std::runtime_error("File not exist");
 
     file.seekg(0, std::ios::end);
     std::streampos file_size = file.tellg();
-    write(socket, buffer(&file_size, sizeof(std::streampos)));
-
-    //cout<<sizeof(std::streampos)<<endl;
+    boost::asio::write(socket, boost::asio::buffer(&file_size, sizeof(std::streampos)));
 
     file.seekg(0, std::ios::beg);
 
     while (!file.eof()) {
         vector<char> buffer(1008);
         file.read(buffer.data(), buffer.size());
-        //cout <<"read sours file "<<endl;
         std::string plaintext(buffer.begin(), buffer.end());
-        std::string chipertext = encryptAES(plaintext, aesKey);
-        size_t bytes_sent = write(socket, boost::asio::buffer(chipertext));
-        //cout << "send "<< bytes_sent<<endl;
+        std::string ciphertext = encryptAES(plaintext, aesKey);
+        size_t bytes_sent = boost::asio::write(socket, boost::asio::buffer(ciphertext));
     }
     file.close();
-    //cout << "Файл был успешно отправлен: " << filename << endl;
 }
 
-void authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hurray!
+void authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& login, const std::string& password) {
     int number = 2;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
-
-
-    std::string login, password;
-    ImGui::InputText("Login", &login);
-    ImGui::InputText("Password", &password);
-
-    //std::cout << "Логин: ";
-    //std::cin >> login;
-    //std::cout << "Пароль: ";
-    //std::cin >> password;
 
     password = encryptAES(password, aesKey);
 
@@ -178,24 +137,12 @@ void authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hu
         throw std::runtime_error("Wrong password or login");
         ImGui::Text("Wrong password or login");
     }
-    //std::cout << response << std::endl;
 }
 
-void registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hurray!
+void registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& login, const std::string& password) {
     int number = 1;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
 
-    std::string login, password;
-    ImGui::InputText("Login", &login);
-    ImGui::InputText("Password", &password);
-
-    //std::cout << "Логин: ";
-    //std::cin >> login;
-    //std::cout << "Пароль: ";
-    //std::cin >> password;
-    password = encryptAES(password, aesKey);
-
-    // Отправляем логин и пароль на сервер.
     std::size_t login_length = login.size();
     std::size_t password_length = password.size();
 
@@ -208,60 +155,30 @@ void registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { // Hurr
     bool response;
     socket.read_some(boost::asio::buffer(&response, sizeof(bool)));
 
-    if (ImGui::Button("Sign Up") && response) {
+    if (response) {
         ImGui::Begin("Your menu");
-        // cheto napisat'
         ImGui::Text("You are now sucessfully registered");
         ImGui::End();
     }
 
-    if (!response)
-    {
+    if (!response) {
         throw std::runtime_error("Неудалось зарегестрировать пользователя");
         ImGui::Text("We can't register this user");
-
     }
-    //std::cout << response << std::endl;
-
 }
 
-void delete_user(tcp::socket& socket) { //Hurray!
+void delete_user(tcp::socket& socket, const std::string& login) {
     int number = 7;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
-    std::string login;
-
-    ImGui::OpenPopup("Delete user");
-    if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::InputText("Username", &login);
-        ImGui::EndPopup();
-    }
-
-    //std::cout << "Кого удаляем : ";
-    //std::cin >> login;
 
     std::size_t login_length = login.size();
     boost::asio::write(socket, boost::asio::buffer(&login_length, sizeof(std::size_t)));
     boost::asio::write(socket, boost::asio::buffer(login, login_length));
-
 }
 
-void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
-
+void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& filename, const std::string& user) {
     int number = 5;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
-
-    std::string filename, user;
-
-    ImGui::OpenPopup("Add Access");
-    if (ImGui::BeginPopupModal("Add Access", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-        ImGui::InputText("Filename", &filename);
-        ImGui::InputText("User", &user);
-        ImGui::EndPopup();
-    }
-    //std::cout << " Имя файла: ";
-    //std::cin >> filename;
-    //std::cout << "Кому даем права: ";
-    //std::cin >> user;
 
     std::size_t filename_length = filename.size();
     std::size_t user_length = user.size();
@@ -270,7 +187,6 @@ void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey) { //Hurray!
     boost::asio::write(socket, boost::asio::buffer(filename, filename_length));
     boost::asio::write(socket, boost::asio::buffer(&user_length, sizeof(std::size_t)));
     boost::asio::write(socket, boost::asio::buffer(user, user_length));
-
 }
 
 void log_out(tcp::socket& socket) { //Hurray!
@@ -312,7 +228,6 @@ int main() {
         socket.connect(tcp::endpoint(ip::address::from_string("127.0.0.1"), 1234));
 
         CryptoPP::SecByteBlock aesKey = get_aesKey(socket);
-        registration(socket, aesKey);
 
         // Initialize GLFW
         glfwInit();
@@ -330,6 +245,19 @@ int main() {
         int file_count = 0;
         bool userExists = false;
         bool userAlreadyOnPlatform = false;
+        char loginBuf[256];
+        char passwordBuf[256];
+        char filenameBuf[256];
+        char userBuf[256];
+        char ownerBuf[256];
+        std::string login;
+        std::string password;
+        std::string filename;
+        std::string user;
+        std::string owner;
+        std::string read_file(const std::string & file);
+        bool is_text_file(const std::string & file);
+
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
@@ -338,59 +266,99 @@ int main() {
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
 
-            ImGui::Begin("Sign Up");
+            if (ImGui::Button("Sign Up")) {
+                ImGui::OpenPopup("Sign Up");
+                if (ImGui::BeginPopupModal("Sign Up", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                    ImGui::InputText("Login", &login);
+                    ImGui::InputText("Password", &password.c_str());
+                    ImGui::EndPopup();
+                    registration(socket, aesKey, login, password);
+                }
+            }
 
-            if (ImGui::Button("Sign In")) {           
-                if (authentication()) {
-                    if (userAlreadyOnPlatform) {
-                        ImGui::Text("User is already on the platform");
-                    } else {
-                        ImGui::Begin("Your menu");
-                        ImGui::Text("Welcome to your menu!");
-                        ImGui::End();
-                        ImGui::Begin("Workspace");
+            if (ImGui::Button("Sign In")) {
+                ImGui::OpenPopup("Sign In");
+                if (ImGui::BeginPopupModal("Sign In", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                    ImGui::InputText("Login", &login);
+                    ImGui::InputText("Password", &password);
+                    ImGui::EndPopup();
+                }
+                authentication(socket, aesKey, login, password);
+                {
+                    //if (userAlreadyOnPlatform) {
+                    //    ImGui::Text("User is already on the platform");
+                //}
+                //else {
+                    ImGui::Begin("Your menu");
+                    ImGui::Text("Welcome to your menu!");
+                    ImGui::End();
+                //}
+                    ImGui::Begin("Workspace");
 
-                        userAlreadyOnPlatform = true; // where is the already on a platgorm check??
-                        if (ImGui::BeginTabBar("Files")) {
+                        //userAlreadyOnPlatform = true; // where is the already on a platgorm check??
+                    if (ImGui::BeginTabBar("Files")) {
                             //might be a problem with user_files as it's not declared it is 
-                            for (const auto& file : user_files) {
-                                if (ImGui::BeginTabItem(file.c_str())) {
-                                    std::string file_content = read_file(file);
-                                    if (is_text_file(file)) {
-                                        ImGui::Text(file_content.c_str());
-                                    }
-                                    else {
-                                        ImGui::Text("Can't open this format, please download the file");
-                                    }
-
-                                    if (ImGui::Button("Download file")) {
-                                        download_file();
-                                    }
-
-                                    ImGui::EndTabItem();
+                        for (const auto& file : user_files) {
+                            if (ImGui::BeginTabItem(file.c_str())) {
+                                std::string file_content = read_file(file);
+                                if (is_text_file(file)) {
+                                    ImGui::Text(file_content.c_str());
                                 }
+                                else {
+                                    ImGui::Text("Can't open this format, please download the file");
+                                }
+
+                                if (ImGui::Button("Download file")) {
+                                    download_file();
+                                }
+
+                                ImGui::EndTabItem();
                             }
-                            ImGui::EndTabBar();
                         }
+                        ImGui::EndTabBar();
+                    }
 
                         if (ImGui::Button("Add access")) {
-                            add_access();
+                            ImGui::OpenPopup("Add Access");
+                            if (ImGui::BeginPopupModal("Add Access", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                                ImGui::InputText("Filename", &filename);
+                                ImGui::InputText("User", &user);
+                                ImGui::EndPopup();
+                            }
+                            add_access(socket, aesKey, filename, user);
                         }
 
                         if (ImGui::Button("Send File")) {
-                            send_file();
+                            ImGui::OpenPopup("Send File");
+                            if (ImGui::BeginPopupModal("Send File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                                ImGui::InputText("Input owner's name", &owner);
+                                ImGui::InputText("File name", &filename);
+                                ImGui::EndPopup();
+                            }
+                            send_file(socket, aesKey, owner, filename);
                         }
 
                         if (ImGui::Button("Delete file")) {
-                            delete_file();
+                            ImGui::OpenPopup("Delete File");
+                            if (ImGui::BeginPopupModal("Delete File", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                                ImGui::InputText("Owner", &owner);
+                                ImGui::InputText("Filename", &filename);
+                                ImGui::EndPopup();
+                            }
+                            delete_file(socket, aesKey, owner, filename);
                         }
-
+                        
                         if (ImGui::Button("Delete user")) {
-                            delete_user();
+                            ImGui::OpenPopup("Delete user");
+                            if (ImGui::BeginPopupModal("Delete User", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
+                                ImGui::InputText("Username", &login);
+                                ImGui::EndPopup();
+                            }
+                            delete_user(socket, login);
                         }
 
                         if (ImGui::Button("Sign out")) {
-                            log_out();
+                            log_out(socket);
                             userAlreadyOnPlatform = false;
                             // end!! 
                         }
@@ -415,7 +383,7 @@ int main() {
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
             glfwSwapBuffers(window);
-        }
+        
 
         ImGui_ImplOpenGL3_Shutdown();
         ImGui_ImplGlfw_Shutdown();
