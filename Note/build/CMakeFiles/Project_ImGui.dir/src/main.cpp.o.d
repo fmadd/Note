@@ -1213,10 +1213,10 @@ CMakeFiles/Project_ImGui.dir/src/main.cpp.o: \
  /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/base64.h \
  /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/basecode.h \
  /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hex.h \
- /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/imgui/imgui.h \
- /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/imgui/imconfig.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/imgui/backends/imgui_impl_glfw.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imconfig.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/imgui/backends/imgui_impl_opengl3.h \
  /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/include/GLFW/glfw3.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \

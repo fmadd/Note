@@ -1,0 +1,21 @@
+# ninja log v6
+2	93	7400951834449255	glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir	d7d50af4e17b653d
+2	93	7400951834449255	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir	d7d50af4e17b653d
+96	3943	7400951872945741	glad-populate-prefix/src/glad-populate-stamp/glad-populate-download	9f079912ca848dbe
+96	3943	7400951872945741	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-download	9f079912ca848dbe
+3943	4130	7400951873017945	glad-populate-prefix/src/glad-populate-stamp/glad-populate-update	70b09098eb296455
+3943	4130	7400951873017945	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-update	70b09098eb296455
+4130	4195	7400951875470370	glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch	e6b5094fb5a1411b
+4130	4195	7400951875470370	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch	e6b5094fb5a1411b
+4196	4273	7400951876218847	glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure	e7db9d6061e042b2
+4196	4273	7400951876218847	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure	e7db9d6061e042b2
+4273	4338	7400951876905325	glad-populate-prefix/src/glad-populate-stamp/glad-populate-build	7d70d351b73ff0fd
+4273	4338	7400951876905325	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-build	7d70d351b73ff0fd
+4338	4398	7400951877494861	glad-populate-prefix/src/glad-populate-stamp/glad-populate-install	20de671a03bb6a19
+4338	4398	7400951877494861	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-install	20de671a03bb6a19
+4398	4469	7400951878213783	glad-populate-prefix/src/glad-populate-stamp/glad-populate-test	bf1c93c503f85ed
+4398	4469	7400951878213783	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-test	bf1c93c503f85ed
+4469	4571	7400951879233082	CMakeFiles/glad-populate-complete	35c50cb5931e0275
+4469	4571	7400951879233082	glad-populate-prefix/src/glad-populate-stamp/glad-populate-done	35c50cb5931e0275
+4469	4571	7400951879233082	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/CMakeFiles/glad-populate-complete	35c50cb5931e0275
+4469	4571	7400951879233082	C:/Users/Victoriya/Desktop/Study/good/Note/cmake-build-debug/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-done	35c50cb5931e0275
