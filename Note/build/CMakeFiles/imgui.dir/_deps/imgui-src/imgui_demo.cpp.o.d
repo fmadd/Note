@@ -1,8 +1,8 @@
 CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o: \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui_demo.cpp \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_demo.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imconfig.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/string.h \

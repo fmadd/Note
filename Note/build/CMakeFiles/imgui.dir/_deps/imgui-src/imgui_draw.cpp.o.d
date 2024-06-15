@@ -1,8 +1,8 @@
 CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o: \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui_draw.cpp \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_draw.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imconfig.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/string.h \
@@ -20,7 +20,7 @@ CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/assert.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui_internal.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_internal.h \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -122,6 +122,6 @@ CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imstb_textedit.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imstb_rectpack.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imstb_truetype.h
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imstb_textedit.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imstb_rectpack.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imstb_truetype.h

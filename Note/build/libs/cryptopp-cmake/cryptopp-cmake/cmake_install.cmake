@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/FINALE/libs/cryptopp-cmake/cryptopp-cmake
+# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,11 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/test/cmake_install.cmake")
+  include("/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/test/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/cmake_install.cmake")
+  include("/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/cmake_install.cmake")
 endif()
 

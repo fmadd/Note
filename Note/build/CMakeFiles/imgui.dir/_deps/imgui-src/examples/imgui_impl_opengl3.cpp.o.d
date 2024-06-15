@@ -1,8 +1,8 @@
 CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o: \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/examples/imgui_impl_opengl3.cpp \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/examples/imgui_impl_opengl3.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imconfig.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/string.h \
@@ -20,7 +20,7 @@ CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/assert.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/examples/imgui_impl_opengl3.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/examples/imgui_impl_opengl3.h \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -40,5 +40,5 @@ CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glad-build/include/glad/glad.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glad-build/include/KHR/khrplatform.h
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include/glad/glad.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include/KHR/khrplatform.h

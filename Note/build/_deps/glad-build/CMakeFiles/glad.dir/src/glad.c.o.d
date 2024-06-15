@@ -1,5 +1,5 @@
 _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o: \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glad-build/src/glad.c \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/src/glad.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -58,8 +58,8 @@ _deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o: \
  /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glad-build/include/glad/glad.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glad-build/include/KHR/khrplatform.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include/glad/glad.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/dlfcn.h \

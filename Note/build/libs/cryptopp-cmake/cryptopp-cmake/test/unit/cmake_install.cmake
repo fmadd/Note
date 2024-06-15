@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/FINALE/libs/cryptopp-cmake/cryptopp-cmake/test/unit
+# Install script for directory: /mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/test/unit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

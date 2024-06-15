@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="650e611b-9571-432d-b3b8-aa6e681d6083" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeASMCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/Project_ImGui" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Project_ImGui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitclone-lastrun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitinfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-cfgcmd.txt.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitclone.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitupdate.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/include/glad/glad.h" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/include/glad/glad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/src/glad.c" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/src/glad.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-cfgcmd.txt.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/glx_context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/glx_context.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_time.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_time.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_init.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_init.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_window.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_window.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/glfw3ConfigVersion.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/glfw3ConfigVersion.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitclone-lastrun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitinfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-cfgcmd.txt.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitupdate.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitclone-lastrun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitinfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-cfgcmd.txt.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitclone.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitupdate.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chern.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_lin.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/Doxyfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8cpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8cpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8cpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8cpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/base_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classDB__service-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classDB__service-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classDB__service.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classDB__service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classserver__service-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classserver__service-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classserver__service.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classserver__service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classsocket__service-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classsocket__service-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/classsocket__service.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/classsocket__service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/crypto_8hpp_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/doxygen.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/doxygen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/doxygen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/doxygen.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/dynsections.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/dynsections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/files.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/files.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/functions_func.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/functions_func.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/globals.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/globals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/globals_func.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/globals_func.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/globals_vars.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/globals_vars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/graph_legend.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/graph_legend.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/graph_legend.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/graph_legend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/main_8cpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/main_8cpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/main_8cpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/main_8cpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/menudata.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/menudata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/path__util_8hpp_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_7.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_8.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_9.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_9.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_a.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_a.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_b.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_b.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_c.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_c.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_d.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_d.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_e.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_e.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_e.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/all_e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/classes_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/files_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_6.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_7.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_8.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_9.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_9.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_a.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_a.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_b.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_b.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_c.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_c.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/functions_c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/mag_sel.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/mag_sel.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/nomatches.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/nomatches.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/searchdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/searchdata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/variables_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/variables_0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/search/variables_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/search/variables_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/server_8hpp_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/socket__service_8hpp_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/annotated.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/annotated.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8cpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8cpp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8cpp.tex.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8cpp.tex.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8cpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8cpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8h.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8h.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8h__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8h__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8h__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/base_8h__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/classDB__service.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/classDB__service.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/classserver__service.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/classserver__service.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/classsocket__service.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/classsocket__service.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/crypto_8hpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/crypto_8hpp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/crypto_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/crypto_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/crypto_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/crypto_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/dir_68267d1309a1af8e8297ef4c3efbcdba.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/dir_68267d1309a1af8e8297ef4c3efbcdba.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/doxygen.sty" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/doxygen.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/files.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/files.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/longtable_doxygen.sty" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/longtable_doxygen.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/main_8cpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/main_8cpp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/main_8cpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/main_8cpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/path__util_8hpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/path__util_8hpp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/path__util_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/path__util_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/path__util_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/path__util_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/refman.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/refman.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/server_8hpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/server_8hpp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/server_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/server_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/server_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/server_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__dep__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__incl.dot" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2hsnz2ja8S09pprpfI1ScMYtOxl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Victoriya/Desktop/Study/good/Note/CmakeLists.txt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="650e611b-9571-432d-b3b8-aa6e681d6083" name="Changes" comment="" />
+      <created>1718391912204</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718391912204</updated>
+      <workItem from="1718391914842" duration="457000" />
+      <workItem from="1718392384285" duration="71000" />
+      <workItem from="1718397236295" duration="924000" />
+      <workItem from="1718456196046" duration="9000" />
+      <workItem from="1718456245774" duration="4000" />
+      <workItem from="1718457088766" duration="11000" />
+      <workItem from="1718457279663" duration="198000" />
+      <workItem from="1718457695235" duration="246000" />
+      <workItem from="1718457954902" duration="2040000" />
+      <workItem from="1718460345958" duration="142000" />
+      <workItem from="1718460771682" duration="419000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

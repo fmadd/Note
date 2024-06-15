@@ -1,8 +1,8 @@
 CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o: \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/examples/imgui_impl_glfw.cpp \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/examples/imgui_impl_glfw.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imgui.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/imconfig.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/string.h \
@@ -20,8 +20,8 @@ CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/assert.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/imgui-src/examples/imgui_impl_glfw.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glfw-src/include/GLFW/glfw3.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/examples/imgui_impl_glfw.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -30,4 +30,4 @@ CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/_deps/glad-build/include/KHR/khrplatform.h
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build/include/KHR/khrplatform.h

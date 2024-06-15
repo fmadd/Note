@@ -1,7 +1,7 @@
 CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o: \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/src/crpt.cpp \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/crpt.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/src/crpt.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/crpt.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -163,21 +163,21 @@ CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/modes.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/cryptlib.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_align.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_asm.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_os.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_ver.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_cpu.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_cxx.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/modes.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/cryptlib.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_align.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_asm.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_os.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_ver.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_cpu.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_cxx.h \
  /usr/include/c++/11/cstddef \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_dll.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_int.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_ns.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_misc.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/stdcpp.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_dll.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_int.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_ns.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/config_misc.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/stdcpp.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -271,46 +271,46 @@ CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/trap.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/secblock.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/allocate.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/misc.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/secblockfwd.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/smartptr.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/trap.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/secblock.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/allocate.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/misc.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/secblockfwd.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/smartptr.h \
  /usr/include/byteswap.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/strciphr.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/seckey.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/simple.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/argnames.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/algparam.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/integer.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/filters.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/queue.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/aes.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rijndael.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/osrng.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/randpool.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/filters.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/aes.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/fips140.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hkdf.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hmac.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rng.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/sha.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/iterhash.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/dh2.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/dh.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/gfpcrypt.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/pubkey.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/algebra.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/modarith.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/eprecomp.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/modexppc.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/asn.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/secblock.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/base64.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/basecode.h \
- /mnt/c/Users/Victoriya/Desktop/Study/FINALE/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hex.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/strciphr.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/seckey.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/simple.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/argnames.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/algparam.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/integer.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/filters.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/queue.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/aes.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rijndael.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/osrng.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/randpool.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/filters.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/aes.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/fips140.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hkdf.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hmac.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rng.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/sha.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/iterhash.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/dh2.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/dh.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/gfpcrypt.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/pubkey.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/algebra.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/modarith.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/eprecomp.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/modexppc.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/asn.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/secblock.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/base64.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/basecode.h \
+ /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/hex.h \
  /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \
