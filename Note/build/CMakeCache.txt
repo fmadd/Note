@@ -1014,9 +1014,6 @@ cryptopp-cmake_SOURCE_DIR:STATIC=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/
 //Dependencies for the target
 glfw_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/librt.a;general;/usr/lib/x86_64-linux-gnu/libm.so;general;dl;general;/usr/lib/x86_64-linux-gnu/libX11.so;
 
-//Dependencies for the target
-imgui_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libGL.so;general;glfw;general;glad;
-
 //Path to a library.
 pkgcfg_lib_PKG_FONTCONFIG_fontconfig:FILEPATH=/usr/lib/x86_64-linux-gnu/libfontconfig.so
 

@@ -124,4 +124,5 @@ CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o: \
  /usr/include/c++/11/cstdlib \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/inttypes.h

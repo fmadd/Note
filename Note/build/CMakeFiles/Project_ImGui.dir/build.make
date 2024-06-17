@@ -97,27 +97,58 @@ CMakeFiles/Project_ImGui.dir/src/crpt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project_ImGui.dir/src/crpt.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victoriya/Desktop/Study/good/Note/src/crpt.cpp -o CMakeFiles/Project_ImGui.dir/src/crpt.cpp.s
 
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o: CMakeFiles/Project_ImGui.dir/flags.make
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o: _deps/imgui-src/backends/imgui_impl_glfw.cpp
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o: CMakeFiles/Project_ImGui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp
+
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp > CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i
+
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp -o CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s
+
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/Project_ImGui.dir/flags.make
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o: _deps/imgui-src/backends/imgui_impl_opengl3.cpp
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/Project_ImGui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp
+
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp > CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
+
+CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp -o CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
+
 # Object files for target Project_ImGui
 Project_ImGui_OBJECTS = \
 "CMakeFiles/Project_ImGui.dir/src/main.cpp.o" \
-"CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o"
+"CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o" \
+"CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o" \
+"CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o"
 
 # External object files for target Project_ImGui
 Project_ImGui_EXTERNAL_OBJECTS =
 
 Project_ImGui: CMakeFiles/Project_ImGui.dir/src/main.cpp.o
 Project_ImGui: CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o
+Project_ImGui: CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o
+Project_ImGui: CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
 Project_ImGui: CMakeFiles/Project_ImGui.dir/build.make
 Project_ImGui: libs/cryptopp-cmake/cryptopp-cmake/cryptopp/libcryptopp.a
 Project_ImGui: libimgui.a
-Project_ImGui: /usr/lib/x86_64-linux-gnu/libGL.so
 Project_ImGui: _deps/glfw-build/src/libglfw3.a
+Project_ImGui: /usr/lib/x86_64-linux-gnu/libGL.so
 Project_ImGui: /usr/lib/x86_64-linux-gnu/librt.a
 Project_ImGui: /usr/lib/x86_64-linux-gnu/libm.so
 Project_ImGui: /usr/lib/x86_64-linux-gnu/libX11.so
-Project_ImGui: _deps/glad-build/libglad.a
 Project_ImGui: CMakeFiles/Project_ImGui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project_ImGui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Project_ImGui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_ImGui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

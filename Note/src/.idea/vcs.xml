@@ -6,6 +6,8 @@
     <mapping directory="$PROJECT_DIR$/../build/_deps/glfw-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../build/_deps/imgui-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cmake-build-debug/_deps/glad-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cmake-build-debug/_deps/glfw-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/glfw" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/imgui" vcs="Git" />
   </component>

@@ -38,3 +38,5 @@ std::string decryptAES(const std::string &ciphertext, CryptoPP::SecByteBlock Key
 std::string hashPass(std::string password);
 
 void recive_param(tcp::socket& socket, Integer& val);
+
+CryptoPP::SecByteBlock get_aesKey(tcp::socket& socket) ;

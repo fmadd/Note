@@ -19,185 +19,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="650e611b-9571-432d-b3b8-aa6e681d6083" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../NoteServer/.idea/NoteServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Note_my2/Note_my2/.idea/Note_my2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Note_my2/Note_my2/src/.idea/src.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CmakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CmakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Files/file_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/file_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Files/file_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/file_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Files/file_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/file_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Files/saved_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/saved_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeASMCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.22.1/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/Project_ImGui" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Project_ImGui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/Labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeFiles/cryptopp-populate.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitclone-lastrun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/src/cryptopp-populate-stamp/cryptopp-populate-gitinfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-cfgcmd.txt.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitclone.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/cryptopp-subbuild/cryptopp-populate-prefix/tmp/cryptopp-populate-gitupdate.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/src/glad.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/include/glad/glad.h" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/include/glad/glad.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/src/glad.c" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/src/glad.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/Labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-cfgcmd.txt.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/glx_context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/glx_context.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_time.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/posix_time.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_init.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_init.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_window.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/x11_window.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/glfw3ConfigVersion.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/glfw3ConfigVersion.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/Labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitclone-lastrun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-gitinfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-cfgcmd.txt.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitupdate.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/Labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-src" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-src/.appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-src/.appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-src" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-src/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-src/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitclone-lastrun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitclone-lastrun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/imgui-populate-gitinfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-cfgcmd.txt.in" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitclone.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitupdate.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/integration/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/test/unit/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chern.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libimgui.a" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libimgui.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/git-data/head-ref" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/git-data/head-ref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdrand.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdrand.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdseed.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdseed.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crpt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/crpt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crpt.h" beforeDir="false" afterPath="$PROJECT_DIR$/crpt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glfw" beforeDir="false" afterPath="$PROJECT_DIR$/glfw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glfw/.appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/glfw/.appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgui" beforeDir="false" afterPath="$PROJECT_DIR$/imgui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgui/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/imgui/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_lin.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/Doxyfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" afterDir="false" />
@@ -357,6 +244,18 @@
       <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__dep__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__dep__incl.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__incl.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/latex/socket__service_8hpp__incl.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/external/catch2/catch.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/external/catch2/catch.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/src/base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/src/base.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/src/base.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/src/base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/src/crypto.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/src/crypto.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/src/server.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/src/server.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/src/socket_service.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/src/socket_service.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/tests/db_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/tests/db_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/tests/server_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/tests/server_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/user_files/Nastya/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/user_files/test_user/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NoteServer/user_files/test_user/test2.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,22 +284,32 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Victoriya/Desktop/Study/good/Note/CmakeLists.txt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Victoriya/Desktop/Study/good/NoteServer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="src" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="src\main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -419,11 +328,29 @@
       <workItem from="1718457695235" duration="246000" />
       <workItem from="1718457954902" duration="2040000" />
       <workItem from="1718460345958" duration="142000" />
-      <workItem from="1718460771682" duration="419000" />
+      <workItem from="1718460771682" duration="1555000" />
+      <workItem from="1718463095739" duration="1000" />
+      <workItem from="1718463161123" duration="5944000" />
+      <workItem from="1718470367984" duration="1498000" />
+      <workItem from="1718471878652" duration="11000" />
+      <workItem from="1718506288335" duration="3249000" />
+      <workItem from="1718527433050" duration="184000" />
+      <workItem from="1718534937200" duration="629000" />
+      <workItem from="1718627515894" duration="13000" />
+      <workItem from="1718629773510" duration="7487000" />
+      <workItem from="1718640112136" duration="8017000" />
+      <workItem from="1718648663755" duration="662000" />
+      <workItem from="1718649435842" duration="1566000" />
+      <workItem from="1718651174252" duration="605000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
 </project>

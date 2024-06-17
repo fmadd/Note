@@ -8,11 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/examples/imgui_impl_glfw.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_glfw.cpp.o.d"
-  "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/examples/imgui_impl_opengl3.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/examples/imgui_impl_opengl3.cpp.o.d"
   "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d"
   "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_demo.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d"
   "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_draw.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d"
+  "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_tables.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.o.d"
   "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/imgui-src/imgui_widgets.cpp" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o" "gcc" "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d"
   )
 

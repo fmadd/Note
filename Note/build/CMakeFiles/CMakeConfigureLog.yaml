@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -70,13 +70,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_64784/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_64784.dir/build.make CMakeFiles/cmTC_64784.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7'
-        Building C object CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d2a83/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d2a83.dir/build.make CMakeFiles/cmTC_d2a83.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8'
+        Building C object CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -86,8 +86,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_64784.dir/'
-         /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_64784.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccpl5tZg.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2a83.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d2a83.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccX9Kn59.s
         GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
         	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -107,15 +107,15 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 50eaa2331df977b8016186198deb2d18
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_64784.dir/'
-         as -v --64 -o CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o /tmp/ccpl5tZg.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2a83.dir/'
+         as -v --64 -o CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o /tmp/ccX9Kn59.s
         GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_64784
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64784.dir/link.txt --verbose=1
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -o cmTC_64784
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_d2a83
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2a83.dir/link.txt --verbose=1
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -o cmTC_d2a83
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
@@ -128,13 +128,13 @@ events:
         gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_64784' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_64784.'
-         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn5rilm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_64784 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d2a83' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d2a83.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuaoEg9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d2a83 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
         collect2 version 11.4.0
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn5rilm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_64784 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuaoEg9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d2a83 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.38
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_64784' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_64784.'
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d2a83' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d2a83.'
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8'
         
       exitCode: 0
   -
@@ -169,13 +169,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7']
+        ignore line: [Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8']
         ignore line: []
-        ignore line: [Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_64784/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_64784.dir/build.make CMakeFiles/cmTC_64784.dir/build]
-        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-M4Txt7']
-        ignore line: [Building C object CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d2a83/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_d2a83.dir/build.make CMakeFiles/cmTC_d2a83.dir/build]
+        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-mTobY8']
+        ignore line: [Building C object CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -185,8 +185,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_64784.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_64784.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccpl5tZg.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2a83.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d2a83.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccX9Kn59.s]
         ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -206,15 +206,15 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 50eaa2331df977b8016186198deb2d18]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_64784.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o /tmp/ccpl5tZg.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2a83.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o /tmp/ccX9Kn59.s]
         ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_64784]
-        ignore line: [/snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64784.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/cc  -v -Wl -v CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -o cmTC_64784]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_d2a83]
+        ignore line: [/snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2a83.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v -Wl -v CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -o cmTC_d2a83]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
@@ -227,13 +227,13 @@ events:
         ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_64784' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_64784.']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn5rilm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_64784 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d2a83' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d2a83.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuaoEg9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d2a83 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccn5rilm.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccuaoEg9.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -251,7 +251,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_64784] ==> ignore
+          arg [cmTC_d2a83] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
@@ -264,7 +264,7 @@ events:
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -279,7 +279,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 11.4.0]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn5rilm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_64784 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_64784.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuaoEg9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d2a83 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_d2a83.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -317,8 +317,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
@@ -327,13 +327,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5c688/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_5c688.dir/build.make CMakeFiles/cmTC_5c688.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4'
-        Building CXX object CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0f488/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0f488.dir/build.make CMakeFiles/cmTC_0f488.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8'
+        Building CXX object CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -343,8 +343,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c688.dir/'
-         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5c688.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cclRwwpj.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0f488.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0f488.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccwaJhvg.s
         GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
         	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -368,15 +368,15 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c688.dir/'
-         as -v --64 -o CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o /tmp/cclRwwpj.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0f488.dir/'
+         as -v --64 -o CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccwaJhvg.s
         GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_5c688
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c688.dir/link.txt --verbose=1
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5c688
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_0f488
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f488.dir/link.txt --verbose=1
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0f488
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
@@ -389,13 +389,13 @@ events:
         gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5c688' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5c688.'
-         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqbtsC0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5c688 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0f488' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0f488.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwjoeUd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0f488 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
         collect2 version 11.4.0
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqbtsC0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5c688 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwjoeUd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0f488 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.38
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5c688' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5c688.'
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0f488' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0f488.'
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8'
         
       exitCode: 0
   -
@@ -436,13 +436,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4']
+        ignore line: [Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8']
         ignore line: []
-        ignore line: [Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5c688/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_5c688.dir/build.make CMakeFiles/cmTC_5c688.dir/build]
-        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Ut9Kb4']
-        ignore line: [Building CXX object CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0f488/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_0f488.dir/build.make CMakeFiles/cmTC_0f488.dir/build]
+        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9HXgG8']
+        ignore line: [Building CXX object CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -c /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -452,8 +452,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c688.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5c688.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cclRwwpj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0f488.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /snap/cmake/1391/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0f488.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccwaJhvg.s]
         ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -477,15 +477,15 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c688.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o /tmp/cclRwwpj.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0f488.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccwaJhvg.s]
         ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_5c688]
-        ignore line: [/snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c688.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v -Wl -v CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5c688]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_0f488]
+        ignore line: [/snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f488.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v -Wl -v CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0f488]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
@@ -498,13 +498,13 @@ events:
         ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5c688' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5c688.']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqbtsC0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5c688 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0f488' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0f488.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwjoeUd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0f488 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccqbtsC0.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccwjoeUd.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -522,7 +522,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_5c688] ==> ignore
+          arg [cmTC_0f488] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
@@ -535,7 +535,7 @@ events:
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -546,7 +546,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 11.4.0]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqbtsC0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5c688 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_5c688.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwjoeUd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0f488 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_0f488.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -586,8 +586,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Kr4T95"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Kr4T95"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-GUp3n7"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-GUp3n7"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -595,17 +595,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Kr4T95'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-GUp3n7'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e8c0a/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_e8c0a.dir/build.make CMakeFiles/cmTC_e8c0a.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Kr4T95'
-        Building C object CMakeFiles/cmTC_e8c0a.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e8c0a.dir/src.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Kr4T95/src.c
-        Linking C executable cmTC_e8c0a
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8c0a.dir/link.txt --verbose=1
-        /usr/bin/cc -rdynamic CMakeFiles/cmTC_e8c0a.dir/src.c.o -o cmTC_e8c0a
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-Kr4T95'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5cdb4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5cdb4.dir/build.make CMakeFiles/cmTC_5cdb4.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-GUp3n7'
+        Building C object CMakeFiles/cmTC_5cdb4.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5cdb4.dir/src.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-GUp3n7/src.c
+        Linking C executable cmTC_5cdb4
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cdb4.dir/link.txt --verbose=1
+        /usr/bin/cc -rdynamic CMakeFiles/cmTC_5cdb4.dir/src.c.o -o cmTC_5cdb4
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-GUp3n7'
         
       exitCode: 0
   -
@@ -617,8 +617,8 @@ events:
     checks:
       - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-VBjlg8"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-VBjlg8"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-OJC9xb"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-OJC9xb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -626,17 +626,17 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-VBjlg8'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-OJC9xb'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ee833/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_ee833.dir/build.make CMakeFiles/cmTC_ee833.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-VBjlg8'
-        Building C object CMakeFiles/cmTC_ee833.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_ee833.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-VBjlg8/CheckFunctionExists.c
-        Linking C executable cmTC_ee833
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee833.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay -rdynamic CMakeFiles/cmTC_ee833.dir/CheckFunctionExists.c.o -o cmTC_ee833  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-VBjlg8'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_98da9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_98da9.dir/build.make CMakeFiles/cmTC_98da9.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-OJC9xb'
+        Building C object CMakeFiles/cmTC_98da9.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_98da9.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-OJC9xb/CheckFunctionExists.c
+        Linking C executable cmTC_98da9
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98da9.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay -rdynamic CMakeFiles/cmTC_98da9.dir/CheckFunctionExists.c.o -o cmTC_98da9  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-OJC9xb'
         
       exitCode: 0
   -
@@ -648,8 +648,8 @@ events:
     checks:
       - "Looking for gethostbyname"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-f72zw6"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-f72zw6"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-MEuRM8"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-MEuRM8"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -657,17 +657,17 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-f72zw6'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-MEuRM8'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b003d/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_b003d.dir/build.make CMakeFiles/cmTC_b003d.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-f72zw6'
-        Building C object CMakeFiles/cmTC_b003d.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_b003d.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-f72zw6/CheckFunctionExists.c
-        Linking C executable cmTC_b003d
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b003d.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname -rdynamic CMakeFiles/cmTC_b003d.dir/CheckFunctionExists.c.o -o cmTC_b003d
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-f72zw6'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6b0a2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6b0a2.dir/build.make CMakeFiles/cmTC_6b0a2.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-MEuRM8'
+        Building C object CMakeFiles/cmTC_6b0a2.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_6b0a2.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-MEuRM8/CheckFunctionExists.c
+        Linking C executable cmTC_6b0a2
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b0a2.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname -rdynamic CMakeFiles/cmTC_6b0a2.dir/CheckFunctionExists.c.o -o cmTC_6b0a2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-MEuRM8'
         
       exitCode: 0
   -
@@ -679,8 +679,8 @@ events:
     checks:
       - "Looking for connect"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9UOqe8"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9UOqe8"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-tIZTIa"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-tIZTIa"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -688,17 +688,17 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9UOqe8'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-tIZTIa'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_527d0/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_527d0.dir/build.make CMakeFiles/cmTC_527d0.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9UOqe8'
-        Building C object CMakeFiles/cmTC_527d0.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_527d0.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9UOqe8/CheckFunctionExists.c
-        Linking C executable cmTC_527d0
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_527d0.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect -rdynamic CMakeFiles/cmTC_527d0.dir/CheckFunctionExists.c.o -o cmTC_527d0
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-9UOqe8'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_51534/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_51534.dir/build.make CMakeFiles/cmTC_51534.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-tIZTIa'
+        Building C object CMakeFiles/cmTC_51534.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_51534.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-tIZTIa/CheckFunctionExists.c
+        Linking C executable cmTC_51534
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51534.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect -rdynamic CMakeFiles/cmTC_51534.dir/CheckFunctionExists.c.o -o cmTC_51534
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-tIZTIa'
         
       exitCode: 0
   -
@@ -710,8 +710,8 @@ events:
     checks:
       - "Looking for remove"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-JhKqc5"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-JhKqc5"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-pUXmd9"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-pUXmd9"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -719,17 +719,17 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-JhKqc5'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-pUXmd9'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_89df7/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_89df7.dir/build.make CMakeFiles/cmTC_89df7.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-JhKqc5'
-        Building C object CMakeFiles/cmTC_89df7.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_89df7.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-JhKqc5/CheckFunctionExists.c
-        Linking C executable cmTC_89df7
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89df7.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove -rdynamic CMakeFiles/cmTC_89df7.dir/CheckFunctionExists.c.o -o cmTC_89df7
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-JhKqc5'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3ca1e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3ca1e.dir/build.make CMakeFiles/cmTC_3ca1e.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-pUXmd9'
+        Building C object CMakeFiles/cmTC_3ca1e.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_3ca1e.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-pUXmd9/CheckFunctionExists.c
+        Linking C executable cmTC_3ca1e
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ca1e.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove -rdynamic CMakeFiles/cmTC_3ca1e.dir/CheckFunctionExists.c.o -o cmTC_3ca1e
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-pUXmd9'
         
       exitCode: 0
   -
@@ -741,8 +741,8 @@ events:
     checks:
       - "Looking for shmat"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-0OPbQ7"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-0OPbQ7"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-IaDqTb"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-IaDqTb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -750,17 +750,17 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-0OPbQ7'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-IaDqTb'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f575c/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_f575c.dir/build.make CMakeFiles/cmTC_f575c.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-0OPbQ7'
-        Building C object CMakeFiles/cmTC_f575c.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_f575c.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-0OPbQ7/CheckFunctionExists.c
-        Linking C executable cmTC_f575c
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f575c.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat -rdynamic CMakeFiles/cmTC_f575c.dir/CheckFunctionExists.c.o -o cmTC_f575c
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-0OPbQ7'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7cbfe/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7cbfe.dir/build.make CMakeFiles/cmTC_7cbfe.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-IaDqTb'
+        Building C object CMakeFiles/cmTC_7cbfe.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_7cbfe.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-IaDqTb/CheckFunctionExists.c
+        Linking C executable cmTC_7cbfe
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cbfe.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat -rdynamic CMakeFiles/cmTC_7cbfe.dir/CheckFunctionExists.c.o -o cmTC_7cbfe
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-IaDqTb'
         
       exitCode: 0
   -
@@ -772,8 +772,8 @@ events:
     checks:
       - "Looking for IceConnectionNumber in ICE"
     directories:
-      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-YAzNm6"
-      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-YAzNm6"
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-rn7Bh8"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-rn7Bh8"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glfw-src/CMake/modules"
@@ -781,17 +781,17 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-YAzNm6'
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-rn7Bh8'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_127fc/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_127fc.dir/build.make CMakeFiles/cmTC_127fc.dir/build
-        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-YAzNm6'
-        Building C object CMakeFiles/cmTC_127fc.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_127fc.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-YAzNm6/CheckFunctionExists.c
-        Linking C executable cmTC_127fc
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_127fc.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -rdynamic CMakeFiles/cmTC_127fc.dir/CheckFunctionExists.c.o -o cmTC_127fc  -lICE
-        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-YAzNm6'
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3d843/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3d843.dir/build.make CMakeFiles/cmTC_3d843.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-rn7Bh8'
+        Building C object CMakeFiles/cmTC_3d843.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_3d843.dir/CheckFunctionExists.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-rn7Bh8/CheckFunctionExists.c
+        Linking C executable cmTC_3d843
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d843.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -rdynamic CMakeFiles/cmTC_3d843.dir/CheckFunctionExists.c.o -o cmTC_3d843  -lICE
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeScratch/TryCompile-rn7Bh8'
         
       exitCode: 0
   -
@@ -829,20 +829,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d3091/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_d3091.dir/build.make CMakeFiles/cmTC_d3091.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2a63b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2a63b.dir/build.make CMakeFiles/cmTC_2a63b.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_d3091.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d3091.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_2a63b.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_2a63b.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_d3091.dir/build.make:78: CMakeFiles/cmTC_d3091.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_2a63b.dir/build.make:78: CMakeFiles/cmTC_2a63b.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_d3091/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_2a63b/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -870,20 +870,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_700c4/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_700c4.dir/build.make CMakeFiles/cmTC_700c4.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c4e07/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c4e07.dir/build.make CMakeFiles/cmTC_c4e07.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_700c4.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_700c4.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_c4e07.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c4e07.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_700c4.dir/build.make:78: CMakeFiles/cmTC_700c4.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_c4e07.dir/build.make:78: CMakeFiles/cmTC_c4e07.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_700c4/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_c4e07/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -911,20 +911,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_986b4/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_986b4.dir/build.make CMakeFiles/cmTC_986b4.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1c62e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1c62e.dir/build.make CMakeFiles/cmTC_1c62e.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_986b4.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_986b4.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_1c62e.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_1c62e.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_986b4.dir/build.make:78: CMakeFiles/cmTC_986b4.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_1c62e.dir/build.make:78: CMakeFiles/cmTC_1c62e.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_986b4/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_1c62e/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -952,20 +952,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3ada4/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_3ada4.dir/build.make CMakeFiles/cmTC_3ada4.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1c799/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1c799.dir/build.make CMakeFiles/cmTC_1c799.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_3ada4.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_3ada4.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_1c799.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_1c799.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_3ada4.dir/build.make:78: CMakeFiles/cmTC_3ada4.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_1c799.dir/build.make:78: CMakeFiles/cmTC_1c799.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_3ada4/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_1c799/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -993,20 +993,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_841a7/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_841a7.dir/build.make CMakeFiles/cmTC_841a7.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b352e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b352e.dir/build.make CMakeFiles/cmTC_b352e.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_841a7.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_841a7.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_b352e.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_b352e.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_841a7.dir/build.make:78: CMakeFiles/cmTC_841a7.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_b352e.dir/build.make:78: CMakeFiles/cmTC_b352e.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_841a7/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_b352e/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1034,20 +1034,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a5eb0/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_a5eb0.dir/build.make CMakeFiles/cmTC_a5eb0.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_50c30/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_50c30.dir/build.make CMakeFiles/cmTC_50c30.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_a5eb0.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_a5eb0.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_50c30.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_50c30.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_a5eb0.dir/build.make:78: CMakeFiles/cmTC_a5eb0.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_50c30.dir/build.make:78: CMakeFiles/cmTC_50c30.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_a5eb0/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_50c30/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1075,20 +1075,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_40e47/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_40e47.dir/build.make CMakeFiles/cmTC_40e47.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_423fa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_423fa.dir/build.make CMakeFiles/cmTC_423fa.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_40e47.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_40e47.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_423fa.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_423fa.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_40e47.dir/build.make:78: CMakeFiles/cmTC_40e47.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_423fa.dir/build.make:78: CMakeFiles/cmTC_423fa.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_40e47/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_423fa/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1116,20 +1116,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c40c1/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_c40c1.dir/build.make CMakeFiles/cmTC_c40c1.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_03155/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_03155.dir/build.make CMakeFiles/cmTC_03155.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_c40c1.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c40c1.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_03155.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_03155.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_c40c1.dir/build.make:78: CMakeFiles/cmTC_c40c1.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_03155.dir/build.make:78: CMakeFiles/cmTC_03155.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_c40c1/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_03155/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1157,20 +1157,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_edc13/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_edc13.dir/build.make CMakeFiles/cmTC_edc13.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b30f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1b30f.dir/build.make CMakeFiles/cmTC_1b30f.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_edc13.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_edc13.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_1b30f.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_1b30f.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_edc13.dir/build.make:78: CMakeFiles/cmTC_edc13.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_1b30f.dir/build.make:78: CMakeFiles/cmTC_1b30f.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_edc13/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_1b30f/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1197,14 +1197,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7d6eb/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_7d6eb.dir/build.make CMakeFiles/cmTC_7d6eb.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9c615/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9c615.dir/build.make CMakeFiles/cmTC_9c615.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_7d6eb.dir/test_x86_sse2.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -msse2 -o CMakeFiles/cmTC_7d6eb.dir/test_x86_sse2.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse2.cpp
-        Linking CXX executable cmTC_7d6eb
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d6eb.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_7d6eb.dir/test_x86_sse2.cpp.o -o cmTC_7d6eb
+        Building CXX object CMakeFiles/cmTC_9c615.dir/test_x86_sse2.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -msse2 -o CMakeFiles/cmTC_9c615.dir/test_x86_sse2.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse2.cpp
+        Linking CXX executable cmTC_9c615
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c615.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_9c615.dir/test_x86_sse2.cpp.o -o cmTC_9c615
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1229,14 +1229,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b832f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_b832f.dir/build.make CMakeFiles/cmTC_b832f.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bed35/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bed35.dir/build.make CMakeFiles/cmTC_bed35.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_b832f.dir/test_x86_sse3.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -msse3 -o CMakeFiles/cmTC_b832f.dir/test_x86_sse3.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse3.cpp
-        Linking CXX executable cmTC_b832f
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b832f.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_b832f.dir/test_x86_sse3.cpp.o -o cmTC_b832f
+        Building CXX object CMakeFiles/cmTC_bed35.dir/test_x86_sse3.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -msse3 -o CMakeFiles/cmTC_bed35.dir/test_x86_sse3.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse3.cpp
+        Linking CXX executable cmTC_bed35
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bed35.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_bed35.dir/test_x86_sse3.cpp.o -o cmTC_bed35
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1261,14 +1261,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_15fa0/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_15fa0.dir/build.make CMakeFiles/cmTC_15fa0.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4b151/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4b151.dir/build.make CMakeFiles/cmTC_4b151.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_15fa0.dir/test_x86_ssse3.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -mssse3 -o CMakeFiles/cmTC_15fa0.dir/test_x86_ssse3.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_ssse3.cpp
-        Linking CXX executable cmTC_15fa0
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15fa0.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_15fa0.dir/test_x86_ssse3.cpp.o -o cmTC_15fa0
+        Building CXX object CMakeFiles/cmTC_4b151.dir/test_x86_ssse3.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -mssse3 -o CMakeFiles/cmTC_4b151.dir/test_x86_ssse3.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_ssse3.cpp
+        Linking CXX executable cmTC_4b151
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b151.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_4b151.dir/test_x86_ssse3.cpp.o -o cmTC_4b151
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1293,14 +1293,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_60e83/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_60e83.dir/build.make CMakeFiles/cmTC_60e83.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_24af2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_24af2.dir/build.make CMakeFiles/cmTC_24af2.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_60e83.dir/test_x86_sse41.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -msse4.1 -o CMakeFiles/cmTC_60e83.dir/test_x86_sse41.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse41.cpp
-        Linking CXX executable cmTC_60e83
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60e83.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_60e83.dir/test_x86_sse41.cpp.o -o cmTC_60e83
+        Building CXX object CMakeFiles/cmTC_24af2.dir/test_x86_sse41.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -msse4.1 -o CMakeFiles/cmTC_24af2.dir/test_x86_sse41.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse41.cpp
+        Linking CXX executable cmTC_24af2
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24af2.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_24af2.dir/test_x86_sse41.cpp.o -o cmTC_24af2
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1325,14 +1325,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8c87f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_8c87f.dir/build.make CMakeFiles/cmTC_8c87f.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a491e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a491e.dir/build.make CMakeFiles/cmTC_a491e.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_8c87f.dir/test_x86_sse42.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -msse4.2 -o CMakeFiles/cmTC_8c87f.dir/test_x86_sse42.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse42.cpp
-        Linking CXX executable cmTC_8c87f
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c87f.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_8c87f.dir/test_x86_sse42.cpp.o -o cmTC_8c87f
+        Building CXX object CMakeFiles/cmTC_a491e.dir/test_x86_sse42.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -msse4.2 -o CMakeFiles/cmTC_a491e.dir/test_x86_sse42.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sse42.cpp
+        Linking CXX executable cmTC_a491e
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a491e.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_a491e.dir/test_x86_sse42.cpp.o -o cmTC_a491e
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1357,14 +1357,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ed475/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_ed475.dir/build.make CMakeFiles/cmTC_ed475.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8c554/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8c554.dir/build.make CMakeFiles/cmTC_8c554.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_ed475.dir/test_x86_clmul.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -mpclmul -o CMakeFiles/cmTC_ed475.dir/test_x86_clmul.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_clmul.cpp
-        Linking CXX executable cmTC_ed475
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed475.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_ed475.dir/test_x86_clmul.cpp.o -o cmTC_ed475
+        Building CXX object CMakeFiles/cmTC_8c554.dir/test_x86_clmul.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -mpclmul -o CMakeFiles/cmTC_8c554.dir/test_x86_clmul.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_clmul.cpp
+        Linking CXX executable cmTC_8c554
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c554.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_8c554.dir/test_x86_clmul.cpp.o -o cmTC_8c554
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1389,14 +1389,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6bda4/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_6bda4.dir/build.make CMakeFiles/cmTC_6bda4.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fd6bd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fd6bd.dir/build.make CMakeFiles/cmTC_fd6bd.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_6bda4.dir/test_x86_aes.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -maes -o CMakeFiles/cmTC_6bda4.dir/test_x86_aes.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_aes.cpp
-        Linking CXX executable cmTC_6bda4
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bda4.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_6bda4.dir/test_x86_aes.cpp.o -o cmTC_6bda4
+        Building CXX object CMakeFiles/cmTC_fd6bd.dir/test_x86_aes.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -maes -o CMakeFiles/cmTC_fd6bd.dir/test_x86_aes.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_aes.cpp
+        Linking CXX executable cmTC_fd6bd
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd6bd.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_fd6bd.dir/test_x86_aes.cpp.o -o cmTC_fd6bd
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1421,14 +1421,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_04f5d/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_04f5d.dir/build.make CMakeFiles/cmTC_04f5d.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aa2e3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aa2e3.dir/build.make CMakeFiles/cmTC_aa2e3.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_04f5d.dir/test_x86_avx.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -mavx -o CMakeFiles/cmTC_04f5d.dir/test_x86_avx.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_avx.cpp
-        Linking CXX executable cmTC_04f5d
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04f5d.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_04f5d.dir/test_x86_avx.cpp.o -o cmTC_04f5d
+        Building CXX object CMakeFiles/cmTC_aa2e3.dir/test_x86_avx.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -mavx -o CMakeFiles/cmTC_aa2e3.dir/test_x86_avx.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_avx.cpp
+        Linking CXX executable cmTC_aa2e3
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa2e3.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_aa2e3.dir/test_x86_avx.cpp.o -o cmTC_aa2e3
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1453,14 +1453,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2deba/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_2deba.dir/build.make CMakeFiles/cmTC_2deba.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3420e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3420e.dir/build.make CMakeFiles/cmTC_3420e.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_2deba.dir/test_x86_avx2.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -mavx2 -o CMakeFiles/cmTC_2deba.dir/test_x86_avx2.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_avx2.cpp
-        Linking CXX executable cmTC_2deba
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2deba.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_2deba.dir/test_x86_avx2.cpp.o -o cmTC_2deba
+        Building CXX object CMakeFiles/cmTC_3420e.dir/test_x86_avx2.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -mavx2 -o CMakeFiles/cmTC_3420e.dir/test_x86_avx2.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_avx2.cpp
+        Linking CXX executable cmTC_3420e
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3420e.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_3420e.dir/test_x86_avx2.cpp.o -o cmTC_3420e
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1485,14 +1485,14 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2000f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_2000f.dir/build.make CMakeFiles/cmTC_2000f.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3580/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3580.dir/build.make CMakeFiles/cmTC_c3580.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building CXX object CMakeFiles/cmTC_2000f.dir/test_x86_sha.cpp.o
-        /usr/bin/c++   -std=gnu++20 -fPIE   -msha -o CMakeFiles/cmTC_2000f.dir/test_x86_sha.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sha.cpp
-        Linking CXX executable cmTC_2000f
-        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2000f.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_2000f.dir/test_x86_sha.cpp.o -o cmTC_2000f
+        Building CXX object CMakeFiles/cmTC_c3580.dir/test_x86_sha.cpp.o
+        /usr/bin/c++   -std=gnu++20 -fPIE   -msha -o CMakeFiles/cmTC_c3580.dir/test_x86_sha.cpp.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/TestPrograms/test_x86_sha.cpp
+        Linking CXX executable cmTC_c3580
+        /snap/cmake/1391/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3580.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_c3580.dir/test_x86_sha.cpp.o -o cmTC_c3580
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 0
@@ -1522,20 +1522,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_11c51/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_11c51.dir/build.make CMakeFiles/cmTC_11c51.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aa500/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aa500.dir/build.make CMakeFiles/cmTC_aa500.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_11c51.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_11c51.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_aa500.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_aa500.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_11c51.dir/build.make:78: CMakeFiles/cmTC_11c51.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_aa500.dir/build.make:78: CMakeFiles/cmTC_aa500.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_11c51/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_aa500/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1563,20 +1563,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b0d88/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_b0d88.dir/build.make CMakeFiles/cmTC_b0d88.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_99647/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_99647.dir/build.make CMakeFiles/cmTC_99647.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_b0d88.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_b0d88.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_99647.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_99647.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_b0d88.dir/build.make:78: CMakeFiles/cmTC_b0d88.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_99647.dir/build.make:78: CMakeFiles/cmTC_99647.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_b0d88/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_99647/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1604,20 +1604,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_50465/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_50465.dir/build.make CMakeFiles/cmTC_50465.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9c0b7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9c0b7.dir/build.make CMakeFiles/cmTC_9c0b7.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_50465.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_50465.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_9c0b7.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_9c0b7.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_50465.dir/build.make:78: CMakeFiles/cmTC_50465.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_9c0b7.dir/build.make:78: CMakeFiles/cmTC_9c0b7.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_50465/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_9c0b7/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1645,20 +1645,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6c083/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_6c083.dir/build.make CMakeFiles/cmTC_6c083.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8e517/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8e517.dir/build.make CMakeFiles/cmTC_8e517.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_6c083.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_6c083.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_8e517.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_8e517.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_6c083.dir/build.make:78: CMakeFiles/cmTC_6c083.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_8e517.dir/build.make:78: CMakeFiles/cmTC_8e517.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_6c083/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_8e517/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1686,20 +1686,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_65a26/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_65a26.dir/build.make CMakeFiles/cmTC_65a26.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a79bf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a79bf.dir/build.make CMakeFiles/cmTC_a79bf.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_65a26.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_65a26.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_a79bf.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_a79bf.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_65a26.dir/build.make:78: CMakeFiles/cmTC_65a26.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_a79bf.dir/build.make:78: CMakeFiles/cmTC_a79bf.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_65a26/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_a79bf/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1727,20 +1727,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_df61f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_df61f.dir/build.make CMakeFiles/cmTC_df61f.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aac46/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aac46.dir/build.make CMakeFiles/cmTC_aac46.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_df61f.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_df61f.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_aac46.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_aac46.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_df61f.dir/build.make:78: CMakeFiles/cmTC_df61f.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_aac46.dir/build.make:78: CMakeFiles/cmTC_aac46.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_df61f/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_aac46/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1768,20 +1768,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_72165/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_72165.dir/build.make CMakeFiles/cmTC_72165.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9e4f9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9e4f9.dir/build.make CMakeFiles/cmTC_9e4f9.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_72165.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_72165.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_9e4f9.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_9e4f9.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_72165.dir/build.make:78: CMakeFiles/cmTC_72165.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_9e4f9.dir/build.make:78: CMakeFiles/cmTC_9e4f9.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_72165/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_9e4f9/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1809,20 +1809,20 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_621b8/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_621b8.dir/build.make CMakeFiles/cmTC_621b8.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_952eb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_952eb.dir/build.make CMakeFiles/cmTC_952eb.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_621b8.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_621b8.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_952eb.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_952eb.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_621b8.dir/build.make:78: CMakeFiles/cmTC_621b8.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_952eb.dir/build.make:78: CMakeFiles/cmTC_952eb.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_621b8/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_952eb/fast] Error 2
         
       exitCode: 2
     runResult:
@@ -1850,20 +1850,784 @@ events:
       stdout: |
         Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f16ff/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_f16ff.dir/build.make CMakeFiles/cmTC_f16ff.dir/build
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f4640/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f4640.dir/build.make CMakeFiles/cmTC_f4640.dir/build
         gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        Building C object CMakeFiles/cmTC_f16ff.dir/arch.c.o
-        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_f16ff.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        Building C object CMakeFiles/cmTC_f4640.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_f4640.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
            21 |     #error cmake_ARCH x86_64
               |      ^~~~~
         /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
            33 | #error cmake_ARCH unknown
               |  ^~~~~
-        gmake[1]: *** [CMakeFiles/cmTC_f16ff.dir/build.make:78: CMakeFiles/cmTC_f16ff.dir/arch.c.o] Error 1
+        gmake[1]: *** [CMakeFiles/cmTC_f4640.dir/build.make:78: CMakeFiles/cmTC_f4640.dir/arch.c.o] Error 1
         gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
-        gmake: *** [Makefile:127: cmTC_f16ff/fast] Error 2
+        gmake: *** [Makefile:127: cmTC_f4640/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f4b5b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f4b5b.dir/build.make CMakeFiles/cmTC_f4b5b.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_f4b5b.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_f4b5b.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_f4b5b.dir/build.make:78: CMakeFiles/cmTC_f4b5b.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_f4b5b/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3c66a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3c66a.dir/build.make CMakeFiles/cmTC_3c66a.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_3c66a.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_3c66a.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_3c66a.dir/build.make:78: CMakeFiles/cmTC_3c66a.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_3c66a/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_12c6b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_12c6b.dir/build.make CMakeFiles/cmTC_12c6b.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_12c6b.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_12c6b.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_12c6b.dir/build.make:78: CMakeFiles/cmTC_12c6b.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_12c6b/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1c229/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1c229.dir/build.make CMakeFiles/cmTC_1c229.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_1c229.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_1c229.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_1c229.dir/build.make:78: CMakeFiles/cmTC_1c229.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_1c229/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_11416/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_11416.dir/build.make CMakeFiles/cmTC_11416.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_11416.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_11416.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_11416.dir/build.make:78: CMakeFiles/cmTC_11416.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_11416/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a2102/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a2102.dir/build.make CMakeFiles/cmTC_a2102.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_a2102.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_a2102.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_a2102.dir/build.make:78: CMakeFiles/cmTC_a2102.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_a2102/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_db1af/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_db1af.dir/build.make CMakeFiles/cmTC_db1af.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_db1af.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_db1af.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_db1af.dir/build.make:78: CMakeFiles/cmTC_db1af.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_db1af/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bf85b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bf85b.dir/build.make CMakeFiles/cmTC_bf85b.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_bf85b.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_bf85b.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_bf85b.dir/build.make:78: CMakeFiles/cmTC_bf85b.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_bf85b/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9415a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9415a.dir/build.make CMakeFiles/cmTC_9415a.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_9415a.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_9415a.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_9415a.dir/build.make:78: CMakeFiles/cmTC_9415a.dir/arch.c.o] Error 1
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_9415a/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d09c1/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d09c1.dir/build.make CMakeFiles/cmTC_d09c1.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_d09c1.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d09c1.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_d09c1.dir/build.make:78: CMakeFiles/cmTC_d09c1.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_d09c1/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_98477/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_98477.dir/build.make CMakeFiles/cmTC_98477.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_98477.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_98477.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_98477.dir/build.make:78: CMakeFiles/cmTC_98477.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_98477/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_46cd7/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_46cd7.dir/build.make CMakeFiles/cmTC_46cd7.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_46cd7.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_46cd7.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_46cd7.dir/build.make:78: CMakeFiles/cmTC_46cd7.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_46cd7/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_71be1/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_71be1.dir/build.make CMakeFiles/cmTC_71be1.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_71be1.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_71be1.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_71be1.dir/build.make:78: CMakeFiles/cmTC_71be1.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_71be1/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f5512/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f5512.dir/build.make CMakeFiles/cmTC_f5512.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_f5512.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_f5512.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_f5512.dir/build.make:78: CMakeFiles/cmTC_f5512.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_f5512/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6efbc/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6efbc.dir/build.make CMakeFiles/cmTC_6efbc.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_6efbc.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_6efbc.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_6efbc.dir/build.make:78: CMakeFiles/cmTC_6efbc.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_6efbc/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6a8c3/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6a8c3.dir/build.make CMakeFiles/cmTC_6a8c3.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_6a8c3.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_6a8c3.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_6a8c3.dir/build.make:78: CMakeFiles/cmTC_6a8c3.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_6a8c3/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_991da/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_991da.dir/build.make CMakeFiles/cmTC_991da.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_991da.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_991da.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_991da.dir/build.make:78: CMakeFiles/cmTC_991da.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_991da/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9c5d3/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9c5d3.dir/build.make CMakeFiles/cmTC_9c5d3.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_9c5d3.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_9c5d3.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_9c5d3.dir/build.make:78: CMakeFiles/cmTC_9c5d3.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_9c5d3/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
         
       exitCode: 2
     runResult:
