@@ -24,10 +24,7 @@ enum LOGIN_STATE {
     SUCCESS,
     FAILURE
 };
-
-ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 std::string fileContent;
-int clicked = 0;
 bool fileContentLoaded = false;
 
 void start_menu() {
@@ -35,7 +32,17 @@ void start_menu() {
     ImGui::Text("Welcome to your menu!");
     ImGui::End();
 }
+void success_reg() {
+    ImGui::Begin("Registration");
+    ImGui::Text("You have successfully registered!");
+    ImGui::End();
+}
 
+void not_reg() {
+    ImGui::Begin("Registration");
+    ImGui::Text("Could not register this user, please try again");
+    ImGui::End();
+}
 int main() {
     try {
         io_service io_service;
@@ -67,8 +74,6 @@ int main() {
         static char filename[128] = "";
         static char user[128] = "";
         static char owner[128] = "";
-//        std::string read_file(const std::string & file);
-//        bool is_text_file(const std::string & file);
 
         while (!glfwWindowShouldClose(window))
         {
@@ -84,26 +89,27 @@ int main() {
                     ImGui::OpenPopup("Sign Up");
                 }
                 if (ImGui::BeginPopupModal("Sign Up", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
-                    //ImGui::InputText("Login", loginBuf, sizeof(loginBuf), ImGuiInputTextFlags_CharsUppercase, const_cast<char*>(login.c_str()));
                     ImGui::InputText("Login", login, IM_ARRAYSIZE(login));
                     ImGui::InputText("Password", password, IM_ARRAYSIZE(password));
                     if (ImGui::Button("Register")) {
-                        registration(socket, aesKey, login, password);
+                        bool flag = registration(socket, aesKey, login, password);
+                        success_reg();
+                        if(!flag) not_reg();
                         ImGui::CloseCurrentPopup();
                     }
                     ImGui::EndPopup();
                 }
 
-                if (ImGui::Button("Sign In")) { //click++
+                if (ImGui::Button("Sign In")) {
                     ImGui::OpenPopup("Sign In");
                 }
                 if (ImGui::BeginPopupModal("Sign In", NULL, ImGuiWindowFlags_AlwaysAutoResize)) {
                     ImGui::InputText("Login", login, IM_ARRAYSIZE(login));
                     ImGui::InputText("Password", password, IM_ARRAYSIZE(password));
                     if (ImGui::Button("Log in")) {
-                        authentication(socket, aesKey, login, password);
+                        bool flag = authentication(socket, aesKey, login, password);
                         login_state = LOGIN_STATE::SUCCESS;
-                        if authentication was failed set login_state = LOGIN_STATE::FAILURE
+                        if(!flag) login_state = LOGIN_STATE::FAILURE;
                         ImGui::CloseCurrentPopup();
                     }
                     ImGui::EndPopup();
@@ -133,7 +139,15 @@ int main() {
                                                 ImGui::Text("Failed to open file.");
                                             }
                                         }
-                                        ImGui::InputTextMultiline("File", &fileContent[0], fileContent.size(), ImVec2(400, 200));
+                                        if (ImGui::InputTextMultiline("File", &fileContent[0], fileContent.size(), ImVec2(400, 200))) {
+                                            std::ofstream outFile("userfiles/file_" + std::to_string(i) + ".txt");
+                                            if (outFile.is_open()) {
+                                                outFile << fileContent;
+                                                outFile.close();
+                                            } else {
+                                                ImGui::Text("Failed to save edition.");
+                                            }
+                                        }
                                         ImGui::EndTabItem();
                                     }
                                 }
