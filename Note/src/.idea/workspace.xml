@@ -19,72 +19,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="650e611b-9571-432d-b3b8-aa6e681d6083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../NoteServer/.idea/NoteServer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Note_my2/Note_my2/.idea/Note_my2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Note_my2/Note_my2/src/.idea/src.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CmakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CmakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Files/file_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/file_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Files/file_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/file_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Files/file_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/file_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Files/saved_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../userfiles/saved_file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/imgui.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/Project_ImGui" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Project_ImGui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad-generate-files.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/CMakeFiles/glad.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/include/glad/glad.h" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/include/glad/glad.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glad-build/src/glad.c" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glad-build/src/glad.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-build/src/CMakeFiles/glfw.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userfiles/file_0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-src" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-src/.appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-src/.appveyor.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-src" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-src/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-src/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitclone.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-subbuild/imgui-populate-prefix/tmp/imgui-populate-gitupdate.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libimgui.a" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libimgui.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/git-data/head-ref" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/git-data/head-ref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdrand.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdrand.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdseed.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdseed.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crpt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/crpt.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crpt.h" beforeDir="false" afterPath="$PROJECT_DIR$/crpt.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glfw" beforeDir="false" afterPath="$PROJECT_DIR$/glfw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glfw/.appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/glfw/.appveyor.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui" beforeDir="false" afterPath="$PROJECT_DIR$/imgui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/imgui/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../userfiles/saved_file.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/Doxyfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" afterDir="false" />
@@ -256,6 +205,8 @@
       <change beforePath="$PROJECT_DIR$/../../NoteServer/user_files/Nastya/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/user_files/test_user/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/user_files/test_user/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Note_my2/Note_my2/.idea/Note_my2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Note_my2/Note_my2/src/.idea/src.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +292,7 @@
       <workItem from="1718640112136" duration="8017000" />
       <workItem from="1718648663755" duration="662000" />
       <workItem from="1718649435842" duration="1566000" />
-      <workItem from="1718651174252" duration="605000" />
+      <workItem from="1718651174252" duration="1432000" />
     </task>
     <servers />
   </component>

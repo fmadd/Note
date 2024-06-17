@@ -130,11 +130,11 @@ int main() {
                                                 }
                                                 file.close();
                                                 fileContentLoaded = true;
-                                                ImGui::InputText("File: ", fileContent, sizeof(fileContent));
                                             } else {
                                                 ImGui::Text("Failed to open file.");
                                             }
                                         }
+                                        ImGui::InputTextMultiline("File", &fileContent[0], fileContent.size(), ImVec2(400, 200));
                                         ImGui::EndTabItem();
                                     }
                                 }
