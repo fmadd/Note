@@ -4,7 +4,6 @@
 #include <boost/asio.hpp>
 #include "crpt.h"
 #include <stdio.h>
-//#include <window.h>
 
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
@@ -102,9 +101,9 @@ int main() {
                     ImGui::InputText("Login", login, IM_ARRAYSIZE(login));
                     ImGui::InputText("Password", password, IM_ARRAYSIZE(password));
                     if (ImGui::Button("Log in")) {
-                        // authentication(socket, aesKey, login, password);
+                        authentication(socket, aesKey, login, password);
                         login_state = LOGIN_STATE::SUCCESS;
-                        // if authentication was failed set login_state = LOGIN_STATE::FAILURE
+                        if authentication was failed set login_state = LOGIN_STATE::FAILURE
                         ImGui::CloseCurrentPopup();
                     }
                     ImGui::EndPopup();
