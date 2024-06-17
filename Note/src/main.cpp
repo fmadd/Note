@@ -174,16 +174,16 @@ int main() {
                                 ImGui::EndPopup();
                             }
 
-                            if (ImGui::Button("Delete file")) {
+                            if (ImGui::Button("Download File")) {
                                 memset(owner, 0, 128);
                                 memset(filename, 0, 128);
-                                ImGui::OpenPopup("Delete File");
+                                ImGui::OpenPopup("Download File");
                             }
-                            if (ImGui::BeginPopup("Delete File")) {
+                            if (ImGui::BeginPopup("Download File")) {
                                 ImGui::InputText("Owner", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("Filename", filename, IM_ARRAYSIZE(filename));
-                                if (ImGui::Button("Delete")) {
-                                    delete_file(socket, aesKey, owner, filename);
+                                if (ImGui::Button("Download")) {
+                                    except_file(socket, aesKey, owner, filename);
                                     ImGui::CloseCurrentPopup();
                                 }
                                 ImGui::EndPopup();
