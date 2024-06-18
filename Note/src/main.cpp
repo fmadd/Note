@@ -182,7 +182,7 @@ int main() {
                                 memset(filename, 0, 128);
                                 ImGui::OpenPopup("Send File");
                             }
-                            if (ImGui::BeginPopup("Send File")) {
+                            if (ImGui::BeginPopup("Send File", ImGuiWindowFlags_AlwaysAutoResize)) {
                                 ImGui::InputText("Input owner's name", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("File name", filename, IM_ARRAYSIZE(filename));
                                 if (ImGui::Button("Send")) {
@@ -191,7 +191,7 @@ int main() {
                                         ImGui::Text("The file has been successfully sent!");
                                         ImGui::CloseCurrentPopup();
                                     }catch (const std::runtime_error &e) {
-                                        ImGui::Begin("Error!");
+                                        ImGui::Begin("Error", ImGuiWindowFlags_MenuBar);
                                         ImGui::Text("File doesn't exist");
                                         ImGui::End();
                                     }
@@ -213,7 +213,7 @@ int main() {
                                         ImGui::Text("The file has been successfully downloaded!");
                                         ImGui::CloseCurrentPopup();
                                     }catch (const std::runtime_error &e) {
-                                        ImGui::Begin("Your menu");
+                                        ImGui::Begin("Error", ImGuiWindowFlags_MenuBar);
                                         ImGui::Text("Don't have access to the file or it is empty");
                                         ImGui::End();
                                     }
