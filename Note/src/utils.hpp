@@ -27,7 +27,35 @@ using namespace boost::asio;
 string current_user;
 
 
-
+/**
+ * @brief Registers a user by sending registration data securely over a TCP socket.
+ *
+ * This function registers a user by sending their login and encrypted password
+ * over the provided TCP socket. It first sends a registration number to indicate
+ * the type of operation. The password is encrypted using AES encryption with the
+ * given AES key.
+ *
+ * @param socket The TCP socket used for communication.
+ * @param aesKey Reference to a CryptoPP::SecByteBlock containing the AES key used for encryption.
+ * @param login The user's login or username as a std::string.
+ * @param password_plain The user's password in plain text as a std::string.
+ * @return Returns true if registration succeeds, false otherwise.
+ *         The function also sets the global variable `current_user` to `login` upon successful registration.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a registration number (integer) to the server via the socket.
+ * - Encrypts the plain text password using AES encryption with `aesKey`.
+ * - Sends the length of the login and encrypted password as size_t values followed by
+ *   the actual login and password data over the socket.
+ * - Reads a boolean response from the socket indicating the success of the registration.
+ * - If registration is successful (response is true), updates the global `current_user` variable.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures) should be added
+ *   in a production environment.
+ */
 bool registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& login, const std::string& password_plain) {
     int number = 1;
 
@@ -48,6 +76,35 @@ bool registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std
     if(response) current_user = login;
     return response;
 }
+/**
+ * @brief Authenticates a user by sending authentication data securely over a TCP socket.
+ *
+ * This function authenticates a user by sending their login and encrypted password
+ * over the provided TCP socket. It first sends an authentication number to indicate
+ * the type of operation. The password is encrypted using AES encryption with the
+ * given AES key.
+ *
+ * @param socket The TCP socket used for communication.
+ * @param aesKey Reference to a CryptoPP::SecByteBlock containing the AES key used for encryption.
+ * @param login The user's login or username as a std::string.
+ * @param password_plain The user's password in plain text as a std::string.
+ * @return Returns true if authentication succeeds, false otherwise.
+ *         The function also sets the global variable `current_user` to `login` upon successful authentication.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends an authentication number (integer) to the server via the socket.
+ * - Encrypts the plain text password using AES encryption with `aesKey`.
+ * - Sends the length of the login and encrypted password as size_t values followed by
+ *   the actual login and password data over the socket.
+ * - Reads a boolean response from the socket indicating the success of the authentication.
+ * - If authentication is successful (response is true), updates the global `current_user` variable.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures) should be added
+ *   in a production environment.
+ */
 bool authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& login, const std::string& password_plain) {
     int number = 2;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
@@ -68,6 +125,40 @@ bool authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const s
     if(response) current_user = login;
     return response;
 }
+/**
+ * @brief Retrieves an encrypted file from the server, decrypts it, and saves it locally.
+ *
+ * This function requests a file from the server specified by the 'owner' and 'filename'
+ * parameters. It sends a request number to indicate the operation type. After receiving
+ * the file size from the server, it reads encrypted data in chunks, decrypts it using AES
+ * encryption with the provided key, and saves the decrypted file locally in a designated
+ * directory.
+ *
+ * @param socket The TCP socket used for communication.
+ * @param aesKey A copy of CryptoPP::SecByteBlock containing the AES key used for decryption.
+ * @param owner The owner of the file as a std::string.
+ * @param filename The name of the file to retrieve and save as a std::string.
+ *
+ * @throws std::runtime_error If the file is unavailable or empty (file_size == 0).
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a request number (integer) to the server via the socket.
+ * - Sends the lengths of 'owner' and 'filename' as size_t values followed by the actual
+ *   'owner' and 'filename' data over the socket.
+ * - Reads the size of the file from the server.
+ * - If the file size received is 0, throws a runtime_error indicating that the file is
+ *   unavailable or empty.
+ * - Retrieves the encrypted file data in chunks from the socket, decrypts it using AES
+ *   encryption with 'aesKey', and saves the decrypted data to a file in the "userfiles"
+ *   directory relative to the current working directory.
+ * - Ensures the "userfiles" directory exists; creates it if it does not.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures, incomplete
+ *   file transfers) should be added in a production environment.
+ */
 
 void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string owner, string filename) {
 
@@ -115,8 +206,40 @@ void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string owne
     } while (received_bytes < file_size);
 }
 
-
-
+/**
+ * @brief Sends an encrypted file to the server securely over a TCP socket.
+ *
+ * This function sends a file from the local filesystem to the server. It sends a request
+ * number to indicate the operation type, followed by the owner's information and the
+ * encrypted filename. The file is then read in chunks, encrypted using AES with the provided
+ * key, and sent over the socket.
+ *
+ * @param socket The TCP socket used for communication.
+ * @param aesKey Reference to a CryptoPP::SecByteBlock containing the AES key used for encryption.
+ * @param owner The owner of the file as a std::string.
+ * @param filename The name of the file to send as a std::string.
+ *
+ * @throws std::runtime_error If the file does not exist or cannot be opened.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a request number (integer) to the server via the socket.
+ * - Checks if the specified file exists and can be opened. Throws a runtime_error if the file
+ *   does not exist.
+ * - Sends the length of 'owner' and the 'owner' data as size_t followed by the actual
+ *   'owner' data over the socket.
+ * - Encrypts the filename using AES encryption with 'aesKey' and sends its length as size_t
+ *   followed by the encrypted filename data over the socket.
+ * - Determines the size of the file and sends it to the server.
+ * - Reads the file in chunks, encrypts each chunk using AES encryption with 'aesKey', and sends
+ *   the encrypted data over the socket until the entire file is sent.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures, incomplete
+ *   file transfers) should be added in a production environment.
+ * - The file is read from the "../userfiles/" directory relative to the executable's working directory.
+ */
 void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& owner, const std::string& filename) {
     int number = 4;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
@@ -156,7 +279,27 @@ void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::s
     file.close();
 }
 
-
+/**
+ * @brief Grants access to a file for a specific user by sending the necessary data securely over a TCP socket.
+ *
+ * This function sends a request to the server to grant access to a file for a specified user. It sends a
+ * request number to indicate the operation type, followed by the filename and user information.
+ *
+ * @param socket The TCP socket used for communication.
+ * @param aesKey Reference to a CryptoPP::SecByteBlock containing the AES key used for encryption (not used in this function).
+ * @param filename The name of the file for which access is being granted as a std::string.
+ * @param user The username of the user to whom access is being granted as a std::string.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a request number (integer) to the server via the socket to indicate the "grant access" operation.
+ * - Sends the length of 'filename' and 'user' as size_t values followed by the actual 'filename' and 'user' data over the socket.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures) should be added in a production environment.
+ * - The AES key parameter 'aesKey' is included for consistency with other functions but is not used in this function.
+ */
 void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& filename, const std::string& user) {
     int number = 5;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
@@ -170,7 +313,24 @@ void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::
     boost::asio::write(socket, boost::asio::buffer(&user_length, sizeof(std::size_t)));
     boost::asio::write(socket, boost::asio::buffer(user, user_length));
 }
-
+/**
+ * @brief Logs out the current user by sending a logout request to the server over a TCP socket.
+ *
+ * This function logs out the current user by sending a request number to indicate the logout operation.
+ * It also clears the global `current_user` variable.
+ *
+ * @param socket The TCP socket used for communication.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a request number (integer) to the server via the socket to indicate the logout operation.
+ * - Clears the global `current_user` variable to indicate that no user is currently logged in.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures) should be added in a production environment.
+ * - The `current_user` variable is assumed to be a global variable that tracks the currently logged-in user.
+ */
 void log_out(tcp::socket& socket) {
     int number = 6;
     current_user.resize(0);
@@ -178,7 +338,27 @@ void log_out(tcp::socket& socket) {
 
 }
 
-
+/**
+ * @brief Deletes the current user by sending a delete request to the server over a TCP socket.
+ *
+ * This function deletes the current user by sending a request number to indicate the delete operation.
+ * It sends the username of the currently logged-in user to the server and prints a message indicating
+ * that the user has been deleted.
+ *
+ * @param socket The TCP socket used for communication.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a request number (integer) to the server via the socket to indicate the delete user operation.
+ * - Retrieves the current user's login from the global `current_user` variable.
+ * - Prints a message to the console indicating that the current user has been deleted.
+ * - Sends the length of the current user's login as a size_t value followed by the actual login data over the socket.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures) should be added in a production environment.
+ * - The `current_user` variable is assumed to be a global variable that tracks the currently logged-in user.
+ */
 void delete_user(tcp::socket& socket) {
     int number = 7;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));
@@ -190,7 +370,27 @@ void delete_user(tcp::socket& socket) {
     boost::asio::write(socket, boost::asio::buffer(&login_length, sizeof(std::size_t)));
     boost::asio::write(socket, boost::asio::buffer(login, login_length));
 }
-
+/**
+ * @brief Deletes a specified file for a given owner by sending a delete request to the server over a TCP socket.
+ *
+ * This function deletes a specified file for a given owner by sending a request number to indicate the delete
+ * operation. It sends the owner's information and the filename to the server.
+ *
+ * @param socket The TCP socket used for communication.
+ * @param aesKey A copy of CryptoPP::SecByteBlock containing the AES key used for encryption (not used in this function).
+ * @param owner The owner of the file as a std::string.
+ * @param filename The name of the file to be deleted as a std::string.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Sends a request number (integer) to the server via the socket to indicate the delete file operation.
+ * - Sends the length of 'owner' and 'filename' as size_t values followed by the actual 'owner' and 'filename' data over the socket.
+ *
+ * @note
+ * - This function assumes the socket is already connected and operational.
+ * - Proper error handling for socket operations (e.g., connection failures) should be added in a production environment.
+ * - The AES key parameter 'aesKey' is included for consistency with other functions but is not used in this function.
+ */
 void delete_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, const std::string& owner, const std::string& filename) {
     int number = 8;
     boost::asio::write(socket, boost::asio::buffer(&number, sizeof(number)));

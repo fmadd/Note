@@ -58,7 +58,7 @@ void readFiles() {
     std::string extension = ".txt";
     int fileCount = countFilesInDirectory(directory, extension);
 
-    for (int i = 0; i < fileCount; i++) {
+    for (int i = 1; i <= fileCount; i++) { // Changed the loop to include all files
         if (ImGui::BeginTabItem(("User's file " + std::to_string(i)).c_str())) {
             std::string fileName = directory + "/file_" + std::to_string(i) + extension;
             std::string fileContent;
@@ -78,10 +78,15 @@ void readFiles() {
                 ImGui::Text("Failed to open file.");
             }
 
-            if (ImGui::InputTextMultiline("File", &fileContent[0], fileContent.size(), ImVec2(400, 200))) {
-                std::ofstream outFile(fileName);
+            std::vector<char> inputBuffer(fileContent.begin(), fileContent.end());
+            inputBuffer.resize(1024);
+
+            if (ImGui::InputTextMultiline("File", inputBuffer.data(), inputBuffer.size(), ImVec2(400, 200))) {
+                std::string newFileContent(inputBuffer.data());
+
+                std::ofstream outFile(fileName, std::ios::trunc);
                 if (outFile.is_open()) {
-                    outFile << fileContent;
+                    outFile << newFileContent;
                     outFile.close();
                 } else {
                     ImGui::Text("Failed to save edition.");
@@ -92,6 +97,7 @@ void readFiles() {
         }
     }
 }
+
 
 int main() {
     try {
@@ -143,9 +149,9 @@ int main() {
                     ImGui::InputText("Login", login, IM_ARRAYSIZE(login));
                     ImGui::InputText("Password", password, IM_ARRAYSIZE(password));
                     if (ImGui::Button("Register")) {
-                        //bool flag = registration(socket, aesKey, login, password);
+                        bool flag = registration(socket, aesKey, login, password);
                         success_reg();
-                        //if(!flag) not_reg();
+                        if(!flag) not_reg();
                         ImGui::CloseCurrentPopup();
                     }
                     ImGui::EndPopup();
@@ -158,21 +164,20 @@ int main() {
                     ImGui::InputText("Login", login, IM_ARRAYSIZE(login));
                     ImGui::InputText("Password", password, IM_ARRAYSIZE(password));
                     if (ImGui::Button("Log in")) {
-                        //bool flag = authentication(socket, aesKey, login, password);
-                        //login_state = LOGIN_STATE::SUCCESS;
-                        //if(!flag) login_state = LOGIN_STATE::FAILURE;
-                        login_state == LOGIN_STATE::SUCCESS;
+                        bool flag = authentication(socket, aesKey, login, password);
+                        login_state = LOGIN_STATE::SUCCESS;
+                        if(!flag) login_state = LOGIN_STATE::FAILURE;
                         ImGui::CloseCurrentPopup();
                     }
                     ImGui::EndPopup();
                 }
 
-                //if (login_state == LOGIN_STATE::SUCCESS)
+                if (login_state == LOGIN_STATE::SUCCESS)
                 {
                     start_menu();
                     {
                         ImGui::SetNextWindowSize({800, 1080});
-                        ImGui::SetNextWindowPos({1920 / 2 - 400, 1080 / 2 - 300});
+                        ImGui::SetNextWindowPos({10,100});
                         ImGui::Begin("Workspace");
                         ImGui::Text("User info");
 
@@ -194,7 +199,7 @@ int main() {
                                 ImGui::InputText("Filename", filename, IM_ARRAYSIZE(filename));
                                 ImGui::InputText("User", user, IM_ARRAYSIZE(user));
                                 if (ImGui::Button("Add")) {
-                                    //add_access(socket, aesKey, filename, user);
+                                    add_access(socket, aesKey, filename, user);
                                     show_success_message = true;
                                     message_start_time = ImGui::GetTime();
                                     ImGui::Text("The user has been successfully added!");
@@ -219,7 +224,7 @@ int main() {
                                 ImGui::InputText("File name", filename, IM_ARRAYSIZE(filename));
                                 if (ImGui::Button("Send")) {
                                     try {
-                                        //send_file(socket, aesKey, owner, filename);
+                                        send_file(socket, aesKey, owner, filename);
                                         ImGui::Text("The file has been successfully sent!");
                                         ImGui::CloseCurrentPopup();
                                     }catch (const std::runtime_error &e) {
@@ -242,28 +247,43 @@ int main() {
                                 memset(filename, 0, 128);
                                 ImGui::OpenPopup("Download File");
                             }
+
                             if (ImGui::BeginPopup("Download File")) {
                                 ImGui::InputText("Owner", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("Filename", filename, IM_ARRAYSIZE(filename));
+
                                 if (ImGui::Button("Download")) {
                                     try {
-                                        //except_file(socket, aesKey, owner, filename);
-                                        ImGui::Text("The file has been successfully downloaded!");
-                                        ImGui::CloseCurrentPopup();
-                                    }catch (const std::runtime_error &e) {
+                                        except_file(socket, aesKey, owner, filename);
+                                        show_success_message = true;
+                                        message_start_time = ImGui::GetTime();
+                                    } catch (const std::runtime_error &e) {
                                         show_error_down_message = true;
                                         message_start_time = ImGui::GetTime();
-                                        if (show_error_down_message) {
-                                            ImGui::Begin("Error",NULL, ImGuiWindowFlags_MenuBar);
-                                            ImGui::Text("Don't have access to the file or it is empty");
-                                            ImGui::End();
-                                            if (ImGui::GetTime() - message_start_time >= 2.0) {
-                                                show_error_down_message = false;
-                                            }
-                                        }
                                     }
+                                    ImGui::CloseCurrentPopup();
                                 }
+
                                 ImGui::EndPopup();
+                            }
+
+                            if (show_error_down_message) {
+                                ImGui::Begin("Error");
+                                ImGui::Text("Don't have access to the file or it is empty.");
+                                ImGui::End();
+
+                                if (ImGui::GetTime() - message_start_time >= 2.0) {
+                                    show_error_down_message = false;
+                                }
+                            }
+                            if (show_success_message) {
+                                ImGui::Begin("Success");
+                                ImGui::Text("The file has been successfully downloaded!");
+                                ImGui::End();
+
+                                if (ImGui::GetTime() - message_start_time >= 2.0) {
+                                    show_success_message = false;
+                                }
                             }
 
                             if (ImGui::Button("Delete user")) {
@@ -273,14 +293,14 @@ int main() {
                             if (ImGui::BeginPopup("Delete User")) {
                                 ImGui::InputText("Username", login, IM_ARRAYSIZE(login));
                                 if (ImGui::Button("Delete")) {
-                                    //delete_user(socket);
+                                    delete_user(socket);
                                     ImGui::Text("The user has been successfully deleted!");
                                     ImGui::CloseCurrentPopup();
                                 }
                                 ImGui::EndPopup();
                             }
                             if (ImGui::Button("Sign out")) {
-                                //log_out(socket);
+                                log_out(socket);
                                 ImGui::Text("You have been successfully logged out!");
                                 break;
                             }
@@ -290,14 +310,13 @@ int main() {
                         ImGui::End();
                     }
                 }
-//                else if (login_state == LOGIN_STATE::FAILURE) {
-//                    ImGui::Text("Invalid login or password");
-//                }
+                else if (login_state == LOGIN_STATE::FAILURE) {
+                    ImGui::Text("Invalid login or password");
+                }
 
 
                 ImGui::End();
             }
-            //ImGui::EndFrame();
             ImGui::Render();
             int display_w, display_h;
             glfwGetFramebufferSize(window, &display_w, &display_h);

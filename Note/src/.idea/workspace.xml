@@ -19,19 +19,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="650e611b-9571-432d-b3b8-aa6e681d6083" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Project_ImGui.dir/src/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/Project_ImGui" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Project_ImGui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-src" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/glfw-src/.appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/glfw-src/.appveyor.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-src" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/_deps/imgui-src/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/_deps/imgui-src/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../build/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/git-data/head-ref" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/CMakeFiles/git-data/head-ref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdrand.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdrand.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdseed.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../build/libs/cryptopp-cmake/cryptopp-cmake/cryptopp/rdseed.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/userfiles/file_0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/userfiles/file_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/userfiles/file_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/userfiles/file_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/userfiles/file_2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glfw" beforeDir="false" afterPath="$PROJECT_DIR$/glfw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glfw/.appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/glfw/.appveyor.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui" beforeDir="false" afterPath="$PROJECT_DIR$/imgui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imgui/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/imgui/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/utils.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/Doxyfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NoteServer/docs/html/annotated.html" afterDir="false" />
@@ -291,6 +300,7 @@
       <workItem from="1718651174252" duration="1432000" />
       <workItem from="1718652891977" duration="4178000" />
       <workItem from="1718657181035" duration="537000" />
+      <workItem from="1718720769319" duration="5110000" />
     </task>
     <servers />
   </component>
