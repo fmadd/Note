@@ -178,45 +178,45 @@ int main() {
                             }
 
                             if (ImGui::Button("Send File")) {
-                                try {
-                                    memset(owner, 0, 128);
-                                    memset(filename, 0, 128);
-                                    ImGui::OpenPopup("Send File");
-                                } catch (const std::runtime_error &e) {
-                                    ImGui::Begin("Your menu");
-                                    ImGui::Text("File doesn't exist");
-                                    ImGui::End();
-                                }
+                                memset(owner, 0, 128);
+                                memset(filename, 0, 128);
+                                ImGui::OpenPopup("Send File");
                             }
                             if (ImGui::BeginPopup("Send File")) {
                                 ImGui::InputText("Input owner's name", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("File name", filename, IM_ARRAYSIZE(filename));
                                 if (ImGui::Button("Send")) {
-                                    send_file(socket, aesKey, owner, filename);
-                                    ImGui::Text("The file has been successfully sent!");
-                                    ImGui::CloseCurrentPopup();
+                                    try {
+                                        send_file(socket, aesKey, owner, filename);
+                                        ImGui::Text("The file has been successfully sent!");
+                                        ImGui::CloseCurrentPopup();
+                                    }catch (const std::runtime_error &e) {
+                                        ImGui::Begin("Error!");
+                                        ImGui::Text("File doesn't exist");
+                                        ImGui::End();
+                                    }
                                 }
                                 ImGui::EndPopup();
                             }
 
                             if (ImGui::Button("Download File")) {
-                                try {
-                                    memset(owner, 0, 128);
-                                    memset(filename, 0, 128);
-                                    ImGui::OpenPopup("Download File");
-                                } catch (const std::runtime_error& e) {
-                                    ImGui::Begin("Your menu");
-                                    ImGui::Text("Don't have access to the file or it is empty");
-                                    ImGui::End();
-                                }
+                                memset(owner, 0, 128);
+                                memset(filename, 0, 128);
+                                ImGui::OpenPopup("Download File");
                             }
                             if (ImGui::BeginPopup("Download File")) {
                                 ImGui::InputText("Owner", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("Filename", filename, IM_ARRAYSIZE(filename));
                                 if (ImGui::Button("Download")) {
-                                    except_file(socket, aesKey, owner, filename);
-                                    ImGui::Text("The file has been successfully downloaded!");
-                                    ImGui::CloseCurrentPopup();
+                                    try {
+                                        except_file(socket, aesKey, owner, filename);
+                                        ImGui::Text("The file has been successfully downloaded!");
+                                        ImGui::CloseCurrentPopup();
+                                    }catch (const std::runtime_error &e) {
+                                        ImGui::Begin("Your menu");
+                                        ImGui::Text("Don't have access to the file or it is empty");
+                                        ImGui::End();
+                                    }
                                 }
                                 ImGui::EndPopup();
                             }
