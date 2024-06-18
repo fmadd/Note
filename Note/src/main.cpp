@@ -43,6 +43,37 @@ void not_reg() {
     ImGui::Text("Could not register this user, please try again");
     ImGui::End();
 }
+
+void readFiles() {
+    for (int i = 0; i < 10; i++) {
+        if (ImGui::BeginTabItem(("User's file " + std::to_string(i)).c_str())) {
+            if (!fileContentLoaded) {
+                std::ifstream file("userfiles/file_" + std::to_string(i) + ".txt");
+                if (file.is_open()) {
+                    std::string line;
+                    while (std::getline(file, line)) {
+                        fileContent += line + "\n";
+                    }
+                    file.close();
+                    fileContentLoaded = true;
+                } else {
+                    ImGui::Text("Failed to open file.");
+                }
+            }
+            if (ImGui::InputTextMultiline("File", &fileContent[0], fileContent.size(), ImVec2(400, 200))) {
+                std::ofstream outFile("userfiles/file_" + std::to_string(i) + ".txt");
+                if (outFile.is_open()) {
+                    outFile << fileContent;
+                    outFile.close();
+                } else {
+                    ImGui::Text("Failed to save edition.");
+                }
+            }
+            ImGui::EndTabItem();
+        }
+    }
+}
+
 int main() {
     try {
         io_service io_service;
@@ -124,34 +155,7 @@ int main() {
 
                         if (ImGui::BeginTabBar("userfiles")) {
                             if (ImGui::BeginTabBar("userfiles")) {
-                                for (int i = 0; i < 10; i++) {
-                                    if (ImGui::BeginTabItem(("User's file " + std::to_string(i)).c_str())) {
-                                        if (!fileContentLoaded) {
-                                            std::ifstream file("userfiles/file_" + std::to_string(i) + ".txt");
-                                            if (file.is_open()) {
-                                                std::string line;
-                                                while (std::getline(file, line)) {
-                                                    fileContent += line + "\n";
-                                                }
-                                                file.close();
-                                                fileContentLoaded = true;
-                                            } else {
-                                                ImGui::Text("Failed to open file.");
-                                            }
-                                        }
-                                        if (ImGui::InputTextMultiline("File", &fileContent[0], fileContent.size(), ImVec2(400, 200))) {
-                                            std::ofstream outFile("userfiles/file_" + std::to_string(i) + ".txt");
-                                            if (outFile.is_open()) {
-                                                outFile << fileContent;
-                                                outFile.close();
-                                            } else {
-                                                ImGui::Text("Failed to save edition.");
-                                            }
-                                        }
-                                        ImGui::EndTabItem();
-                                    }
-                                }
-
+                                readFiles();
                             }
                             ImGui::EndTabBar();
                         }
@@ -167,36 +171,51 @@ int main() {
                                 ImGui::InputText("User", user, IM_ARRAYSIZE(user));
                                 if (ImGui::Button("Add")) {
                                     add_access(socket, aesKey, filename, user);
+                                    ImGui::Text("The user has been successfully added!");
                                     ImGui::CloseCurrentPopup();
                                 }
                                 ImGui::EndPopup();
                             }
 
                             if (ImGui::Button("Send File")) {
-                                memset(owner, 0, 128);
-                                memset(filename, 0, 128);
-                                ImGui::OpenPopup("Send File");
+                                try {
+                                    memset(owner, 0, 128);
+                                    memset(filename, 0, 128);
+                                    ImGui::OpenPopup("Send File");
+                                } catch (const std::runtime_error &e) {
+                                    ImGui::Begin("Your menu");
+                                    ImGui::Text("File doesn't exist");
+                                    ImGui::End();
+                                }
                             }
                             if (ImGui::BeginPopup("Send File")) {
                                 ImGui::InputText("Input owner's name", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("File name", filename, IM_ARRAYSIZE(filename));
                                 if (ImGui::Button("Send")) {
                                     send_file(socket, aesKey, owner, filename);
+                                    ImGui::Text("The file has been successfully sent!");
                                     ImGui::CloseCurrentPopup();
                                 }
                                 ImGui::EndPopup();
                             }
 
                             if (ImGui::Button("Download File")) {
-                                memset(owner, 0, 128);
-                                memset(filename, 0, 128);
-                                ImGui::OpenPopup("Download File");
+                                try {
+                                    memset(owner, 0, 128);
+                                    memset(filename, 0, 128);
+                                    ImGui::OpenPopup("Download File");
+                                } catch (const std::runtime_error& e) {
+                                    ImGui::Begin("Your menu");
+                                    ImGui::Text("Don't have access to the file or it is empty");
+                                    ImGui::End();
+                                }
                             }
                             if (ImGui::BeginPopup("Download File")) {
                                 ImGui::InputText("Owner", owner, IM_ARRAYSIZE(owner));
                                 ImGui::InputText("Filename", filename, IM_ARRAYSIZE(filename));
                                 if (ImGui::Button("Download")) {
                                     except_file(socket, aesKey, owner, filename);
+                                    ImGui::Text("The file has been successfully downloaded!");
                                     ImGui::CloseCurrentPopup();
                                 }
                                 ImGui::EndPopup();
@@ -210,12 +229,14 @@ int main() {
                                 ImGui::InputText("Username", login, IM_ARRAYSIZE(login));
                                 if (ImGui::Button("Delete")) {
                                     delete_user(socket);
+                                    ImGui::Text("The user has been successfully deleted!");
                                     ImGui::CloseCurrentPopup();
                                 }
                                 ImGui::EndPopup();
                             }
                             if (ImGui::Button("Sign out")) {
                                 log_out(socket);
+                                ImGui::Text("You have been successfully logged out!");
                                 break;
                             }
                             ImGui::EndTabBar();
