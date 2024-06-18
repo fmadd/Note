@@ -2634,3 +2634,394 @@ events:
       variable: "run_result_unused"
       cached: true
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fdfba/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fdfba.dir/build.make CMakeFiles/cmTC_fdfba.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_fdfba.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_fdfba.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_fdfba.dir/build.make:78: CMakeFiles/cmTC_fdfba.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_fdfba/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6c097/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6c097.dir/build.make CMakeFiles/cmTC_6c097.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_6c097.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_6c097.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_6c097.dir/build.make:78: CMakeFiles/cmTC_6c097.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_6c097/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_56beb/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_56beb.dir/build.make CMakeFiles/cmTC_56beb.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_56beb.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_56beb.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_56beb.dir/build.make:78: CMakeFiles/cmTC_56beb.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_56beb/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_54001/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_54001.dir/build.make CMakeFiles/cmTC_54001.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_54001.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_54001.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_54001.dir/build.make:78: CMakeFiles/cmTC_54001.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_54001/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_92e9f/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_92e9f.dir/build.make CMakeFiles/cmTC_92e9f.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_92e9f.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_92e9f.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_92e9f.dir/build.make:78: CMakeFiles/cmTC_92e9f.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_92e9f/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_014f7/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_014f7.dir/build.make CMakeFiles/cmTC_014f7.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_014f7.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_014f7.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_014f7.dir/build.make:78: CMakeFiles/cmTC_014f7.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_014f7/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3637d/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3637d.dir/build.make CMakeFiles/cmTC_3637d.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_3637d.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_3637d.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_3637d.dir/build.make:78: CMakeFiles/cmTC_3637d.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_3637d/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_406f1/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_406f1.dir/build.make CMakeFiles/cmTC_406f1.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_406f1.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_406f1.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_406f1.dir/build.make:78: CMakeFiles/cmTC_406f1.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_406f1/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "libs/cryptopp-cmake/cryptopp-cmake/cmake/TargetArch.cmake:115 (try_run)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "libs/cryptopp-cmake/cryptopp-cmake/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/mnt/c/Users/Victoriya/Desktop/Study/good/Note/libs/cryptopp-cmake/cryptopp-cmake/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /snap/cmake/1391/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1745c/fast
+        gmake[1]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1745c.dir/build.make CMakeFiles/cmTC_1745c.dir/build
+        gmake[2]: Entering directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_1745c.dir/arch.c.o
+        /usr/bin/cc   -fPIE -o CMakeFiles/cmTC_1745c.dir/arch.c.o -c /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        gmake[2]: *** [CMakeFiles/cmTC_1745c.dir/build.make:78: CMakeFiles/cmTC_1745c.dir/arch.c.o] Error 1
+        gmake[2]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        gmake[1]: *** [Makefile:127: cmTC_1745c/fast] Error 2
+        gmake[1]: Leaving directory '/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
