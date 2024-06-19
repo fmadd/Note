@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1391/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1399/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1391/bin/cmake -E rm -f
+RM = /snap/cmake/1399/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ include libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/comp
 include libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/progress.make
 
 libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose:
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake && /snap/cmake/1391/bin/ctest --verbose --output-on-failure
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/libs/cryptopp-cmake/cryptopp-cmake && /snap/cmake/1399/bin/ctest --verbose --output-on-failure
 
 test-verbose: libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose
 test-verbose: libs/cryptopp-cmake/cryptopp-cmake/test/CMakeFiles/test-verbose.dir/build.make

@@ -1,0 +1,319 @@
+\doxysection{src/imgui/backends/imgui\+\_\+impl\+\_\+win32.cpp File Reference}
+\hypertarget{imgui__impl__win32_8cpp}{}\label{imgui__impl__win32_8cpp}\index{src/imgui/backends/imgui\_impl\_win32.cpp@{src/imgui/backends/imgui\_impl\_win32.cpp}}
+{\ttfamily \#include "{}imgui.\+h"{}}\newline
+{\ttfamily \#include "{}imgui\+\_\+impl\+\_\+win32.\+h"{}}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$windowsx.\+h$>$}\newline
+{\ttfamily \#include $<$tchar.\+h$>$}\newline
+{\ttfamily \#include $<$dwmapi.\+h$>$}\newline
+{\ttfamily \#include $<$xinput.\+h$>$}\newline
+Include dependency graph for imgui\+\_\+impl\+\_\+win32.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structImGui__ImplWin32__Data}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_ac7bef5d85e3dcd73eef56ad39ffc84a9}{WIN32\+\_\+\+LEAN\+\_\+\+AND\+\_\+\+MEAN}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_abfc205127accf0adc131007017a20442}{IM\+\_\+\+SATURATE}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}})~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $<$ 0.\+0f ? 0.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $>$ 1.\+0f ? 1.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}})
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a2836771b67b5a6453c60b139320d255c}{MAP\+\_\+\+BUTTON}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{BUTTON\+\_\+\+ENUM}})~\{ io.\+Add\+Key\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, (gamepad.\+w\+Buttons \& \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{BUTTON\+\_\+\+ENUM}}) != 0); \}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_ab9e788661f93cea16f50bdd44f7228f2}{MAP\+\_\+\+ANALOG}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VALUE}},  V0,  V1)~\{ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VALUE}} -\/ V0) / (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(V1 -\/ V0); io.\+Add\+Key\+Analog\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} $>$ 0.\+10f, \mbox{\hyperlink{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442}{IM\+\_\+\+SATURATE}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}})); \}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_aa2e13f774782031f8b49ae0edca83d69}{IM\+\_\+\+VK\+\_\+\+KEYPAD\+\_\+\+ENTER}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VK\+\_\+\+RETURN}} + 256)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a7b2918d422b3a1fe86a641f74818bb55}{WM\+\_\+\+MOUSEHWHEEL}}~0x020E
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a454522b0cfb3a366cc14230e62be3e94}{DBT\+\_\+\+DEVNODES\+\_\+\+CHANGED}}~0x0007
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a742997db6a6fe03581d2244ea085618e}{\+\_\+\+Is\+Windows\+Vista\+Or\+Greater}}()~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0600), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0600), 0)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_ae8ca9bc7824bd084363ae25af2df8991}{\+\_\+\+Is\+Windows8\+Or\+Greater}}()~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0602), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0602), 0)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a7befc644ed0e43855853f48c1045e9d3}{\+\_\+\+Is\+Windows8\+Point1\+Or\+Greater}}()~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0603), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0603), 0)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a2b8cd4078bf40e54b53124033cf274a4}{\+\_\+\+Is\+Windows10\+Or\+Greater}}()~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0\+A00), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0\+A00), 0)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a9272fbff584df35213a9076e900c24c1}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+AWARE}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})-\/3
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__win32_8cpp_ac007743843b15f477f33dc5c3dd0507a}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+AWARE\+\_\+\+V2}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})-\/4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{imgui__impl__win32_8cpp_ab894020cfaceec8e0a7e24a2b8cf003a}{PFN\+\_\+\+XInput\+Get\+Capabilities}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}, \mbox{\hyperlink{xinput_8h_acf54f59fb9d30352c7016615d997ee42}{XINPUT\+\_\+\+CAPABILITIES}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{imgui__impl__win32_8cpp_a0554b333dae0845c369b9d7234c695e9}{PFN\+\_\+\+XInput\+Get\+State}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}, \mbox{\hyperlink{xinput_8h_a0627b327913f1bc398ae904fc980e74c}{XINPUT\+\_\+\+STATE}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HRESULT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{imgui__impl__win32_8cpp_a36d30a5f5f7942a50b272fa13058cf96}{PFN\+\_\+\+Set\+Process\+Dpi\+Awareness}}) (\mbox{\hyperlink{win32__platform_8h_a0b4072c3e306aab56e4b1f41f66ecfd0}{PROCESS\+\_\+\+DPI\+\_\+\+AWARENESS}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HRESULT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{imgui__impl__win32_8cpp_a411247e61a6621babce2d06bb8a434db}{PFN\+\_\+\+Get\+Dpi\+For\+Monitor}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HMONITOR}}, \mbox{\hyperlink{win32__platform_8h_a6d3b6e6160452fd0315bf529461dadcf}{MONITOR\+\_\+\+DPI\+\_\+\+TYPE}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{UINT}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{UINT}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{imgui__impl__win32_8cpp_ac4fd09e8ec8568aa443549a1286800b1}{PFN\+\_\+\+Set\+Thread\+Dpi\+Awareness\+Context}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0}{PROCESS\+\_\+\+DPI\+\_\+\+AWARENESS}} \{ \mbox{\hyperlink{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0ab42f9fa8bef80716253ff5732f98d019}{PROCESS\+\_\+\+DPI\+\_\+\+UNAWARE}} = 0
+, \mbox{\hyperlink{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0a2690b1d0f73cd71a24c38dbccc99be8b}{PROCESS\+\_\+\+SYSTEM\+\_\+\+DPI\+\_\+\+AWARE}} = 1
+, \mbox{\hyperlink{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0aad0077e9938715939b18fc533eeae097}{PROCESS\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+DPI\+\_\+\+AWARE}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcf}{MONITOR\+\_\+\+DPI\+\_\+\+TYPE}} \{ \mbox{\hyperlink{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa75d3ba3b96559377e5cac23d6e380162}{MDT\+\_\+\+EFFECTIVE\+\_\+\+DPI}} = 0
+, \mbox{\hyperlink{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa7c555ba8472b1bcc44a2b8b7da7bc1c3}{MDT\+\_\+\+ANGULAR\+\_\+\+DPI}} = 1
+, \mbox{\hyperlink{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa3a8c01568cf5b17569b53587783e9851}{MDT\+\_\+\+RAW\+\_\+\+DPI}} = 2
+, \mbox{\hyperlink{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfacf96ef9f03d6fbbef385b67cfbe2578f}{MDT\+\_\+\+DEFAULT}} = MDT\+\_\+\+EFFECTIVE\+\_\+\+DPI
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a9f752412a1f6dfdf6fc00dbbd90a8428}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Init}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}hwnd)
+\item 
+\mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a62c65c5f453046a14119bc62234ac5b7}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Init\+For\+Open\+GL}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}hwnd)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a4eddd1969cc460312197f2df3dbc992a}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Shutdown}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__win32_8cpp_ade4f55b90fdbd75a562d894d33f1909e}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+New\+Frame}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LRESULT}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a25447e4d5d2cabecf54cb9a5c84e7cde}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Wnd\+Proc\+Handler}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HWND}} hwnd, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{UINT}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{msg}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WPARAM}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{w\+Param}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LPARAM}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{l\+Param}})
+\item 
+\mbox{\hyperlink{imgui__impl__win32_8cpp_a3d68bc19ea52dbb5682b42f9a3316189}{DECLARE\+\_\+\+HANDLE}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__win32_8cpp_afda525ac1c8a2b4e357f19488f661014}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Enable\+Dpi\+Awareness}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a765356269dc7e4f7f521d5f9c9bc42a5}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Get\+Dpi\+Scale\+For\+Monitor}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}monitor)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a63408fa92e0f85dcf74b27ba6b81f7f4}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Get\+Dpi\+Scale\+For\+Hwnd}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}hwnd)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__win32_8cpp_a726a328080634cc7b808de6b7e1cec9e}{Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Enable\+Alpha\+Compositing}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}hwnd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{imgui__impl__win32_8cpp_a2b8cd4078bf40e54b53124033cf274a4}\label{imgui__impl__win32_8cpp_a2b8cd4078bf40e54b53124033cf274a4} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!\_IsWindows10OrGreater@{\_IsWindows10OrGreater}}
+\index{\_IsWindows10OrGreater@{\_IsWindows10OrGreater}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{\_IsWindows10OrGreater}{\_IsWindows10OrGreater}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \+\_\+\+Is\+Windows10\+Or\+Greater(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0\+A00), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0\+A00), 0)}
+
+\Hypertarget{imgui__impl__win32_8cpp_ae8ca9bc7824bd084363ae25af2df8991}\label{imgui__impl__win32_8cpp_ae8ca9bc7824bd084363ae25af2df8991} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!\_IsWindows8OrGreater@{\_IsWindows8OrGreater}}
+\index{\_IsWindows8OrGreater@{\_IsWindows8OrGreater}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{\_IsWindows8OrGreater}{\_IsWindows8OrGreater}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \+\_\+\+Is\+Windows8\+Or\+Greater(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0602), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0602), 0)}
+
+\Hypertarget{imgui__impl__win32_8cpp_a7befc644ed0e43855853f48c1045e9d3}\label{imgui__impl__win32_8cpp_a7befc644ed0e43855853f48c1045e9d3} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!\_IsWindows8Point1OrGreater@{\_IsWindows8Point1OrGreater}}
+\index{\_IsWindows8Point1OrGreater@{\_IsWindows8Point1OrGreater}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{\_IsWindows8Point1OrGreater}{\_IsWindows8Point1OrGreater}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \+\_\+\+Is\+Windows8\+Point1\+Or\+Greater(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0603), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0603), 0)}
+
+\Hypertarget{imgui__impl__win32_8cpp_a742997db6a6fe03581d2244ea085618e}\label{imgui__impl__win32_8cpp_a742997db6a6fe03581d2244ea085618e} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!\_IsWindowsVistaOrGreater@{\_IsWindowsVistaOrGreater}}
+\index{\_IsWindowsVistaOrGreater@{\_IsWindowsVistaOrGreater}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{\_IsWindowsVistaOrGreater}{\_IsWindowsVistaOrGreater}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \+\_\+\+Is\+Windows\+Vista\+Or\+Greater(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\+\_\+\+Is\+Windows\+Version\+Or\+Greater(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HIBYTE}}(0x0600), \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LOBYTE}}(0x0600), 0)}
+
+\Hypertarget{imgui__impl__win32_8cpp_a454522b0cfb3a366cc14230e62be3e94}\label{imgui__impl__win32_8cpp_a454522b0cfb3a366cc14230e62be3e94} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!DBT\_DEVNODES\_CHANGED@{DBT\_DEVNODES\_CHANGED}}
+\index{DBT\_DEVNODES\_CHANGED@{DBT\_DEVNODES\_CHANGED}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{DBT\_DEVNODES\_CHANGED}{DBT\_DEVNODES\_CHANGED}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} DBT\+\_\+\+DEVNODES\+\_\+\+CHANGED~0x0007}
+
+\Hypertarget{imgui__impl__win32_8cpp_a9272fbff584df35213a9076e900c24c1}\label{imgui__impl__win32_8cpp_a9272fbff584df35213a9076e900c24c1} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE@{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE}}
+\index{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE@{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE}{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+AWARE~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})-\/3}
+
+\Hypertarget{imgui__impl__win32_8cpp_ac007743843b15f477f33dc5c3dd0507a}\label{imgui__impl__win32_8cpp_ac007743843b15f477f33dc5c3dd0507a} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE\_V2@{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE\_V2}}
+\index{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE\_V2@{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE\_V2}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE\_V2}{DPI\_AWARENESS\_CONTEXT\_PER\_MONITOR\_AWARE\_V2}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+AWARE\+\_\+\+V2~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})-\/4}
+
+\Hypertarget{imgui__impl__win32_8cpp_abfc205127accf0adc131007017a20442}\label{imgui__impl__win32_8cpp_abfc205127accf0adc131007017a20442} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!IM\_SATURATE@{IM\_SATURATE}}
+\index{IM\_SATURATE@{IM\_SATURATE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{IM\_SATURATE}{IM\_SATURATE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IM\+\_\+\+SATURATE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $<$ 0.\+0f ? 0.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $>$ 1.\+0f ? 1.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}})}
+
+\Hypertarget{imgui__impl__win32_8cpp_aa2e13f774782031f8b49ae0edca83d69}\label{imgui__impl__win32_8cpp_aa2e13f774782031f8b49ae0edca83d69} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!IM\_VK\_KEYPAD\_ENTER@{IM\_VK\_KEYPAD\_ENTER}}
+\index{IM\_VK\_KEYPAD\_ENTER@{IM\_VK\_KEYPAD\_ENTER}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{IM\_VK\_KEYPAD\_ENTER}{IM\_VK\_KEYPAD\_ENTER}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IM\+\_\+\+VK\+\_\+\+KEYPAD\+\_\+\+ENTER~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VK\+\_\+\+RETURN}} + 256)}
+
+\Hypertarget{imgui__impl__win32_8cpp_ab9e788661f93cea16f50bdd44f7228f2}\label{imgui__impl__win32_8cpp_ab9e788661f93cea16f50bdd44f7228f2} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MAP\_ANALOG@{MAP\_ANALOG}}
+\index{MAP\_ANALOG@{MAP\_ANALOG}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_ANALOG}{MAP\_ANALOG}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} MAP\+\_\+\+ANALOG(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VALUE}},  }\item[{}]{V0,  }\item[{}]{V1 }\end{DoxyParamCaption})~\{ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VALUE}} -\/ V0) / (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(V1 -\/ V0); io.\+Add\+Key\+Analog\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} $>$ 0.\+10f, \mbox{\hyperlink{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442}{IM\+\_\+\+SATURATE}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}})); \}}
+
+\Hypertarget{imgui__impl__win32_8cpp_a2836771b67b5a6453c60b139320d255c}\label{imgui__impl__win32_8cpp_a2836771b67b5a6453c60b139320d255c} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MAP\_BUTTON@{MAP\_BUTTON}}
+\index{MAP\_BUTTON@{MAP\_BUTTON}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_BUTTON}{MAP\_BUTTON}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} MAP\+\_\+\+BUTTON(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{BUTTON\+\_\+\+ENUM}} }\end{DoxyParamCaption})~\{ io.\+Add\+Key\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, (gamepad.\+w\+Buttons \& \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{BUTTON\+\_\+\+ENUM}}) != 0); \}}
+
+\Hypertarget{imgui__impl__win32_8cpp_ac7bef5d85e3dcd73eef56ad39ffc84a9}\label{imgui__impl__win32_8cpp_ac7bef5d85e3dcd73eef56ad39ffc84a9} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}}
+\index{WIN32\_LEAN\_AND\_MEAN@{WIN32\_LEAN\_AND\_MEAN}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{WIN32\_LEAN\_AND\_MEAN}{WIN32\_LEAN\_AND\_MEAN}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} WIN32\+\_\+\+LEAN\+\_\+\+AND\+\_\+\+MEAN}
+
+\Hypertarget{imgui__impl__win32_8cpp_a7b2918d422b3a1fe86a641f74818bb55}\label{imgui__impl__win32_8cpp_a7b2918d422b3a1fe86a641f74818bb55} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!WM\_MOUSEHWHEEL@{WM\_MOUSEHWHEEL}}
+\index{WM\_MOUSEHWHEEL@{WM\_MOUSEHWHEEL}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{WM\_MOUSEHWHEEL}{WM\_MOUSEHWHEEL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} WM\+\_\+\+MOUSEHWHEEL~0x020E}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{imgui__impl__win32_8cpp_a411247e61a6621babce2d06bb8a434db}\label{imgui__impl__win32_8cpp_a411247e61a6621babce2d06bb8a434db} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PFN\_GetDpiForMonitor@{PFN\_GetDpiForMonitor}}
+\index{PFN\_GetDpiForMonitor@{PFN\_GetDpiForMonitor}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{PFN\_GetDpiForMonitor}{PFN\_GetDpiForMonitor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HRESULT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+Get\+Dpi\+For\+Monitor) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HMONITOR}}, \mbox{\hyperlink{win32__platform_8h_a6d3b6e6160452fd0315bf529461dadcf}{MONITOR\+\_\+\+DPI\+\_\+\+TYPE}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{UINT}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{UINT}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a36d30a5f5f7942a50b272fa13058cf96}\label{imgui__impl__win32_8cpp_a36d30a5f5f7942a50b272fa13058cf96} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PFN\_SetProcessDpiAwareness@{PFN\_SetProcessDpiAwareness}}
+\index{PFN\_SetProcessDpiAwareness@{PFN\_SetProcessDpiAwareness}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{PFN\_SetProcessDpiAwareness}{PFN\_SetProcessDpiAwareness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HRESULT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+Set\+Process\+Dpi\+Awareness) (\mbox{\hyperlink{win32__platform_8h_a0b4072c3e306aab56e4b1f41f66ecfd0}{PROCESS\+\_\+\+DPI\+\_\+\+AWARENESS}})}
+
+\Hypertarget{imgui__impl__win32_8cpp_ac4fd09e8ec8568aa443549a1286800b1}\label{imgui__impl__win32_8cpp_ac4fd09e8ec8568aa443549a1286800b1} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PFN\_SetThreadDpiAwarenessContext@{PFN\_SetThreadDpiAwarenessContext}}
+\index{PFN\_SetThreadDpiAwarenessContext@{PFN\_SetThreadDpiAwarenessContext}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{PFN\_SetThreadDpiAwarenessContext}{PFN\_SetThreadDpiAwarenessContext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+Set\+Thread\+Dpi\+Awareness\+Context) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}})}
+
+\Hypertarget{imgui__impl__win32_8cpp_ab894020cfaceec8e0a7e24a2b8cf003a}\label{imgui__impl__win32_8cpp_ab894020cfaceec8e0a7e24a2b8cf003a} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PFN\_XInputGetCapabilities@{PFN\_XInputGetCapabilities}}
+\index{PFN\_XInputGetCapabilities@{PFN\_XInputGetCapabilities}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{PFN\_XInputGetCapabilities}{PFN\_XInputGetCapabilities}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+XInput\+Get\+Capabilities) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}, \mbox{\hyperlink{xinput_8h_acf54f59fb9d30352c7016615d997ee42}{XINPUT\+\_\+\+CAPABILITIES}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a0554b333dae0845c369b9d7234c695e9}\label{imgui__impl__win32_8cpp_a0554b333dae0845c369b9d7234c695e9} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PFN\_XInputGetState@{PFN\_XInputGetState}}
+\index{PFN\_XInputGetState@{PFN\_XInputGetState}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{PFN\_XInputGetState}{PFN\_XInputGetState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WINAPI}} \texorpdfstring{$\ast$}{*} PFN\+\_\+\+XInput\+Get\+State) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DWORD}}, \mbox{\hyperlink{xinput_8h_a0627b327913f1bc398ae904fc980e74c}{XINPUT\+\_\+\+STATE}} \texorpdfstring{$\ast$}{*})}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcf}\label{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcf} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MONITOR\_DPI\_TYPE@{MONITOR\_DPI\_TYPE}}
+\index{MONITOR\_DPI\_TYPE@{MONITOR\_DPI\_TYPE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{MONITOR\_DPI\_TYPE}{MONITOR\_DPI\_TYPE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{enum}} \mbox{\hyperlink{win32__platform_8h_a6d3b6e6160452fd0315bf529461dadcf}{MONITOR\+\_\+\+DPI\+\_\+\+TYPE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MDT\_EFFECTIVE\_DPI@{MDT\_EFFECTIVE\_DPI}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MDT\_EFFECTIVE\_DPI@{MDT\_EFFECTIVE\_DPI}}}\Hypertarget{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa75d3ba3b96559377e5cac23d6e380162}\label{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa75d3ba3b96559377e5cac23d6e380162} 
+MDT\+\_\+\+EFFECTIVE\+\_\+\+DPI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MDT\_ANGULAR\_DPI@{MDT\_ANGULAR\_DPI}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MDT\_ANGULAR\_DPI@{MDT\_ANGULAR\_DPI}}}\Hypertarget{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa7c555ba8472b1bcc44a2b8b7da7bc1c3}\label{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa7c555ba8472b1bcc44a2b8b7da7bc1c3} 
+MDT\+\_\+\+ANGULAR\+\_\+\+DPI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MDT\_RAW\_DPI@{MDT\_RAW\_DPI}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MDT\_RAW\_DPI@{MDT\_RAW\_DPI}}}\Hypertarget{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa3a8c01568cf5b17569b53587783e9851}\label{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfa3a8c01568cf5b17569b53587783e9851} 
+MDT\+\_\+\+RAW\+\_\+\+DPI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MDT\_DEFAULT@{MDT\_DEFAULT}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!MDT\_DEFAULT@{MDT\_DEFAULT}}}\Hypertarget{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfacf96ef9f03d6fbbef385b67cfbe2578f}\label{imgui__impl__win32_8cpp_a6d3b6e6160452fd0315bf529461dadcfacf96ef9f03d6fbbef385b67cfbe2578f} 
+MDT\+\_\+\+DEFAULT&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0}\label{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PROCESS\_DPI\_AWARENESS@{PROCESS\_DPI\_AWARENESS}}
+\index{PROCESS\_DPI\_AWARENESS@{PROCESS\_DPI\_AWARENESS}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{PROCESS\_DPI\_AWARENESS}{PROCESS\_DPI\_AWARENESS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{enum}} \mbox{\hyperlink{win32__platform_8h_a0b4072c3e306aab56e4b1f41f66ecfd0}{PROCESS\+\_\+\+DPI\+\_\+\+AWARENESS}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROCESS\_DPI\_UNAWARE@{PROCESS\_DPI\_UNAWARE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PROCESS\_DPI\_UNAWARE@{PROCESS\_DPI\_UNAWARE}}}\Hypertarget{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0ab42f9fa8bef80716253ff5732f98d019}\label{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0ab42f9fa8bef80716253ff5732f98d019} 
+PROCESS\+\_\+\+DPI\+\_\+\+UNAWARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROCESS\_SYSTEM\_DPI\_AWARE@{PROCESS\_SYSTEM\_DPI\_AWARE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PROCESS\_SYSTEM\_DPI\_AWARE@{PROCESS\_SYSTEM\_DPI\_AWARE}}}\Hypertarget{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0a2690b1d0f73cd71a24c38dbccc99be8b}\label{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0a2690b1d0f73cd71a24c38dbccc99be8b} 
+PROCESS\+\_\+\+SYSTEM\+\_\+\+DPI\+\_\+\+AWARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROCESS\_PER\_MONITOR\_DPI\_AWARE@{PROCESS\_PER\_MONITOR\_DPI\_AWARE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!PROCESS\_PER\_MONITOR\_DPI\_AWARE@{PROCESS\_PER\_MONITOR\_DPI\_AWARE}}}\Hypertarget{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0aad0077e9938715939b18fc533eeae097}\label{imgui__impl__win32_8cpp_a0b4072c3e306aab56e4b1f41f66ecfd0aad0077e9938715939b18fc533eeae097} 
+PROCESS\+\_\+\+PER\+\_\+\+MONITOR\+\_\+\+DPI\+\_\+\+AWARE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{imgui__impl__win32_8cpp_a3d68bc19ea52dbb5682b42f9a3316189}\label{imgui__impl__win32_8cpp_a3d68bc19ea52dbb5682b42f9a3316189} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!DECLARE\_HANDLE@{DECLARE\_HANDLE}}
+\index{DECLARE\_HANDLE@{DECLARE\_HANDLE}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_HANDLE()}{DECLARE\_HANDLE()}}
+{\footnotesize\ttfamily DECLARE\+\_\+\+HANDLE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DPI\+\_\+\+AWARENESS\+\_\+\+CONTEXT}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a726a328080634cc7b808de6b7e1cec9e}\label{imgui__impl__win32_8cpp_a726a328080634cc7b808de6b7e1cec9e} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_EnableAlphaCompositing@{ImGui\_ImplWin32\_EnableAlphaCompositing}}
+\index{ImGui\_ImplWin32\_EnableAlphaCompositing@{ImGui\_ImplWin32\_EnableAlphaCompositing}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_EnableAlphaCompositing()}{ImGui\_ImplWin32\_EnableAlphaCompositing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Enable\+Alpha\+Compositing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{hwnd }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_afda525ac1c8a2b4e357f19488f661014}\label{imgui__impl__win32_8cpp_afda525ac1c8a2b4e357f19488f661014} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_EnableDpiAwareness@{ImGui\_ImplWin32\_EnableDpiAwareness}}
+\index{ImGui\_ImplWin32\_EnableDpiAwareness@{ImGui\_ImplWin32\_EnableDpiAwareness}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_EnableDpiAwareness()}{ImGui\_ImplWin32\_EnableDpiAwareness()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Enable\+Dpi\+Awareness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a63408fa92e0f85dcf74b27ba6b81f7f4}\label{imgui__impl__win32_8cpp_a63408fa92e0f85dcf74b27ba6b81f7f4} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_GetDpiScaleForHwnd@{ImGui\_ImplWin32\_GetDpiScaleForHwnd}}
+\index{ImGui\_ImplWin32\_GetDpiScaleForHwnd@{ImGui\_ImplWin32\_GetDpiScaleForHwnd}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_GetDpiScaleForHwnd()}{ImGui\_ImplWin32\_GetDpiScaleForHwnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Get\+Dpi\+Scale\+For\+Hwnd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{hwnd }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a765356269dc7e4f7f521d5f9c9bc42a5}\label{imgui__impl__win32_8cpp_a765356269dc7e4f7f521d5f9c9bc42a5} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_GetDpiScaleForMonitor@{ImGui\_ImplWin32\_GetDpiScaleForMonitor}}
+\index{ImGui\_ImplWin32\_GetDpiScaleForMonitor@{ImGui\_ImplWin32\_GetDpiScaleForMonitor}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_GetDpiScaleForMonitor()}{ImGui\_ImplWin32\_GetDpiScaleForMonitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Get\+Dpi\+Scale\+For\+Monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{monitor }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a9f752412a1f6dfdf6fc00dbbd90a8428}\label{imgui__impl__win32_8cpp_a9f752412a1f6dfdf6fc00dbbd90a8428} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_Init@{ImGui\_ImplWin32\_Init}}
+\index{ImGui\_ImplWin32\_Init@{ImGui\_ImplWin32\_Init}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_Init()}{ImGui\_ImplWin32\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{hwnd }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a62c65c5f453046a14119bc62234ac5b7}\label{imgui__impl__win32_8cpp_a62c65c5f453046a14119bc62234ac5b7} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_InitForOpenGL@{ImGui\_ImplWin32\_InitForOpenGL}}
+\index{ImGui\_ImplWin32\_InitForOpenGL@{ImGui\_ImplWin32\_InitForOpenGL}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_InitForOpenGL()}{ImGui\_ImplWin32\_InitForOpenGL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Init\+For\+Open\+GL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{hwnd }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_ade4f55b90fdbd75a562d894d33f1909e}\label{imgui__impl__win32_8cpp_ade4f55b90fdbd75a562d894d33f1909e} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_NewFrame@{ImGui\_ImplWin32\_NewFrame}}
+\index{ImGui\_ImplWin32\_NewFrame@{ImGui\_ImplWin32\_NewFrame}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_NewFrame()}{ImGui\_ImplWin32\_NewFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a4eddd1969cc460312197f2df3dbc992a}\label{imgui__impl__win32_8cpp_a4eddd1969cc460312197f2df3dbc992a} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_Shutdown@{ImGui\_ImplWin32\_Shutdown}}
+\index{ImGui\_ImplWin32\_Shutdown@{ImGui\_ImplWin32\_Shutdown}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_Shutdown()}{ImGui\_ImplWin32\_Shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__win32_8cpp_a25447e4d5d2cabecf54cb9a5c84e7cde}\label{imgui__impl__win32_8cpp_a25447e4d5d2cabecf54cb9a5c84e7cde} 
+\index{imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}!ImGui\_ImplWin32\_WndProcHandler@{ImGui\_ImplWin32\_WndProcHandler}}
+\index{ImGui\_ImplWin32\_WndProcHandler@{ImGui\_ImplWin32\_WndProcHandler}!imgui\_impl\_win32.cpp@{imgui\_impl\_win32.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplWin32\_WndProcHandler()}{ImGui\_ImplWin32\_WndProcHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\+\_\+\+IMPL\+\_\+\+API}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LRESULT}} Im\+Gui\+\_\+\+Impl\+Win32\+\_\+\+Wnd\+Proc\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{HWND}}}]{hwnd,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{UINT}}}]{msg,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{WPARAM}}}]{w\+Param,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{LPARAM}}}]{l\+Param }\end{DoxyParamCaption})}
+

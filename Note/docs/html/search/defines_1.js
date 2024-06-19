@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['adjustwindowrectexfordpi_0',['AdjustWindowRectExForDpi',['../win32__platform_8h.html#a13bab8e489d9ad05951150e27d3a6334',1,'win32_platform.h']]],
+  ['allegro_5fhas_5fclipboard_1',['ALLEGRO_HAS_CLIPBOARD',['../imgui__impl__allegro5_8cpp.html#a3075d26d56db9747d99d8e2229e11543',1,'imgui_impl_allegro5.cpp']]],
+  ['allegro_5fhas_5fdraw_5findexed_5fprim_2',['ALLEGRO_HAS_DRAW_INDEXED_PRIM',['../imgui__impl__allegro5_8cpp.html#a529dc68f5fcf2c043c073e3e38783e00',1,'imgui_impl_allegro5.cpp']]],
+  ['angle_5ftype_5fd3d11_3',['ANGLE_TYPE_D3D11',['../glfwinfo_8c.html#a9451fcd3819c6c6f9274f637a6be8208',1,'glfwinfo.c']]],
+  ['angle_5ftype_5fd3d9_4',['ANGLE_TYPE_D3D9',['../glfwinfo_8c.html#ab634c975a83fe31e2ed466dc021be781',1,'glfwinfo.c']]],
+  ['angle_5ftype_5fmetal_5',['ANGLE_TYPE_METAL',['../glfwinfo_8c.html#ac9c29d1a32bbb9753de904dda9a6442d',1,'glfwinfo.c']]],
+  ['angle_5ftype_5fopengl_6',['ANGLE_TYPE_OPENGL',['../glfwinfo_8c.html#ac87828683516dacd1c160fd8468ac1b4',1,'glfwinfo.c']]],
+  ['angle_5ftype_5fopengles_7',['ANGLE_TYPE_OPENGLES',['../glfwinfo_8c.html#ad10f7dfd5a01a61de533a3305224fb2f',1,'glfwinfo.c']]],
+  ['angle_5ftype_5fvulkan_8',['ANGLE_TYPE_VULKAN',['../glfwinfo_8c.html#a68a797e0d8d26a73371a118d12683cc9',1,'glfwinfo.c']]],
+  ['animation_5fspeed_9',['animation_speed',['../boing_8c.html#aaa69f89df4c8e47abeb574bfdd11d9f4',1,'ANIMATION_SPEED:&#160;boing.c'],['../wave_8c.html#aaa69f89df4c8e47abeb574bfdd11d9f4',1,'ANIMATION_SPEED:&#160;wave.c']]],
+  ['api_5fname_5fegl_10',['API_NAME_EGL',['../glfwinfo_8c.html#ab81c2e58deb2f086cd66b5b02d02bbdd',1,'glfwinfo.c']]],
+  ['api_5fname_5fnative_11',['API_NAME_NATIVE',['../glfwinfo_8c.html#a4759ca30eeb9b561d9f92620a0bf5a72',1,'glfwinfo.c']]],
+  ['api_5fname_5fopengl_12',['API_NAME_OPENGL',['../glfwinfo_8c.html#ad86628ae9a6cd0856e18e3d4597592c2',1,'glfwinfo.c']]],
+  ['api_5fname_5fopengl_5fes_13',['API_NAME_OPENGL_ES',['../glfwinfo_8c.html#a511755371b01da0ad04356d8748bf00e',1,'glfwinfo.c']]],
+  ['api_5fname_5fosmesa_14',['API_NAME_OSMESA',['../glfwinfo_8c.html#ae378fdbbc6634c234caa5b184ccfa8cb',1,'glfwinfo.c']]],
+  ['apientry_15',['apientry',['../glfw_2include_2GLFW_2glfw3_8h.html#a428a91acf2c2439dc1a257708ee1f805',1,'APIENTRY:&#160;glfw3.h'],['../imgui__impl__opengl3__loader_8h.html#a428a91acf2c2439dc1a257708ee1f805',1,'APIENTRY:&#160;imgui_impl_opengl3_loader.h'],['../imgui_2examples_2libs_2glfw_2include_2GLFW_2glfw3_8h.html#a428a91acf2c2439dc1a257708ee1f805',1,'APIENTRY:&#160;glfw3.h']]],
+  ['apientryp_16',['APIENTRYP',['../imgui__impl__opengl3__loader_8h.html#aef0d9e5e275e1b7becf54b6aa9ce3911',1,'imgui_impl_opengl3_loader.h']]],
+  ['app_5flong_5fname_17',['APP_LONG_NAME',['../triangle-vulkan_8c.html#a7ddc1be37ecfdff9eaaaa045820a96ad',1,'triangle-vulkan.c']]],
+  ['app_5fshort_5fname_18',['APP_SHORT_NAME',['../triangle-vulkan_8c.html#ab5541e08a357bb88cd008693b6ffc6db',1,'triangle-vulkan.c']]],
+  ['apple_5fhas_5fbutton_5foptions_19',['APPLE_HAS_BUTTON_OPTIONS',['../imgui__impl__osx_8mm.html#aee91fef8731ea5824c510af7ac26eb14',1,'imgui_impl_osx.mm']]],
+  ['apple_5fhas_5fcontroller_20',['APPLE_HAS_CONTROLLER',['../imgui__impl__osx_8mm.html#a9dc71e704b64954e5cc8fa9eb1d7a2f3',1,'imgui_impl_osx.mm']]],
+  ['apple_5fhas_5fthumbsticks_21',['APPLE_HAS_THUMBSTICKS',['../imgui__impl__osx_8mm.html#ae80a0030f0ca50357dff788785862d44',1,'imgui_impl_osx.mm']]],
+  ['array_5fsize_22',['ARRAY_SIZE',['../triangle-vulkan_8c.html#a25f003de16c08a4888b69f619d70f427',1,'triangle-vulkan.c']]]
+];

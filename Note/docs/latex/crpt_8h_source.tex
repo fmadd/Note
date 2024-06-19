@@ -1,0 +1,48 @@
+\doxysection{crpt.\+h}
+\hypertarget{crpt_8h_source}{}\label{crpt_8h_source}\index{src/crpt.h@{src/crpt.h}}
+\mbox{\hyperlink{crpt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cryptopp/modes.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cryptopp/filters.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cryptopp/aes.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cryptopp/osrng.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cryptopp/dh2.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cryptopp/dh.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cryptopp/secblock.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cryptopp/base64.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cryptopp/hex.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <boost/asio.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }boost::asio::ip::tcp;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }boost::asio;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }CryptoPP;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{crpt_8h_abbd1d9521584f906e8391f4c5ed41ade}{send\_crypto\_block}}(tcp::socket\ \&socket,\ \textcolor{keyword}{const}\ SecByteBlock\ \&block);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ SecByteBlock\ \mbox{\hyperlink{crpt_8h_af8e1ab2a1ca6501efc89f6c0bd6fc790}{receive\_crypto\_block}}(tcp::socket\ \&socket);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{crpt_8h_a2bb601d220a653ba269a8c8b38230159}{send\_param}}(tcp::socket\ \&socket,\ Integer\ \&val);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{crpt_8h_a357b4039652b5dbe603f6c97431f24ff}{GenerateDHKeys}}(tcp::socket\ \&socket,\ DH\ \&dh,\ AutoSeededRandomPool\ \&rnd,\ SecByteBlock\ \&privKey,\ SecByteBlock\ \&pubKey);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{crpt_8h_a11e93c54bcf05eaf5c3070cc1bf193a4}{printParam}}(SecByteBlock\ pubKey,\ SecByteBlock\ privKey,\ SecByteBlock\ otherPubKey,\ SecByteBlock\ sharedKey);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ CryptoPP::SecByteBlock\ \mbox{\hyperlink{crpt_8h_ab2d28e4a314161268efe1d7f3eb3039c}{deriveAESKeyFromDH}}(SecByteBlock\ \&sharedKey);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ std::string\ \mbox{\hyperlink{crpt_8h_af3bcb54de4355e9da9030e080ba7c69f}{encryptAES}}(\textcolor{keyword}{const}\ std::string\ \&plaintext,\ CryptoPP::SecByteBlock\ \mbox{\hyperlink{gears_8c_accd6b5b92b78666e36543412d4ac14cd}{key}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ std::string\ \mbox{\hyperlink{crpt_8h_a8490e9e60deba146bf0a520b55a7a22e}{decryptAES}}(\textcolor{keyword}{const}\ std::string\ \&ciphertext,\ CryptoPP::SecByteBlock\ Key);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ std::string\ \mbox{\hyperlink{crpt_8h_aacda4090667881256561f070e30c800f}{hashPass}}(std::string\ password);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{crpt_8h_a99066cb6578d487bae0a58455b725fbb}{recive\_param}}(tcp::socket\&\ socket,\ Integer\&\ val);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ CryptoPP::SecByteBlock\ \mbox{\hyperlink{crpt_8h_a5f89df9301b1e358c372520f3c83629c}{get\_aesKey}}(tcp::socket\&\ socket)\ ;}
+
+\end{DoxyCode}

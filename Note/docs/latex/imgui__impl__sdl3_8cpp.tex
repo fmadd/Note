@@ -1,0 +1,128 @@
+\doxysection{src/imgui/backends/imgui\+\_\+impl\+\_\+sdl3.cpp File Reference}
+\hypertarget{imgui__impl__sdl3_8cpp}{}\label{imgui__impl__sdl3_8cpp}\index{src/imgui/backends/imgui\_impl\_sdl3.cpp@{src/imgui/backends/imgui\_impl\_sdl3.cpp}}
+{\ttfamily \#include "{}imgui.\+h"{}}\newline
+{\ttfamily \#include "{}imgui\+\_\+impl\+\_\+sdl3.\+h"{}}\newline
+{\ttfamily \#include $<$SDL3/\+SDL.\+h$>$}\newline
+Include dependency graph for imgui\+\_\+impl\+\_\+sdl3.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structImGui__ImplSDL3__Data}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a313b5bc58c0de4eb53710ddc720e094d}{SDL\+\_\+\+HAS\+\_\+\+CAPTURE\+\_\+\+AND\+\_\+\+GLOBAL\+\_\+\+MOUSE}}~1
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_afc3a107ed10170a65c0aab45cd9465b5}{SDLK\+\_\+\+APOSTROPHE}}~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDLK\+\_\+\+QUOTE}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a4262c604c55ccdb079e6ffce695b3e29}{SDLK\+\_\+\+GRAVE}}~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDLK\+\_\+\+BACKQUOTE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a58595dc275ecf083f3b6c1c576f1ecd4}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Process\+Event}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__sdl2_8h_a33fcc6aa445cb781bfca881e39e5333e}{SDL\+\_\+\+Event}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{event}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a7348a90cea386ab385cc7229a54bc01b}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Open\+GL}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}window, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{sdl\+\_\+gl\+\_\+context}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a84dedc42e47a9eca6c6fefeca99289bf}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Vulkan}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}window)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_ae2ada3f4ca417aa4b4efd77a47078a38}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+D3D}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}window)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_aa55a6a0190e5bf2248858ac01e830e2d}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Metal}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}window)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a71a5c4cbeb4d9058ac724d68a8c7c762}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+SDLRenderer}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}window, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{renderer}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_ae8b3e3e94b79cb82e4b5b2175dfe2641}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Other}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}window)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a9103a82edb06cbdd5b5827d13fb0d37b}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Shutdown}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a061009e592f919d45ee5b79c35d516f9}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Set\+Gamepad\+Mode}} (\mbox{\hyperlink{imgui__impl__sdl3_8h_ad480fd2f529e7f698bbf12d024b373bd}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Gamepad\+Mode}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Gamepad}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{manual\+\_\+gamepads\+\_\+array}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{manual\+\_\+gamepads\+\_\+count}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdl3_8cpp_a234e948df1bab6e801daf91ec31d4f0b}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+New\+Frame}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{imgui__impl__sdl3_8cpp_a313b5bc58c0de4eb53710ddc720e094d}\label{imgui__impl__sdl3_8cpp_a313b5bc58c0de4eb53710ddc720e094d} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!SDL\_HAS\_CAPTURE\_AND\_GLOBAL\_MOUSE@{SDL\_HAS\_CAPTURE\_AND\_GLOBAL\_MOUSE}}
+\index{SDL\_HAS\_CAPTURE\_AND\_GLOBAL\_MOUSE@{SDL\_HAS\_CAPTURE\_AND\_GLOBAL\_MOUSE}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{SDL\_HAS\_CAPTURE\_AND\_GLOBAL\_MOUSE}{SDL\_HAS\_CAPTURE\_AND\_GLOBAL\_MOUSE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} SDL\+\_\+\+HAS\+\_\+\+CAPTURE\+\_\+\+AND\+\_\+\+GLOBAL\+\_\+\+MOUSE~1}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_afc3a107ed10170a65c0aab45cd9465b5}\label{imgui__impl__sdl3_8cpp_afc3a107ed10170a65c0aab45cd9465b5} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!SDLK\_APOSTROPHE@{SDLK\_APOSTROPHE}}
+\index{SDLK\_APOSTROPHE@{SDLK\_APOSTROPHE}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{SDLK\_APOSTROPHE}{SDLK\_APOSTROPHE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} SDLK\+\_\+\+APOSTROPHE~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDLK\+\_\+\+QUOTE}}}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a4262c604c55ccdb079e6ffce695b3e29}\label{imgui__impl__sdl3_8cpp_a4262c604c55ccdb079e6ffce695b3e29} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!SDLK\_GRAVE@{SDLK\_GRAVE}}
+\index{SDLK\_GRAVE@{SDLK\_GRAVE}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{SDLK\_GRAVE}{SDLK\_GRAVE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} SDLK\+\_\+\+GRAVE~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDLK\+\_\+\+BACKQUOTE}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{imgui__impl__sdl3_8cpp_ae2ada3f4ca417aa4b4efd77a47078a38}\label{imgui__impl__sdl3_8cpp_ae2ada3f4ca417aa4b4efd77a47078a38} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_InitForD3D@{ImGui\_ImplSDL3\_InitForD3D}}
+\index{ImGui\_ImplSDL3\_InitForD3D@{ImGui\_ImplSDL3\_InitForD3D}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_InitForD3D()}{ImGui\_ImplSDL3\_InitForD3D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+D3D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_aa55a6a0190e5bf2248858ac01e830e2d}\label{imgui__impl__sdl3_8cpp_aa55a6a0190e5bf2248858ac01e830e2d} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_InitForMetal@{ImGui\_ImplSDL3\_InitForMetal}}
+\index{ImGui\_ImplSDL3\_InitForMetal@{ImGui\_ImplSDL3\_InitForMetal}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_InitForMetal()}{ImGui\_ImplSDL3\_InitForMetal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Metal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a7348a90cea386ab385cc7229a54bc01b}\label{imgui__impl__sdl3_8cpp_a7348a90cea386ab385cc7229a54bc01b} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_InitForOpenGL@{ImGui\_ImplSDL3\_InitForOpenGL}}
+\index{ImGui\_ImplSDL3\_InitForOpenGL@{ImGui\_ImplSDL3\_InitForOpenGL}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_InitForOpenGL()}{ImGui\_ImplSDL3\_InitForOpenGL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Open\+GL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{sdl\+\_\+gl\+\_\+context }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_ae8b3e3e94b79cb82e4b5b2175dfe2641}\label{imgui__impl__sdl3_8cpp_ae8b3e3e94b79cb82e4b5b2175dfe2641} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_InitForOther@{ImGui\_ImplSDL3\_InitForOther}}
+\index{ImGui\_ImplSDL3\_InitForOther@{ImGui\_ImplSDL3\_InitForOther}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_InitForOther()}{ImGui\_ImplSDL3\_InitForOther()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Other (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a71a5c4cbeb4d9058ac724d68a8c7c762}\label{imgui__impl__sdl3_8cpp_a71a5c4cbeb4d9058ac724d68a8c7c762} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_InitForSDLRenderer@{ImGui\_ImplSDL3\_InitForSDLRenderer}}
+\index{ImGui\_ImplSDL3\_InitForSDLRenderer@{ImGui\_ImplSDL3\_InitForSDLRenderer}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_InitForSDLRenderer()}{ImGui\_ImplSDL3\_InitForSDLRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+SDLRenderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a84dedc42e47a9eca6c6fefeca99289bf}\label{imgui__impl__sdl3_8cpp_a84dedc42e47a9eca6c6fefeca99289bf} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_InitForVulkan@{ImGui\_ImplSDL3\_InitForVulkan}}
+\index{ImGui\_ImplSDL3\_InitForVulkan@{ImGui\_ImplSDL3\_InitForVulkan}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_InitForVulkan()}{ImGui\_ImplSDL3\_InitForVulkan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Init\+For\+Vulkan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a234e948df1bab6e801daf91ec31d4f0b}\label{imgui__impl__sdl3_8cpp_a234e948df1bab6e801daf91ec31d4f0b} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_NewFrame@{ImGui\_ImplSDL3\_NewFrame}}
+\index{ImGui\_ImplSDL3\_NewFrame@{ImGui\_ImplSDL3\_NewFrame}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_NewFrame()}{ImGui\_ImplSDL3\_NewFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a58595dc275ecf083f3b6c1c576f1ecd4}\label{imgui__impl__sdl3_8cpp_a58595dc275ecf083f3b6c1c576f1ecd4} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_ProcessEvent@{ImGui\_ImplSDL3\_ProcessEvent}}
+\index{ImGui\_ImplSDL3\_ProcessEvent@{ImGui\_ImplSDL3\_ProcessEvent}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_ProcessEvent()}{ImGui\_ImplSDL3\_ProcessEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__sdl2_8h_a33fcc6aa445cb781bfca881e39e5333e}{SDL\+\_\+\+Event}} \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a061009e592f919d45ee5b79c35d516f9}\label{imgui__impl__sdl3_8cpp_a061009e592f919d45ee5b79c35d516f9} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_SetGamepadMode@{ImGui\_ImplSDL3\_SetGamepadMode}}
+\index{ImGui\_ImplSDL3\_SetGamepadMode@{ImGui\_ImplSDL3\_SetGamepadMode}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_SetGamepadMode()}{ImGui\_ImplSDL3\_SetGamepadMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Set\+Gamepad\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__sdl3_8h_ad480fd2f529e7f698bbf12d024b373bd}{Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Gamepad\+Mode}}}]{mode,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Gamepad}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{manual\+\_\+gamepads\+\_\+array,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{manual\+\_\+gamepads\+\_\+count }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdl3_8cpp_a9103a82edb06cbdd5b5827d13fb0d37b}\label{imgui__impl__sdl3_8cpp_a9103a82edb06cbdd5b5827d13fb0d37b} 
+\index{imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}!ImGui\_ImplSDL3\_Shutdown@{ImGui\_ImplSDL3\_Shutdown}}
+\index{ImGui\_ImplSDL3\_Shutdown@{ImGui\_ImplSDL3\_Shutdown}!imgui\_impl\_sdl3.cpp@{imgui\_impl\_sdl3.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDL3\_Shutdown()}{ImGui\_ImplSDL3\_Shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDL3\+\_\+\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

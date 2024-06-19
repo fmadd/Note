@@ -1,0 +1,201 @@
+\doxysection{imgui\+\_\+impl\+\_\+vulkan.\+h}
+\hypertarget{imgui__impl__vulkan_8h_source}{}\label{imgui__impl__vulkan_8h_source}\index{src/imgui/backends/imgui\_impl\_vulkan.h@{src/imgui/backends/imgui\_impl\_vulkan.h}}
+\mbox{\hyperlink{imgui__impl__vulkan_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ dear\ imgui:\ Renderer\ Backend\ for\ Vulkan}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ This\ needs\ to\ be\ used\ along\ with\ a\ Platform\ Backend\ (e.g.\ GLFW,\ SDL,\ Win32,\ custom..)}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Implemented\ features:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ [!]\ Renderer:\ User\ texture\ binding.\ Use\ 'VkDescriptorSet'\ as\ ImTextureID.\ Read\ the\ FAQ\ about\ ImTextureID!\ See\ https://github.com/ocornut/imgui/pull/914\ for\ discussions.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ [X]\ Renderer:\ Large\ meshes\ support\ (64k+\ vertices)\ with\ 16-\/bit\ indices.}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Important:\ on\ 32-\/bit\ systems,\ user\ texture\ binding\ is\ only\ supported\ if\ your\ imconfig\ file\ has\ '\#define\ ImTextureID\ ImU64'.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ See\ imgui\_impl\_vulkan.cpp\ file\ for\ details.}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ The\ aim\ of\ imgui\_impl\_vulkan.h/.cpp\ is\ to\ be\ usable\ in\ your\ engine\ without\ any\ modification.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ IF\ YOU\ FEEL\ YOU\ NEED\ TO\ MAKE\ ANY\ CHANGE\ TO\ THIS\ CODE,\ please\ share\ them\ and\ your\ feedback\ at\ https://github.com/ocornut/imgui/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ You\ can\ use\ unmodified\ imgui\_impl\_*\ files\ in\ your\ project.\ See\ examples/\ folder\ for\ examples\ of\ using\ this.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Prefer\ including\ the\ entire\ imgui/\ repository\ into\ your\ project\ (either\ as\ a\ copy\ or\ as\ a\ submodule),\ and\ only\ build\ the\ backends\ you\ need.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Learn\ about\ Dear\ ImGui:}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ -\/\ FAQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ https://dearimgui.com/faq}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ -\/\ Getting\ Started\ \ \ \ \ \ https://dearimgui.com/getting-\/started}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ -\/\ Documentation\ \ \ \ \ \ \ \ https://dearimgui.com/docs\ (same\ as\ your\ local\ docs/\ folder).}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ -\/\ Introduction,\ links\ and\ more\ at\ the\ top\ of\ imgui.cpp}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Important\ note\ to\ the\ reader\ who\ wish\ to\ integrate\ imgui\_impl\_vulkan.cpp/.h\ in\ their\ own\ engine/app.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ -\/\ Common\ ImGui\_ImplVulkan\_XXX\ functions\ and\ structures\ are\ used\ to\ interface\ with\ imgui\_impl\_vulkan.cpp/.h.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ \ You\ will\ use\ those\ if\ you\ want\ to\ use\ this\ rendering\ backend\ in\ your\ engine/app.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ -\/\ Helper\ ImGui\_ImplVulkanH\_XXX\ functions\ and\ structures\ are\ only\ used\ by\ this\ example\ (main.cpp)\ and\ by}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ \ the\ backend\ itself\ (imgui\_impl\_vulkan.cpp),\ but\ should\ PROBABLY\ NOT\ be\ used\ by\ your\ own\ engine/app\ code.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Read\ comments\ in\ imgui\_impl\_vulkan.h.}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifndef\ IMGUI\_DISABLE}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{imgui_8h}{imgui.h}}"{}}\ \ \ \ \ \ \textcolor{comment}{//\ IMGUI\_IMPL\_API}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ [Configuration]\ in\ order\ to\ use\ a\ custom\ Vulkan\ function\ loader:}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ (1)\ You'll\ need\ to\ disable\ default\ Vulkan\ function\ prototypes.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ We\ provide\ a\ '\#define\ IMGUI\_IMPL\_VULKAN\_NO\_PROTOTYPES'\ convenience\ configuration\ flag.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ \ \ \ In\ order\ to\ make\ sure\ this\ is\ visible\ from\ the\ imgui\_impl\_vulkan.cpp\ compilation\ unit:}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ \ \ \ \ -\/\ Add\ '\#define\ IMGUI\_IMPL\_VULKAN\_NO\_PROTOTYPES'\ in\ your\ imconfig.h\ file}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ \ \ \ \ -\/\ Or\ as\ a\ compilation\ flag\ in\ your\ build\ system}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ \ \ \ \ -\/\ Or\ uncomment\ here\ (not\ recommended\ because\ you'd\ be\ modifying\ imgui\ sources!)}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ \ \ \ -\/\ Do\ not\ simply\ add\ it\ in\ a\ .cpp\ file!}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ (2)\ Call\ ImGui\_ImplVulkan\_LoadFunctions()\ before\ ImGui\_ImplVulkan\_Init()\ with\ your\ custom\ function.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ If\ you\ have\ no\ idea\ what\ this\ is,\ leave\ it\ alone!}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//\#define\ IMGUI\_IMPL\_VULKAN\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ Convenience\ support\ for\ Volk}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ (you\ can\ also\ technically\ use\ IMGUI\_IMPL\_VULKAN\_NO\_PROTOTYPES\ +\ wrap\ Volk\ via\ ImGui\_ImplVulkan\_LoadFunctions().)}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\#define\ IMGUI\_IMPL\_VULKAN\_USE\_VOLK}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_IMPL\_VULKAN\_NO\_PROTOTYPES)\ \&\&\ !defined(VK\_NO\_PROTOTYPES)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#if\ defined(VK\_USE\_PLATFORM\_WIN32\_KHR)\ \&\&\ !defined(NOMINMAX)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ NOMINMAX}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Vulkan\ includes}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#ifdef\ IMGUI\_IMPL\_VULKAN\_USE\_VOLK}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ <Volk/volk.h>}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#if\ defined(VK\_VERSION\_1\_3)\ ||\ defined(VK\_KHR\_dynamic\_rendering)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ IMGUI\_IMPL\_VULKAN\_HAS\_DYNAMIC\_RENDERING}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ Initialization\ data,\ for\ ImGui\_ImplVulkan\_Init()}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ -\/\ VkDescriptorPool\ should\ be\ created\ with\ VK\_DESCRIPTOR\_POOL\_CREATE\_FREE\_DESCRIPTOR\_SET\_BIT,}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ \ \ and\ must\ contain\ a\ pool\ size\ large\ enough\ to\ hold\ an\ ImGui\ VK\_DESCRIPTOR\_TYPE\_COMBINED\_IMAGE\_SAMPLER\ descriptor.}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ -\/\ When\ using\ dynamic\ rendering,\ set\ UseDynamicRendering=true\ and\ fill\ PipelineRenderingCreateInfo\ structure.}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ [Please\ zero-\/clear\ before\ use!]}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImGui__ImplVulkan__InitInfo}{ImGui\_ImplVulkan\_InitInfo}}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{internal_8h_a25ae5082a7c01af345570ed09d724881}{VkInstance}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a7b876fe4c1aa7d3e974eeb1292973a7c}{Instance}};}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{internal_8h_aa9acbee1e762fde021511a1b47678a38}{VkPhysicalDevice}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a443ec478eaf433968dea82f35d2c4ddb}{PhysicalDevice}};}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkDevice}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a9afcaa962b5f6ca11181588ae439af78}{Device}};}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a51c934190a99b91180bf95ce56a36407}{QueueFamily}};}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkQueue}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a43144f43d4eeb25a5230a55a1cea2bd4}{Queue}};}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkDescriptorPool}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a8062aeaef73fcda522fbb866b312320a}{DescriptorPool}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ See\ requirements\ in\ note\ above}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkRenderPass}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_aa2b09ece6557a844a08e6ff8b998a316}{RenderPass}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignored\ if\ using\ dynamic\ rendering}}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_afd70c96b923e8af179013387e896b1b7}{MinImageCount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ >=\ 2}}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_ad54bf1ace8ef43826a80148cfc0b336c}{ImageCount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ >=\ MinImageCount}}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{vulkan_8h_a7972fb8a8ec7c225e60ca7c3de159706}{VkSampleCountFlagBits}}\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a07f4dc58914730be73d241dbe3037833}{MSAASamples}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0\ defaults\ to\ VK\_SAMPLE\_COUNT\_1\_BIT}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//\ (Optional)}}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkPipelineCache}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_af1235f630cab2ce5bb29129391870065}{PipelineCache}};}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a1ae69c239cbeb0aa7ea1fbab71e4f38f}{Subpass}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ (Optional)\ Dynamic\ Rendering}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ Need\ to\ explicitly\ enable\ VK\_KHR\_dynamic\_rendering\ extension\ to\ use\ this,\ even\ for\ Vulkan\ 1.3.}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a0a9a0a08571e832b4cdf800be51f9ee7}{UseDynamicRendering}};}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#ifdef\ IMGUI\_IMPL\_VULKAN\_HAS\_DYNAMIC\_RENDERING}}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkPipelineRenderingCreateInfoKHR}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{PipelineRenderingCreateInfo}};}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ (Optional)\ Allocation,\ Debugging}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVkAllocationCallbacks}{VkAllocationCallbacks}}*\ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a2200c0dc31e49210eea3e381f9c0a4aa}{Allocator}};}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (*\mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a4e0c452744fdad8ec91ca33ba70dbceb}{CheckVkResultFn}})(\mbox{\hyperlink{vulkan_8h_abe3614d1bd40772bc2398a4a86ea4a45}{VkResult}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{err}});}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{vulkan_8h_a459be4b1b89c972b0d6018bc483be9cc}{VkDeviceSize}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkan__InitInfo_a2293c3129c2b5e2dd2fe3ea7f61016fa}{MinAllocationSize}};\ \ \ \ \ \ \textcolor{comment}{//\ Minimum\ allocation\ size.\ Set\ to\ 1024*1024\ to\ satisfy\ zealous\ best\ practices\ validation\ layer\ and\ waste\ a\ little\ memory.}}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ Called\ by\ user\ code}}
+\DoxyCodeLine{00102\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a4baf19bad2d49bf54e9905227f220340}{ImGui\_ImplVulkan\_Init}}(\mbox{\hyperlink{structImGui__ImplVulkan__InitInfo}{ImGui\_ImplVulkan\_InitInfo}}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{info}});}
+\DoxyCodeLine{00103\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_ac5f93959197622a7afc8ac9d9e7c378c}{ImGui\_ImplVulkan\_Shutdown}}();}
+\DoxyCodeLine{00104\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a1140b281b5df05d3a20b07d979ee0250}{ImGui\_ImplVulkan\_NewFrame}}();}
+\DoxyCodeLine{00105\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_ab20cc208b1400091be27ed1e57c8ce41}{ImGui\_ImplVulkan\_RenderDrawData}}(\mbox{\hyperlink{structImDrawData}{ImDrawData}}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{draw\_data}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkCommandBuffer}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{command\_buffer}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkPipeline}}\ pipeline\ =\ \mbox{\hyperlink{vulkan_8h_ad1021f65d668acdf1644d94e0828bff0}{VK\_NULL\_HANDLE}});}
+\DoxyCodeLine{00106\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a517dac20f07e31e69d1ba69de65ce9e5}{ImGui\_ImplVulkan\_CreateFontsTexture}}();}
+\DoxyCodeLine{00107\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a3abc2369d4bae616db1e06d062c6dc9a}{ImGui\_ImplVulkan\_DestroyFontsTexture}}();}
+\DoxyCodeLine{00108\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_ab6c61e9c9d8e8c314866e5d9b48b58b5}{ImGui\_ImplVulkan\_SetMinImageCount}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{min\_image\_count}});\ \textcolor{comment}{//\ To\ override\ MinImageCount\ after\ initialization\ (e.g.\ if\ swap\ chain\ is\ recreated)}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ Register\ a\ texture\ (VkDescriptorSet\ ==\ ImTextureID)}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ FIXME:\ This\ is\ experimental\ in\ the\ sense\ that\ we\ are\ unsure\ how\ to\ best\ design/tackle\ this\ problem}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ Please\ post\ to\ https://github.com/ocornut/imgui/pull/914\ if\ you\ have\ suggestions.}}
+\DoxyCodeLine{00113\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkDescriptorSet}}\ \mbox{\hyperlink{imgui__impl__vulkan_8h_a4122551e48de0c2cb4b3e074374fc4bd}{ImGui\_ImplVulkan\_AddTexture}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkSampler}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a4f7acaf0f814147f227f72b9065e8ed0}{sampler}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkImageView}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{image\_view}},\ \mbox{\hyperlink{vulkan_8h_a10d9a29817e871a926df1834c7ccd88c}{VkImageLayout}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{image\_layout}});}
+\DoxyCodeLine{00114\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a312a4fc95451afe097cf45fba6e773fd}{ImGui\_ImplVulkan\_RemoveTexture}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkDescriptorSet}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{descriptor\_set}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ Optional:\ load\ Vulkan\ functions\ with\ a\ custom\ function\ loader}}
+\DoxyCodeLine{00117\ \textcolor{comment}{//\ This\ is\ only\ useful\ with\ IMGUI\_IMPL\_VULKAN\_NO\_PROTOTYPES\ /\ VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{00118\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_aa74445b92ed2b7e06979f4b230d062bc}{ImGui\_ImplVulkan\_LoadFunctions}}(\mbox{\hyperlink{vulkan_8h_ac604c97c18d2ad5be6edb8de8f31e7a1}{PFN\_vkVoidFunction}}(*\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{loader\_func}})(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ function\_name,\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{user\_data}}),\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{user\_data}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ Internal\ /\ Miscellaneous\ Vulkan\ Helpers}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//\ (Used\ by\ example's\ main.cpp.\ Used\ by\ multi-\/viewport\ features.\ PROBABLY\ NOT\ used\ by\ your\ own\ engine/app.)}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ You\ probably\ do\ NOT\ need\ to\ use\ or\ care\ about\ those\ functions.}}
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ Those\ functions\ only\ exist\ because:}}
+\DoxyCodeLine{00126\ \textcolor{comment}{//\ \ \ 1)\ they\ facilitate\ the\ readability\ and\ maintenance\ of\ the\ multiple\ main.cpp\ examples\ files.}}
+\DoxyCodeLine{00127\ \textcolor{comment}{//\ \ \ 2)\ the\ multi-\/viewport\ /\ platform\ window\ implementation\ needs\ them\ internally.}}
+\DoxyCodeLine{00128\ \textcolor{comment}{//\ Generally\ we\ avoid\ exposing\ any\ kind\ of\ superfluous\ high-\/level\ helpers\ in\ the\ bindings,}}
+\DoxyCodeLine{00129\ \textcolor{comment}{//\ but\ it\ is\ too\ much\ code\ to\ duplicate\ everywhere\ so\ we\ exceptionally\ expose\ them.}}
+\DoxyCodeLine{00130\ \textcolor{comment}{//}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ Your\ engine/app\ will\ likely\ \_already\_\ have\ code\ to\ setup\ all\ that\ stuff\ (swap\ chain,\ render\ pass,\ frame\ buffers,\ etc.).}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ You\ may\ read\ this\ code\ to\ learn\ about\ Vulkan,\ but\ it\ is\ recommended\ you\ use\ you\ own\ custom\ tailored\ code\ to\ do\ equivalent\ work.}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ (The\ ImGui\_ImplVulkanH\_XXX\ functions\ do\ not\ interact\ with\ any\ of\ the\ state\ used\ by\ the\ regular\ ImGui\_ImplVulkan\_XXX\ functions)}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImGui__ImplVulkanH__Frame}{ImGui\_ImplVulkanH\_Frame}};}
+\DoxyCodeLine{00137\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImGui__ImplVulkanH__Window}{ImGui\_ImplVulkanH\_Window}};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ Helpers}}
+\DoxyCodeLine{00140\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_af8a69ee55486054683a7a0729445ad76}{ImGui\_ImplVulkanH\_CreateOrResizeWindow}}(\mbox{\hyperlink{internal_8h_a25ae5082a7c01af345570ed09d724881}{VkInstance}}\ instance,\ \mbox{\hyperlink{internal_8h_aa9acbee1e762fde021511a1b47678a38}{VkPhysicalDevice}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{physical\_device}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkDevice}}\ device,\ \mbox{\hyperlink{structImGui__ImplVulkanH__Window}{ImGui\_ImplVulkanH\_Window}}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{wnd}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{queue\_family}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVkAllocationCallbacks}{VkAllocationCallbacks}}*\ allocator,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{min\_image\_count}});}
+\DoxyCodeLine{00141\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a85f0bc7caedd9313be70e55179885081}{ImGui\_ImplVulkanH\_DestroyWindow}}(\mbox{\hyperlink{internal_8h_a25ae5082a7c01af345570ed09d724881}{VkInstance}}\ instance,\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkDevice}}\ device,\ \mbox{\hyperlink{structImGui__ImplVulkanH__Window}{ImGui\_ImplVulkanH\_Window}}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{wnd}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVkAllocationCallbacks}{VkAllocationCallbacks}}*\ allocator);}
+\DoxyCodeLine{00142\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \mbox{\hyperlink{structVkSurfaceFormatKHR}{VkSurfaceFormatKHR}}\ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a372dec07c30709ba8557673a0f28864f}{ImGui\_ImplVulkanH\_SelectSurfaceFormat}}(\mbox{\hyperlink{internal_8h_aa9acbee1e762fde021511a1b47678a38}{VkPhysicalDevice}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{physical\_device}},\ \mbox{\hyperlink{internal_8h_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}\ surface,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{vulkan_8h_ad61b5b94a526d0f9ae0db97072cf6b3f}{VkFormat}}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{request\_formats}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{request\_formats\_count}},\ \mbox{\hyperlink{vulkan_8h_ad9171c0aebd320cee6f963c30ca1dd0c}{VkColorSpaceKHR}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{request\_color\_space}});}
+\DoxyCodeLine{00143\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \mbox{\hyperlink{vulkan_8h_acfe074f0be1b52a106d074c7ac6851c9}{VkPresentModeKHR}}\ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a2db0beb55053b0878cd8ae72f14f56ef}{ImGui\_ImplVulkanH\_SelectPresentMode}}(\mbox{\hyperlink{internal_8h_aa9acbee1e762fde021511a1b47678a38}{VkPhysicalDevice}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{physical\_device}},\ \mbox{\hyperlink{internal_8h_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}\ surface,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{vulkan_8h_acfe074f0be1b52a106d074c7ac6851c9}{VkPresentModeKHR}}*\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{request\_modes}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{request\_modes\_count}});}
+\DoxyCodeLine{00144\ \mbox{\hyperlink{imgui_8h_a665f6b404eea9a640b1222a87236fe19}{IMGUI\_IMPL\_API}}\ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__vulkan_8h_a8236d44a7a09080d3fd617ba0a1ea153}{ImGui\_ImplVulkanH\_GetMinImageCountFromPresentMode}}(\mbox{\hyperlink{vulkan_8h_acfe074f0be1b52a106d074c7ac6851c9}{VkPresentModeKHR}}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{present\_mode}});}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{//\ Helper\ structure\ to\ hold\ the\ data\ needed\ by\ one\ rendering\ frame}}
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ (Used\ by\ example's\ main.cpp.\ Used\ by\ multi-\/viewport\ features.\ Probably\ NOT\ used\ by\ your\ own\ engine/app.)}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//\ [Please\ zero-\/clear\ before\ use!]}}
+\DoxyCodeLine{00149\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImGui__ImplVulkanH__Frame}{ImGui\_ImplVulkanH\_Frame}}}
+\DoxyCodeLine{00150\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkCommandPool}}\ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame_a6c911e80ef74061af078068943e8f0e3}{CommandPool}};}
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkCommandBuffer}}\ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame_a18aaf1c0c5df6cec2a8de6e35da5c7c7}{CommandBuffer}};}
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkFence}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame_a320898ead11e93ed043ee9bce405176a}{Fence}};}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkImage}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame_a9319c32a4da6914a275336f6097f2f23}{Backbuffer}};}
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkImageView}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame_a6f0c15150471d42253c5873f393cfc57}{BackbufferView}};}
+\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkFramebuffer}}\ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame_a31f96a2c02a2e037278bf0ec144c6077}{Framebuffer}};}
+\DoxyCodeLine{00157\ \};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImGui__ImplVulkanH__FrameSemaphores}{ImGui\_ImplVulkanH\_FrameSemaphores}}}
+\DoxyCodeLine{00160\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkSemaphore}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__FrameSemaphores_ad396afd28149848364513e2015c992d1}{ImageAcquiredSemaphore}};}
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkSemaphore}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__FrameSemaphores_aa5dad94e9e02ef1cfd2ef171bb72f3e8}{RenderCompleteSemaphore}};}
+\DoxyCodeLine{00163\ \};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{comment}{//\ Helper\ structure\ to\ hold\ the\ data\ needed\ by\ one\ rendering\ context\ into\ one\ OS\ window}}
+\DoxyCodeLine{00166\ \textcolor{comment}{//\ (Used\ by\ example's\ main.cpp.\ Used\ by\ multi-\/viewport\ features.\ Probably\ NOT\ used\ by\ your\ own\ engine/app.)}}
+\DoxyCodeLine{00167\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImGui__ImplVulkanH__Window}{ImGui\_ImplVulkanH\_Window}}}
+\DoxyCodeLine{00168\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_ad8bc4441fc4c36b110790db262815339}{Width}};}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a9ea73dc6cd9b90a57171c4b0356658f2}{Height}};}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkSwapchainKHR}}\ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a5ecfc0e4ad6b2f3c216860934ab7bb7b}{Swapchain}};}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{internal_8h_a09787d7da5f3146095ed80ceccc2d794}{VkSurfaceKHR}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a1628e6c4fac493af53009947328e55f8}{Surface}};}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{structVkSurfaceFormatKHR}{VkSurfaceFormatKHR}}\ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_abb7c3f3f92b4ee4dd9e291f4b0a98327}{SurfaceFormat}};}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{vulkan_8h_acfe074f0be1b52a106d074c7ac6851c9}{VkPresentModeKHR}}\ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_accb9638525b3da4a4cfe70abd9b3c020}{PresentMode}};}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkRenderPass}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_ac3eff232378a4a334617a8fba3953b03}{RenderPass}};}
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{VkPipeline}}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a142ba44257265c2a5f6570f7e26ca9a4}{Pipeline}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ window\ pipeline\ may\ uses\ a\ different\ VkRenderPass\ than\ the\ one\ passed\ in\ ImGui\_ImplVulkan\_InitInfo}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_ac78d8e8eb73c149e8e28e1abca0abb2d}{UseDynamicRendering}};}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a0262fbfc4b662ec7e2bedef6b264ed86}{ClearEnable}};}
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{unionVkClearValue}{VkClearValue}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_af24defb10c2932ef043755677a5238f3}{ClearValue}};}
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a82722e0ce756fe91cbc61303639aab0a}{FrameIndex}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ frame\ being\ rendered\ to\ (0\ <=\ FrameIndex\ <\ FrameInFlightCount)}}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_ae4f91464af2252fd58640577da78c42c}{ImageCount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ simultaneous\ in-\/flight\ frames\ (returned\ by\ vkGetSwapchainImagesKHR,\ usually\ derived\ from\ min\_image\_count)}}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a3628c3c3133200ed09ee455790639ce6}{SemaphoreCount}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ simultaneous\ in-\/flight\ frames\ +\ 1,\ to\ be\ able\ to\ use\ it\ in\ vkAcquireNextImageKHR}}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a22de46dc435ae4cc3b198b0416bbb84b}{SemaphoreIndex}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ set\ of\ swapchain\ wait\ semaphores\ we're\ using\ (needs\ to\ be\ distinct\ from\ per\ frame\ data)}}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Frame}{ImGui\_ImplVulkanH\_Frame}}*\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a6d363cd2fc5ffac4fd6d10b0d6864f8b}{Frames}};}
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__FrameSemaphores}{ImGui\_ImplVulkanH\_FrameSemaphores}}*\ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_aab4a967793cbf9680cff350a02c56026}{FrameSemaphores}};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a3409eda7f09b755e38ec7631e13937c7}{ImGui\_ImplVulkanH\_Window}}()}
+\DoxyCodeLine{00188\ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{memset}}((\textcolor{keywordtype}{void}*)\textcolor{keyword}{this},\ 0,\ \textcolor{keyword}{sizeof}(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_accb9638525b3da4a4cfe70abd9b3c020}{PresentMode}}\ =\ (\mbox{\hyperlink{vulkan_8h_acfe074f0be1b52a106d074c7ac6851c9}{VkPresentModeKHR}})\string~0;\ \ \ \ \ \textcolor{comment}{//\ Ensure\ we\ get\ an\ error\ if\ user\ doesn't\ set\ this.}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structImGui__ImplVulkanH__Window_a0262fbfc4b662ec7e2bedef6b264ed86}{ClearEnable}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00192\ \ \ \ \ \}}
+\DoxyCodeLine{00193\ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \#ifndef\ IMGUI\_DISABLE}}
+
+\end{DoxyCode}

@@ -1,0 +1,131 @@
+\doxysection{src/imgui/backends/imgui\+\_\+impl\+\_\+osx.mm File Reference}
+\hypertarget{imgui__impl__osx_8mm}{}\label{imgui__impl__osx_8mm}\index{src/imgui/backends/imgui\_impl\_osx.mm@{src/imgui/backends/imgui\_impl\_osx.mm}}
+{\ttfamily import "{}imgui.\+h"{}}\newline
+{\ttfamily import "{}imgui\+\_\+impl\+\_\+osx.\+h"{}}\newline
+{\ttfamily import $<$Cocoa/\+Cocoa.\+h$>$}\newline
+{\ttfamily import $<$Carbon/\+Carbon.\+h$>$}\newline
+{\ttfamily import $<$Game\+Controller/\+Game\+Controller.\+h$>$}\newline
+{\ttfamily import $<$time.\+h$>$}\newline
+Include dependency graph for imgui\+\_\+impl\+\_\+osx.\+mm\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structImGui__ImplOSX__Data}{Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+Data}}
+\item 
+class \mbox{\hyperlink{interfaceKeyEventResponder}{Key\+Event\+Responder}}
+\item 
+class \mbox{\hyperlink{interfaceImGuiObserver}{Im\+Gui\+Observer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__osx_8mm_aee91fef8731ea5824c510af7ac26eb14}{APPLE\+\_\+\+HAS\+\_\+\+BUTTON\+\_\+\+OPTIONS}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+IPHONE\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 130000 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+MAC\+\_\+\+OS\+\_\+\+X\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 101500 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+TV\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 130000)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__osx_8mm_a9dc71e704b64954e5cc8fa9eb1d7a2f3}{APPLE\+\_\+\+HAS\+\_\+\+CONTROLLER}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+IPHONE\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 140000 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+MAC\+\_\+\+OS\+\_\+\+X\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 110000 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+TV\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 140000)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__osx_8mm_ae80a0030f0ca50357dff788785862d44}{APPLE\+\_\+\+HAS\+\_\+\+THUMBSTICKS}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+IPHONE\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 120100 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+MAC\+\_\+\+OS\+\_\+\+X\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 101401 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+TV\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 120100)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442}{IM\+\_\+\+SATURATE}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}})~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $<$ 0.\+0f ? 0.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $>$ 1.\+0f ? 1.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}})
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__osx_8mm_acde2e6121f011b1ce1e59afbd6ac34b4}{MAP\+\_\+\+BUTTON}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{BUTTON\+\_\+\+NAME}})~\{ io.\+Add\+Key\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{gp.\+BUTTON\+\_\+\+NAME.\+is\+Pressed}}); \}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__osx_8mm_a3776de756858a336b0e533b764406256}{MAP\+\_\+\+ANALOG}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{AXIS\+\_\+\+NAME}},  V0,  V1)~\{ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1b2be7bfa84f129a2690a62f3ad82d62}{gp.\+AXIS\+\_\+\+NAME.\+value}} -\/ V0) / (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(V1 -\/ V0); \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} = \mbox{\hyperlink{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442}{IM\+\_\+\+SATURATE}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}}); io.\+Add\+Key\+Analog\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} $>$ 0.\+1\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{f}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}}); \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__osx_8mm_ac4e94ef001edb88c5c2c0de165a18080}{Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+Init}} (NSView \texorpdfstring{$\ast$}{*}view)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__osx_8mm_acc3a2c3d2bc80b8374406e8ca9f3c17e}{Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+Shutdown}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__osx_8mm_a5f96863293e2c918e919fe0e372ea141}{Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+New\+Frame}} (NSView \texorpdfstring{$\ast$}{*}view)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__osx_8mm_aac039e5cfe18e6601b5c82eb5140d7ae}{\+\_\+posY}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSRect}} \mbox{\hyperlink{imgui__impl__osx_8mm_acbb5da7ccff4ce29dc47d54084ffbbf6}{\+\_\+ime\+Rect}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{imgui__impl__osx_8mm_aee91fef8731ea5824c510af7ac26eb14}\label{imgui__impl__osx_8mm_aee91fef8731ea5824c510af7ac26eb14} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!APPLE\_HAS\_BUTTON\_OPTIONS@{APPLE\_HAS\_BUTTON\_OPTIONS}}
+\index{APPLE\_HAS\_BUTTON\_OPTIONS@{APPLE\_HAS\_BUTTON\_OPTIONS}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{APPLE\_HAS\_BUTTON\_OPTIONS}{APPLE\_HAS\_BUTTON\_OPTIONS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} APPLE\+\_\+\+HAS\+\_\+\+BUTTON\+\_\+\+OPTIONS~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+IPHONE\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 130000 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+MAC\+\_\+\+OS\+\_\+\+X\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 101500 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+TV\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 130000)}
+
+\Hypertarget{imgui__impl__osx_8mm_a9dc71e704b64954e5cc8fa9eb1d7a2f3}\label{imgui__impl__osx_8mm_a9dc71e704b64954e5cc8fa9eb1d7a2f3} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!APPLE\_HAS\_CONTROLLER@{APPLE\_HAS\_CONTROLLER}}
+\index{APPLE\_HAS\_CONTROLLER@{APPLE\_HAS\_CONTROLLER}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{APPLE\_HAS\_CONTROLLER}{APPLE\_HAS\_CONTROLLER}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} APPLE\+\_\+\+HAS\+\_\+\+CONTROLLER~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+IPHONE\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 140000 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+MAC\+\_\+\+OS\+\_\+\+X\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 110000 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+TV\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 140000)}
+
+\Hypertarget{imgui__impl__osx_8mm_ae80a0030f0ca50357dff788785862d44}\label{imgui__impl__osx_8mm_ae80a0030f0ca50357dff788785862d44} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!APPLE\_HAS\_THUMBSTICKS@{APPLE\_HAS\_THUMBSTICKS}}
+\index{APPLE\_HAS\_THUMBSTICKS@{APPLE\_HAS\_THUMBSTICKS}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{APPLE\_HAS\_THUMBSTICKS}{APPLE\_HAS\_THUMBSTICKS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} APPLE\+\_\+\+HAS\+\_\+\+THUMBSTICKS~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+IPHONE\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 120100 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+MAC\+\_\+\+OS\+\_\+\+X\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 101401 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+\_\+\+\_\+\+TV\+\_\+\+OS\+\_\+\+VERSION\+\_\+\+MIN\+\_\+\+REQUIRED}} $>$= 120100)}
+
+\Hypertarget{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442}\label{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!IM\_SATURATE@{IM\_SATURATE}}
+\index{IM\_SATURATE@{IM\_SATURATE}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{IM\_SATURATE}{IM\_SATURATE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IM\+\_\+\+SATURATE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $<$ 0.\+0f ? 0.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}} $>$ 1.\+0f ? 1.\+0f \+: \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{V}})}
+
+\Hypertarget{imgui__impl__osx_8mm_a3776de756858a336b0e533b764406256}\label{imgui__impl__osx_8mm_a3776de756858a336b0e533b764406256} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!MAP\_ANALOG@{MAP\_ANALOG}}
+\index{MAP\_ANALOG@{MAP\_ANALOG}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{MAP\_ANALOG}{MAP\_ANALOG}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} MAP\+\_\+\+ANALOG(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{AXIS\+\_\+\+NAME}},  }\item[{}]{V0,  }\item[{}]{V1 }\end{DoxyParamCaption})~\{ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1b2be7bfa84f129a2690a62f3ad82d62}{gp.\+AXIS\+\_\+\+NAME.\+value}} -\/ V0) / (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}})(V1 -\/ V0); \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} = \mbox{\hyperlink{imgui__impl__osx_8mm_abfc205127accf0adc131007017a20442}{IM\+\_\+\+SATURATE}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}}); io.\+Add\+Key\+Analog\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}} $>$ 0.\+1\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{f}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{vn}}); \}}
+
+\Hypertarget{imgui__impl__osx_8mm_acde2e6121f011b1ce1e59afbd6ac34b4}\label{imgui__impl__osx_8mm_acde2e6121f011b1ce1e59afbd6ac34b4} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!MAP\_BUTTON@{MAP\_BUTTON}}
+\index{MAP\_BUTTON@{MAP\_BUTTON}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{MAP\_BUTTON}{MAP\_BUTTON}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} MAP\+\_\+\+BUTTON(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{BUTTON\+\_\+\+NAME}} }\end{DoxyParamCaption})~\{ io.\+Add\+Key\+Event(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{KEY\+\_\+\+NO}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{gp.\+BUTTON\+\_\+\+NAME.\+is\+Pressed}}); \}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{imgui__impl__osx_8mm_ac4e94ef001edb88c5c2c0de165a18080}\label{imgui__impl__osx_8mm_ac4e94ef001edb88c5c2c0de165a18080} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!ImGui\_ImplOSX\_Init@{ImGui\_ImplOSX\_Init}}
+\index{ImGui\_ImplOSX\_Init@{ImGui\_ImplOSX\_Init}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplOSX\_Init()}{ImGui\_ImplOSX\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+Init (\begin{DoxyParamCaption}\item[{NSView \texorpdfstring{$\ast$}{*}}]{view }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__osx_8mm_a5f96863293e2c918e919fe0e372ea141}\label{imgui__impl__osx_8mm_a5f96863293e2c918e919fe0e372ea141} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!ImGui\_ImplOSX\_NewFrame@{ImGui\_ImplOSX\_NewFrame}}
+\index{ImGui\_ImplOSX\_NewFrame@{ImGui\_ImplOSX\_NewFrame}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplOSX\_NewFrame()}{ImGui\_ImplOSX\_NewFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+New\+Frame (\begin{DoxyParamCaption}\item[{NSView \texorpdfstring{$\ast$}{*}}]{view }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__osx_8mm_acc3a2c3d2bc80b8374406e8ca9f3c17e}\label{imgui__impl__osx_8mm_acc3a2c3d2bc80b8374406e8ca9f3c17e} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!ImGui\_ImplOSX\_Shutdown@{ImGui\_ImplOSX\_Shutdown}}
+\index{ImGui\_ImplOSX\_Shutdown@{ImGui\_ImplOSX\_Shutdown}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplOSX\_Shutdown()}{ImGui\_ImplOSX\_Shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+OSX\+\_\+\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{imgui__impl__osx_8mm_acbb5da7ccff4ce29dc47d54084ffbbf6}\label{imgui__impl__osx_8mm_acbb5da7ccff4ce29dc47d54084ffbbf6} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!\_imeRect@{\_imeRect}}
+\index{\_imeRect@{\_imeRect}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{\_imeRect}{\_imeRect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSRect}} \+\_\+ime\+Rect}
+
+\Hypertarget{imgui__impl__osx_8mm_aac039e5cfe18e6601b5c82eb5140d7ae}\label{imgui__impl__osx_8mm_aac039e5cfe18e6601b5c82eb5140d7ae} 
+\index{imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}!\_posY@{\_posY}}
+\index{\_posY@{\_posY}!imgui\_impl\_osx.mm@{imgui\_impl\_osx.mm}}
+\doxysubsubsection{\texorpdfstring{\_posY}{\_posY}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \+\_\+posY}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\_posX}}}
+
+\end{DoxyCode}

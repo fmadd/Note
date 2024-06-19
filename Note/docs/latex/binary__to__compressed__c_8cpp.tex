@@ -1,0 +1,139 @@
+\doxysection{src/imgui/misc/fonts/binary\+\_\+to\+\_\+compressed\+\_\+c.cpp File Reference}
+\hypertarget{binary__to__compressed__c_8cpp}{}\label{binary__to__compressed__c_8cpp}\index{src/imgui/misc/fonts/binary\_to\_compressed\_c.cpp@{src/imgui/misc/fonts/binary\_to\_compressed\_c.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for binary\+\_\+to\+\_\+compressed\+\_\+c.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_ae7362593109573f7e5a8fad1b9837840}{stb\+\_\+out}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{do}} \{ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{if}} (stb\+\_\+\+\_\+out) \texorpdfstring{$\ast$}{*}stb\+\_\+\+\_\+out++ = (\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}}); \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{else}} stb\+\_\+\+\_\+write((\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})); \} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{while}} (0)
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_acd1fce3f60bc7c947d9573b40d96fcfb}{stb\+\_\+\+\_\+hc}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},  h,  c)~(((h) $<$$<$ 7) + ((h) $>$$>$ 25) + \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}c\mbox{]})
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_aa3edeaa860cd62a039589c5ff0d12d0f}{stb\+\_\+\+\_\+hc2}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},  h,  c,  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}})~(((h) $<$$<$ 14) + ((h) $>$$>$ 18) + (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}c\mbox{]} $<$$<$ 7) + \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}\mbox{]})
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a02566557d0083f38ae2f7e6ea2959120}{stb\+\_\+\+\_\+hc3}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},  c,  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}},  e)~((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}c\mbox{]} $<$$<$ 14) + (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}\mbox{]} $<$$<$ 7) + \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}e\mbox{]})
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a6e9742e8f211104eefc65b20057084a6}{STB\+\_\+\+\_\+\+SCRAMBLE}}(h)~(((h) + ((h) $>$$>$ 16)) \& \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{mask}})
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_ae6915b97c7af5c0c4214a03d594df9a5}{stb\+\_\+\+\_\+nc}}(\mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}})~((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}) $<$= window \&\& ((\mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}}) $>$ 9 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} stb\+\_\+not\+\_\+crap((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}})(\mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}}),(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}))))
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_ae9ced4aef3a241149211d367c67454ab}{STB\+\_\+\+\_\+\+TRY}}(\mbox{\hyperlink{boing_8c_a87accd1af8e0aff4b818d891374f7cec}{t}},  \mbox{\hyperlink{wave_8c_ab661957592a1103b5021605bb3f17e19}{p}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}{stb\+\_\+uint}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}{stb\+\_\+uint}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a2a6c45175c8d6c47aea6ddf81c288eae}{stb\+\_\+compress}} (\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{out}}, \mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{in}}, \mbox{\hyperlink{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}{stb\+\_\+uint}} len)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argc}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argv}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a4906f500c094e4b18177305459bc3e43}{Encode85\+Byte}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{offscreen_8c_ad0da36b2558901e21e7a30f6c227a45e}{x}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{binary__to__compressed__c_8cpp_af08ec37a8c99d747fb60fa15bc28678b}\label{binary__to__compressed__c_8cpp_af08ec37a8c99d747fb60fa15bc28678b} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
+\index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{\_CRT\_SECURE\_NO\_WARNINGS}{\_CRT\_SECURE\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}
+
+\Hypertarget{binary__to__compressed__c_8cpp_acd1fce3f60bc7c947d9573b40d96fcfb}\label{binary__to__compressed__c_8cpp_acd1fce3f60bc7c947d9573b40d96fcfb} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_\_hc@{stb\_\_hc}}
+\index{stb\_\_hc@{stb\_\_hc}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_\_hc}{stb\_\_hc}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} stb\+\_\+\+\_\+hc(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},  }\item[{}]{h,  }\item[{}]{c }\end{DoxyParamCaption})~(((h) $<$$<$ 7) + ((h) $>$$>$ 25) + \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}c\mbox{]})}
+
+\Hypertarget{binary__to__compressed__c_8cpp_aa3edeaa860cd62a039589c5ff0d12d0f}\label{binary__to__compressed__c_8cpp_aa3edeaa860cd62a039589c5ff0d12d0f} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_\_hc2@{stb\_\_hc2}}
+\index{stb\_\_hc2@{stb\_\_hc2}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_\_hc2}{stb\_\_hc2}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} stb\+\_\+\+\_\+hc2(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},  }\item[{}]{h,  }\item[{}]{c,  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}} }\end{DoxyParamCaption})~(((h) $<$$<$ 14) + ((h) $>$$>$ 18) + (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}c\mbox{]} $<$$<$ 7) + \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}\mbox{]})}
+
+\Hypertarget{binary__to__compressed__c_8cpp_a02566557d0083f38ae2f7e6ea2959120}\label{binary__to__compressed__c_8cpp_a02566557d0083f38ae2f7e6ea2959120} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_\_hc3@{stb\_\_hc3}}
+\index{stb\_\_hc3@{stb\_\_hc3}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_\_hc3}{stb\_\_hc3}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} stb\+\_\+\+\_\+hc3(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},  }\item[{}]{c,  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}},  }\item[{}]{e }\end{DoxyParamCaption})~((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}c\mbox{]} $<$$<$ 14) + (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}\mbox{]} $<$$<$ 7) + \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\mbox{[}e\mbox{]})}
+
+\Hypertarget{binary__to__compressed__c_8cpp_ae6915b97c7af5c0c4214a03d594df9a5}\label{binary__to__compressed__c_8cpp_ae6915b97c7af5c0c4214a03d594df9a5} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_\_nc@{stb\_\_nc}}
+\index{stb\_\_nc@{stb\_\_nc}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_\_nc}{stb\_\_nc}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} stb\+\_\+\+\_\+nc(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}} }\end{DoxyParamCaption})~((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}) $<$= window \&\& ((\mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}}) $>$ 9 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} stb\+\_\+not\+\_\+crap((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}})(\mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}}),(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{d}}))))}
+
+\Hypertarget{binary__to__compressed__c_8cpp_a6e9742e8f211104eefc65b20057084a6}\label{binary__to__compressed__c_8cpp_a6e9742e8f211104eefc65b20057084a6} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!STB\_\_SCRAMBLE@{STB\_\_SCRAMBLE}}
+\index{STB\_\_SCRAMBLE@{STB\_\_SCRAMBLE}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{STB\_\_SCRAMBLE}{STB\_\_SCRAMBLE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} STB\+\_\+\+\_\+\+SCRAMBLE(\begin{DoxyParamCaption}\item[{}]{h }\end{DoxyParamCaption})~(((h) + ((h) $>$$>$ 16)) \& \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{mask}})}
+
+\Hypertarget{binary__to__compressed__c_8cpp_ae9ced4aef3a241149211d367c67454ab}\label{binary__to__compressed__c_8cpp_ae9ced4aef3a241149211d367c67454ab} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!STB\_\_TRY@{STB\_\_TRY}}
+\index{STB\_\_TRY@{STB\_\_TRY}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{STB\_\_TRY}{STB\_\_TRY}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} STB\+\_\+\+\_\+\+TRY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{boing_8c_a87accd1af8e0aff4b818d891374f7cec}{t}},  }\item[{}]{\mbox{\hyperlink{wave_8c_ab661957592a1103b5021605bb3f17e19}{p}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*\ avoid\ retrying\ a\ match\ we\ already\ tried\ */}\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\ \ \ \ if}}\ (\mbox{\hyperlink{wave_8c_ab661957592a1103b5021605bb3f17e19}{p}}\ ?\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{dist}}\ !=\ (\textcolor{keywordtype}{int})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}-\/\mbox{\hyperlink{boing_8c_a87accd1af8e0aff4b818d891374f7cec}{t}})\ :\ 1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{if}}\ ((\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{m}}\ =\ stb\_matchlen(\mbox{\hyperlink{boing_8c_a87accd1af8e0aff4b818d891374f7cec}{t}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{match\_max}}))\ >\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{best}})\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{if}}\ (\mbox{\hyperlink{binary__to__compressed__c_8cpp_ae6915b97c7af5c0c4214a03d594df9a5}{stb\_\_nc}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{m}},\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}-\/(\mbox{\hyperlink{boing_8c_a87accd1af8e0aff4b818d891374f7cec}{t}})))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{best}}\ =\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{m}},\ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{dist}}\ =\ (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}})(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{q}}\ -\/\ (\mbox{\hyperlink{boing_8c_a87accd1af8e0aff4b818d891374f7cec}{t}}))}
+
+\end{DoxyCode}
+\Hypertarget{binary__to__compressed__c_8cpp_ae7362593109573f7e5a8fad1b9837840}\label{binary__to__compressed__c_8cpp_ae7362593109573f7e5a8fad1b9837840} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_out@{stb\_out}}
+\index{stb\_out@{stb\_out}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_out}{stb\_out}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} stb\+\_\+out(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}} }\end{DoxyParamCaption})~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{do}} \{ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{if}} (stb\+\_\+\+\_\+out) \texorpdfstring{$\ast$}{*}stb\+\_\+\+\_\+out++ = (\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}}); \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{else}} stb\+\_\+\+\_\+write((\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}}) (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})); \} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{while}} (0)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}\label{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_uchar@{stb\_uchar}}
+\index{stb\_uchar@{stb\_uchar}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_uchar}{stb\_uchar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}}}
+
+\Hypertarget{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}\label{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_uint@{stb\_uint}}
+\index{stb\_uint@{stb\_uint}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_uint}{stb\_uint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}{stb\+\_\+uint}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{binary__to__compressed__c_8cpp_a4906f500c094e4b18177305459bc3e43}\label{binary__to__compressed__c_8cpp_a4906f500c094e4b18177305459bc3e43} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!Encode85Byte@{Encode85Byte}}
+\index{Encode85Byte@{Encode85Byte}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{Encode85Byte()}{Encode85Byte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} Encode85\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{x }\end{DoxyParamCaption})}
+
+\Hypertarget{binary__to__compressed__c_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{binary__to__compressed__c_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!main@{main}}
+\index{main@{main}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{argc,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+\Hypertarget{binary__to__compressed__c_8cpp_a2a6c45175c8d6c47aea6ddf81c288eae}\label{binary__to__compressed__c_8cpp_a2a6c45175c8d6c47aea6ddf81c288eae} 
+\index{binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}!stb\_compress@{stb\_compress}}
+\index{stb\_compress@{stb\_compress}!binary\_to\_compressed\_c.cpp@{binary\_to\_compressed\_c.cpp}}
+\doxysubsubsection{\texorpdfstring{stb\_compress()}{stb\_compress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}{stb\+\_\+uint}} stb\+\_\+compress (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}} \texorpdfstring{$\ast$}{*}}]{out,  }\item[{\mbox{\hyperlink{binary__to__compressed__c_8cpp_aade163fe29a05e8b6333c814c771101a}{stb\+\_\+uchar}} \texorpdfstring{$\ast$}{*}}]{in,  }\item[{\mbox{\hyperlink{binary__to__compressed__c_8cpp_a6fe01ca1e7c8e7b941f14187549609c6}{stb\+\_\+uint}}}]{len }\end{DoxyParamCaption})}
+

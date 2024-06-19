@@ -45,6 +45,7 @@ public:
      * \brief Обрабатывает запрос на получение файла.
      */
     void except_file() {
+        cout << "Recive file"<<endl;
         string filename, owner;
 
         owner = _socket.get_string();
@@ -54,13 +55,14 @@ public:
         ofstream file(get_path_to_dir(owner) / filename, ios::out);
         size_t received_bytes = 0;
         size_t file_size =  _socket.read_filesize();
-
         do {
-            // Получаем файл по частям.
-            vector<char> buffer(1024);
+            vector<char> buffer(1008);
             size_t bytes_received = _socket.read_file_buffer(buffer);
             std::string ciphertext(buffer.begin(), buffer.end());
             std::string plaintext = decryptAES(ciphertext, _aesKey);
+            if(received_bytes + bytes_received - file_size > 0){
+                plaintext.resize(file_size - received_bytes);
+            }
             file.write(plaintext.c_str(), plaintext.size());
             received_bytes += bytes_received;
 
@@ -74,13 +76,14 @@ public:
      * \param filename Имя файла.
      */
     void send_file(const string &owner, const string &user, const string &filename) {
+        cout << "Send file"<<endl;
         _db.start_editing(owner, filename);
         ifstream file;
         file.open("../user_files/" + owner + "/" + filename, std::ifstream::in);
         if (!file.is_open()) throw runtime_error("File not exist");
         file.seekg(0, std::ios::end);
         std::streampos file_size = file.tellg();
-        _socket.writeInSocket(buffer(&file_size, sizeof(std::streampos)));
+        _socket.writeInSocket(buffer(&file_size, sizeof(std::size_t)));
         file.seekg(0, std::ios::beg);
 
         while (!file.eof()) {
@@ -88,7 +91,9 @@ public:
             file.read(buffer.data(), buffer.size());
             std::string plaintext(buffer.begin(), buffer.end());
             std::string chipertext = encryptAES(plaintext, _aesKey);
+            //cout << chipertext<<endl;
             size_t bytes_sent = _socket.writeInSocket(boost::asio::buffer(chipertext));
+            //cout << bytes_sent<<endl;
         }
         file.close();
     }
@@ -98,7 +103,7 @@ public:
     void send() {
         string owner = _socket.get_string();
         string filename = _socket.get_string();
-
+        size_t flag = 0;
         if (_db.check_editing(owner, filename)) {
             if (current_user == owner) {
                 send_file(owner, current_user, filename);
@@ -107,10 +112,13 @@ public:
                     send_file(owner, current_user, filename);
 
                 } else {
+
+                    _socket.writeInSocket(buffer(&flag, sizeof(std::size_t)));
                     throw std::runtime_error("not user's file");
                 }
             }
         } else {
+            _socket.writeInSocket(buffer(&flag, sizeof(std::size_t)));
             throw std::runtime_error("file editing right now");
         }
     }
@@ -118,26 +126,28 @@ public:
      * \brief Аутентификация пользователя.
      */
     void authentication() {
+        cout << "Auth"<<endl;
         std::string login, password;
         login = _socket.get_string();
-        password = decryptAES(_socket.get_string(), _aesKey);
-        std::cout << "111 Registration" << std::endl;
-
+        password = _socket.get_string();
+        //std::cout<<password<<std::endl;
+        password = decryptAES(password, _aesKey);
+        //cout << password<<" "<<hashPass(password)<<"\n";
         bool is_authenticated = _db.check_password_correct(login, hashPass(password));
         if (is_authenticated) current_user = login;
-        std::cout << "2 Registration" << std::endl;
 
         _socket.writeInSocket(boost::asio::buffer(&is_authenticated, sizeof(bool)));
-        std::cout << "3 Registration" << std::endl;
+        cout << "auth2\n";
     }
     /**
     * \brief Регистрация пользователя.
     */
     void registration() {
-
+        cout << "Reg"<<endl;
         std::string login, password;
         login = _socket.get_string();
         password = _socket.get_string();
+        password = decryptAES(password, _aesKey);
         bool response;
         try {
             _db.add_user(login, hashPass(password));
@@ -145,6 +155,7 @@ public:
             response = true;
 
         } catch (...) {
+
             response = false;
         }
         _socket.writeInSocket(boost::asio::buffer(&response, sizeof(bool)));
@@ -153,6 +164,7 @@ public:
      * \brief Добавляет доступ пользователю к файлу.
      */
     void add_access() {
+        cout << "Access"<<endl;
         string owner = current_user, filename, user;
         filename = _socket.get_string();
         user = _socket.get_string();
@@ -169,6 +181,7 @@ public:
      * \brief Удаляет пользователя.
      */
     void del_user() {
+        cout << "Del user"<<endl;
         string login = _socket.get_string();
         _db.delete_user(login);
     }
@@ -184,7 +197,7 @@ public:
      * \brief Обрабатывает сеанс обмена данными с клиентом.
      */
     void session() {
-
+        cout << "Start"<<endl;
         int type = _socket.read_request();
 
         if (type == 1) {

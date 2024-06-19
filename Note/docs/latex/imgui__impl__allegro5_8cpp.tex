@@ -1,0 +1,109 @@
+\doxysection{src/imgui/backends/imgui\+\_\+impl\+\_\+allegro5.cpp File Reference}
+\hypertarget{imgui__impl__allegro5_8cpp}{}\label{imgui__impl__allegro5_8cpp}\index{src/imgui/backends/imgui\_impl\_allegro5.cpp@{src/imgui/backends/imgui\_impl\_allegro5.cpp}}
+{\ttfamily \#include "{}imgui.\+h"{}}\newline
+{\ttfamily \#include "{}imgui\+\_\+impl\+\_\+allegro5.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+primitives.\+h$>$}\newline
+Include dependency graph for imgui\+\_\+impl\+\_\+allegro5.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structImDrawVertAllegro}{Im\+Draw\+Vert\+Allegro}}
+\item 
+struct \mbox{\hyperlink{structImGui__ImplAllegro5__Data}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a3075d26d56db9747d99d8e2229e11543}{ALLEGRO\+\_\+\+HAS\+\_\+\+CLIPBOARD}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+VERSION\+\_\+\+INT}} $>$= ((5 $<$$<$ 24) \texorpdfstring{$\vert$}{|} (1 $<$$<$ 16) \texorpdfstring{$\vert$}{|} (12 $<$$<$ 8)))
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a529dc68f5fcf2c043c073e3e38783e00}{ALLEGRO\+\_\+\+HAS\+\_\+\+DRAW\+\_\+\+INDEXED\+\_\+\+PRIM}}~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+VERSION\+\_\+\+INT}} $>$= ((5 $<$$<$ 24) \texorpdfstring{$\vert$}{|} (2 $<$$<$ 16) \texorpdfstring{$\vert$}{|} ( 5 $<$$<$ 8)))
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a24ff514637c9262e260747002365b9a7}{DRAW\+\_\+\+VERT\+\_\+\+IMGUI\+\_\+\+TO\+\_\+\+ALLEGRO}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})~\{ (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}})-\/$>$pos = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})-\/$>$pos; (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}})-\/$>$uv = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})-\/$>$uv; \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}}\texorpdfstring{$\ast$}{*} c = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}}\texorpdfstring{$\ast$}{*})\&(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})-\/$>$col; (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}})-\/$>$col = \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{al\+\_\+map\+\_\+rgba}}(c\mbox{[}0\mbox{]}, c\mbox{[}1\mbox{]}, c\mbox{[}2\mbox{]}, c\mbox{[}3\mbox{]}); \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a303aac161173a556e17e4bf0df5c476d}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Render\+Draw\+Data}} (\mbox{\hyperlink{structImDrawData}{Im\+Draw\+Data}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{draw\+\_\+data}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a789742ed378f216bc5d5531d86212f36}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Create\+Device\+Objects}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a0d09ba855db6d3fdc94cc0c6eb4a032f}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Invalidate\+Device\+Objects}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_ad4f2998624c4f6df0a56222e774614c8}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Init}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+DISPLAY}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{boing_8c_a4ea013001a5fb47853d0fab8f8de35cd}{display}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a109536e8da23d4e801517f95d7f6d248}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Shutdown}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a33e63231523cf294f97d6ae6759e52ca}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Process\+Event}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+EVENT}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ev}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__allegro5_8cpp_a0e1712e5951f3f545d336db317cdcc6c}{Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+New\+Frame}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{imgui__impl__allegro5_8cpp_a3075d26d56db9747d99d8e2229e11543}\label{imgui__impl__allegro5_8cpp_a3075d26d56db9747d99d8e2229e11543} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ALLEGRO\_HAS\_CLIPBOARD@{ALLEGRO\_HAS\_CLIPBOARD}}
+\index{ALLEGRO\_HAS\_CLIPBOARD@{ALLEGRO\_HAS\_CLIPBOARD}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ALLEGRO\_HAS\_CLIPBOARD}{ALLEGRO\_HAS\_CLIPBOARD}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ALLEGRO\+\_\+\+HAS\+\_\+\+CLIPBOARD~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+VERSION\+\_\+\+INT}} $>$= ((5 $<$$<$ 24) \texorpdfstring{$\vert$}{|} (1 $<$$<$ 16) \texorpdfstring{$\vert$}{|} (12 $<$$<$ 8)))}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a529dc68f5fcf2c043c073e3e38783e00}\label{imgui__impl__allegro5_8cpp_a529dc68f5fcf2c043c073e3e38783e00} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ALLEGRO\_HAS\_DRAW\_INDEXED\_PRIM@{ALLEGRO\_HAS\_DRAW\_INDEXED\_PRIM}}
+\index{ALLEGRO\_HAS\_DRAW\_INDEXED\_PRIM@{ALLEGRO\_HAS\_DRAW\_INDEXED\_PRIM}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ALLEGRO\_HAS\_DRAW\_INDEXED\_PRIM}{ALLEGRO\_HAS\_DRAW\_INDEXED\_PRIM}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ALLEGRO\+\_\+\+HAS\+\_\+\+DRAW\+\_\+\+INDEXED\+\_\+\+PRIM~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+VERSION\+\_\+\+INT}} $>$= ((5 $<$$<$ 24) \texorpdfstring{$\vert$}{|} (2 $<$$<$ 16) \texorpdfstring{$\vert$}{|} ( 5 $<$$<$ 8)))}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a24ff514637c9262e260747002365b9a7}\label{imgui__impl__allegro5_8cpp_a24ff514637c9262e260747002365b9a7} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!DRAW\_VERT\_IMGUI\_TO\_ALLEGRO@{DRAW\_VERT\_IMGUI\_TO\_ALLEGRO}}
+\index{DRAW\_VERT\_IMGUI\_TO\_ALLEGRO@{DRAW\_VERT\_IMGUI\_TO\_ALLEGRO}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{DRAW\_VERT\_IMGUI\_TO\_ALLEGRO}{DRAW\_VERT\_IMGUI\_TO\_ALLEGRO}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} DRAW\+\_\+\+VERT\+\_\+\+IMGUI\+\_\+\+TO\+\_\+\+ALLEGRO(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}} }\end{DoxyParamCaption})~\{ (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}})-\/$>$pos = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})-\/$>$pos; (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}})-\/$>$uv = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})-\/$>$uv; \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}}\texorpdfstring{$\ast$}{*} c = (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{unsigned}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}}\texorpdfstring{$\ast$}{*})\&(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SRC}})-\/$>$col; (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DST}})-\/$>$col = \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{al\+\_\+map\+\_\+rgba}}(c\mbox{[}0\mbox{]}, c\mbox{[}1\mbox{]}, c\mbox{[}2\mbox{]}, c\mbox{[}3\mbox{]}); \}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{imgui__impl__allegro5_8cpp_a789742ed378f216bc5d5531d86212f36}\label{imgui__impl__allegro5_8cpp_a789742ed378f216bc5d5531d86212f36} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_CreateDeviceObjects@{ImGui\_ImplAllegro5\_CreateDeviceObjects}}
+\index{ImGui\_ImplAllegro5\_CreateDeviceObjects@{ImGui\_ImplAllegro5\_CreateDeviceObjects}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_CreateDeviceObjects()}{ImGui\_ImplAllegro5\_CreateDeviceObjects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Create\+Device\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_ad4f2998624c4f6df0a56222e774614c8}\label{imgui__impl__allegro5_8cpp_ad4f2998624c4f6df0a56222e774614c8} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_Init@{ImGui\_ImplAllegro5\_Init}}
+\index{ImGui\_ImplAllegro5\_Init@{ImGui\_ImplAllegro5\_Init}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_Init()}{ImGui\_ImplAllegro5\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+DISPLAY}} \texorpdfstring{$\ast$}{*}}]{display }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a0d09ba855db6d3fdc94cc0c6eb4a032f}\label{imgui__impl__allegro5_8cpp_a0d09ba855db6d3fdc94cc0c6eb4a032f} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_InvalidateDeviceObjects@{ImGui\_ImplAllegro5\_InvalidateDeviceObjects}}
+\index{ImGui\_ImplAllegro5\_InvalidateDeviceObjects@{ImGui\_ImplAllegro5\_InvalidateDeviceObjects}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_InvalidateDeviceObjects()}{ImGui\_ImplAllegro5\_InvalidateDeviceObjects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Invalidate\+Device\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a0e1712e5951f3f545d336db317cdcc6c}\label{imgui__impl__allegro5_8cpp_a0e1712e5951f3f545d336db317cdcc6c} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_NewFrame@{ImGui\_ImplAllegro5\_NewFrame}}
+\index{ImGui\_ImplAllegro5\_NewFrame@{ImGui\_ImplAllegro5\_NewFrame}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_NewFrame()}{ImGui\_ImplAllegro5\_NewFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a33e63231523cf294f97d6ae6759e52ca}\label{imgui__impl__allegro5_8cpp_a33e63231523cf294f97d6ae6759e52ca} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_ProcessEvent@{ImGui\_ImplAllegro5\_ProcessEvent}}
+\index{ImGui\_ImplAllegro5\_ProcessEvent@{ImGui\_ImplAllegro5\_ProcessEvent}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_ProcessEvent()}{ImGui\_ImplAllegro5\_ProcessEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ALLEGRO\+\_\+\+EVENT}} \texorpdfstring{$\ast$}{*}}]{ev }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a303aac161173a556e17e4bf0df5c476d}\label{imgui__impl__allegro5_8cpp_a303aac161173a556e17e4bf0df5c476d} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_RenderDrawData@{ImGui\_ImplAllegro5\_RenderDrawData}}
+\index{ImGui\_ImplAllegro5\_RenderDrawData@{ImGui\_ImplAllegro5\_RenderDrawData}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_RenderDrawData()}{ImGui\_ImplAllegro5\_RenderDrawData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Render\+Draw\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structImDrawData}{Im\+Draw\+Data}} \texorpdfstring{$\ast$}{*}}]{draw\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__allegro5_8cpp_a109536e8da23d4e801517f95d7f6d248}\label{imgui__impl__allegro5_8cpp_a109536e8da23d4e801517f95d7f6d248} 
+\index{imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}!ImGui\_ImplAllegro5\_Shutdown@{ImGui\_ImplAllegro5\_Shutdown}}
+\index{ImGui\_ImplAllegro5\_Shutdown@{ImGui\_ImplAllegro5\_Shutdown}!imgui\_impl\_allegro5.cpp@{imgui\_impl\_allegro5.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplAllegro5\_Shutdown()}{ImGui\_ImplAllegro5\_Shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+Allegro5\+\_\+\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

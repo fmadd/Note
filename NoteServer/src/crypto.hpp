@@ -13,6 +13,13 @@
 #include <boost/asio.hpp>
 #include "socket_service.hpp"
 
+
+void printSecByteBlock(const SecByteBlock& block) {
+    string hexString;
+    StringSource(block, block.size(), true, new HexEncoder(new StringSink(hexString)));
+    cout << "SecByteBlock: " << hexString << endl;
+}
+
 using boost::asio::ip::tcp;
 using namespace boost::asio;
 using namespace std;
@@ -77,7 +84,6 @@ GenerateDHKeys(socket_service &socket, DH &dh, AutoSeededRandomPool &rnd, SecByt
     Integer g = dh.GetGroupParameters().GetGenerator();
     send_param(socket, p);
     send_param(socket, g);
-
     dh.AccessGroupParameters().Initialize(p, q, g);
     privKey.resize(dh.PrivateKeyLength());
     pubKey.resize(dh.PublicKeyLength());
@@ -117,7 +123,6 @@ std::string encryptAES(const std::string &plaintext, CryptoPP::SecByteBlock key)
                              new StringSink(encoded)
                      )
     );
-    cout << "cipher text: " << encoded << endl;
     return cipher;
 
 }
@@ -130,16 +135,16 @@ std::string encryptAES(const std::string &plaintext, CryptoPP::SecByteBlock key)
 std::string decryptAES(const std::string &ciphertext, CryptoPP::SecByteBlock Key) {
     ECB_Mode<AES>::Decryption aesDecryption(Key, Key.size());
     string recovered;
-
+    //printSecByteBlock(Key);
     StringSource ss3(ciphertext, true,
                      new StreamTransformationFilter(aesDecryption,
                                                     new StringSink(recovered)
                      )
     );
-
-    cout << "recovered text: " << recovered << endl;
+    //cout << "recovered text: " << recovered << endl;
     return recovered;
 }
+
 /**
  * \brief Хэширует пароль пользователя.
  * \param password Пароль пользователя.
@@ -161,7 +166,6 @@ std::string hashPass(std::string password) {
     encoder.Put(reinterpret_cast<const CryptoPP::byte *>(hashed_password.data()), hashed_password.size());
     encoder.MessageEnd();
 
-
     return encoded;
 }
 /**
@@ -178,8 +182,10 @@ CryptoPP::SecByteBlock sharing_key(socket_service &socket) {
     GenerateDHKeys(socket, dh, rnd, privKey, pubKey);
     otherPubKey = receive_crypto_block(socket);
     send_crypto_block(socket, pubKey);
-    SecByteBlock sharedKey(dh.AgreedValueLength());
 
-    std::cout << "suc generated key" << endl;
+    SecByteBlock sharedKey(dh.AgreedValueLength());
+    dh.Agree(sharedKey, privKey, otherPubKey);
+    //printSecByteBlock(otherPubKey);
+    //printSecByteBlock(sharedKey);
     return deriveAESKeyFromDH(sharedKey);
 }

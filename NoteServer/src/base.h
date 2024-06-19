@@ -20,7 +20,7 @@ class DB_service{
     * \param login Логин пользователя.
     * \return true, если логин существует в базе данных, иначе false.
     */
-    bool check_login_exists(const std::string &login);
+    virtual bool check_login_exists(const std::string &login);
     /**
      * \brief Проверяет правильность пароля пользователя.
      * \param login Логин пользователя.

@@ -1,0 +1,62 @@
+\doxysection{src/glfw/examples/gears.c File Reference}
+\hypertarget{gears_8c}{}\label{gears_8c}\index{src/glfw/examples/gears.c@{src/glfw/examples/gears.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$glad/gl.\+h$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+Include dependency graph for gears.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{gears_8c_a09f9c3bf094ecaf707c673924ffd615a}{GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{gears_8c_a088324ad8995e3eb76024e3e79083d48}{GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{gears_8c_accd6b5b92b78666e36543412d4ac14cd}{key}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}window, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{k}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} s, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{action}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} mods)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{gears_8c_a90c91eeeaf414ba66b8bf9861ce6a9a3}{reshape}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}window, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a6879d830f164725df67adeeabca3ea47}{width}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a60075de22f90a1223dc0bea98d2ee4d5}{height}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{gears_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argc}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argv}}\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{gears_8c_a09f9c3bf094ecaf707c673924ffd615a}\label{gears_8c_a09f9c3bf094ecaf707c673924ffd615a} 
+\index{gears.c@{gears.c}!GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}}
+\index{GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}!gears.c@{gears.c}}
+\doxysubsubsection{\texorpdfstring{GLAD\_GL\_IMPLEMENTATION}{GLAD\_GL\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}
+
+\Hypertarget{gears_8c_a088324ad8995e3eb76024e3e79083d48}\label{gears_8c_a088324ad8995e3eb76024e3e79083d48} 
+\index{gears.c@{gears.c}!GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}}
+\index{GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}!gears.c@{gears.c}}
+\doxysubsubsection{\texorpdfstring{GLFW\_INCLUDE\_NONE}{GLFW\_INCLUDE\_NONE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gears_8c_accd6b5b92b78666e36543412d4ac14cd}\label{gears_8c_accd6b5b92b78666e36543412d4ac14cd} 
+\index{gears.c@{gears.c}!key@{key}}
+\index{key@{key}!gears.c@{gears.c}}
+\doxysubsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{k,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{s,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{action,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{mods }\end{DoxyParamCaption})}
+
+\Hypertarget{gears_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{gears_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{gears.c@{gears.c}!main@{main}}
+\index{main@{main}!gears.c@{gears.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{argc,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\Hypertarget{gears_8c_a90c91eeeaf414ba66b8bf9861ce6a9a3}\label{gears_8c_a90c91eeeaf414ba66b8bf9861ce6a9a3} 
+\index{gears.c@{gears.c}!reshape@{reshape}}
+\index{reshape@{reshape}!gears.c@{gears.c}}
+\doxysubsubsection{\texorpdfstring{reshape()}{reshape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} reshape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{width,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{height }\end{DoxyParamCaption})}
+

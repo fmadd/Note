@@ -1,0 +1,99 @@
+\doxysection{Metal\+Context Class Reference}
+\hypertarget{interfaceMetalContext}{}\label{interfaceMetalContext}\index{MetalContext@{MetalContext}}
+
+
+Inheritance diagram for Metal\+Context\+:
+% FIG 0
+
+
+Collaboration diagram for Metal\+Context\+:
+% FIG 1
+\doxysubsubsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\mbox{\hyperlink{interfaceMetalBuffer}{Metal\+Buffer}} \texorpdfstring{$\ast$}{*}) -\/ \mbox{\hyperlink{interfaceMetalContext_a0072d0861f0eb6fb3b86f5ef8cdc58a1}{dequeue\+Reusable\+Buffer\+Of\+Length\+:device\+:}}
+\item 
+(\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLRender\+Pipeline\+State}} $>$) -\/ \mbox{\hyperlink{interfaceMetalContext_aac2bd030147e62717964be692e0bd95d}{render\+Pipeline\+State\+For\+Framebuffer\+Descriptor\+:device\+:}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLDevice}} $>$ \mbox{\hyperlink{interfaceMetalContext_aaeece5efed908d19d932b0cc4c57043f}{device}}
+\item 
+\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLDepth\+Stencil\+State}} $>$ \mbox{\hyperlink{interfaceMetalContext_ad2d5d25ce4205853bd518bb39629a502}{depth\+Stencil\+State}}
+\item 
+\mbox{\hyperlink{interfaceFramebufferDescriptor}{Framebuffer\+Descriptor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interfaceMetalContext_a785454c99666d12c02a464eef0a13723}{framebuffer\+Descriptor}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSMutable\+Dictionary}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interfaceMetalContext_a2a1300f49244bd0411ab85de8f3cbccd}{render\+Pipeline\+State\+Cache}}
+\item 
+\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLTexture}} $>$ \mbox{\hyperlink{interfaceMetalContext_af3c82aa45895bd93945ab606e9909d89}{font\+Texture}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSMutable\+Array}}$<$ \mbox{\hyperlink{interfaceMetalBuffer}{Metal\+Buffer}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{interfaceMetalContext_a92a5cc2011e074c2a665cc58fdc6f586}{buffer\+Cache}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{double}} \mbox{\hyperlink{interfaceMetalContext_a7c1e19128bb83491b9a6d8382c92f2cb}{last\+Buffer\+Cache\+Purge}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Method Documentation}
+\Hypertarget{interfaceMetalContext_a0072d0861f0eb6fb3b86f5ef8cdc58a1}\label{interfaceMetalContext_a0072d0861f0eb6fb3b86f5ef8cdc58a1} 
+\index{MetalContext@{MetalContext}!dequeueReusableBufferOfLength:device:@{dequeueReusableBufferOfLength:device:}}
+\index{dequeueReusableBufferOfLength:device:@{dequeueReusableBufferOfLength:device:}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{dequeueReusableBufferOfLength:device:}{dequeueReusableBufferOfLength:device:}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{interfaceMetalBuffer}{Metal\+Buffer}} \texorpdfstring{$\ast$}{*}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{dequeue\+Reusable\+Buffer\+Of\+Length\+:}} \begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSUInteger}})}]{length }\item[{device\+:(\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLDevice}}$>$)}]{device }\end{DoxyParamCaption}}
+
+\Hypertarget{interfaceMetalContext_aac2bd030147e62717964be692e0bd95d}\label{interfaceMetalContext_aac2bd030147e62717964be692e0bd95d} 
+\index{MetalContext@{MetalContext}!renderPipelineStateForFramebufferDescriptor:device:@{renderPipelineStateForFramebufferDescriptor:device:}}
+\index{renderPipelineStateForFramebufferDescriptor:device:@{renderPipelineStateForFramebufferDescriptor:device:}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{renderPipelineStateForFramebufferDescriptor:device:}{renderPipelineStateForFramebufferDescriptor:device:}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLRender\+Pipeline\+State}} $>$) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{render\+Pipeline\+State\+For\+Framebuffer\+Descriptor\+:}} \begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{interfaceFramebufferDescriptor}{Framebuffer\+Descriptor}}\texorpdfstring{$\ast$}{*})}]{descriptor }\item[{device\+:(\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLDevice}}$>$)}]{device }\end{DoxyParamCaption}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interfaceMetalContext_a92a5cc2011e074c2a665cc58fdc6f586}\label{interfaceMetalContext_a92a5cc2011e074c2a665cc58fdc6f586} 
+\index{MetalContext@{MetalContext}!bufferCache@{bufferCache}}
+\index{bufferCache@{bufferCache}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{bufferCache}{bufferCache}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSMutable\+Array}}$<$\mbox{\hyperlink{interfaceMetalBuffer}{Metal\+Buffer}}\texorpdfstring{$\ast$}{*}$>$\texorpdfstring{$\ast$}{*}) buffer\+Cache\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+\Hypertarget{interfaceMetalContext_ad2d5d25ce4205853bd518bb39629a502}\label{interfaceMetalContext_ad2d5d25ce4205853bd518bb39629a502} 
+\index{MetalContext@{MetalContext}!depthStencilState@{depthStencilState}}
+\index{depthStencilState@{depthStencilState}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{depthStencilState}{depthStencilState}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLDepth\+Stencil\+State}}$>$) depth\+Stencil\+State\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+\Hypertarget{interfaceMetalContext_aaeece5efed908d19d932b0cc4c57043f}\label{interfaceMetalContext_aaeece5efed908d19d932b0cc4c57043f} 
+\index{MetalContext@{MetalContext}!device@{device}}
+\index{device@{device}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLDevice}}$>$) device\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+\Hypertarget{interfaceMetalContext_af3c82aa45895bd93945ab606e9909d89}\label{interfaceMetalContext_af3c82aa45895bd93945ab606e9909d89} 
+\index{MetalContext@{MetalContext}!fontTexture@{fontTexture}}
+\index{fontTexture@{fontTexture}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{fontTexture}{fontTexture}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{cocoa__platform_8h_a6ca49e267a019c46a02191d2d11620b6}{id}}$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{MTLTexture}}$>$) font\+Texture\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+\Hypertarget{interfaceMetalContext_a785454c99666d12c02a464eef0a13723}\label{interfaceMetalContext_a785454c99666d12c02a464eef0a13723} 
+\index{MetalContext@{MetalContext}!framebufferDescriptor@{framebufferDescriptor}}
+\index{framebufferDescriptor@{framebufferDescriptor}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{framebufferDescriptor}{framebufferDescriptor}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{interfaceFramebufferDescriptor}{Framebuffer\+Descriptor}}\texorpdfstring{$\ast$}{*}) framebuffer\+Descriptor\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+\Hypertarget{interfaceMetalContext_a7c1e19128bb83491b9a6d8382c92f2cb}\label{interfaceMetalContext_a7c1e19128bb83491b9a6d8382c92f2cb} 
+\index{MetalContext@{MetalContext}!lastBufferCachePurge@{lastBufferCachePurge}}
+\index{lastBufferCachePurge@{lastBufferCachePurge}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{lastBufferCachePurge}{lastBufferCachePurge}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{double}}) last\+Buffer\+Cache\+Purge\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+\Hypertarget{interfaceMetalContext_a2a1300f49244bd0411ab85de8f3cbccd}\label{interfaceMetalContext_a2a1300f49244bd0411ab85de8f3cbccd} 
+\index{MetalContext@{MetalContext}!renderPipelineStateCache@{renderPipelineStateCache}}
+\index{renderPipelineStateCache@{renderPipelineStateCache}!MetalContext@{MetalContext}}
+\doxysubsubsection{\texorpdfstring{renderPipelineStateCache}{renderPipelineStateCache}}
+{\footnotesize\ttfamily -\/ (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{NSMutable\+Dictionary}}\texorpdfstring{$\ast$}{*}) render\+Pipeline\+State\+Cache\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/imgui/backends/\mbox{\hyperlink{imgui__impl__metal_8mm}{imgui\+\_\+impl\+\_\+metal.\+mm}}\end{DoxyCompactItemize}

@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1391/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1399/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1391/bin/cmake -E rm -f
+RM = /snap/cmake/1399/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/snap/cmake/1391/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1399/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,37 +97,37 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/snap/cmake/1391/bin/cmake -P cmake_install.cmake
+	/snap/cmake/1399/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/snap/cmake/1391/bin/cmake -P cmake_install.cmake
+	/snap/cmake/1399/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/snap/cmake/1391/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/cmake/1399/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/snap/cmake/1391/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/cmake/1399/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/snap/cmake/1391/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/cmake/1399/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/snap/cmake/1391/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/cmake/1399/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
@@ -186,6 +186,32 @@ Project_ImGui: cmake_check_build_system
 Project_ImGui/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/build
 .PHONY : Project_ImGui/fast
+
+#=============================================================================
+# Target rules for targets named utils_tests
+
+# Build rule for target.
+utils_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils_tests
+.PHONY : utils_tests
+
+# fast build rule for target.
+utils_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/build
+.PHONY : utils_tests/fast
+
+#=============================================================================
+# Target rules for targets named file_tests
+
+# Build rule for target.
+file_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 file_tests
+.PHONY : file_tests
+
+# fast build rule for target.
+file_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/build
+.PHONY : file_tests/fast
 
 #=============================================================================
 # Target rules for targets named glad-generate-files
@@ -271,6 +297,8 @@ _deps/imgui-src/backends/imgui_impl_glfw.o: _deps/imgui-src/backends/imgui_impl_
 # target to build an object file
 _deps/imgui-src/backends/imgui_impl_glfw.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o
 .PHONY : _deps/imgui-src/backends/imgui_impl_glfw.cpp.o
 
 _deps/imgui-src/backends/imgui_impl_glfw.i: _deps/imgui-src/backends/imgui_impl_glfw.cpp.i
@@ -279,6 +307,8 @@ _deps/imgui-src/backends/imgui_impl_glfw.i: _deps/imgui-src/backends/imgui_impl_
 # target to preprocess a source file
 _deps/imgui-src/backends/imgui_impl_glfw.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i
 .PHONY : _deps/imgui-src/backends/imgui_impl_glfw.cpp.i
 
 _deps/imgui-src/backends/imgui_impl_glfw.s: _deps/imgui-src/backends/imgui_impl_glfw.cpp.s
@@ -287,6 +317,8 @@ _deps/imgui-src/backends/imgui_impl_glfw.s: _deps/imgui-src/backends/imgui_impl_
 # target to generate assembly for a file
 _deps/imgui-src/backends/imgui_impl_glfw.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s
 .PHONY : _deps/imgui-src/backends/imgui_impl_glfw.cpp.s
 
 _deps/imgui-src/backends/imgui_impl_opengl3.o: _deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
@@ -295,6 +327,8 @@ _deps/imgui-src/backends/imgui_impl_opengl3.o: _deps/imgui-src/backends/imgui_im
 # target to build an object file
 _deps/imgui-src/backends/imgui_impl_opengl3.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
 .PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
 
 _deps/imgui-src/backends/imgui_impl_opengl3.i: _deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
@@ -303,6 +337,8 @@ _deps/imgui-src/backends/imgui_impl_opengl3.i: _deps/imgui-src/backends/imgui_im
 # target to preprocess a source file
 _deps/imgui-src/backends/imgui_impl_opengl3.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
 .PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
 
 _deps/imgui-src/backends/imgui_impl_opengl3.s: _deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
@@ -311,6 +347,8 @@ _deps/imgui-src/backends/imgui_impl_opengl3.s: _deps/imgui-src/backends/imgui_im
 # target to generate assembly for a file
 _deps/imgui-src/backends/imgui_impl_opengl3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
 .PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
 
 _deps/imgui-src/imgui.o: _deps/imgui-src/imgui.cpp.o
@@ -439,6 +477,8 @@ src/crpt.o: src/crpt.cpp.o
 # target to build an object file
 src/crpt.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/src/crpt.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/crpt.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/src/crpt.cpp.o
 .PHONY : src/crpt.cpp.o
 
 src/crpt.i: src/crpt.cpp.i
@@ -447,6 +487,8 @@ src/crpt.i: src/crpt.cpp.i
 # target to preprocess a source file
 src/crpt.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/src/crpt.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/crpt.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/src/crpt.cpp.i
 .PHONY : src/crpt.cpp.i
 
 src/crpt.s: src/crpt.cpp.s
@@ -455,6 +497,8 @@ src/crpt.s: src/crpt.cpp.s
 # target to generate assembly for a file
 src/crpt.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/src/crpt.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/crpt.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/src/crpt.cpp.s
 .PHONY : src/crpt.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -481,6 +525,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_ImGui.dir/build.make CMakeFiles/Project_ImGui.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+tests/file_test.o: tests/file_test.cpp.o
+.PHONY : tests/file_test.o
+
+# target to build an object file
+tests/file_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/tests/file_test.cpp.o
+.PHONY : tests/file_test.cpp.o
+
+tests/file_test.i: tests/file_test.cpp.i
+.PHONY : tests/file_test.i
+
+# target to preprocess a source file
+tests/file_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/tests/file_test.cpp.i
+.PHONY : tests/file_test.cpp.i
+
+tests/file_test.s: tests/file_test.cpp.s
+.PHONY : tests/file_test.s
+
+# target to generate assembly for a file
+tests/file_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/file_tests.dir/build.make CMakeFiles/file_tests.dir/tests/file_test.cpp.s
+.PHONY : tests/file_test.cpp.s
+
+tests/utils_test.o: tests/utils_test.cpp.o
+.PHONY : tests/utils_test.o
+
+# target to build an object file
+tests/utils_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_test.cpp.o
+.PHONY : tests/utils_test.cpp.o
+
+tests/utils_test.i: tests/utils_test.cpp.i
+.PHONY : tests/utils_test.i
+
+# target to preprocess a source file
+tests/utils_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_test.cpp.i
+.PHONY : tests/utils_test.cpp.i
+
+tests/utils_test.s: tests/utils_test.cpp.s
+.PHONY : tests/utils_test.s
+
+# target to generate assembly for a file
+tests/utils_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_test.cpp.s
+.PHONY : tests/utils_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -498,9 +590,11 @@ help:
 	@echo "... Project_ImGui"
 	@echo "... cryptest"
 	@echo "... cryptopp"
+	@echo "... file_tests"
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... imgui"
+	@echo "... utils_tests"
 	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.o"
 	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.i"
 	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.s"
@@ -528,6 +622,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... tests/file_test.o"
+	@echo "... tests/file_test.i"
+	@echo "... tests/file_test.s"
+	@echo "... tests/utils_test.o"
+	@echo "... tests/utils_test.i"
+	@echo "... tests/utils_test.s"
 .PHONY : help
 
 

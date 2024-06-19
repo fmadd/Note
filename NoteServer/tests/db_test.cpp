@@ -58,7 +58,7 @@ TEST_CASE( "TestAdd") {
     create_Database();
     DB_service db(con_string);
     db.add_user("Nastya1", "40");
-    
+
     CHECK(db.check_login_exists("Nastya1"));
     drop_Database();
 }

@@ -11,6 +11,7 @@ using namespace CryptoPP;
 tcp::socket init_socket(){
     boost::asio::io_service io_service;
     tcp::socket socket(io_service);
+
     return socket;
 }
 /**
@@ -39,6 +40,7 @@ public:
         boost::asio::io_service io_service;
         tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 1234));
         acceptor.accept(_socket);
+        acceptor.set_option(boost::asio::ip::tcp::acceptor::reuse_address(true));
     }
     /**
      * \brief Записывает данные в сокет.

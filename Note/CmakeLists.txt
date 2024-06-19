@@ -51,6 +51,15 @@ target_sources(imgui INTERFACE
 )
 
 add_executable(${PROJECT_NAME} src/main.cpp src/crpt.cpp src/utils.hpp)
+
+add_executable(utils_tests src/crpt.cpp src/utils.hpp
+        tests/utils_test.cpp
+        )
+
+add_executable(file_tests src/crpt.cpp src/utils.hpp
+        tests/file_test.cpp)
+
+
 find_package(Boost REQUIRED)
 
 IF (Boost_FOUND)
@@ -61,3 +70,5 @@ ENDIF()
 add_subdirectory(libs/cryptopp-cmake/cryptopp-cmake)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE cryptopp imgui glfw OpenGL::GL)
+target_link_libraries(utils_tests PRIVATE cryptopp imgui glfw OpenGL::GL gtest)
+target_link_libraries(file_tests PRIVATE cryptopp imgui glfw OpenGL::GL gtest)

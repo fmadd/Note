@@ -1,0 +1,473 @@
+\doxysection{Im\+Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structImVector}{}\label{structImVector}\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$imgui.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \mbox{\hyperlink{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a74b5478f1f6fd471cc71219bce483db6}{iterator}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structImVector_a547fff373659fd848c3ecc6b25a83f25}{Im\+Vector}} ()
+\item 
+\mbox{\hyperlink{structImVector_a6e2ee59d8b2fa1583617a2110a56aed4}{Im\+Vector}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{src}})
+\item 
+\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \& \mbox{\hyperlink{structImVector_aa616055e1c04b4b1026ecdb67ce839e7}{operator=}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{src}})
+\item 
+\mbox{\hyperlink{structImVector_a9b782359ca26eaa1a6a6138fcf341c54}{\texorpdfstring{$\sim$}{\string~}\+Im\+Vector}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_ae2d401b4ec5f1113cdb8edb5a61a38f7}{clear}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_aed9c986ef3cd59fabbd89355d0023122}{clear\+\_\+delete}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_ac1ed34eac753156e87e8a92f78dbbe3f}{clear\+\_\+destruct}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector_aa53e48a5272f4bad1099368769514ff1}{empty}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_a8c903ecb1aaee0601b6a8ad835a4a435}{size}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_ade9f2e937e47b0e0f9970dcfba038204}{size\+\_\+in\+\_\+bytes}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_a6df36345c5943c83cf11b8e827584bf9}{max\+\_\+size}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_ac17681baa8b9b5cd97e556da29f9ef73}{capacity}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector_aec87a57a48b7c07e636f338b6113935b}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{i}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector_a1aac88ee8dded24c94801a41ed41b793}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{i}}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_ab48ae48675fa779e29c9ae5892bb99f4}{begin}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a1e10cf9afeb244d7d42131682531f865}{begin}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a278ca772697b2b2139d3b8add336a249}{end}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a457ca3fb7345e1b21c59fc196dd08607}{end}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector_a5a21f508086337de2f6739701d22f721}{front}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector_a6f55b8b7351295c06eeb4f4f28af14ae}{front}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector_a2d80e87e81b1b01143c8d8be93e6fde1}{back}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector_ab46e61c71932385c2ee96d1dfc94546a}{back}} () \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_afcec0d2a1e28aebe412b6efd06f0a77a}{swap}} (\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{rhs}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_a3a097635d464b1b70dc7d59996a88b28}{\+\_\+grow\+\_\+capacity}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{sz}}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_ac371dd62e56ae486b1a5038cf07eee56}{resize}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{new\+\_\+size}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_abe7f21776ecfb7d0214963fd8c0689f0}{resize}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{new\+\_\+size}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_a8dafcce1e393244890f52ef1aa490876}{shrink}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{new\+\_\+size}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_a0f14f5736c3372157856eebb67123b75}{reserve}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{new\+\_\+capacity}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_a4120d4da7804ae0a34aa521dbb8e1994}{reserve\+\_\+discard}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{new\+\_\+capacity}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_aab5df48e0711a48bd12f3206e08c4108}{push\+\_\+back}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_a3db7ce62d3c429effdb893fbf7148c1c}{pop\+\_\+back}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector_a168658df8e0e1df5698ebe7a69946389}{push\+\_\+front}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a2f88ac70791f2da6d4168d7b29f38f1e}{erase}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{it}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a8feb96da4eb8ef13a48dbd2e18cb641d}{erase}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{it}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{it\+\_\+last}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a87a4cae517c156b73823c5cd5e86378a}{erase\+\_\+unsorted}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{it}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a541c8cd4b844f5276f10d160cb500533}{insert}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{it}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector_a2e7860fbde1c721f168b6262d8f14aec}{contains}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a406417c3efef769d4bee47df2188831a}{find}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_a1fb6def3d26d7efeae0881e8dffb3f79}{find}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_a374b32265297839b0cd8e2b4c827112a}{find\+\_\+index}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector_a4e9214ecaa413240f76223500dbed912}{find\+\_\+erase}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector_a07f501e40783436616156682ec668327}{find\+\_\+erase\+\_\+unsorted}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{v}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_a3fd48379f807eeb01fb9da39afa30dc7}{index\+\_\+from\+\_\+ptr}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{it}}) \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_abbfd157947f66280d27b21d70a16df8d}{Size}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector_abd24482b4d30d22e37582e521e5bfb33}{Capacity}}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector_ac0e46e8b30cb079d93c8f0aad7d7cbd0}{Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structImVector_aedeac9c5080f9d6ce96ae837768ee4c4}\label{structImVector_aedeac9c5080f9d6ce96ae837768ee4c4} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::const\+\_\+iterator}
+
+\Hypertarget{structImVector_a74b5478f1f6fd471cc71219bce483db6}\label{structImVector_a74b5478f1f6fd471cc71219bce483db6} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::iterator}
+
+\Hypertarget{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}\label{structImVector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typedef}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structImVector_a547fff373659fd848c3ecc6b25a83f25}\label{structImVector_a547fff373659fd848c3ecc6b25a83f25} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!ImVector@{ImVector}}
+\index{ImVector@{ImVector}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ImVector()}{ImVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\mbox{\hyperlink{structImVector}{\+::\+Im\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a6e2ee59d8b2fa1583617a2110a56aed4}\label{structImVector_a6e2ee59d8b2fa1583617a2110a56aed4} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!ImVector@{ImVector}}
+\index{ImVector@{ImVector}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ImVector()}{ImVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\mbox{\hyperlink{structImVector}{\+::\+Im\+Vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a9b782359ca26eaa1a6a6138fcf341c54}\label{structImVector_a9b782359ca26eaa1a6a6138fcf341c54} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!````~ImVector@{\texorpdfstring{$\sim$}{\string~}ImVector}}
+\index{````~ImVector@{\texorpdfstring{$\sim$}{\string~}ImVector}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ImVector()}{\string~ImVector()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{structImVector}{Im\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structImVector_a3a097635d464b1b70dc7d59996a88b28}\label{structImVector_a3a097635d464b1b70dc7d59996a88b28} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!\_grow\_capacity@{\_grow\_capacity}}
+\index{\_grow\_capacity@{\_grow\_capacity}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_grow\_capacity()}{\_grow\_capacity()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::\+\_\+grow\+\_\+capacity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{sz }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a2d80e87e81b1b01143c8d8be93e6fde1}\label{structImVector_a2d80e87e81b1b01143c8d8be93e6fde1} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!back@{back}}
+\index{back@{back}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ab46e61c71932385c2ee96d1dfc94546a}\label{structImVector_ab46e61c71932385c2ee96d1dfc94546a} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!back@{back}}
+\index{back@{back}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ab48ae48675fa779e29c9ae5892bb99f4}\label{structImVector_ab48ae48675fa779e29c9ae5892bb99f4} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a1e10cf9afeb244d7d42131682531f865}\label{structImVector_a1e10cf9afeb244d7d42131682531f865} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ac17681baa8b9b5cd97e556da29f9ef73}\label{structImVector_ac17681baa8b9b5cd97e556da29f9ef73} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ae2d401b4ec5f1113cdb8edb5a61a38f7}\label{structImVector_ae2d401b4ec5f1113cdb8edb5a61a38f7} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_aed9c986ef3cd59fabbd89355d0023122}\label{structImVector_aed9c986ef3cd59fabbd89355d0023122} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!clear\_delete@{clear\_delete}}
+\index{clear\_delete@{clear\_delete}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear\_delete()}{clear\_delete()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::clear\+\_\+delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ac1ed34eac753156e87e8a92f78dbbe3f}\label{structImVector_ac1ed34eac753156e87e8a92f78dbbe3f} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!clear\_destruct@{clear\_destruct}}
+\index{clear\_destruct@{clear\_destruct}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear\_destruct()}{clear\_destruct()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::clear\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a2e7860fbde1c721f168b6262d8f14aec}\label{structImVector_a2e7860fbde1c721f168b6262d8f14aec} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_aa53e48a5272f4bad1099368769514ff1}\label{structImVector_aa53e48a5272f4bad1099368769514ff1} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a278ca772697b2b2139d3b8add336a249}\label{structImVector_a278ca772697b2b2139d3b8add336a249} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!end@{end}}
+\index{end@{end}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a457ca3fb7345e1b21c59fc196dd08607}\label{structImVector_a457ca3fb7345e1b21c59fc196dd08607} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!end@{end}}
+\index{end@{end}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a2f88ac70791f2da6d4168d7b29f38f1e}\label{structImVector_a2f88ac70791f2da6d4168d7b29f38f1e} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a8feb96da4eb8ef13a48dbd2e18cb641d}\label{structImVector_a8feb96da4eb8ef13a48dbd2e18cb641d} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}}]{it,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}}]{it\+\_\+last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a87a4cae517c156b73823c5cd5e86378a}\label{structImVector_a87a4cae517c156b73823c5cd5e86378a} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!erase\_unsorted@{erase\_unsorted}}
+\index{erase\_unsorted@{erase\_unsorted}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase\_unsorted()}{erase\_unsorted()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::erase\+\_\+unsorted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a406417c3efef769d4bee47df2188831a}\label{structImVector_a406417c3efef769d4bee47df2188831a} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!find@{find}}
+\index{find@{find}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a1fb6def3d26d7efeae0881e8dffb3f79}\label{structImVector_a1fb6def3d26d7efeae0881e8dffb3f79} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!find@{find}}
+\index{find@{find}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a4e9214ecaa413240f76223500dbed912}\label{structImVector_a4e9214ecaa413240f76223500dbed912} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!find\_erase@{find\_erase}}
+\index{find\_erase@{find\_erase}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find\_erase()}{find\_erase()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::find\+\_\+erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a07f501e40783436616156682ec668327}\label{structImVector_a07f501e40783436616156682ec668327} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!find\_erase\_unsorted@{find\_erase\_unsorted}}
+\index{find\_erase\_unsorted@{find\_erase\_unsorted}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find\_erase\_unsorted()}{find\_erase\_unsorted()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::find\+\_\+erase\+\_\+unsorted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a374b32265297839b0cd8e2b4c827112a}\label{structImVector_a374b32265297839b0cd8e2b4c827112a} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!find\_index@{find\_index}}
+\index{find\_index@{find\_index}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find\_index()}{find\_index()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::find\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a5a21f508086337de2f6739701d22f721}\label{structImVector_a5a21f508086337de2f6739701d22f721} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!front@{front}}
+\index{front@{front}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a6f55b8b7351295c06eeb4f4f28af14ae}\label{structImVector_a6f55b8b7351295c06eeb4f4f28af14ae} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!front@{front}}
+\index{front@{front}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a3fd48379f807eeb01fb9da39afa30dc7}\label{structImVector_a3fd48379f807eeb01fb9da39afa30dc7} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!index\_from\_ptr@{index\_from\_ptr}}
+\index{index\_from\_ptr@{index\_from\_ptr}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{index\_from\_ptr()}{index\_from\_ptr()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::index\+\_\+from\+\_\+ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a541c8cd4b844f5276f10d160cb500533}\label{structImVector_a541c8cd4b844f5276f10d160cb500533} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \texorpdfstring{$\ast$}{*}}]{it,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a6df36345c5943c83cf11b8e827584bf9}\label{structImVector_a6df36345c5943c83cf11b8e827584bf9} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!max\_size@{max\_size}}
+\index{max\_size@{max\_size}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{max\_size()}{max\_size()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::max\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_aa616055e1c04b4b1026ecdb67ce839e7}\label{structImVector_aa616055e1c04b4b1026ecdb67ce839e7} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+::operator}}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_aec87a57a48b7c07e636f338b6113935b}\label{structImVector_aec87a57a48b7c07e636f338b6113935b} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+::operator}}\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a1aac88ee8dded24c94801a41ed41b793}\label{structImVector_a1aac88ee8dded24c94801a41ed41b793} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \& \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\+::operator}}\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a3db7ce62d3c429effdb893fbf7148c1c}\label{structImVector_a3db7ce62d3c429effdb893fbf7148c1c} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_aab5df48e0711a48bd12f3206e08c4108}\label{structImVector_aab5df48e0711a48bd12f3206e08c4108} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a168658df8e0e1df5698ebe7a69946389}\label{structImVector_a168658df8e0e1df5698ebe7a69946389} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a0f14f5736c3372157856eebb67123b75}\label{structImVector_a0f14f5736c3372157856eebb67123b75} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::reserve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{new\+\_\+capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a4120d4da7804ae0a34aa521dbb8e1994}\label{structImVector_a4120d4da7804ae0a34aa521dbb8e1994} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!reserve\_discard@{reserve\_discard}}
+\index{reserve\_discard@{reserve\_discard}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reserve\_discard()}{reserve\_discard()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::reserve\+\_\+discard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{new\+\_\+capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ac371dd62e56ae486b1a5038cf07eee56}\label{structImVector_ac371dd62e56ae486b1a5038cf07eee56} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_abe7f21776ecfb7d0214963fd8c0689f0}\label{structImVector_abe7f21776ecfb7d0214963fd8c0689f0} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{new\+\_\+size,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a8dafcce1e393244890f52ef1aa490876}\label{structImVector_a8dafcce1e393244890f52ef1aa490876} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!shrink@{shrink}}
+\index{shrink@{shrink}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shrink()}{shrink()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::shrink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_a8c903ecb1aaee0601b6a8ad835a4a435}\label{structImVector_a8c903ecb1aaee0601b6a8ad835a4a435} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!size@{size}}
+\index{size@{size}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{\+::size}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_ade9f2e937e47b0e0f9970dcfba038204}\label{structImVector_ade9f2e937e47b0e0f9970dcfba038204} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!size\_in\_bytes@{size\_in\_bytes}}
+\index{size\_in\_bytes@{size\_in\_bytes}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_in\_bytes()}{size\_in\_bytes()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::size\+\_\+in\+\_\+bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{structImVector_afcec0d2a1e28aebe412b6efd06f0a77a}\label{structImVector_afcec0d2a1e28aebe412b6efd06f0a77a} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!swap@{swap}}
+\index{swap@{swap}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structImVector_abd24482b4d30d22e37582e521e5bfb33}\label{structImVector_abd24482b4d30d22e37582e521e5bfb33} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::\+Capacity}
+
+\Hypertarget{structImVector_ac0e46e8b30cb079d93c8f0aad7d7cbd0}\label{structImVector_ac0e46e8b30cb079d93c8f0aad7d7cbd0} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!Data@{Data}}
+\index{Data@{Data}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::\+Data}
+
+\Hypertarget{structImVector_abbfd157947f66280d27b21d70a16df8d}\label{structImVector_abbfd157947f66280d27b21d70a16df8d} 
+\index{ImVector$<$ T $>$@{ImVector$<$ T $>$}!Size@{Size}}
+\index{Size@{Size}!ImVector$<$ T $>$@{ImVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{typename}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$ \\
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{structImVector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{T}} $>$\+::\+Size}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/imgui/\mbox{\hyperlink{imgui_8h}{imgui.\+h}}\end{DoxyCompactItemize}

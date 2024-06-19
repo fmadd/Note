@@ -1,0 +1,84 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$imgui\+\_\+impl\+\_\+glfw.\+h$>$}\newline
+{\ttfamily \#include $<$imgui\+\_\+impl\+\_\+opengl3.\+h$>$}\newline
+{\ttfamily \#include "{}glfw/include/\+GLFW/glfw3.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}utils.\+hpp"{}}\newline
+{\ttfamily \#include "{}crpt.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8cpp_afa325e1c108164984c815fdba2815828}{LOGIN\+\_\+\+STATE}} \{ \mbox{\hyperlink{main_8cpp_afa325e1c108164984c815fdba2815828a6ce26a62afab55d7606ad4e92428b30c}{UNKNOWN}}
+, \mbox{\hyperlink{main_8cpp_afa325e1c108164984c815fdba2815828ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}}
+, \mbox{\hyperlink{main_8cpp_afa325e1c108164984c815fdba2815828aa5571864412c8275a2e18a931fddcaa6}{FAILURE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{main_8cpp_a24d219a6031c75e3206f93c61484b61c}{start\+\_\+menu}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{main_8cpp_a50fc3ed8c00dc90b51d19467778aad32}{success\+\_\+reg}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{main_8cpp_ac102d8b1d9ebcb04cafeaeadc0e47efa}{not\+\_\+reg}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8cpp_afa325e1c108164984c815fdba2815828}\label{main_8cpp_afa325e1c108164984c815fdba2815828} 
+\index{main.cpp@{main.cpp}!LOGIN\_STATE@{LOGIN\_STATE}}
+\index{LOGIN\_STATE@{LOGIN\_STATE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{LOGIN\_STATE}{LOGIN\_STATE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{enum}} \mbox{\hyperlink{main_8cpp_afa325e1c108164984c815fdba2815828}{LOGIN\+\_\+\+STATE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN@{UNKNOWN}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!UNKNOWN@{UNKNOWN}}}\Hypertarget{main_8cpp_afa325e1c108164984c815fdba2815828a6ce26a62afab55d7606ad4e92428b30c}\label{main_8cpp_afa325e1c108164984c815fdba2815828a6ce26a62afab55d7606ad4e92428b30c} 
+UNKNOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUCCESS@{SUCCESS}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!SUCCESS@{SUCCESS}}}\Hypertarget{main_8cpp_afa325e1c108164984c815fdba2815828ac7f69f7c9e5aea9b8f54cf02870e2bf8}\label{main_8cpp_afa325e1c108164984c815fdba2815828ac7f69f7c9e5aea9b8f54cf02870e2bf8} 
+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAILURE@{FAILURE}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!FAILURE@{FAILURE}}}\Hypertarget{main_8cpp_afa325e1c108164984c815fdba2815828aa5571864412c8275a2e18a931fddcaa6}\label{main_8cpp_afa325e1c108164984c815fdba2815828aa5571864412c8275a2e18a931fddcaa6} 
+FAILURE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ac102d8b1d9ebcb04cafeaeadc0e47efa}\label{main_8cpp_ac102d8b1d9ebcb04cafeaeadc0e47efa} 
+\index{main.cpp@{main.cpp}!not\_reg@{not\_reg}}
+\index{not\_reg@{not\_reg}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{not\_reg()}{not\_reg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} not\+\_\+reg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a24d219a6031c75e3206f93c61484b61c}\label{main_8cpp_a24d219a6031c75e3206f93c61484b61c} 
+\index{main.cpp@{main.cpp}!start\_menu@{start\_menu}}
+\index{start\_menu@{start\_menu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{start\_menu()}{start\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} start\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a50fc3ed8c00dc90b51d19467778aad32}\label{main_8cpp_a50fc3ed8c00dc90b51d19467778aad32} 
+\index{main.cpp@{main.cpp}!success\_reg@{success\_reg}}
+\index{success\_reg@{success\_reg}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{success\_reg()}{success\_reg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} success\+\_\+reg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

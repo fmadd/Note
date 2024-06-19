@@ -1,0 +1,240 @@
+\doxysection{src/glfw/tests/glfwinfo.c File Reference}
+\hypertarget{glfwinfo_8c}{}\label{glfwinfo_8c}\index{src/glfw/tests/glfwinfo.c@{src/glfw/tests/glfwinfo.c}}
+{\ttfamily \#include $<$glad/gl.\+h$>$}\newline
+{\ttfamily \#include $<$glad/vulkan.\+h$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}getopt.\+h"{}}\newline
+Include dependency graph for glfwinfo.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a09f9c3bf094ecaf707c673924ffd615a}{GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_abbba9cf294570728cf5bd2f8538158bd}{GLAD\+\_\+\+VULKAN\+\_\+\+IMPLEMENTATION}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a088324ad8995e3eb76024e3e79083d48}{GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ad86628ae9a6cd0856e18e3d4597592c2}{API\+\_\+\+NAME\+\_\+\+OPENGL}}~"{}gl"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a511755371b01da0ad04356d8748bf00e}{API\+\_\+\+NAME\+\_\+\+OPENGL\+\_\+\+ES}}~"{}es"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a4759ca30eeb9b561d9f92620a0bf5a72}{API\+\_\+\+NAME\+\_\+\+NATIVE}}~"{}native"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ab81c2e58deb2f086cd66b5b02d02bbdd}{API\+\_\+\+NAME\+\_\+\+EGL}}~"{}egl"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ae378fdbbc6634c234caa5b184ccfa8cb}{API\+\_\+\+NAME\+\_\+\+OSMESA}}~"{}osmesa"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_aa17e97eac64dd5c8a67d61aee4d04e18}{PROFILE\+\_\+\+NAME\+\_\+\+CORE}}~"{}core"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_acfc211849aa8dff75e8f07fd2ef6d202}{PROFILE\+\_\+\+NAME\+\_\+\+COMPAT}}~"{}compat"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_aeddf6d1cc208f883f552be3d8e85be20}{STRATEGY\+\_\+\+NAME\+\_\+\+NONE}}~"{}none"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ad1bebefcc4d979fa8d2b0903446c8503}{STRATEGY\+\_\+\+NAME\+\_\+\+LOSE}}~"{}lose"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ab69925e9bbb02d4b381d4ff402a20dc0}{BEHAVIOR\+\_\+\+NAME\+\_\+\+NONE}}~"{}none"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a38d80d41276fa757605653c264534b05}{BEHAVIOR\+\_\+\+NAME\+\_\+\+FLUSH}}~"{}flush"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ac87828683516dacd1c160fd8468ac1b4}{ANGLE\+\_\+\+TYPE\+\_\+\+OPENGL}}~"{}gl"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ad10f7dfd5a01a61de533a3305224fb2f}{ANGLE\+\_\+\+TYPE\+\_\+\+OPENGLES}}~"{}es"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ab634c975a83fe31e2ed466dc021be781}{ANGLE\+\_\+\+TYPE\+\_\+\+D3\+D9}}~"{}d3d9"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a9451fcd3819c6c6f9274f637a6be8208}{ANGLE\+\_\+\+TYPE\+\_\+\+D3\+D11}}~"{}d3d11"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a68a797e0d8d26a73371a118d12683cc9}{ANGLE\+\_\+\+TYPE\+\_\+\+VULKAN}}~"{}vk"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ac9c29d1a32bbb9753de904dda9a6442d}{ANGLE\+\_\+\+TYPE\+\_\+\+METAL}}~"{}mtl"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a001880f209dd16b55a01d2474b5f7023}{PLATFORM\+\_\+\+NAME\+\_\+\+ANY}}~"{}any"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a37d124eea3879336a05e8a1d66b0372d}{PLATFORM\+\_\+\+NAME\+\_\+\+WIN32}}~"{}win32"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a426361224e9af65d2d0d8bc151c2463e}{PLATFORM\+\_\+\+NAME\+\_\+\+COCOA}}~"{}cooca"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ac6f904571614f2f51b60d89a2c4180b8}{PLATFORM\+\_\+\+NAME\+\_\+\+WL}}~"{}wayland"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_ad88d6566659a82178076296637152005}{PLATFORM\+\_\+\+NAME\+\_\+\+X11}}~"{}x11"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{glfwinfo_8c_a1d0ad63a34404afede76d0cb9bcd4d82}{PLATFORM\+\_\+\+NAME\+\_\+\+NULL}}~"{}null"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{glfwinfo_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argc}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argv}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{glfwinfo_8c_a9451fcd3819c6c6f9274f637a6be8208}\label{glfwinfo_8c_a9451fcd3819c6c6f9274f637a6be8208} 
+\index{glfwinfo.c@{glfwinfo.c}!ANGLE\_TYPE\_D3D11@{ANGLE\_TYPE\_D3D11}}
+\index{ANGLE\_TYPE\_D3D11@{ANGLE\_TYPE\_D3D11}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{ANGLE\_TYPE\_D3D11}{ANGLE\_TYPE\_D3D11}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ANGLE\+\_\+\+TYPE\+\_\+\+D3\+D11~"{}d3d11"{}}
+
+\Hypertarget{glfwinfo_8c_ab634c975a83fe31e2ed466dc021be781}\label{glfwinfo_8c_ab634c975a83fe31e2ed466dc021be781} 
+\index{glfwinfo.c@{glfwinfo.c}!ANGLE\_TYPE\_D3D9@{ANGLE\_TYPE\_D3D9}}
+\index{ANGLE\_TYPE\_D3D9@{ANGLE\_TYPE\_D3D9}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{ANGLE\_TYPE\_D3D9}{ANGLE\_TYPE\_D3D9}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ANGLE\+\_\+\+TYPE\+\_\+\+D3\+D9~"{}d3d9"{}}
+
+\Hypertarget{glfwinfo_8c_ac9c29d1a32bbb9753de904dda9a6442d}\label{glfwinfo_8c_ac9c29d1a32bbb9753de904dda9a6442d} 
+\index{glfwinfo.c@{glfwinfo.c}!ANGLE\_TYPE\_METAL@{ANGLE\_TYPE\_METAL}}
+\index{ANGLE\_TYPE\_METAL@{ANGLE\_TYPE\_METAL}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{ANGLE\_TYPE\_METAL}{ANGLE\_TYPE\_METAL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ANGLE\+\_\+\+TYPE\+\_\+\+METAL~"{}mtl"{}}
+
+\Hypertarget{glfwinfo_8c_ac87828683516dacd1c160fd8468ac1b4}\label{glfwinfo_8c_ac87828683516dacd1c160fd8468ac1b4} 
+\index{glfwinfo.c@{glfwinfo.c}!ANGLE\_TYPE\_OPENGL@{ANGLE\_TYPE\_OPENGL}}
+\index{ANGLE\_TYPE\_OPENGL@{ANGLE\_TYPE\_OPENGL}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{ANGLE\_TYPE\_OPENGL}{ANGLE\_TYPE\_OPENGL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ANGLE\+\_\+\+TYPE\+\_\+\+OPENGL~"{}gl"{}}
+
+\Hypertarget{glfwinfo_8c_ad10f7dfd5a01a61de533a3305224fb2f}\label{glfwinfo_8c_ad10f7dfd5a01a61de533a3305224fb2f} 
+\index{glfwinfo.c@{glfwinfo.c}!ANGLE\_TYPE\_OPENGLES@{ANGLE\_TYPE\_OPENGLES}}
+\index{ANGLE\_TYPE\_OPENGLES@{ANGLE\_TYPE\_OPENGLES}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{ANGLE\_TYPE\_OPENGLES}{ANGLE\_TYPE\_OPENGLES}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ANGLE\+\_\+\+TYPE\+\_\+\+OPENGLES~"{}es"{}}
+
+\Hypertarget{glfwinfo_8c_a68a797e0d8d26a73371a118d12683cc9}\label{glfwinfo_8c_a68a797e0d8d26a73371a118d12683cc9} 
+\index{glfwinfo.c@{glfwinfo.c}!ANGLE\_TYPE\_VULKAN@{ANGLE\_TYPE\_VULKAN}}
+\index{ANGLE\_TYPE\_VULKAN@{ANGLE\_TYPE\_VULKAN}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{ANGLE\_TYPE\_VULKAN}{ANGLE\_TYPE\_VULKAN}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ANGLE\+\_\+\+TYPE\+\_\+\+VULKAN~"{}vk"{}}
+
+\Hypertarget{glfwinfo_8c_ab81c2e58deb2f086cd66b5b02d02bbdd}\label{glfwinfo_8c_ab81c2e58deb2f086cd66b5b02d02bbdd} 
+\index{glfwinfo.c@{glfwinfo.c}!API\_NAME\_EGL@{API\_NAME\_EGL}}
+\index{API\_NAME\_EGL@{API\_NAME\_EGL}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{API\_NAME\_EGL}{API\_NAME\_EGL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} API\+\_\+\+NAME\+\_\+\+EGL~"{}egl"{}}
+
+\Hypertarget{glfwinfo_8c_a4759ca30eeb9b561d9f92620a0bf5a72}\label{glfwinfo_8c_a4759ca30eeb9b561d9f92620a0bf5a72} 
+\index{glfwinfo.c@{glfwinfo.c}!API\_NAME\_NATIVE@{API\_NAME\_NATIVE}}
+\index{API\_NAME\_NATIVE@{API\_NAME\_NATIVE}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{API\_NAME\_NATIVE}{API\_NAME\_NATIVE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} API\+\_\+\+NAME\+\_\+\+NATIVE~"{}native"{}}
+
+\Hypertarget{glfwinfo_8c_ad86628ae9a6cd0856e18e3d4597592c2}\label{glfwinfo_8c_ad86628ae9a6cd0856e18e3d4597592c2} 
+\index{glfwinfo.c@{glfwinfo.c}!API\_NAME\_OPENGL@{API\_NAME\_OPENGL}}
+\index{API\_NAME\_OPENGL@{API\_NAME\_OPENGL}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{API\_NAME\_OPENGL}{API\_NAME\_OPENGL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} API\+\_\+\+NAME\+\_\+\+OPENGL~"{}gl"{}}
+
+\Hypertarget{glfwinfo_8c_a511755371b01da0ad04356d8748bf00e}\label{glfwinfo_8c_a511755371b01da0ad04356d8748bf00e} 
+\index{glfwinfo.c@{glfwinfo.c}!API\_NAME\_OPENGL\_ES@{API\_NAME\_OPENGL\_ES}}
+\index{API\_NAME\_OPENGL\_ES@{API\_NAME\_OPENGL\_ES}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{API\_NAME\_OPENGL\_ES}{API\_NAME\_OPENGL\_ES}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} API\+\_\+\+NAME\+\_\+\+OPENGL\+\_\+\+ES~"{}es"{}}
+
+\Hypertarget{glfwinfo_8c_ae378fdbbc6634c234caa5b184ccfa8cb}\label{glfwinfo_8c_ae378fdbbc6634c234caa5b184ccfa8cb} 
+\index{glfwinfo.c@{glfwinfo.c}!API\_NAME\_OSMESA@{API\_NAME\_OSMESA}}
+\index{API\_NAME\_OSMESA@{API\_NAME\_OSMESA}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{API\_NAME\_OSMESA}{API\_NAME\_OSMESA}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} API\+\_\+\+NAME\+\_\+\+OSMESA~"{}osmesa"{}}
+
+\Hypertarget{glfwinfo_8c_a38d80d41276fa757605653c264534b05}\label{glfwinfo_8c_a38d80d41276fa757605653c264534b05} 
+\index{glfwinfo.c@{glfwinfo.c}!BEHAVIOR\_NAME\_FLUSH@{BEHAVIOR\_NAME\_FLUSH}}
+\index{BEHAVIOR\_NAME\_FLUSH@{BEHAVIOR\_NAME\_FLUSH}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{BEHAVIOR\_NAME\_FLUSH}{BEHAVIOR\_NAME\_FLUSH}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} BEHAVIOR\+\_\+\+NAME\+\_\+\+FLUSH~"{}flush"{}}
+
+\Hypertarget{glfwinfo_8c_ab69925e9bbb02d4b381d4ff402a20dc0}\label{glfwinfo_8c_ab69925e9bbb02d4b381d4ff402a20dc0} 
+\index{glfwinfo.c@{glfwinfo.c}!BEHAVIOR\_NAME\_NONE@{BEHAVIOR\_NAME\_NONE}}
+\index{BEHAVIOR\_NAME\_NONE@{BEHAVIOR\_NAME\_NONE}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{BEHAVIOR\_NAME\_NONE}{BEHAVIOR\_NAME\_NONE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} BEHAVIOR\+\_\+\+NAME\+\_\+\+NONE~"{}none"{}}
+
+\Hypertarget{glfwinfo_8c_a09f9c3bf094ecaf707c673924ffd615a}\label{glfwinfo_8c_a09f9c3bf094ecaf707c673924ffd615a} 
+\index{glfwinfo.c@{glfwinfo.c}!GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}}
+\index{GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{GLAD\_GL\_IMPLEMENTATION}{GLAD\_GL\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}
+
+\Hypertarget{glfwinfo_8c_abbba9cf294570728cf5bd2f8538158bd}\label{glfwinfo_8c_abbba9cf294570728cf5bd2f8538158bd} 
+\index{glfwinfo.c@{glfwinfo.c}!GLAD\_VULKAN\_IMPLEMENTATION@{GLAD\_VULKAN\_IMPLEMENTATION}}
+\index{GLAD\_VULKAN\_IMPLEMENTATION@{GLAD\_VULKAN\_IMPLEMENTATION}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{GLAD\_VULKAN\_IMPLEMENTATION}{GLAD\_VULKAN\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLAD\+\_\+\+VULKAN\+\_\+\+IMPLEMENTATION}
+
+\Hypertarget{glfwinfo_8c_a088324ad8995e3eb76024e3e79083d48}\label{glfwinfo_8c_a088324ad8995e3eb76024e3e79083d48} 
+\index{glfwinfo.c@{glfwinfo.c}!GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}}
+\index{GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{GLFW\_INCLUDE\_NONE}{GLFW\_INCLUDE\_NONE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}
+
+\Hypertarget{glfwinfo_8c_a001880f209dd16b55a01d2474b5f7023}\label{glfwinfo_8c_a001880f209dd16b55a01d2474b5f7023} 
+\index{glfwinfo.c@{glfwinfo.c}!PLATFORM\_NAME\_ANY@{PLATFORM\_NAME\_ANY}}
+\index{PLATFORM\_NAME\_ANY@{PLATFORM\_NAME\_ANY}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_NAME\_ANY}{PLATFORM\_NAME\_ANY}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PLATFORM\+\_\+\+NAME\+\_\+\+ANY~"{}any"{}}
+
+\Hypertarget{glfwinfo_8c_a426361224e9af65d2d0d8bc151c2463e}\label{glfwinfo_8c_a426361224e9af65d2d0d8bc151c2463e} 
+\index{glfwinfo.c@{glfwinfo.c}!PLATFORM\_NAME\_COCOA@{PLATFORM\_NAME\_COCOA}}
+\index{PLATFORM\_NAME\_COCOA@{PLATFORM\_NAME\_COCOA}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_NAME\_COCOA}{PLATFORM\_NAME\_COCOA}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PLATFORM\+\_\+\+NAME\+\_\+\+COCOA~"{}cooca"{}}
+
+\Hypertarget{glfwinfo_8c_a1d0ad63a34404afede76d0cb9bcd4d82}\label{glfwinfo_8c_a1d0ad63a34404afede76d0cb9bcd4d82} 
+\index{glfwinfo.c@{glfwinfo.c}!PLATFORM\_NAME\_NULL@{PLATFORM\_NAME\_NULL}}
+\index{PLATFORM\_NAME\_NULL@{PLATFORM\_NAME\_NULL}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_NAME\_NULL}{PLATFORM\_NAME\_NULL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PLATFORM\+\_\+\+NAME\+\_\+\+NULL~"{}null"{}}
+
+\Hypertarget{glfwinfo_8c_a37d124eea3879336a05e8a1d66b0372d}\label{glfwinfo_8c_a37d124eea3879336a05e8a1d66b0372d} 
+\index{glfwinfo.c@{glfwinfo.c}!PLATFORM\_NAME\_WIN32@{PLATFORM\_NAME\_WIN32}}
+\index{PLATFORM\_NAME\_WIN32@{PLATFORM\_NAME\_WIN32}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_NAME\_WIN32}{PLATFORM\_NAME\_WIN32}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PLATFORM\+\_\+\+NAME\+\_\+\+WIN32~"{}win32"{}}
+
+\Hypertarget{glfwinfo_8c_ac6f904571614f2f51b60d89a2c4180b8}\label{glfwinfo_8c_ac6f904571614f2f51b60d89a2c4180b8} 
+\index{glfwinfo.c@{glfwinfo.c}!PLATFORM\_NAME\_WL@{PLATFORM\_NAME\_WL}}
+\index{PLATFORM\_NAME\_WL@{PLATFORM\_NAME\_WL}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_NAME\_WL}{PLATFORM\_NAME\_WL}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PLATFORM\+\_\+\+NAME\+\_\+\+WL~"{}wayland"{}}
+
+\Hypertarget{glfwinfo_8c_ad88d6566659a82178076296637152005}\label{glfwinfo_8c_ad88d6566659a82178076296637152005} 
+\index{glfwinfo.c@{glfwinfo.c}!PLATFORM\_NAME\_X11@{PLATFORM\_NAME\_X11}}
+\index{PLATFORM\_NAME\_X11@{PLATFORM\_NAME\_X11}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_NAME\_X11}{PLATFORM\_NAME\_X11}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PLATFORM\+\_\+\+NAME\+\_\+\+X11~"{}x11"{}}
+
+\Hypertarget{glfwinfo_8c_acfc211849aa8dff75e8f07fd2ef6d202}\label{glfwinfo_8c_acfc211849aa8dff75e8f07fd2ef6d202} 
+\index{glfwinfo.c@{glfwinfo.c}!PROFILE\_NAME\_COMPAT@{PROFILE\_NAME\_COMPAT}}
+\index{PROFILE\_NAME\_COMPAT@{PROFILE\_NAME\_COMPAT}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PROFILE\_NAME\_COMPAT}{PROFILE\_NAME\_COMPAT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PROFILE\+\_\+\+NAME\+\_\+\+COMPAT~"{}compat"{}}
+
+\Hypertarget{glfwinfo_8c_aa17e97eac64dd5c8a67d61aee4d04e18}\label{glfwinfo_8c_aa17e97eac64dd5c8a67d61aee4d04e18} 
+\index{glfwinfo.c@{glfwinfo.c}!PROFILE\_NAME\_CORE@{PROFILE\_NAME\_CORE}}
+\index{PROFILE\_NAME\_CORE@{PROFILE\_NAME\_CORE}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{PROFILE\_NAME\_CORE}{PROFILE\_NAME\_CORE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} PROFILE\+\_\+\+NAME\+\_\+\+CORE~"{}core"{}}
+
+\Hypertarget{glfwinfo_8c_ad1bebefcc4d979fa8d2b0903446c8503}\label{glfwinfo_8c_ad1bebefcc4d979fa8d2b0903446c8503} 
+\index{glfwinfo.c@{glfwinfo.c}!STRATEGY\_NAME\_LOSE@{STRATEGY\_NAME\_LOSE}}
+\index{STRATEGY\_NAME\_LOSE@{STRATEGY\_NAME\_LOSE}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{STRATEGY\_NAME\_LOSE}{STRATEGY\_NAME\_LOSE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} STRATEGY\+\_\+\+NAME\+\_\+\+LOSE~"{}lose"{}}
+
+\Hypertarget{glfwinfo_8c_aeddf6d1cc208f883f552be3d8e85be20}\label{glfwinfo_8c_aeddf6d1cc208f883f552be3d8e85be20} 
+\index{glfwinfo.c@{glfwinfo.c}!STRATEGY\_NAME\_NONE@{STRATEGY\_NAME\_NONE}}
+\index{STRATEGY\_NAME\_NONE@{STRATEGY\_NAME\_NONE}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{STRATEGY\_NAME\_NONE}{STRATEGY\_NAME\_NONE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} STRATEGY\+\_\+\+NAME\+\_\+\+NONE~"{}none"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{glfwinfo_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{glfwinfo_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{glfwinfo.c@{glfwinfo.c}!main@{main}}
+\index{main@{main}!glfwinfo.c@{glfwinfo.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{argc,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+

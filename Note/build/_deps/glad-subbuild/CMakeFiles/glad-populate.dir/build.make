@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1391/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1399/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1391/bin/cmake -E rm -f
+RM = /snap/cmake/1399/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,59 +78,59 @@ CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/
 CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
 CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/glad-populate-test
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'glad-populate'"
-	/snap/cmake/1391/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles
-	/snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles/glad-populate-complete
-	/snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-done
+	/snap/cmake/1399/bin/cmake -E make_directory /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles
+	/snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles/glad-populate-complete
+	/snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-done
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update:
 .PHONY : glad-populate-prefix/src/glad-populate-stamp/glad-populate-update
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-build: glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'glad-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure: glad-populate-prefix/tmp/glad-populate-cfgcmd.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure: glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'glad-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-download: glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-download: glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'glad-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps && /snap/cmake/1391/bin/cmake -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps && /snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-download
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps && /snap/cmake/1399/bin/cmake -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps && /snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-download
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-install: glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'glad-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'glad-populate'"
-	/snap/cmake/1391/bin/cmake -Dcfgdir= -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-mkdirs.cmake
-	/snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir
+	/snap/cmake/1399/bin/cmake -Dcfgdir= -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-mkdirs.cmake
+	/snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch: glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch-info.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch: glad-populate-prefix/src/glad-populate-stamp/glad-populate-update
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'glad-populate'"
-	/snap/cmake/1391/bin/cmake -E echo_append
-	/snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch
+	/snap/cmake/1399/bin/cmake -E echo_append
+	/snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update:
 .PHONY : glad-populate-prefix/src/glad-populate-stamp/glad-populate-update
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-test: glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'glad-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E echo_append
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1391/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-test
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E echo_append
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-build && /snap/cmake/1399/bin/cmake -E touch /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-test
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update: glad-populate-prefix/tmp/glad-populate-gitupdate.cmake
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update: glad-populate-prefix/src/glad-populate-stamp/glad-populate-update-info.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update: glad-populate-prefix/src/glad-populate-stamp/glad-populate-download
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'glad-populate'"
-	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src && /snap/cmake/1391/bin/cmake -Dcan_fetch=YES -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake
+	cd /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-src && /snap/cmake/1399/bin/cmake -Dcan_fetch=YES -P /mnt/c/Users/Victoriya/Desktop/Study/good/Note/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake
 
 glad-populate: CMakeFiles/glad-populate
 glad-populate: CMakeFiles/glad-populate-complete

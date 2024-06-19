@@ -1,0 +1,138 @@
+\doxysection{src/glfw/tests/triangle-\/vulkan.c File Reference}
+\hypertarget{triangle-vulkan_8c}{}\label{triangle-vulkan_8c}\index{src/glfw/tests/triangle-\/vulkan.c@{src/glfw/tests/triangle-\/vulkan.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$glad/vulkan.\+h$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+Include dependency graph for triangle-\/vulkan.c\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtexture__object}{texture\+\_\+object}}
+\item 
+struct \mbox{\hyperlink{structSwapchainBuffers}{Swapchain\+Buffers}}
+\item 
+struct \mbox{\hyperlink{structdemo}{demo}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_abbba9cf294570728cf5bd2f8538158bd}{GLAD\+\_\+\+VULKAN\+\_\+\+IMPLEMENTATION}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_a088324ad8995e3eb76024e3e79083d48}{GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_a889c754b96e13c9a94c431b8c10b7153}{DEMO\+\_\+\+TEXTURE\+\_\+\+COUNT}}~1
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_aca6d606eef84a7f729b71b8abad8f074}{VERTEX\+\_\+\+BUFFER\+\_\+\+BIND\+\_\+\+ID}}~0
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_ab5541e08a357bb88cd008693b6ffc6db}{APP\+\_\+\+SHORT\+\_\+\+NAME}}~"{}tri"{}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_a7ddc1be37ecfdff9eaaaa045820a96ad}{APP\+\_\+\+LONG\+\_\+\+NAME}}~"{}The \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Vulkan}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Triangle}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Demo}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Program"{}}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_a25f003de16c08a4888b69f619d70f427}{ARRAY\+\_\+\+SIZE}}(a)~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{sizeof}}(a) / \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{sizeof}}(a\mbox{[}0\mbox{]}))
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_ab33dabc77056cb02bf8609c97d49716b}{U\+\_\+\+ASSERT\+\_\+\+ONLY}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{triangle-vulkan_8c_a28fe14fddb8a99da1b8a644308d1a901}{ERR\+\_\+\+EXIT}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{err\+\_\+msg}},  \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{err\+\_\+class}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{triangle-vulkan_8c_aceb348ca75acc3d014a6b94ac3452e57}{Break\+Callback}} (\mbox{\hyperlink{vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{msg\+Flags}}, \mbox{\hyperlink{vulkan_8h_a70ad5d79db53aef728a95528945a4c0f}{Vk\+Debug\+Report\+Object\+Type\+EXT}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{obj\+Type}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint64\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{src\+Object}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} location, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int32\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{msg\+Code}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{p\+Layer\+Prefix}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{p\+Msg}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}p\+User\+Data)
+\item 
+\mbox{\hyperlink{vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} \mbox{\hyperlink{triangle-vulkan_8c_a4e3e0fcb987c805f9d82039a8af2485c}{dbg\+Func}} (\mbox{\hyperlink{vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{msg\+Flags}}, \mbox{\hyperlink{vulkan_8h_a70ad5d79db53aef728a95528945a4c0f}{Vk\+Debug\+Report\+Object\+Type\+EXT}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{obj\+Type}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint64\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{src\+Object}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} location, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int32\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{msg\+Code}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{p\+Layer\+Prefix}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{p\+Msg}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}p\+User\+Data)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{triangle-vulkan_8c_ad53223b8779f25caeddb70a3b9172967}{main}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argc}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{argv}}\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{triangle-vulkan_8c_a7ddc1be37ecfdff9eaaaa045820a96ad}\label{triangle-vulkan_8c_a7ddc1be37ecfdff9eaaaa045820a96ad} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!APP\_LONG\_NAME@{APP\_LONG\_NAME}}
+\index{APP\_LONG\_NAME@{APP\_LONG\_NAME}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{APP\_LONG\_NAME}{APP\_LONG\_NAME}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} APP\+\_\+\+LONG\+\_\+\+NAME~"{}The \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Vulkan}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Triangle}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Demo}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Program"{}}}}
+
+\Hypertarget{triangle-vulkan_8c_ab5541e08a357bb88cd008693b6ffc6db}\label{triangle-vulkan_8c_ab5541e08a357bb88cd008693b6ffc6db} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!APP\_SHORT\_NAME@{APP\_SHORT\_NAME}}
+\index{APP\_SHORT\_NAME@{APP\_SHORT\_NAME}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{APP\_SHORT\_NAME}{APP\_SHORT\_NAME}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} APP\+\_\+\+SHORT\+\_\+\+NAME~"{}tri"{}}
+
+\Hypertarget{triangle-vulkan_8c_a25f003de16c08a4888b69f619d70f427}\label{triangle-vulkan_8c_a25f003de16c08a4888b69f619d70f427} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!ARRAY\_SIZE@{ARRAY\_SIZE}}
+\index{ARRAY\_SIZE@{ARRAY\_SIZE}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_SIZE}{ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ARRAY\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{sizeof}}(a) / \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{sizeof}}(a\mbox{[}0\mbox{]}))}
+
+\Hypertarget{triangle-vulkan_8c_a889c754b96e13c9a94c431b8c10b7153}\label{triangle-vulkan_8c_a889c754b96e13c9a94c431b8c10b7153} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!DEMO\_TEXTURE\_COUNT@{DEMO\_TEXTURE\_COUNT}}
+\index{DEMO\_TEXTURE\_COUNT@{DEMO\_TEXTURE\_COUNT}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{DEMO\_TEXTURE\_COUNT}{DEMO\_TEXTURE\_COUNT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} DEMO\+\_\+\+TEXTURE\+\_\+\+COUNT~1}
+
+\Hypertarget{triangle-vulkan_8c_a28fe14fddb8a99da1b8a644308d1a901}\label{triangle-vulkan_8c_a28fe14fddb8a99da1b8a644308d1a901} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!ERR\_EXIT@{ERR\_EXIT}}
+\index{ERR\_EXIT@{ERR\_EXIT}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{ERR\_EXIT}{ERR\_EXIT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} ERR\+\_\+\+EXIT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{err\+\_\+msg}},  }\item[{}]{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{err\+\_\+class}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\ \ \ \ \ \ \ \ printf}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{err\_msg}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\ \ \ \ \ \ \ \ fflush}}(\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{stdout}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{\ \ \ \ \ \ \ \ exit}}(1);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (0)}
+
+\end{DoxyCode}
+\Hypertarget{triangle-vulkan_8c_abbba9cf294570728cf5bd2f8538158bd}\label{triangle-vulkan_8c_abbba9cf294570728cf5bd2f8538158bd} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!GLAD\_VULKAN\_IMPLEMENTATION@{GLAD\_VULKAN\_IMPLEMENTATION}}
+\index{GLAD\_VULKAN\_IMPLEMENTATION@{GLAD\_VULKAN\_IMPLEMENTATION}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{GLAD\_VULKAN\_IMPLEMENTATION}{GLAD\_VULKAN\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLAD\+\_\+\+VULKAN\+\_\+\+IMPLEMENTATION}
+
+\Hypertarget{triangle-vulkan_8c_a088324ad8995e3eb76024e3e79083d48}\label{triangle-vulkan_8c_a088324ad8995e3eb76024e3e79083d48} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}}
+\index{GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{GLFW\_INCLUDE\_NONE}{GLFW\_INCLUDE\_NONE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}
+
+\Hypertarget{triangle-vulkan_8c_ab33dabc77056cb02bf8609c97d49716b}\label{triangle-vulkan_8c_ab33dabc77056cb02bf8609c97d49716b} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!U\_ASSERT\_ONLY@{U\_ASSERT\_ONLY}}
+\index{U\_ASSERT\_ONLY@{U\_ASSERT\_ONLY}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{U\_ASSERT\_ONLY}{U\_ASSERT\_ONLY}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} U\+\_\+\+ASSERT\+\_\+\+ONLY}
+
+\Hypertarget{triangle-vulkan_8c_aca6d606eef84a7f729b71b8abad8f074}\label{triangle-vulkan_8c_aca6d606eef84a7f729b71b8abad8f074} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!VERTEX\_BUFFER\_BIND\_ID@{VERTEX\_BUFFER\_BIND\_ID}}
+\index{VERTEX\_BUFFER\_BIND\_ID@{VERTEX\_BUFFER\_BIND\_ID}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{VERTEX\_BUFFER\_BIND\_ID}{VERTEX\_BUFFER\_BIND\_ID}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} VERTEX\+\_\+\+BUFFER\+\_\+\+BIND\+\_\+\+ID~0}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{triangle-vulkan_8c_aceb348ca75acc3d014a6b94ac3452e57}\label{triangle-vulkan_8c_aceb348ca75acc3d014a6b94ac3452e57} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!BreakCallback@{BreakCallback}}
+\index{BreakCallback@{BreakCallback}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{BreakCallback()}{BreakCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} Break\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}}}]{msg\+Flags,  }\item[{\mbox{\hyperlink{vulkan_8h_a70ad5d79db53aef728a95528945a4c0f}{Vk\+Debug\+Report\+Object\+Type\+EXT}}}]{obj\+Type,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint64\+\_\+t}}}]{src\+Object,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}}}]{location,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int32\+\_\+t}}}]{msg\+Code,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{p\+Layer\+Prefix,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{p\+Msg,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{p\+User\+Data }\end{DoxyParamCaption})}
+
+\Hypertarget{triangle-vulkan_8c_a4e3e0fcb987c805f9d82039a8af2485c}\label{triangle-vulkan_8c_a4e3e0fcb987c805f9d82039a8af2485c} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!dbgFunc@{dbgFunc}}
+\index{dbgFunc@{dbgFunc}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{dbgFunc()}{dbgFunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vulkan_8h_a4394dd2421147ed91e838b086be25512}{VKAPI\+\_\+\+ATTR}} \mbox{\hyperlink{vulkan_8h_ae5d9faf75f583010e32ee49087a15326}{Vk\+Bool32}} \mbox{\hyperlink{vulkan_8h_a3856c7761d8b7260870053d0f03a0a49}{VKAPI\+\_\+\+CALL}} dbg\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vulkan_8h_abb605a7700670dd8420cc3841b939444}{Vk\+Flags}}}]{msg\+Flags,  }\item[{\mbox{\hyperlink{vulkan_8h_a70ad5d79db53aef728a95528945a4c0f}{Vk\+Debug\+Report\+Object\+Type\+EXT}}}]{obj\+Type,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint64\+\_\+t}}}]{src\+Object,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}}}]{location,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int32\+\_\+t}}}]{msg\+Code,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{p\+Layer\+Prefix,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{p\+Msg,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{p\+User\+Data }\end{DoxyParamCaption})}
+
+\Hypertarget{triangle-vulkan_8c_ad53223b8779f25caeddb70a3b9172967}\label{triangle-vulkan_8c_ad53223b8779f25caeddb70a3b9172967} 
+\index{triangle-\/vulkan.c@{triangle-\/vulkan.c}!main@{main}}
+\index{main@{main}!triangle-\/vulkan.c@{triangle-\/vulkan.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{argc,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+

@@ -1,0 +1,78 @@
+\doxysection{src/glfw/examples/splitview.c File Reference}
+\hypertarget{splitview_8c}{}\label{splitview_8c}\index{src/glfw/examples/splitview.c@{src/glfw/examples/splitview.c}}
+{\ttfamily \#include $<$glad/gl.\+h$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$linmath.\+h$>$}\newline
+Include dependency graph for splitview.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{splitview_8c_a09f9c3bf094ecaf707c673924ffd615a}{GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{splitview_8c_a088324ad8995e3eb76024e3e79083d48}{GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{splitview_8c_acfb6d5cd05fe03a42972c0c57cf73506}{TORUS\+\_\+\+MAJOR}}~1.\+5
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{splitview_8c_ac75210c23b87fc15bd89025847226a7e}{TORUS\+\_\+\+MINOR}}~0.\+5
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{splitview_8c_a6b35feaaa1487695b330b068ba41a91c}{TORUS\+\_\+\+MAJOR\+\_\+\+RES}}~32
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{splitview_8c_ac73cef19ed0e92c4b98b538f7ea96ccc}{TORUS\+\_\+\+MINOR\+\_\+\+RES}}~32
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{splitview_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{splitview_8c_a09f9c3bf094ecaf707c673924ffd615a}\label{splitview_8c_a09f9c3bf094ecaf707c673924ffd615a} 
+\index{splitview.c@{splitview.c}!GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}}
+\index{GLAD\_GL\_IMPLEMENTATION@{GLAD\_GL\_IMPLEMENTATION}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{GLAD\_GL\_IMPLEMENTATION}{GLAD\_GL\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLAD\+\_\+\+GL\+\_\+\+IMPLEMENTATION}
+
+\Hypertarget{splitview_8c_a088324ad8995e3eb76024e3e79083d48}\label{splitview_8c_a088324ad8995e3eb76024e3e79083d48} 
+\index{splitview.c@{splitview.c}!GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}}
+\index{GLFW\_INCLUDE\_NONE@{GLFW\_INCLUDE\_NONE}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{GLFW\_INCLUDE\_NONE}{GLFW\_INCLUDE\_NONE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} GLFW\+\_\+\+INCLUDE\+\_\+\+NONE}
+
+\Hypertarget{splitview_8c_acfb6d5cd05fe03a42972c0c57cf73506}\label{splitview_8c_acfb6d5cd05fe03a42972c0c57cf73506} 
+\index{splitview.c@{splitview.c}!TORUS\_MAJOR@{TORUS\_MAJOR}}
+\index{TORUS\_MAJOR@{TORUS\_MAJOR}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{TORUS\_MAJOR}{TORUS\_MAJOR}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} TORUS\+\_\+\+MAJOR~1.\+5}
+
+\Hypertarget{splitview_8c_a6b35feaaa1487695b330b068ba41a91c}\label{splitview_8c_a6b35feaaa1487695b330b068ba41a91c} 
+\index{splitview.c@{splitview.c}!TORUS\_MAJOR\_RES@{TORUS\_MAJOR\_RES}}
+\index{TORUS\_MAJOR\_RES@{TORUS\_MAJOR\_RES}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{TORUS\_MAJOR\_RES}{TORUS\_MAJOR\_RES}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} TORUS\+\_\+\+MAJOR\+\_\+\+RES~32}
+
+\Hypertarget{splitview_8c_ac75210c23b87fc15bd89025847226a7e}\label{splitview_8c_ac75210c23b87fc15bd89025847226a7e} 
+\index{splitview.c@{splitview.c}!TORUS\_MINOR@{TORUS\_MINOR}}
+\index{TORUS\_MINOR@{TORUS\_MINOR}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{TORUS\_MINOR}{TORUS\_MINOR}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} TORUS\+\_\+\+MINOR~0.\+5}
+
+\Hypertarget{splitview_8c_ac73cef19ed0e92c4b98b538f7ea96ccc}\label{splitview_8c_ac73cef19ed0e92c4b98b538f7ea96ccc} 
+\index{splitview.c@{splitview.c}!TORUS\_MINOR\_RES@{TORUS\_MINOR\_RES}}
+\index{TORUS\_MINOR\_RES@{TORUS\_MINOR\_RES}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{TORUS\_MINOR\_RES}{TORUS\_MINOR\_RES}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} TORUS\+\_\+\+MINOR\+\_\+\+RES~32}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{splitview_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{splitview_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{splitview.c@{splitview.c}!main@{main}}
+\index{main@{main}!splitview.c@{splitview.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}}}]{ }\end{DoxyParamCaption})}
+

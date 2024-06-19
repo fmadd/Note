@@ -1,0 +1,111 @@
+\doxysection{src/crpt.h File Reference}
+\hypertarget{crpt_8h}{}\label{crpt_8h}\index{src/crpt.h@{src/crpt.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cryptopp/modes.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/filters.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/aes.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/osrng.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/dh2.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/dh.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/secblock.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/base64.\+h$>$}\newline
+{\ttfamily \#include $<$cryptopp/hex.\+h$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+Include dependency graph for crpt.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{crpt_8h_abbd1d9521584f906e8391f4c5ed41ade}{send\+\_\+crypto\+\_\+block}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{block}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \mbox{\hyperlink{crpt_8h_af8e1ab2a1ca6501efc89f6c0bd6fc790}{receive\+\_\+crypto\+\_\+block}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{crpt_8h_a2bb601d220a653ba269a8c8b38230159}{send\+\_\+param}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Integer}} \&val)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{crpt_8h_a357b4039652b5dbe603f6c97431f24ff}{Generate\+DHKeys}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DH}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{dh}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Auto\+Seeded\+Random\+Pool}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{rnd}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{priv\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{pub\+Key}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{crpt_8h_a11e93c54bcf05eaf5c3070cc1bf193a4}{print\+Param}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{pub\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{priv\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{other\+Pub\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{shared\+Key}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \mbox{\hyperlink{crpt_8h_ab2d28e4a314161268efe1d7f3eb3039c}{derive\+AESKey\+From\+DH}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{shared\+Key}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \mbox{\hyperlink{crpt_8h_af3bcb54de4355e9da9030e080ba7c69f}{encrypt\+AES}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{plaintext}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \mbox{\hyperlink{gears_8c_accd6b5b92b78666e36543412d4ac14cd}{key}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \mbox{\hyperlink{crpt_8h_a8490e9e60deba146bf0a520b55a7a22e}{decrypt\+AES}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{ciphertext}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} Key)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \mbox{\hyperlink{crpt_8h_aacda4090667881256561f070e30c800f}{hash\+Pass}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{password}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{crpt_8h_a99066cb6578d487bae0a58455b725fbb}{recive\+\_\+param}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Integer}} \&val)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \mbox{\hyperlink{crpt_8h_a5f89df9301b1e358c372520f3c83629c}{get\+\_\+aes\+Key}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{crpt_8h_a8490e9e60deba146bf0a520b55a7a22e}\label{crpt_8h_a8490e9e60deba146bf0a520b55a7a22e} 
+\index{crpt.h@{crpt.h}!decryptAES@{decryptAES}}
+\index{decryptAES@{decryptAES}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{decryptAES()}{decryptAES()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} decrypt\+AES (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{ciphertext,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}}}]{Key }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_ab2d28e4a314161268efe1d7f3eb3039c}\label{crpt_8h_ab2d28e4a314161268efe1d7f3eb3039c} 
+\index{crpt.h@{crpt.h}!deriveAESKeyFromDH@{deriveAESKeyFromDH}}
+\index{deriveAESKeyFromDH@{deriveAESKeyFromDH}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{deriveAESKeyFromDH()}{deriveAESKeyFromDH()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} derive\+AESKey\+From\+DH (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&}]{shared\+Key }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_af3bcb54de4355e9da9030e080ba7c69f}\label{crpt_8h_af3bcb54de4355e9da9030e080ba7c69f} 
+\index{crpt.h@{crpt.h}!encryptAES@{encryptAES}}
+\index{encryptAES@{encryptAES}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{encryptAES()}{encryptAES()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} encrypt\+AES (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{plaintext,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}}}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_a357b4039652b5dbe603f6c97431f24ff}\label{crpt_8h_a357b4039652b5dbe603f6c97431f24ff} 
+\index{crpt.h@{crpt.h}!GenerateDHKeys@{GenerateDHKeys}}
+\index{GenerateDHKeys@{GenerateDHKeys}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{GenerateDHKeys()}{GenerateDHKeys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Generate\+DHKeys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{DH}} \&}]{dh,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Auto\+Seeded\+Random\+Pool}} \&}]{rnd,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&}]{priv\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&}]{pub\+Key }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_a5f89df9301b1e358c372520f3c83629c}\label{crpt_8h_a5f89df9301b1e358c372520f3c83629c} 
+\index{crpt.h@{crpt.h}!get\_aesKey@{get\_aesKey}}
+\index{get\_aesKey@{get\_aesKey}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{get\_aesKey()}{get\_aesKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} get\+\_\+aes\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_aacda4090667881256561f070e30c800f}\label{crpt_8h_aacda4090667881256561f070e30c800f} 
+\index{crpt.h@{crpt.h}!hashPass@{hashPass}}
+\index{hashPass@{hashPass}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{hashPass()}{hashPass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} hash\+Pass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}}}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_a11e93c54bcf05eaf5c3070cc1bf193a4}\label{crpt_8h_a11e93c54bcf05eaf5c3070cc1bf193a4} 
+\index{crpt.h@{crpt.h}!printParam@{printParam}}
+\index{printParam@{printParam}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{printParam()}{printParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} print\+Param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}}}]{pub\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}}}]{priv\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}}}]{other\+Pub\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}}}]{shared\+Key }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_af8e1ab2a1ca6501efc89f6c0bd6fc790}\label{crpt_8h_af8e1ab2a1ca6501efc89f6c0bd6fc790} 
+\index{crpt.h@{crpt.h}!receive\_crypto\_block@{receive\_crypto\_block}}
+\index{receive\_crypto\_block@{receive\_crypto\_block}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{receive\_crypto\_block()}{receive\_crypto\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} receive\+\_\+crypto\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_a99066cb6578d487bae0a58455b725fbb}\label{crpt_8h_a99066cb6578d487bae0a58455b725fbb} 
+\index{crpt.h@{crpt.h}!recive\_param@{recive\_param}}
+\index{recive\_param@{recive\_param}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{recive\_param()}{recive\_param()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} recive\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Integer}} \&}]{val }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_abbd1d9521584f906e8391f4c5ed41ade}\label{crpt_8h_abbd1d9521584f906e8391f4c5ed41ade} 
+\index{crpt.h@{crpt.h}!send\_crypto\_block@{send\_crypto\_block}}
+\index{send\_crypto\_block@{send\_crypto\_block}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{send\_crypto\_block()}{send\_crypto\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} send\+\_\+crypto\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Sec\+Byte\+Block}} \&}]{block }\end{DoxyParamCaption})}
+
+\Hypertarget{crpt_8h_a2bb601d220a653ba269a8c8b38230159}\label{crpt_8h_a2bb601d220a653ba269a8c8b38230159} 
+\index{crpt.h@{crpt.h}!send\_param@{send\_param}}
+\index{send\_param@{send\_param}!crpt.h@{crpt.h}}
+\doxysubsubsection{\texorpdfstring{send\_param()}{send\_param()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} send\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Integer}} \&}]{val }\end{DoxyParamCaption})}
+

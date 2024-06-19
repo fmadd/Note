@@ -1,0 +1,86 @@
+\doxysection{src/glfw/src/null\+\_\+monitor.c File Reference}
+\hypertarget{null__monitor_8c}{}\label{null__monitor_8c}\index{src/glfw/src/null\_monitor.c@{src/glfw/src/null\_monitor.c}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for null\+\_\+monitor.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{null__monitor_8c_a339d261e3d07b4c45c393dfd4452908b}{\+\_\+glfw\+Poll\+Monitors\+Null}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{null__monitor_8c_a0d7c225bc6576fd5fea1d8a26d432c8c}{\+\_\+glfw\+Free\+Monitor\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{null__monitor_8c_a1e81eddc13231e54342eff02726e8728}{\+\_\+glfw\+Get\+Monitor\+Pos\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}xpos, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}ypos)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{null__monitor_8c_a3bb4dc5cd26d5e80f713fafc071f39fa}{\+\_\+glfw\+Get\+Monitor\+Content\+Scale\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \texorpdfstring{$\ast$}{*}xscale, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \texorpdfstring{$\ast$}{*}yscale)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{null__monitor_8c_ac7dda306ec2006471faa653bbefe9ba6}{\+\_\+glfw\+Get\+Monitor\+Workarea\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}xpos, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}ypos, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a6879d830f164725df67adeeabca3ea47}{width}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a60075de22f90a1223dc0bea98d2ee4d5}{height}})
+\item 
+\mbox{\hyperlink{structGLFWvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{null__monitor_8c_a4a3ab6092069eb8f9170510fc613cf4a}{\+\_\+glfw\+Get\+Video\+Modes\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{found}})
+\item 
+\mbox{\hyperlink{internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{null__monitor_8c_a6f9dd05ee754adef259c4b6dbad8a97f}{\+\_\+glfw\+Get\+Video\+Mode\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{structGLFWvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})
+\item 
+\mbox{\hyperlink{internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{null__monitor_8c_a67d7f3710e7856b007821f6729751c46}{\+\_\+glfw\+Get\+Gamma\+Ramp\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{structGLFWgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}ramp)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{null__monitor_8c_af8d1f4f2409c49dd5d5e282233a36cb6}{\+\_\+glfw\+Set\+Gamma\+Ramp\+Null}} (\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structGLFWgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}ramp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{null__monitor_8c_a0d7c225bc6576fd5fea1d8a26d432c8c}\label{null__monitor_8c_a0d7c225bc6576fd5fea1d8a26d432c8c} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwFreeMonitorNull@{\_glfwFreeMonitorNull}}
+\index{\_glfwFreeMonitorNull@{\_glfwFreeMonitorNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwFreeMonitorNull()}{\_glfwFreeMonitorNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Free\+Monitor\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_a67d7f3710e7856b007821f6729751c46}\label{null__monitor_8c_a67d7f3710e7856b007821f6729751c46} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwGetGammaRampNull@{\_glfwGetGammaRampNull}}
+\index{\_glfwGetGammaRampNull@{\_glfwGetGammaRampNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetGammaRampNull()}{\_glfwGetGammaRampNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \+\_\+glfw\+Get\+Gamma\+Ramp\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{structGLFWgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}}]{ramp }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_a3bb4dc5cd26d5e80f713fafc071f39fa}\label{null__monitor_8c_a3bb4dc5cd26d5e80f713fafc071f39fa} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwGetMonitorContentScaleNull@{\_glfwGetMonitorContentScaleNull}}
+\index{\_glfwGetMonitorContentScaleNull@{\_glfwGetMonitorContentScaleNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetMonitorContentScaleNull()}{\_glfwGetMonitorContentScaleNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Get\+Monitor\+Content\+Scale\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \texorpdfstring{$\ast$}{*}}]{xscale,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{float}} \texorpdfstring{$\ast$}{*}}]{yscale }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_a1e81eddc13231e54342eff02726e8728}\label{null__monitor_8c_a1e81eddc13231e54342eff02726e8728} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwGetMonitorPosNull@{\_glfwGetMonitorPosNull}}
+\index{\_glfwGetMonitorPosNull@{\_glfwGetMonitorPosNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetMonitorPosNull()}{\_glfwGetMonitorPosNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Get\+Monitor\+Pos\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{xpos,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{ypos }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_ac7dda306ec2006471faa653bbefe9ba6}\label{null__monitor_8c_ac7dda306ec2006471faa653bbefe9ba6} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwGetMonitorWorkareaNull@{\_glfwGetMonitorWorkareaNull}}
+\index{\_glfwGetMonitorWorkareaNull@{\_glfwGetMonitorWorkareaNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetMonitorWorkareaNull()}{\_glfwGetMonitorWorkareaNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Get\+Monitor\+Workarea\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{xpos,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{ypos,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{width,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{height }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_a6f9dd05ee754adef259c4b6dbad8a97f}\label{null__monitor_8c_a6f9dd05ee754adef259c4b6dbad8a97f} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwGetVideoModeNull@{\_glfwGetVideoModeNull}}
+\index{\_glfwGetVideoModeNull@{\_glfwGetVideoModeNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetVideoModeNull()}{\_glfwGetVideoModeNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \+\_\+glfw\+Get\+Video\+Mode\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{structGLFWvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*}}]{mode }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_a4a3ab6092069eb8f9170510fc613cf4a}\label{null__monitor_8c_a4a3ab6092069eb8f9170510fc613cf4a} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwGetVideoModesNull@{\_glfwGetVideoModesNull}}
+\index{\_glfwGetVideoModesNull@{\_glfwGetVideoModesNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetVideoModesNull()}{\_glfwGetVideoModesNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGLFWvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+Get\+Video\+Modes\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{found }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_a339d261e3d07b4c45c393dfd4452908b}\label{null__monitor_8c_a339d261e3d07b4c45c393dfd4452908b} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwPollMonitorsNull@{\_glfwPollMonitorsNull}}
+\index{\_glfwPollMonitorsNull@{\_glfwPollMonitorsNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPollMonitorsNull()}{\_glfwPollMonitorsNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Poll\+Monitors\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{null__monitor_8c_af8d1f4f2409c49dd5d5e282233a36cb6}\label{null__monitor_8c_af8d1f4f2409c49dd5d5e282233a36cb6} 
+\index{null\_monitor.c@{null\_monitor.c}!\_glfwSetGammaRampNull@{\_glfwSetGammaRampNull}}
+\index{\_glfwSetGammaRampNull@{\_glfwSetGammaRampNull}!null\_monitor.c@{null\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwSetGammaRampNull()}{\_glfwSetGammaRampNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Set\+Gamma\+Ramp\+Null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__GLFWmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structGLFWgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}}]{ramp }\end{DoxyParamCaption})}
+

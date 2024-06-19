@@ -1,0 +1,53 @@
+\doxysection{src/imgui/imstb\+\_\+textedit.h File Reference}
+\hypertarget{imstb__textedit_8h}{}\label{imstb__textedit_8h}\index{src/imgui/imstb\_textedit.h@{src/imgui/imstb\_textedit.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structStbUndoRecord}{Stb\+Undo\+Record}}
+\item 
+struct \mbox{\hyperlink{structStbUndoState}{Stb\+Undo\+State}}
+\item 
+struct \mbox{\hyperlink{structSTB__TexteditState}{STB\+\_\+\+Textedit\+State}}
+\item 
+struct \mbox{\hyperlink{structStbTexteditRow}{Stb\+Textedit\+Row}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imstb__textedit_8h_adbfdb185853b8825c899126ce0a65990}{IMSTB\+\_\+\+TEXTEDIT\+\_\+\+UNDOSTATECOUNT}}~99
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imstb__textedit_8h_ad9c91ba430dfd8dd924ecbeefacf6eab}{IMSTB\+\_\+\+TEXTEDIT\+\_\+\+UNDOCHARCOUNT}}~999
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imstb__textedit_8h_a123969d1a111b15825eaa9d2b989cecc}{IMSTB\+\_\+\+TEXTEDIT\+\_\+\+CHARTYPE}}~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}
+\item 
+\#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} \mbox{\hyperlink{imstb__textedit_8h_a8689614e35e12ab67f08f097dcef95d0}{IMSTB\+\_\+\+TEXTEDIT\+\_\+\+POSITIONTYPE}}~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{imstb__textedit_8h_a123969d1a111b15825eaa9d2b989cecc}\label{imstb__textedit_8h_a123969d1a111b15825eaa9d2b989cecc} 
+\index{imstb\_textedit.h@{imstb\_textedit.h}!IMSTB\_TEXTEDIT\_CHARTYPE@{IMSTB\_TEXTEDIT\_CHARTYPE}}
+\index{IMSTB\_TEXTEDIT\_CHARTYPE@{IMSTB\_TEXTEDIT\_CHARTYPE}!imstb\_textedit.h@{imstb\_textedit.h}}
+\doxysubsubsection{\texorpdfstring{IMSTB\_TEXTEDIT\_CHARTYPE}{IMSTB\_TEXTEDIT\_CHARTYPE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IMSTB\+\_\+\+TEXTEDIT\+\_\+\+CHARTYPE~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}
+
+\Hypertarget{imstb__textedit_8h_a8689614e35e12ab67f08f097dcef95d0}\label{imstb__textedit_8h_a8689614e35e12ab67f08f097dcef95d0} 
+\index{imstb\_textedit.h@{imstb\_textedit.h}!IMSTB\_TEXTEDIT\_POSITIONTYPE@{IMSTB\_TEXTEDIT\_POSITIONTYPE}}
+\index{IMSTB\_TEXTEDIT\_POSITIONTYPE@{IMSTB\_TEXTEDIT\_POSITIONTYPE}!imstb\_textedit.h@{imstb\_textedit.h}}
+\doxysubsubsection{\texorpdfstring{IMSTB\_TEXTEDIT\_POSITIONTYPE}{IMSTB\_TEXTEDIT\_POSITIONTYPE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IMSTB\+\_\+\+TEXTEDIT\+\_\+\+POSITIONTYPE~\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}
+
+\Hypertarget{imstb__textedit_8h_ad9c91ba430dfd8dd924ecbeefacf6eab}\label{imstb__textedit_8h_ad9c91ba430dfd8dd924ecbeefacf6eab} 
+\index{imstb\_textedit.h@{imstb\_textedit.h}!IMSTB\_TEXTEDIT\_UNDOCHARCOUNT@{IMSTB\_TEXTEDIT\_UNDOCHARCOUNT}}
+\index{IMSTB\_TEXTEDIT\_UNDOCHARCOUNT@{IMSTB\_TEXTEDIT\_UNDOCHARCOUNT}!imstb\_textedit.h@{imstb\_textedit.h}}
+\doxysubsubsection{\texorpdfstring{IMSTB\_TEXTEDIT\_UNDOCHARCOUNT}{IMSTB\_TEXTEDIT\_UNDOCHARCOUNT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IMSTB\+\_\+\+TEXTEDIT\+\_\+\+UNDOCHARCOUNT~999}
+
+\Hypertarget{imstb__textedit_8h_adbfdb185853b8825c899126ce0a65990}\label{imstb__textedit_8h_adbfdb185853b8825c899126ce0a65990} 
+\index{imstb\_textedit.h@{imstb\_textedit.h}!IMSTB\_TEXTEDIT\_UNDOSTATECOUNT@{IMSTB\_TEXTEDIT\_UNDOSTATECOUNT}}
+\index{IMSTB\_TEXTEDIT\_UNDOSTATECOUNT@{IMSTB\_TEXTEDIT\_UNDOSTATECOUNT}!imstb\_textedit.h@{imstb\_textedit.h}}
+\doxysubsubsection{\texorpdfstring{IMSTB\_TEXTEDIT\_UNDOSTATECOUNT}{IMSTB\_TEXTEDIT\_UNDOSTATECOUNT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{define}} IMSTB\+\_\+\+TEXTEDIT\+\_\+\+UNDOSTATECOUNT~99}
+

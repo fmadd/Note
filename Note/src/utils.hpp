@@ -6,15 +6,11 @@
 #include <string>
 #include <fstream>
 
-#include <cryptopp/modes.h>
-#include <cryptopp/filters.h>
-#include <cryptopp/aes.h>
-#include <cryptopp/osrng.h>
-#include <cryptopp/dh2.h>
-#include <cryptopp/dh.h>
-#include <cryptopp/secblock.h>
-#include <cryptopp/base64.h>
-#include <cryptopp/hex.h>
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
+#include "glfw/include/GLFW/glfw3.h"
+#include <string>
+#include <fstream>
 
 #include "crpt.h"
 
@@ -22,6 +18,7 @@ using boost::asio::ip::tcp;
 using namespace std;
 using namespace CryptoPP;
 using namespace boost::asio;
+namespace fs = std::filesystem;
 
 
 string current_user;
@@ -30,8 +27,7 @@ string current_user;
 /**
  * @brief Registers a user by sending registration data securely over a TCP socket.
  *
- * This function registers a user by sending their login and encrypted password
- * over the provided TCP socket. It first sends a registration number to indicate
+ * This function registers a user. It first sends a registration number to indicate
  * the type of operation. The password is encrypted using AES encryption with the
  * given AES key.
  *
@@ -53,8 +49,6 @@ string current_user;
  *
  * @note
  * - This function assumes the socket is already connected and operational.
- * - Proper error handling for socket operations (e.g., connection failures) should be added
- *   in a production environment.
  */
 bool registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& login, const std::string& password_plain) {
     int number = 1;
@@ -102,8 +96,6 @@ bool registration(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std
  *
  * @note
  * - This function assumes the socket is already connected and operational.
- * - Proper error handling for socket operations (e.g., connection failures) should be added
- *   in a production environment.
  */
 bool authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& login, const std::string& password_plain) {
     int number = 2;
@@ -156,7 +148,6 @@ bool authentication(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const s
  *
  * @note
  * - This function assumes the socket is already connected and operational.
- * - Proper error handling for socket operations (e.g., connection failures, incomplete
  *   file transfers) should be added in a production environment.
  */
 
@@ -236,7 +227,6 @@ void except_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, string owne
  *
  * @note
  * - This function assumes the socket is already connected and operational.
- * - Proper error handling for socket operations (e.g., connection failures, incomplete
  *   file transfers) should be added in a production environment.
  * - The file is read from the "../userfiles/" directory relative to the executable's working directory.
  */
@@ -297,7 +287,6 @@ void send_file(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::s
  *
  * @note
  * - This function assumes the socket is already connected and operational.
- * - Proper error handling for socket operations (e.g., connection failures) should be added in a production environment.
  * - The AES key parameter 'aesKey' is included for consistency with other functions but is not used in this function.
  */
 void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::string& filename, const std::string& user) {
@@ -328,7 +317,6 @@ void add_access(tcp::socket& socket, CryptoPP::SecByteBlock& aesKey, const std::
  *
  * @note
  * - This function assumes the socket is already connected and operational.
- * - Proper error handling for socket operations (e.g., connection failures) should be added in a production environment.
  * - The `current_user` variable is assumed to be a global variable that tracks the currently logged-in user.
  */
 void log_out(tcp::socket& socket) {
@@ -404,3 +392,108 @@ void delete_file(tcp::socket& socket, CryptoPP::SecByteBlock aesKey, const std::
     boost::asio::write(socket, boost::asio::buffer(filename, filename_length));
 }
 
+/**
+ * @brief Counts the number of files with a specific extension in a given directory.
+ *
+ * This function iterates through the files in the specified directory and counts how many of them
+ * have the specified file extension.
+ *
+ * @param directory The path to the directory to be searched as a std::string.
+ * @param extension The file extension to count as a std::string.
+ * @return The number of files with the specified extension in the directory as an int.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Initializes a file count to 0.
+ * - Iterates through each entry in the specified directory using `fs::directory_iterator`.
+ * - Checks if the entry is a regular file and if its extension matches the specified extension.
+ * - Increments the file count for each matching file.
+ * - Returns the total count of files with the specified extension.
+ *
+ * @note
+ * - This function assumes that the filesystem namespace is aliased as `fs`.
+ * - Proper error handling for filesystem operations (e.g., invalid directory path) should be added in a production environment.
+ * - The extension parameter should include the dot (e.g., ".txt").
+ */
+int countFilesInDirectory(const std::string& directory, const std::string& extension) {
+    int fileCount = 0;
+    for (const auto& entry : fs::directory_iterator(directory)) {
+        if (entry.is_regular_file() && entry.path().extension() == extension) {
+            ++fileCount;
+        }
+    }
+    return fileCount;
+}
+
+/**
+ * @brief Reads and displays text files from a specified directory in ImGui tab items.
+ *
+ * This function reads text files with a specific extension from a given directory, displays each file's content in an ImGui tab item,
+ * and allows the user to edit and save the file content through an ImGui input text widget.
+ *
+ * @details
+ * The function performs the following steps:
+ * - Defines the directory path (`../userfiles`) and the file extension (`.txt`).
+ * - Counts the number of files in the directory with the specified extension using `countFilesInDirectory`.
+ * - Iterates through each file, creating an ImGui tab item for each one.
+ * - Reads the content of each file into a string and checks if the file exists.
+ * - Displays the file content in an ImGui input text multiline widget.
+ * - Allows the user to edit the content and saves the changes back to the file.
+ * - Displays an error message if the file cannot be opened or saved.
+ *
+ * @note
+ * - This function uses the ImGui library for the graphical user interface.
+ * - The function assumes that the ImGui context is already set up and that ImGui is in a state ready for rendering UI elements.
+ */
+void readFiles() {
+    std::string directory = "../userfiles";
+    std::string extension = ".txt";
+    int fileCount = countFilesInDirectory(directory, extension);
+
+    for (int i = 1; i <= fileCount; i++) {
+        if (ImGui::BeginTabItem(("User's file " + std::to_string(i)).c_str())) {
+            std::string fileName = directory + "/file_" + std::to_string(i) + extension;
+            std::string fileContent;
+            bool fileExists = false;
+
+            std::ifstream file(fileName);
+            if (file.is_open()) {
+                std::string line;
+                while (std::getline(file, line)) {
+                    fileContent += line + "\n";
+                }
+                file.close();
+                fileExists = true;
+            }
+
+            if (!fileExists) {
+                ImGui::Text("Failed to open file.");
+            }
+
+            std::vector<char> inputBuffer(fileContent.begin(), fileContent.end());
+            inputBuffer.resize(1024);
+
+            if (ImGui::InputTextMultiline("File", inputBuffer.data(), inputBuffer.size(), ImVec2(400, 200))) {
+                std::string newFileContent(inputBuffer.data());
+
+                std::ofstream outFile(fileName, std::ios::trunc);
+                if (outFile.is_open()) {
+                    outFile << newFileContent;
+                    outFile.close();
+                } else {
+                    ImGui::Text("Failed to save edition.");
+                }
+            }
+
+            ImGui::EndTabItem();
+        }
+    }
+}
+
+bool deleteFile(const std::string& filename) {
+    std::filesystem::path filePath(filename);
+    if (std::filesystem::is_regular_file(filePath)) {
+        return std::filesystem::remove(filePath);
+    }
+    return false;
+}

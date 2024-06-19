@@ -1,0 +1,439 @@
+\doxysection{src/utils.hpp File Reference}
+\hypertarget{utils_8hpp}{}\label{utils_8hpp}\index{src/utils.hpp@{src/utils.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$imgui\+\_\+impl\+\_\+glfw.\+h$>$}\newline
+{\ttfamily \#include $<$imgui\+\_\+impl\+\_\+opengl3.\+h$>$}\newline
+{\ttfamily \#include "{}glfw/include/\+GLFW/glfw3.\+h"{}}\newline
+{\ttfamily \#include "{}crpt.\+h"{}}\newline
+Include dependency graph for utils.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{utils_8hpp_a4b90afe01c345d156378d3e8ffd4e8a3}{registration}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{aes\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{login}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{password\+\_\+plain}})
+\begin{DoxyCompactList}\small\item\em Registers a user by sending registration data securely over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{utils_8hpp_aab21f189c8ebb5ca665bba5924dde1ea}{authentication}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{aes\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{login}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{password\+\_\+plain}})
+\begin{DoxyCompactList}\small\item\em Authenticates a user by sending authentication data securely over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_a9be053978a82dc6016c9d5f4081fcb08}{except\+\_\+file}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{aes\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{string}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{owner}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{string}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{filename}})
+\begin{DoxyCompactList}\small\item\em Retrieves an encrypted file from the server, decrypts it, and saves it locally. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_a9b5ff8f0b81031ff7bd7df8001e48fa0}{send\+\_\+file}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{aes\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{owner}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{filename}})
+\begin{DoxyCompactList}\small\item\em Sends an encrypted file to the server securely over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_a27df30fca4ec66276a7c48bf7152bf3c}{add\+\_\+access}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{aes\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{filename}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&user)
+\begin{DoxyCompactList}\small\item\em Grants access to a file for a specific user by sending the necessary data securely over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_af83cb938f8b696e0b971e01c1f0d2190}{log\+\_\+out}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}})
+\begin{DoxyCompactList}\small\item\em Logs out the current user by sending a logout request to the server over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_a6cc32ee0600598629b46b05c0827a3bc}{delete\+\_\+user}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}})
+\begin{DoxyCompactList}\small\item\em Deletes the current user by sending a delete request to the server over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_a6c70d0f94b5477b99442e52a6d68ab55}{delete\+\_\+file}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{socket}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{aes\+Key}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{owner}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{filename}})
+\begin{DoxyCompactList}\small\item\em Deletes a specified file for a given owner by sending a delete request to the server over a TCP socket. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{utils_8hpp_a8d0a38fc6d502e23d6bc2c63113e9127}{count\+Files\+In\+Directory}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{directory}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{extension}})
+\begin{DoxyCompactList}\small\item\em Counts the number of files with a specific extension in a given directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{utils_8hpp_a9c3c12a5dec5dfef70fb36340e470bbb}{read\+Files}} ()
+\begin{DoxyCompactList}\small\item\em Reads and displays text files from a specified directory in \doxylink{namespaceImGui}{Im\+Gui} tab items. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{utils_8hpp_a1ac9ccc068706814d783eb7c117613d2}{delete\+File}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{filename}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{string}} \mbox{\hyperlink{utils_8hpp_a903e697f413972b0709ff93b42329438}{current\+\_\+user}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8hpp_a27df30fca4ec66276a7c48bf7152bf3c}\label{utils_8hpp_a27df30fca4ec66276a7c48bf7152bf3c} 
+\index{utils.hpp@{utils.hpp}!add\_access@{add\_access}}
+\index{add\_access@{add\_access}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{add\_access()}{add\_access()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} add\+\_\+access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&}]{aes\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{filename,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Grants access to a file for a specific user by sending the necessary data securely over a TCP socket. 
+
+This function sends a request to the server to grant access to a file for a specified user. It sends a request number to indicate the operation type, followed by the filename and user information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication. \\
+\hline
+{\em aes\+Key} & Reference to a Crypto\+PP\+::\+Sec\+Byte\+Block containing the AES key used for encryption (not used in this function). \\
+\hline
+{\em filename} & The name of the file for which access is being granted as a std\+::string. \\
+\hline
+{\em user} & The username of the user to whom access is being granted as a std\+::string.\\
+\hline
+\end{DoxyParams}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a request number (integer) to the server via the socket to indicate the "{}grant access"{} operation.
+\item Sends the length of \textquotesingle{}filename\textquotesingle{} and \textquotesingle{}user\textquotesingle{} as size\+\_\+t values followed by the actual \textquotesingle{}filename\textquotesingle{} and \textquotesingle{}user\textquotesingle{} data over the socket.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational.
+\item The AES key parameter \textquotesingle{}aes\+Key\textquotesingle{} is included for consistency with other functions but is not used in this function. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_aab21f189c8ebb5ca665bba5924dde1ea}\label{utils_8hpp_aab21f189c8ebb5ca665bba5924dde1ea} 
+\index{utils.hpp@{utils.hpp}!authentication@{authentication}}
+\index{authentication@{authentication}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{authentication()}{authentication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} authentication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&}]{aes\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{login,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{password\+\_\+plain }\end{DoxyParamCaption})}
+
+
+
+Authenticates a user by sending authentication data securely over a TCP socket. 
+
+This function authenticates a user by sending their login and encrypted password over the provided TCP socket. It first sends an authentication number to indicate the type of operation. The password is encrypted using AES encryption with the given AES key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication. \\
+\hline
+{\em aes\+Key} & Reference to a Crypto\+PP\+::\+Sec\+Byte\+Block containing the AES key used for encryption. \\
+\hline
+{\em login} & The user\textquotesingle{}s login or username as a std\+::string. \\
+\hline
+{\em password\+\_\+plain} & The user\textquotesingle{}s password in plain text as a std\+::string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if authentication succeeds, false otherwise. The function also sets the global variable {\ttfamily current\+\_\+user} to {\ttfamily login} upon successful authentication.
+\end{DoxyReturn}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends an authentication number (integer) to the server via the socket.
+\item Encrypts the plain text password using AES encryption with {\ttfamily aes\+Key}.
+\item Sends the length of the login and encrypted password as size\+\_\+t values followed by the actual login and password data over the socket.
+\item Reads a boolean response from the socket indicating the success of the authentication.
+\item If authentication is successful (response is true), updates the global {\ttfamily current\+\_\+user} variable.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a8d0a38fc6d502e23d6bc2c63113e9127}\label{utils_8hpp_a8d0a38fc6d502e23d6bc2c63113e9127} 
+\index{utils.hpp@{utils.hpp}!countFilesInDirectory@{countFilesInDirectory}}
+\index{countFilesInDirectory@{countFilesInDirectory}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{countFilesInDirectory()}{countFilesInDirectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} count\+Files\+In\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{directory,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{extension }\end{DoxyParamCaption})}
+
+
+
+Counts the number of files with a specific extension in a given directory. 
+
+This function iterates through the files in the specified directory and counts how many of them have the specified file extension.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & The path to the directory to be searched as a std\+::string. \\
+\hline
+{\em extension} & The file extension to count as a std\+::string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of files with the specified extension in the directory as an int.
+\end{DoxyReturn}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Initializes a file count to 0.
+\item Iterates through each entry in the specified directory using {\ttfamily fs\+::directory\+\_\+iterator}.
+\item Checks if the entry is a regular file and if its extension matches the specified extension.
+\item Increments the file count for each matching file.
+\item Returns the total count of files with the specified extension.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes that the filesystem namespace is aliased as {\ttfamily fs}.
+\item Proper error handling for filesystem operations (e.\+g., invalid directory path) should be added in a production environment.
+\item The extension parameter should include the dot (e.\+g., "{}.\+txt"{}). 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a6c70d0f94b5477b99442e52a6d68ab55}\label{utils_8hpp_a6c70d0f94b5477b99442e52a6d68ab55} 
+\index{utils.hpp@{utils.hpp}!delete\_file@{delete\_file}}
+\index{delete\_file@{delete\_file}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{delete\_file()}{delete\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} delete\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}}}]{aes\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{owner,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Deletes a specified file for a given owner by sending a delete request to the server over a TCP socket. 
+
+This function deletes a specified file for a given owner by sending a request number to indicate the delete operation. It sends the owner\textquotesingle{}s information and the filename to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication. \\
+\hline
+{\em aes\+Key} & A copy of Crypto\+PP\+::\+Sec\+Byte\+Block containing the AES key used for encryption (not used in this function). \\
+\hline
+{\em owner} & The owner of the file as a std\+::string. \\
+\hline
+{\em filename} & The name of the file to be deleted as a std\+::string.\\
+\hline
+\end{DoxyParams}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a request number (integer) to the server via the socket to indicate the delete file operation.
+\item Sends the length of \textquotesingle{}owner\textquotesingle{} and \textquotesingle{}filename\textquotesingle{} as size\+\_\+t values followed by the actual \textquotesingle{}owner\textquotesingle{} and \textquotesingle{}filename\textquotesingle{} data over the socket.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational.
+\item Proper error handling for socket operations (e.\+g., connection failures) should be added in a production environment.
+\item The AES key parameter \textquotesingle{}aes\+Key\textquotesingle{} is included for consistency with other functions but is not used in this function. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a6cc32ee0600598629b46b05c0827a3bc}\label{utils_8hpp_a6cc32ee0600598629b46b05c0827a3bc} 
+\index{utils.hpp@{utils.hpp}!delete\_user@{delete\_user}}
+\index{delete\_user@{delete\_user}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{delete\_user()}{delete\_user()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} delete\+\_\+user (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+Deletes the current user by sending a delete request to the server over a TCP socket. 
+
+This function deletes the current user by sending a request number to indicate the delete operation. It sends the username of the currently logged-\/in user to the server and prints a message indicating that the user has been deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication.\\
+\hline
+\end{DoxyParams}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a request number (integer) to the server via the socket to indicate the delete user operation.
+\item Retrieves the current user\textquotesingle{}s login from the global {\ttfamily current\+\_\+user} variable.
+\item Prints a message to the console indicating that the current user has been deleted.
+\item Sends the length of the current user\textquotesingle{}s login as a size\+\_\+t value followed by the actual login data over the socket.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational.
+\item Proper error handling for socket operations (e.\+g., connection failures) should be added in a production environment.
+\item The {\ttfamily current\+\_\+user} variable is assumed to be a global variable that tracks the currently logged-\/in user. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a1ac9ccc068706814d783eb7c117613d2}\label{utils_8hpp_a1ac9ccc068706814d783eb7c117613d2} 
+\index{utils.hpp@{utils.hpp}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{deleteFile()}{deleteFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} delete\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{filename }\end{DoxyParamCaption})}
+
+\Hypertarget{utils_8hpp_a9be053978a82dc6016c9d5f4081fcb08}\label{utils_8hpp_a9be053978a82dc6016c9d5f4081fcb08} 
+\index{utils.hpp@{utils.hpp}!except\_file@{except\_file}}
+\index{except\_file@{except\_file}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{except\_file()}{except\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} except\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}}}]{aes\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{string}}}]{owner,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{string}}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Retrieves an encrypted file from the server, decrypts it, and saves it locally. 
+
+This function requests a file from the server specified by the \textquotesingle{}owner\textquotesingle{} and \textquotesingle{}filename\textquotesingle{} parameters. It sends a request number to indicate the operation type. After receiving the file size from the server, it reads encrypted data in chunks, decrypts it using AES encryption with the provided key, and saves the decrypted file locally in a designated directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication. \\
+\hline
+{\em aes\+Key} & A copy of Crypto\+PP\+::\+Sec\+Byte\+Block containing the AES key used for decryption. \\
+\hline
+{\em owner} & The owner of the file as a std\+::string. \\
+\hline
+{\em filename} & The name of the file to retrieve and save as a std\+::string.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file is unavailable or empty (file\+\_\+size == 0).\\
+\hline
+\end{DoxyExceptions}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a request number (integer) to the server via the socket.
+\item Sends the lengths of \textquotesingle{}owner\textquotesingle{} and \textquotesingle{}filename\textquotesingle{} as size\+\_\+t values followed by the actual \textquotesingle{}owner\textquotesingle{} and \textquotesingle{}filename\textquotesingle{} data over the socket.
+\item Reads the size of the file from the server.
+\item If the file size received is 0, throws a runtime\+\_\+error indicating that the file is unavailable or empty.
+\item Retrieves the encrypted file data in chunks from the socket, decrypts it using AES encryption with \textquotesingle{}aes\+Key\textquotesingle{}, and saves the decrypted data to a file in the "{}userfiles"{} directory relative to the current working directory.
+\item Ensures the "{}userfiles"{} directory exists; creates it if it does not.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational. file transfers) should be added in a production environment. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_af83cb938f8b696e0b971e01c1f0d2190}\label{utils_8hpp_af83cb938f8b696e0b971e01c1f0d2190} 
+\index{utils.hpp@{utils.hpp}!log\_out@{log\_out}}
+\index{log\_out@{log\_out}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{log\_out()}{log\_out()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} log\+\_\+out (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+Logs out the current user by sending a logout request to the server over a TCP socket. 
+
+This function logs out the current user by sending a request number to indicate the logout operation. It also clears the global {\ttfamily current\+\_\+user} variable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication.\\
+\hline
+\end{DoxyParams}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a request number (integer) to the server via the socket to indicate the logout operation.
+\item Clears the global {\ttfamily current\+\_\+user} variable to indicate that no user is currently logged in.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational.
+\item The {\ttfamily current\+\_\+user} variable is assumed to be a global variable that tracks the currently logged-\/in user. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a9c3c12a5dec5dfef70fb36340e470bbb}\label{utils_8hpp_a9c3c12a5dec5dfef70fb36340e470bbb} 
+\index{utils.hpp@{utils.hpp}!readFiles@{readFiles}}
+\index{readFiles@{readFiles}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{readFiles()}{readFiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} read\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads and displays text files from a specified directory in \doxylink{namespaceImGui}{Im\+Gui} tab items. 
+
+This function reads text files with a specific extension from a given directory, displays each file\textquotesingle{}s content in an \doxylink{namespaceImGui}{Im\+Gui} tab item, and allows the user to edit and save the file content through an \doxylink{namespaceImGui}{Im\+Gui} input text widget.
+
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Defines the directory path ({\ttfamily ../userfiles}) and the file extension ({\ttfamily .txt}).
+\item Counts the number of files in the directory with the specified extension using {\ttfamily count\+Files\+In\+Directory}.
+\item Iterates through each file, creating an \doxylink{namespaceImGui}{Im\+Gui} tab item for each one.
+\item Reads the content of each file into a string and checks if the file exists.
+\item Displays the file content in an \doxylink{namespaceImGui}{Im\+Gui} input text multiline widget.
+\item Allows the user to edit the content and saves the changes back to the file.
+\item Displays an error message if the file cannot be opened or saved.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function uses the \doxylink{namespaceImGui}{Im\+Gui} library for the graphical user interface.
+\item The function assumes that the \doxylink{namespaceImGui}{Im\+Gui} context is already set up and that \doxylink{namespaceImGui}{Im\+Gui} is in a state ready for rendering UI elements. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a4b90afe01c345d156378d3e8ffd4e8a3}\label{utils_8hpp_a4b90afe01c345d156378d3e8ffd4e8a3} 
+\index{utils.hpp@{utils.hpp}!registration@{registration}}
+\index{registration@{registration}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{registration()}{registration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} registration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&}]{aes\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{login,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{password\+\_\+plain }\end{DoxyParamCaption})}
+
+
+
+Registers a user by sending registration data securely over a TCP socket. 
+
+This function registers a user. It first sends a registration number to indicate the type of operation. The password is encrypted using AES encryption with the given AES key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication. \\
+\hline
+{\em aes\+Key} & Reference to a Crypto\+PP\+::\+Sec\+Byte\+Block containing the AES key used for encryption. \\
+\hline
+{\em login} & The user\textquotesingle{}s login or username as a std\+::string. \\
+\hline
+{\em password\+\_\+plain} & The user\textquotesingle{}s password in plain text as a std\+::string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if registration succeeds, false otherwise. The function also sets the global variable {\ttfamily current\+\_\+user} to {\ttfamily login} upon successful registration.
+\end{DoxyReturn}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a registration number (integer) to the server via the socket.
+\item Encrypts the plain text password using AES encryption with {\ttfamily aes\+Key}.
+\item Sends the length of the login and encrypted password as size\+\_\+t values followed by the actual login and password data over the socket.
+\item Reads a boolean response from the socket indicating the success of the registration.
+\item If registration is successful (response is true), updates the global {\ttfamily current\+\_\+user} variable.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\Hypertarget{utils_8hpp_a9b5ff8f0b81031ff7bd7df8001e48fa0}\label{utils_8hpp_a9b5ff8f0b81031ff7bd7df8001e48fa0} 
+\index{utils.hpp@{utils.hpp}!send\_file@{send\_file}}
+\index{send\_file@{send\_file}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{send\_file()}{send\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} send\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{tcp\+::socket}} \&}]{socket,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{Crypto\+PP\+::\+Sec\+Byte\+Block}} \&}]{aes\+Key,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{owner,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{std\+::string}} \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Sends an encrypted file to the server securely over a TCP socket. 
+
+This function sends a file from the local filesystem to the server. It sends a request number to indicate the operation type, followed by the owner\textquotesingle{}s information and the encrypted filename. The file is then read in chunks, encrypted using AES with the provided key, and sent over the socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The TCP socket used for communication. \\
+\hline
+{\em aes\+Key} & Reference to a Crypto\+PP\+::\+Sec\+Byte\+Block containing the AES key used for encryption. \\
+\hline
+{\em owner} & The owner of the file as a std\+::string. \\
+\hline
+{\em filename} & The name of the file to send as a std\+::string.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file does not exist or cannot be opened.\\
+\hline
+\end{DoxyExceptions}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Sends a request number (integer) to the server via the socket.
+\item Checks if the specified file exists and can be opened. Throws a runtime\+\_\+error if the file does not exist.
+\item Sends the length of \textquotesingle{}owner\textquotesingle{} and the \textquotesingle{}owner\textquotesingle{} data as size\+\_\+t followed by the actual \textquotesingle{}owner\textquotesingle{} data over the socket.
+\item Encrypts the filename using AES encryption with \textquotesingle{}aes\+Key\textquotesingle{} and sends its length as size\+\_\+t followed by the encrypted filename data over the socket.
+\item Determines the size of the file and sends it to the server.
+\item Reads the file in chunks, encrypts each chunk using AES encryption with \textquotesingle{}aes\+Key\textquotesingle{}, and sends the encrypted data over the socket until the entire file is sent.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+
+\begin{DoxyItemize}
+\item This function assumes the socket is already connected and operational. file transfers) should be added in a production environment.
+\item The file is read from the "{}../userfiles/"{} directory relative to the executable\textquotesingle{}s working directory. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{utils_8hpp_a903e697f413972b0709ff93b42329438}\label{utils_8hpp_a903e697f413972b0709ff93b42329438} 
+\index{utils.hpp@{utils.hpp}!current\_user@{current\_user}}
+\index{current\_user@{current\_user}!utils.hpp@{utils.hpp}}
+\doxysubsubsection{\texorpdfstring{current\_user}{current\_user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac83513893df92266f79a515488701770}{string}} current\+\_\+user}
+

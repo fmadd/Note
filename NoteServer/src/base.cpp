@@ -1,6 +1,5 @@
 #include "base.h"
 
-// Функция для проверки наличия логина в базе
 bool DB_service::check_login_exists(const std::string &login ) {
     pqxx::connection conn(_con_string);
 
@@ -12,7 +11,6 @@ bool DB_service::check_login_exists(const std::string &login ) {
     return result[0][0].as<int>() > 0;
 }
 
-// Функция для проверки правильности пароля пользователя
 bool DB_service::check_password_correct(const std::string &login, const std::string &password ) {
     pqxx::connection conn(_con_string);
 
@@ -24,7 +22,6 @@ bool DB_service::check_password_correct(const std::string &login, const std::str
     return result[0][0].as<int>() > 0;
 }
 
-// Функция для проверки наличия пользователя в базе и удаления его
 void DB_service::delete_user(const std::string &login ) {
 
     if (DB_service::check_login_exists(login)) {
@@ -41,9 +38,8 @@ void DB_service::delete_user(const std::string &login ) {
 
 }
 
-// Функция для добавления нового пользователя
 void DB_service::add_user(const std::string &login, const std::string &password ) {
-    std::cout<<"add_user"<<std::endl;
+
     if (!DB_service::check_login_exists(login)) {
         pqxx::connection conn(_con_string);
         pqxx::work txn(conn);
@@ -52,12 +48,12 @@ void DB_service::add_user(const std::string &login, const std::string &password 
         txn.exec(query);
         txn.commit();
         conn.close();
+        std::cout<<"add_user"<<std::endl;
     } else{
         throw std::runtime_error("login already exist");
     }
 }
 
-// Функция для предоставления прав
 void DB_service::add_user_access(const std::string &owner, const std::string &filename, const std::string &user ) {
     pqxx::connection conn(_con_string);
     std::string path = owner+"/"+filename;

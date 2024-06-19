@@ -1,0 +1,83 @@
+\doxysection{src/imgui/backends/imgui\+\_\+impl\+\_\+sdlrenderer2.cpp File Reference}
+\hypertarget{imgui__impl__sdlrenderer2_8cpp}{}\label{imgui__impl__sdlrenderer2_8cpp}\index{src/imgui/backends/imgui\_impl\_sdlrenderer2.cpp@{src/imgui/backends/imgui\_impl\_sdlrenderer2.cpp}}
+{\ttfamily \#include "{}imgui.\+h"{}}\newline
+{\ttfamily \#include "{}imgui\+\_\+impl\+\_\+sdlrenderer2.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+Include dependency graph for imgui\+\_\+impl\+\_\+sdlrenderer2.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structImGui__ImplSDLRenderer2__Data}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a50cdc149a452ede2ca4f7d798bf8ee67}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Init}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{renderer}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a6065b55ab8411fe3b42679aa602670e4}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Shutdown}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a1455086053943c565ff2360a95a5ea50}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+New\+Frame}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a46cb21b97f9bc953952190ad3aedd4b4}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Render\+Draw\+Data}} (\mbox{\hyperlink{structImDrawData}{Im\+Draw\+Data}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{draw\+\_\+data}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{renderer}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a26c919069422acd35cc124bd1588cf6e}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Create\+Fonts\+Texture}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a31a15d90c9620e377f313453572a6e93}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Destroy\+Fonts\+Texture}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a76d7625b5c7d4ad9a930cdb9bf187539}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Create\+Device\+Objects}} ()
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{imgui__impl__sdlrenderer2_8cpp_a2b5a2cece3b1ac2d91b6a7c2fe243c2d}{Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Destroy\+Device\+Objects}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a76d7625b5c7d4ad9a930cdb9bf187539}\label{imgui__impl__sdlrenderer2_8cpp_a76d7625b5c7d4ad9a930cdb9bf187539} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_CreateDeviceObjects@{ImGui\_ImplSDLRenderer2\_CreateDeviceObjects}}
+\index{ImGui\_ImplSDLRenderer2\_CreateDeviceObjects@{ImGui\_ImplSDLRenderer2\_CreateDeviceObjects}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_CreateDeviceObjects()}{ImGui\_ImplSDLRenderer2\_CreateDeviceObjects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Create\+Device\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a26c919069422acd35cc124bd1588cf6e}\label{imgui__impl__sdlrenderer2_8cpp_a26c919069422acd35cc124bd1588cf6e} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_CreateFontsTexture@{ImGui\_ImplSDLRenderer2\_CreateFontsTexture}}
+\index{ImGui\_ImplSDLRenderer2\_CreateFontsTexture@{ImGui\_ImplSDLRenderer2\_CreateFontsTexture}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_CreateFontsTexture()}{ImGui\_ImplSDLRenderer2\_CreateFontsTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Create\+Fonts\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a2b5a2cece3b1ac2d91b6a7c2fe243c2d}\label{imgui__impl__sdlrenderer2_8cpp_a2b5a2cece3b1ac2d91b6a7c2fe243c2d} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_DestroyDeviceObjects@{ImGui\_ImplSDLRenderer2\_DestroyDeviceObjects}}
+\index{ImGui\_ImplSDLRenderer2\_DestroyDeviceObjects@{ImGui\_ImplSDLRenderer2\_DestroyDeviceObjects}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_DestroyDeviceObjects()}{ImGui\_ImplSDLRenderer2\_DestroyDeviceObjects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Destroy\+Device\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a31a15d90c9620e377f313453572a6e93}\label{imgui__impl__sdlrenderer2_8cpp_a31a15d90c9620e377f313453572a6e93} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_DestroyFontsTexture@{ImGui\_ImplSDLRenderer2\_DestroyFontsTexture}}
+\index{ImGui\_ImplSDLRenderer2\_DestroyFontsTexture@{ImGui\_ImplSDLRenderer2\_DestroyFontsTexture}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_DestroyFontsTexture()}{ImGui\_ImplSDLRenderer2\_DestroyFontsTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Destroy\+Fonts\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a50cdc149a452ede2ca4f7d798bf8ee67}\label{imgui__impl__sdlrenderer2_8cpp_a50cdc149a452ede2ca4f7d798bf8ee67} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_Init@{ImGui\_ImplSDLRenderer2\_Init}}
+\index{ImGui\_ImplSDLRenderer2\_Init@{ImGui\_ImplSDLRenderer2\_Init}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_Init()}{ImGui\_ImplSDLRenderer2\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{bool}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a1455086053943c565ff2360a95a5ea50}\label{imgui__impl__sdlrenderer2_8cpp_a1455086053943c565ff2360a95a5ea50} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_NewFrame@{ImGui\_ImplSDLRenderer2\_NewFrame}}
+\index{ImGui\_ImplSDLRenderer2\_NewFrame@{ImGui\_ImplSDLRenderer2\_NewFrame}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_NewFrame()}{ImGui\_ImplSDLRenderer2\_NewFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a46cb21b97f9bc953952190ad3aedd4b4}\label{imgui__impl__sdlrenderer2_8cpp_a46cb21b97f9bc953952190ad3aedd4b4} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_RenderDrawData@{ImGui\_ImplSDLRenderer2\_RenderDrawData}}
+\index{ImGui\_ImplSDLRenderer2\_RenderDrawData@{ImGui\_ImplSDLRenderer2\_RenderDrawData}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_RenderDrawData()}{ImGui\_ImplSDLRenderer2\_RenderDrawData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Render\+Draw\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structImDrawData}{Im\+Draw\+Data}} \texorpdfstring{$\ast$}{*}}]{draw\+\_\+data,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{SDL\+\_\+\+Renderer}} \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+\Hypertarget{imgui__impl__sdlrenderer2_8cpp_a6065b55ab8411fe3b42679aa602670e4}\label{imgui__impl__sdlrenderer2_8cpp_a6065b55ab8411fe3b42679aa602670e4} 
+\index{imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}!ImGui\_ImplSDLRenderer2\_Shutdown@{ImGui\_ImplSDLRenderer2\_Shutdown}}
+\index{ImGui\_ImplSDLRenderer2\_Shutdown@{ImGui\_ImplSDLRenderer2\_Shutdown}!imgui\_impl\_sdlrenderer2.cpp@{imgui\_impl\_sdlrenderer2.cpp}}
+\doxysubsubsection{\texorpdfstring{ImGui\_ImplSDLRenderer2\_Shutdown()}{ImGui\_ImplSDLRenderer2\_Shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} Im\+Gui\+\_\+\+Impl\+SDLRenderer2\+\_\+\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

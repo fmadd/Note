@@ -111,7 +111,7 @@ namespace Catch {
 // CATCH_CONFIG_POSIX_SIGNALS : are POSIX signals supported?
 // CATCH_CONFIG_DISABLE_EXCEPTIONS : Are exceptions enabled?
 // ****************
-// Note to maintainers: if new toggles are added please document them
+// Note_my to maintainers: if new toggles are added please document them
 // in configuration.md, too
 // ****************
 
@@ -581,7 +581,7 @@ namespace Catch {
 namespace Catch {
 
     /// A non-owning string class (similar to the forthcoming std::string_view)
-    /// Note that, because a StringRef may be a substring of another string,
+    /// Note_my that, because a StringRef may be a substring of another string,
     /// it may not be null terminated.
     class StringRef {
     public:
@@ -3672,7 +3672,7 @@ namespace Matchers {
         struct UnorderedEqualsMatcher : MatcherBase<std::vector<T>> {
             UnorderedEqualsMatcher(std::vector<T> const& target) : m_target(target) {}
             bool match(std::vector<T> const& vec) const override {
-                // Note: This is a reimplementation of std::is_permutation,
+                // Note_my: This is a reimplementation of std::is_permutation,
                 //       because I don't want to include <algorithm> inside the common path
                 if (m_target.size() != vec.size()) {
                     return false;
@@ -4036,7 +4036,7 @@ namespace Generators {
     auto acquireGeneratorTracker( SourceLineInfo const& lineInfo ) -> IGeneratorTracker&;
 
     template<typename L>
-    // Note: The type after -> is weird, because VS2015 cannot parse
+    // Note_my: The type after -> is weird, because VS2015 cannot parse
     //       the expression used in the typedef inside, when it is in
     //       return type. Yeah.
     auto generate( SourceLineInfo const& lineInfo, L const& generatorExpression ) -> decltype(std::declval<decltype(generatorExpression())>().get()) {
@@ -6079,7 +6079,7 @@ namespace Catch {
 #if defined(_MSC_VER)
 #pragma warning(push)
 #pragma warning(disable:4061) // Not all labels are EXPLICITLY handled in switch
-                              // Note that 4062 (not all labels are handled
+                              // Note_my that 4062 (not all labels are handled
                               // and default is missing) is enabled
 #endif
 
@@ -13345,7 +13345,7 @@ namespace Catch {
             if( m_config->warnAboutNoTests() && totals.error == -1 )
                 return 2;
 
-            // Note that on unices only the lower 8 bits are usually used, clamping
+            // Note_my that on unices only the lower 8 bits are usually used, clamping
             // the return value to 255 prevents false negative when some multiple
             // of 256 tests has failed
             return (std::min) (MaxExitCode, (std::max) (totals.error, static_cast<int>(totals.assertions.failed)));
@@ -15793,7 +15793,7 @@ private:
 #if defined(_MSC_VER)
 #pragma warning(push)
 #pragma warning(disable:4061) // Not all labels are EXPLICITLY handled in switch
- // Note that 4062 (not all labels are handled and default is missing) is enabled
+ // Note_my that 4062 (not all labels are handled and default is missing) is enabled
 #endif
 
 #if defined(__clang__)
@@ -16897,7 +16897,7 @@ namespace Catch {
 #if defined(_MSC_VER)
 #pragma warning(push)
 #pragma warning(disable:4061) // Not all labels are EXPLICITLY handled in switch
-                              // Note that 4062 (not all labels are handled
+                              // Note_my that 4062 (not all labels are handled
                               // and default is missing) is enabled
 #endif
 

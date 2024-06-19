@@ -1,0 +1,124 @@
+\doxysection{src/glfw/src/init.c File Reference}
+\hypertarget{init_8c}{}\label{init_8c}\index{src/glfw/src/init.c@{src/glfw/src/init.c}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for init.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} \mbox{\hyperlink{init_8c_a920bdd09bf605b918b93fbec1993c55b}{\+\_\+glfw\+Encode\+UTF8}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{codepoint}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{init_8c_a52c17edd88a6ec5bebc87d96ac5d00ae}{\+\_\+glfw\+Parse\+Uri\+List}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}text, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a619bc20e8198de3bd3f3d7fc34de66b2}{count}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{init_8c_af725e1f466a710a1fc590ff3726f1151}{\+\_\+glfw\+\_\+strdup}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}source)
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{init_8c_afa5b80ef05733304e18066539f2fe702}{\+\_\+glfw\+\_\+min}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} a, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{init_8c_a91120c4dfe80fbd3b162413f154a585f}{\+\_\+glfw\+\_\+max}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} a, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{offscreen_8c_a83fc1af92e29717b4513d121b0c72c7d}{b}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{init_8c_a88a6e01ef5c1245a6d2a5e62b02e5678}{\+\_\+glfw\+\_\+calloc}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a619bc20e8198de3bd3f3d7fc34de66b2}{count}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{init_8c_a7ee3244d243d5778c712c1b3c98f8bc3}{\+\_\+glfw\+\_\+realloc}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{block}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{init_8c_abcf72962b101a8a5c539da1a278b0e9e}{\+\_\+glfw\+\_\+free}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{block}})
+\item 
+\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{init_8c_a3287b282ec57a4a89127ae51f49f10f5}{\+\_\+glfw\+Input\+Error}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} code, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{format}},...)
+\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}})
+\begin{DoxyCompactList}\small\item\em Initializes the GLFW library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\+Terminate}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}})
+\begin{DoxyCompactList}\small\item\em Terminates the GLFW library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{group__init_gac85e41aab1c2bd6fc740f4377d9e7e9f}{glfw\+Init\+Hint}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{hint}}, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1b2be7bfa84f129a2690a62f3ad82d62}{value}})
+\begin{DoxyCompactList}\small\item\em Sets the specified init hint to the desired value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{group__init_ga0f4c8556a21d9e774a0ba0332da1748e}{glfw\+Init\+Allocator}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{structGLFWallocator}{GLFWallocator}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Sets the init allocator to the desired value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{init_8c_a1712210f34c339a05adda69e3587ec00}{glfw\+Init\+Vulkan\+Loader}} (\mbox{\hyperlink{vulkan_8h_a646be9b04ac763b5d4b7263756237906}{PFN\+\_\+vk\+Get\+Instance\+Proc\+Addr}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{loader}})
+\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \mbox{\hyperlink{group__init_ga2402c7824ac0194c13722790ff9559ff}{glfw\+Get\+Version}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}major, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}minor, \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{rev}})
+\begin{DoxyCompactList}\small\item\em Retrieves the version of the GLFW library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \mbox{\hyperlink{group__init_gaee7bac4c7e1b2769207747c1b5ae2f9e}{glfw\+Get\+Error}} (\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}description)
+\begin{DoxyCompactList}\small\item\em Returns and clears the last error for the calling thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__init_ga8184701785c096b3862a75cda1bf44a3}{GLFWerrorfun}} \mbox{\hyperlink{group__init_ga746e2757d069eaea423349aca6ae097a}{glfw\+Set\+Error\+Callback}} (\mbox{\hyperlink{group__init_ga8184701785c096b3862a75cda1bf44a3}{GLFWerrorfun}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the error callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct__GLFWlibrary}{\+\_\+\+GLFWlibrary}} \mbox{\hyperlink{init_8c_a3007bc654ca6468ee69759007f70ba1e}{\+\_\+glfw}} = \{ \mbox{\hyperlink{group__init_gac877fe3b627d21ef3a0a23e0a73ba8c5}{GLFW\+\_\+\+FALSE}} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{init_8c_a88a6e01ef5c1245a6d2a5e62b02e5678}\label{init_8c_a88a6e01ef5c1245a6d2a5e62b02e5678} 
+\index{init.c@{init.c}!\_glfw\_calloc@{\_glfw\_calloc}}
+\index{\_glfw\_calloc@{\_glfw\_calloc}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_calloc()}{\_glfw\_calloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+\_\+calloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}}}]{count,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_abcf72962b101a8a5c539da1a278b0e9e}\label{init_8c_abcf72962b101a8a5c539da1a278b0e9e} 
+\index{init.c@{init.c}!\_glfw\_free@{\_glfw\_free}}
+\index{\_glfw\_free@{\_glfw\_free}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_free()}{\_glfw\_free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{block }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_a91120c4dfe80fbd3b162413f154a585f}\label{init_8c_a91120c4dfe80fbd3b162413f154a585f} 
+\index{init.c@{init.c}!\_glfw\_max@{\_glfw\_max}}
+\index{\_glfw\_max@{\_glfw\_max}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_max()}{\_glfw\_max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \+\_\+glfw\+\_\+max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{a,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{b }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_afa5b80ef05733304e18066539f2fe702}\label{init_8c_afa5b80ef05733304e18066539f2fe702} 
+\index{init.c@{init.c}!\_glfw\_min@{\_glfw\_min}}
+\index{\_glfw\_min@{\_glfw\_min}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_min()}{\_glfw\_min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \+\_\+glfw\+\_\+min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{a,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{b }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_a7ee3244d243d5778c712c1b3c98f8bc3}\label{init_8c_a7ee3244d243d5778c712c1b3c98f8bc3} 
+\index{init.c@{init.c}!\_glfw\_realloc@{\_glfw\_realloc}}
+\index{\_glfw\_realloc@{\_glfw\_realloc}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_realloc()}{\_glfw\_realloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+\_\+realloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \texorpdfstring{$\ast$}{*}}]{block,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_af725e1f466a710a1fc590ff3726f1151}\label{init_8c_af725e1f466a710a1fc590ff3726f1151} 
+\index{init.c@{init.c}!\_glfw\_strdup@{\_glfw\_strdup}}
+\index{\_glfw\_strdup@{\_glfw\_strdup}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_strdup()}{\_glfw\_strdup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+\_\+strdup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{source }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_a920bdd09bf605b918b93fbec1993c55b}\label{init_8c_a920bdd09bf605b918b93fbec1993c55b} 
+\index{init.c@{init.c}!\_glfwEncodeUTF8@{\_glfwEncodeUTF8}}
+\index{\_glfwEncodeUTF8@{\_glfwEncodeUTF8}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwEncodeUTF8()}{\_glfwEncodeUTF8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{size\+\_\+t}} \+\_\+glfw\+Encode\+UTF8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{s,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{uint32\+\_\+t}}}]{codepoint }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_a3287b282ec57a4a89127ae51f49f10f5}\label{init_8c_a3287b282ec57a4a89127ae51f49f10f5} 
+\index{init.c@{init.c}!\_glfwInputError@{\_glfwInputError}}
+\index{\_glfwInputError@{\_glfwInputError}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputError()}{\_glfwInputError()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} \+\_\+glfw\+Input\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}}}]{code,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{const}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_a52c17edd88a6ec5bebc87d96ac5d00ae}\label{init_8c_a52c17edd88a6ec5bebc87d96ac5d00ae} 
+\index{init.c@{init.c}!\_glfwParseUriList@{\_glfwParseUriList}}
+\index{\_glfwParseUriList@{\_glfwParseUriList}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwParseUriList()}{\_glfwParseUriList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \+\_\+glfw\+Parse\+Uri\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{char}} \texorpdfstring{$\ast$}{*}}]{text,  }\item[{\mbox{\hyperlink{imgui__impl__opengl3__loader_8h_a1e3b09934060e9d373139c3557730d37}{int}} \texorpdfstring{$\ast$}{*}}]{count }\end{DoxyParamCaption})}
+
+\Hypertarget{init_8c_a1712210f34c339a05adda69e3587ec00}\label{init_8c_a1712210f34c339a05adda69e3587ec00} 
+\index{init.c@{init.c}!glfwInitVulkanLoader@{glfwInitVulkanLoader}}
+\index{glfwInitVulkanLoader@{glfwInitVulkanLoader}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{glfwInitVulkanLoader()}{glfwInitVulkanLoader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glfw_2include_2GLFW_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{imgui__impl__opengl3__loader_8h_ac668e7cffd9e2e9cfee428b9b2f34fa7}{void}} glfw\+Init\+Vulkan\+Loader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vulkan_8h_a646be9b04ac763b5d4b7263756237906}{PFN\+\_\+vk\+Get\+Instance\+Proc\+Addr}}}]{loader }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{init_8c_a3007bc654ca6468ee69759007f70ba1e}\label{init_8c_a3007bc654ca6468ee69759007f70ba1e} 
+\index{init.c@{init.c}!\_glfw@{\_glfw}}
+\index{\_glfw@{\_glfw}!init.c@{init.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw}{\_glfw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct__GLFWlibrary}{\+\_\+\+GLFWlibrary}} \+\_\+glfw = \{ \mbox{\hyperlink{group__init_gac877fe3b627d21ef3a0a23e0a73ba8c5}{GLFW\+\_\+\+FALSE}} \}}
+
